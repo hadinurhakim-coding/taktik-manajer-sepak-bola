@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "checked_at_utc": "2026-10-15T09:37:49.936703+00:00",
+  "platform": "Windows x64",
+  "input": "D:\\Hadi\\proyek\\football-manager\\FootballSim_Master\\01_SimulationCore_CPP\\replay_samples\\converted_match_input.json",
+  "input_sha256": "329f176aebc3d18feb8caa19d62d3c2e95586226f4a8378078e51052a04eac5c",
+  "library": "D:\\Hadi\\proyek\\football-manager\\FootballSim_Master\\01_SimulationCore_CPP\\build\\engine\\Release\\match_bridge.dll",
+  "teams": [
+    {
+      "id": "tm_15531ff404756aa6",
+      "name": "AS Roma",
+      "formation": "3-4-2-1",
+      "play_style": "balanced",
+      "roster_size": 18
+    },
+    {
+      "id": "tm_1a1cdacb819699d1",
+      "name": "AC Milan",
+      "formation": "4-2-3-1",
+      "play_style": "possession",
+      "roster_size": 18
+    }
+  ],
+  "schema_matches_spec": true,
+  "snapshot_players": 22,
+  "first_tick": {
+    "real_seconds": 0.016666666666666666,
+    "game_seconds": 0.1
+  },
+  "halftime": {
+    "tick": 27000,
+    "real_seconds": 450.0,
+    "game_seconds": 2700.0,
+    "phase": "second_half"
+  },
+  "fulltime": {
+    "tick": 54000,
+    "real_seconds": 900.0,
+    "game_seconds": 5400.0,
+    "phase": "completed"
+  },
+  "source_database_sha256_unchanged": "fa6271a2d12899c98af561839850e697855db076593bb3299ec64aba0e0203f5",
+  "snapshot_samples": "D:\\Hadi\\proyek\\football-manager\\FootballSim_Master\\01_SimulationCore_CPP\\replay_samples\\converted_match_snapshots.json",
+  "scope": "clock_and_initial_state",
+  "legacy_replay_compatible": false,
+  "android_and_ue_builds_tested": false,
+  "library_sha256": "b418880d7c362bdd3b51ec3bc222f119148efad2ab77abafbfe7da3da76c48d4",
+  "static_core_sha256": "784ea00169878e09233b49102d559ca8ebe6db9c29de287a13710ef21eeed112"
+}

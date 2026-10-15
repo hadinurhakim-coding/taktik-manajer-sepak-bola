@@ -1,0 +1,470 @@
+[
+  {
+    "path": "app/src/androidTest/java/com/example/ExampleInstrumentedTest.kt",
+    "sha256": "f7bc0b231a59931310c179c47122dbec19a385bb16090de3375b4fd1fa64bbb8"
+  },
+  {
+    "path": "app/src/debug/java/com/example/club/ClubHarnessActivity.kt",
+    "sha256": "26cf8bd9a2fbedbcb6c66331e2e6bdd5e2dc769a55b45f8dd180df460c4c729c"
+  },
+  {
+    "path": "app/src/debug/java/com/example/friendly/FriendlyHarnessActivity.kt",
+    "sha256": "6cf43b7ed39b8f75c03ac6e9a0870d255ec60bc690635351cbf5fe77873110fd"
+  },
+  {
+    "path": "app/src/main/assets/lawatan/action_phase.gd",
+    "sha256": "4166d664c26e7ec1649560d5282ec4c1132a4c3806860f73103a396041960766"
+  },
+  {
+    "path": "app/src/main/assets/lawatan/ball_motion.gd",
+    "sha256": "5e53d0fb0366ccac1ca0f4d38d21cf7e47aa73ff768a208025ed3495c9cd4b19"
+  },
+  {
+    "path": "app/src/main/assets/lawatan/ball_trajectory.gd",
+    "sha256": "95869c58cda00120355ca7cd1752f6b00f53d75f69f8dbf656d09711d4c9eb3d"
+  },
+  {
+    "path": "app/src/main/assets/lawatan/football_presentation.gd",
+    "sha256": "07e3845d8a97ebbb2897cfa9362127c584a5585f7752639a28760cb0cabf95bf"
+  },
+  {
+    "path": "app/src/main/assets/lawatan/kickoff_intro.gd",
+    "sha256": "cf05f8d04492fffb11cc71b080b19ab5db01ee878506810fb8558549bbe4412f"
+  },
+  {
+    "path": "app/src/main/assets/lawatan/match_view.gd",
+    "sha256": "3d2fe48f42208b95639caa60fb735e23f7e93f469e4b5ce305da141f6042b342"
+  },
+  {
+    "path": "app/src/main/assets/lawatan/player_appearance.gd",
+    "sha256": "97bb0b3c9b8b733c48f725a9c0e6e87fe49a393aeb3863c6e43c714cd6dbffee"
+  },
+  {
+    "path": "app/src/main/assets/lawatan/player_mesh_rig.gd",
+    "sha256": "58f5631f2e5be007b5aa1c03c1ae59299958b634185bbc257bf9215ba8e0ebf1"
+  },
+  {
+    "path": "app/src/main/assets/lawatan/player_motion.gd",
+    "sha256": "7913a5f7b7a0b6de39250d99c93d5ea4431d4de19bc3073202769f65b0fd13fa"
+  },
+  {
+    "path": "app/src/main/assets/lawatan/player_pose.gd",
+    "sha256": "aaa83ecbb360a1bee84ac4d68ff473738de5983c9aea710323ccc17155c4f0bf"
+  },
+  {
+    "path": "app/src/main/assets/lawatan/player_rig.gd",
+    "sha256": "af081ce7d02349696b99f31ef8ca909683c7ac99984df5a667c1e21ecd39ed05"
+  },
+  {
+    "path": "app/src/main/assets/lawatan/player_separation.gd",
+    "sha256": "ccff7a23a1269afbf9b200d10db577e350219092c96965c2a10c1d7df8c53083"
+  },
+  {
+    "path": "app/src/main/assets/lawatan/player_showcase.gd",
+    "sha256": "151059e2e7813c5ba45b74ad057ff2cb1db0ebe92f092f5d7548d66bca3950db"
+  },
+  {
+    "path": "app/src/main/assets/lawatan/pose_cache.gd",
+    "sha256": "e12b8ba96c996d9fe0d6fc90b3b439817f370598419d4643baf4a06f1654cf02"
+  },
+  {
+    "path": "app/src/main/assets/lawatan/replay_timeline.gd",
+    "sha256": "984c8da98b16964ed2bc4d1a00dd59109f9e7023383f47349ca3ca9adc1a1f1a"
+  },
+  {
+    "path": "app/src/main/assets/lawatan/sinigaglia_stadium.gd",
+    "sha256": "3860dc19242aed8f8432adbeec605d0c6b9f252e9734da80f85665fc19f11875"
+  },
+  {
+    "path": "app/src/main/java/com/example/data/auth/AuthRepository.kt",
+    "sha256": "655da461e479ca9c73631adbfb4b5da8635d54a053ea6ed05d7e7b9285e03427"
+  },
+  {
+    "path": "app/src/main/java/com/example/data/auth/LocalAuthRepository.kt",
+    "sha256": "4f148579137476d66483a1cda7f7584f992cddaf9a043832a07adab2cceadfa8"
+  },
+  {
+    "path": "app/src/main/java/com/example/data/career/CareerModels.kt",
+    "sha256": "a973815013739f7488369fb9dc26b75225bc2f6f5a2b07643c140b08a07bb015"
+  },
+  {
+    "path": "app/src/main/java/com/example/data/career/CareerRepository.kt",
+    "sha256": "650078f4a4daa2d5fe8e7bea1e7c0bc469d1e5474c1a78284654c2c9a6313b7e"
+  },
+  {
+    "path": "app/src/main/java/com/example/data/club/ClubRepository.kt",
+    "sha256": "17c8a208549ffd574364f15485f91e0bc90f5c5f78c8345cd48fdd778bb5c9fa"
+  },
+  {
+    "path": "app/src/main/java/com/example/data/club/MatchSchedule.kt",
+    "sha256": "318e69658f9f0138d9fdda430536bac133d09c6de90dfbe6bbebc8166f3ca6db"
+  },
+  {
+    "path": "app/src/main/java/com/example/data/club/TacticsDraft.kt",
+    "sha256": "e7e42662e3ccb2af7cdf5ae1274ab2ebfbfc2cc3c9ac15a4b0ce1462226b8f8d"
+  },
+  {
+    "path": "app/src/main/java/com/example/data/club/TacticsOptimizer.kt",
+    "sha256": "94d6f14a9230c7b285e370437fcb6e07e23a60909aa2690f7209d9b38f8fda79"
+  },
+  {
+    "path": "app/src/main/java/com/example/data/club/TacticsPositions.kt",
+    "sha256": "28362fc4667a148c100d1a805032dc84ec97e00783b270addf9e0746367324e2"
+  },
+  {
+    "path": "app/src/main/java/com/example/friendly/FriendlyAgendaScreen.kt",
+    "sha256": "dc30b1906ad49e0e882745da24d0e19e246e2257cff8a96723e13abffcb70358"
+  },
+  {
+    "path": "app/src/main/java/com/example/friendly/FriendlyMatchActivity.kt",
+    "sha256": "56348585c5186799b393b17f85137131102c98eaca5e5f8f7e965f662451fa3b"
+  },
+  {
+    "path": "app/src/main/java/com/example/friendly/FriendlyReplayFormat.kt",
+    "sha256": "7cc5eb460b90e2b0ebe0e40f65d7955f1eab518b110d81399afd6ed3842b6d10"
+  },
+  {
+    "path": "app/src/main/java/com/example/friendly/FriendlyRepository.kt",
+    "sha256": "f219b08593b657010495eb526f8fe5ee055cac135d60bb1d0d5c3e52aafed15b"
+  },
+  {
+    "path": "app/src/main/java/com/example/MainActivity.kt",
+    "sha256": "d368fa74efcdee71d87f7b53fade8561f9a795c10a976080533f220cb484b0c0"
+  },
+  {
+    "path": "app/src/main/java/com/example/ui/components/AccountModalDialog.kt",
+    "sha256": "ddccba1d331cd1b673ba11dafcc28e4851101ce32a958fe9daf2bf27e20edfd3"
+  },
+  {
+    "path": "app/src/main/java/com/example/ui/components/AccountSettingsDialog.kt",
+    "sha256": "d41e2e304fd9791ffbc88e417e6f95f9a70425c31137de3c1388fb734b9197e3"
+  },
+  {
+    "path": "app/src/main/java/com/example/ui/components/ClubLogoHelper.kt",
+    "sha256": "02d0225c92a6c8dd44819c7567d5884f4dcfb656f0ab74776233cc34a752e67d"
+  },
+  {
+    "path": "app/src/main/java/com/example/ui/components/ClubRatingBadge.kt",
+    "sha256": "86655f42a066ca1092dd88ede7ebc0023b5c2087ddf9120d37bf46662425f5c5"
+  },
+  {
+    "path": "app/src/main/java/com/example/ui/components/ComoWaveProgressBar.kt",
+    "sha256": "e988ba31906326a8a8cf17090eb37d98e8b6fb1c8662d674ab118b2bd68b595c"
+  },
+  {
+    "path": "app/src/main/java/com/example/ui/components/CreateLeagueDialog.kt",
+    "sha256": "5cff05eea8dad8cab89811dd04353128922500289049c61a7a59dd410193c1e1"
+  },
+  {
+    "path": "app/src/main/java/com/example/ui/components/DeviceDisplayRotation.kt",
+    "sha256": "27ee3a15fd727a9e374925ba13e6766751d33fbd4928229317e0fdcb1b7b4cbb"
+  },
+  {
+    "path": "app/src/main/java/com/example/ui/components/FloatingLoadingCard.kt",
+    "sha256": "13544b299cb21285d655d6cc9ae6aa8146aeceef063e3c95f2ad6f54c7fc78bb"
+  },
+  {
+    "path": "app/src/main/java/com/example/ui/components/FootballToggleButton.kt",
+    "sha256": "6fcb4d6e4e9484a8b0badc39f4893090d4993d85f8b537392406c702029dda85"
+  },
+  {
+    "path": "app/src/main/java/com/example/ui/components/GlassBackdrop.kt",
+    "sha256": "7f5d9efd882060ec4b993512d9ee9398cd6bbf3cf334cf73b5aa88ddba337e81"
+  },
+  {
+    "path": "app/src/main/java/com/example/ui/components/JoinLeagueDialog.kt",
+    "sha256": "88e4e152c94f243af81908a2be71e32bee83e4967b2e39b19cac4b0c76add2aa"
+  },
+  {
+    "path": "app/src/main/java/com/example/ui/components/KeyboardAwareClose.kt",
+    "sha256": "16a875f0f62b2a5f35d00b3531a683e991a40b733ed47d8539292c9fe0e0d883"
+  },
+  {
+    "path": "app/src/main/java/com/example/ui/components/LoginDialogCard.kt",
+    "sha256": "d011ee5267d7150b9f44c0a4b1244e95c4cbe9f91d26028abc1b6666a2d0f77d"
+  },
+  {
+    "path": "app/src/main/java/com/example/ui/components/ManagerSidebar.kt",
+    "sha256": "a5e233c36e7b28bc8a36da502f0ef251106f8e94f27863a06d20a0f31d012ef8"
+  },
+  {
+    "path": "app/src/main/java/com/example/ui/components/ManagerTopBar.kt",
+    "sha256": "321d52c44a23e66e4bc255a477e534bf584ec646acca65cfa394ea552da986b2"
+  },
+  {
+    "path": "app/src/main/java/com/example/ui/components/NotificationDropdown.kt",
+    "sha256": "a468ec2d6fb550d28384e78173b9ddea6fbde16266fd0e2267e2dbfaa0ff5840"
+  },
+  {
+    "path": "app/src/main/java/com/example/ui/components/RollingBallProgressBar.kt",
+    "sha256": "5cbc5256b4bf0f919d4764eae03f920835efc0eebec3c70677e324d8e5410add"
+  },
+  {
+    "path": "app/src/main/java/com/example/ui/components/SettingsModalCard.kt",
+    "sha256": "ad76f78b5a1d13398726ed01c32b50a574ee64fb1854d283f7756e91d5994155"
+  },
+  {
+    "path": "app/src/main/java/com/example/ui/components/SidebarBalances.kt",
+    "sha256": "e13f74b5c5c2825ed32c28654b41bf0a36ebb7a28070485fa3c093e0eac4770c"
+  },
+  {
+    "path": "app/src/main/java/com/example/ui/components/SoccerBall3D.kt",
+    "sha256": "47b8c5830c3e423b6df6df3ad6fbb3180e13d7257c2098c82280de643e667820"
+  },
+  {
+    "path": "app/src/main/java/com/example/ui/components/StadiumManagerScene.kt",
+    "sha256": "2fa6e241c18478e415aadebd0eda4f747ac7c5d893f882d3a102dcb69a0b78e0"
+  },
+  {
+    "path": "app/src/main/java/com/example/ui/screens/CareerScreen.kt",
+    "sha256": "5076f2df548fbdd3ebebcaa282fad601a745c13e007d3999723c0e863c34cb26"
+  },
+  {
+    "path": "app/src/main/java/com/example/ui/screens/ClubController.kt",
+    "sha256": "33646e8e963a87cb6b1a947c49a3085f7b0d5e00082598ce421ebe4c58f24af6"
+  },
+  {
+    "path": "app/src/main/java/com/example/ui/screens/ClubScreens.kt",
+    "sha256": "aefed96a1fab33ba177d4234b0971530301e1edde459a37586e1d678d16e9e8d"
+  },
+  {
+    "path": "app/src/main/java/com/example/ui/screens/DashboardScreen.kt",
+    "sha256": "d2f997da19262d62789c8073f4b240ec93193708a14df2e15372cad074994b30"
+  },
+  {
+    "path": "app/src/main/java/com/example/ui/screens/LoadingScreen.kt",
+    "sha256": "d2f3ff704d274011a38071d094a6681753377d715a915999ffe41fc139408f1c"
+  },
+  {
+    "path": "app/src/main/java/com/example/ui/screens/LoadingViewModel.kt",
+    "sha256": "54136648d4b0c97a6e0c215c50382b6100836c6715c4416e61de3227541da3bb"
+  },
+  {
+    "path": "app/src/main/java/com/example/ui/screens/ManagerProfileScreen.kt",
+    "sha256": "eb721dd5fe9e009ad70b59382d2c913f3f858247afab44dea722c11d18179470"
+  },
+  {
+    "path": "app/src/main/java/com/example/ui/screens/ManagerSectionScreens.kt",
+    "sha256": "4f1a954a69a071806f476c0a6fa9c40900b6ab84168cdb5bd46903baadb319de"
+  },
+  {
+    "path": "app/src/main/java/com/example/ui/screens/TacticsDrag.kt",
+    "sha256": "4386b0bd2bceda81ffadb650464dfbe218c88cabf2f1dd605718f7cba84be8a3"
+  },
+  {
+    "path": "app/src/main/java/com/example/ui/screens/TacticsScreen.kt",
+    "sha256": "2acc6bbecbf6033984c29da6141ed1d75c3b628617504fdb922fcf8c64647e39"
+  },
+  {
+    "path": "app/src/main/java/com/example/ui/screens/TacticsTempo.kt",
+    "sha256": "daf2fd3c6fc5f9d438b26f337e3cef45923b02a25cde6b4ca69c339aa8f8cc03"
+  },
+  {
+    "path": "app/src/main/java/com/example/ui/theme/Color.kt",
+    "sha256": "c8674708304e8cbb79ebc929fac12904d8dde140ae89fe0993e37db87eed1643"
+  },
+  {
+    "path": "app/src/main/java/com/example/ui/theme/ComoColors.kt",
+    "sha256": "c0ee6ed13a1e56fdc5c649869abfbaa97889c277a4d8768e88855bf73392d757"
+  },
+  {
+    "path": "app/src/main/java/com/example/ui/theme/ComoHeaderColors.kt",
+    "sha256": "dbdaf9c6bed04ff317e4c035b9f542539f0dd72bc2d83518c116ecff8c82a8ec"
+  },
+  {
+    "path": "app/src/main/java/com/example/ui/theme/Theme.kt",
+    "sha256": "dc55f2bce809aafc567b72216c34c47e96b3dc8ce978903dbc15888b6aeeaa5e"
+  },
+  {
+    "path": "app/src/main/java/com/example/ui/theme/Type.kt",
+    "sha256": "ff7886e8b3601caf6764a79922a254be2beb6c17151cf22192e93c57f7e1c1f4"
+  },
+  {
+    "path": "app/src/test/java/com/example/club/CareerProfileTest.kt",
+    "sha256": "062a0bbec2d08aab8f687743cb12d5fad8f2db6e6ce185bd3bbe567e89766738"
+  },
+  {
+    "path": "app/src/test/java/com/example/club/ClubRepositoryTest.kt",
+    "sha256": "7b5fcbf904b9208786765166d30eb11706ac20c1b7a69c1037e0b53a70f5809e"
+  },
+  {
+    "path": "app/src/test/java/com/example/club/LineupDraftTest.kt",
+    "sha256": "e21e7babc6193842db9c3bdf4b81c92e7f2b2710be716563a22be3d9bef67e25"
+  },
+  {
+    "path": "app/src/test/java/com/example/club/MatchScheduleTest.kt",
+    "sha256": "a0287024617863698f776fb60a468f51f146a395af5167060208c8163f3ee0c4"
+  },
+  {
+    "path": "app/src/test/java/com/example/club/TacticsAutosaveTest.kt",
+    "sha256": "f3f012b1bd1315f284de0583af794a28bdb6e016be74cfaa4b70620a93c253f0"
+  },
+  {
+    "path": "app/src/test/java/com/example/club/TacticsDragTest.kt",
+    "sha256": "8535b492581181859932343cbee10acb69b45fe59db06bf6d9f2b657a4e475bf"
+  },
+  {
+    "path": "app/src/test/java/com/example/club/TacticsOptimizerTest.kt",
+    "sha256": "fc27c2fa5b58cabb9ff5ba5d8ef901bdd8c8c7eae885027b9177c482163840a5"
+  },
+  {
+    "path": "app/src/test/java/com/example/club/TacticsPositionsTest.kt",
+    "sha256": "2d1f09c5a904dd2cb4f875f701f7fbc8c671dd1cd62e2bd668ed5ae40762a37f"
+  },
+  {
+    "path": "app/src/test/java/com/example/club/TempoSliderTest.kt",
+    "sha256": "1920170b3d3f88ba416a56f85683f04399a91a0fe9b3363431ccc8a66fb91b4d"
+  },
+  {
+    "path": "app/src/test/java/com/example/ExampleRobolectricTest.kt",
+    "sha256": "67bc04e10d003d8184055ae7a41a430b6c33f0850fdea58b3e17644eccd79f62"
+  },
+  {
+    "path": "app/src/test/java/com/example/ExampleUnitTest.kt",
+    "sha256": "23c2ce31bd59499ddae061d5fa2c523474b9d4bcadcf5f3930a6a889bb64257a"
+  },
+  {
+    "path": "app/src/test/java/com/example/friendly/FriendlyApiUrlTest.kt",
+    "sha256": "8b8d2dea5e79f21ee8f464b1ad613e4fb225beb71de920db24fead46abaa29ee"
+  },
+  {
+    "path": "app/src/test/java/com/example/friendly/FriendlyReplayFormatTest.kt",
+    "sha256": "237206d87a1c081c359bfc801fe3d4978705e45131b0e4c9cf8f09b62215f54b"
+  },
+  {
+    "path": "app/src/test/java/com/example/GreetingScreenshotTest.kt",
+    "sha256": "ffeb142a229280f29b97312065403cd1ef05ef5b2ecc3d6ab042f372a0965404"
+  },
+  {
+    "path": "backend/action_phase.py",
+    "sha256": "b858dc88ab3849b94e4a9a2c7c4a28fccaeaa6de731868f952806aaad09b4e54"
+  },
+  {
+    "path": "backend/attacking_play.py",
+    "sha256": "5e7c9c99e39d8d576d8961c2f2d7f01fd7a0d1393c49dc7f9df2a0d37762f4f3"
+  },
+  {
+    "path": "backend/ball_trajectory.py",
+    "sha256": "8722521f2bbb39aa8b0bbfc429656584ff74d8c23748421e238499f59c55fc9f"
+  },
+  {
+    "path": "backend/broadcast.py",
+    "sha256": "a377f4b03d78e2093f139f00e1396a8e9aa842d705355a5c96a39af05475bd3a"
+  },
+  {
+    "path": "backend/club_engine.py",
+    "sha256": "1a378588dfe2d05fa9a5273d22e4b6c263170def23f110697bc84bbf8f34aaf7"
+  },
+  {
+    "path": "backend/club_positions.py",
+    "sha256": "7d00a1b7ec515030974f3dd6d69b1ecf61e15df85302b5c7a48fea789e9c1953"
+  },
+  {
+    "path": "backend/club_specialists.py",
+    "sha256": "067e5b8857291ab4ed08efdde8016fcd3996e16f20d4c954e4a39b20d2ee313f"
+  },
+  {
+    "path": "backend/club_tactics.py",
+    "sha256": "223b0ed7091c3dd0193b478d3a127734ae271f13e364acad0dc3bfe5eb7abb65"
+  },
+  {
+    "path": "backend/database.py",
+    "sha256": "d7ab3bbefe7b95a25ec2df72ff4b55f68aeb85d9508b2b0f7902c9dc255387c5"
+  },
+  {
+    "path": "backend/friendly_engine.py",
+    "sha256": "66371407823ef9c7903f902c301858b85fc6209fd305cb170ea5c0f268f71c66"
+  },
+  {
+    "path": "backend/friendly_simulation.py",
+    "sha256": "f1f8816d54eac72a0ad8608cf3047c3e082d2659cfa27b65f8c1306f29848fc6"
+  },
+  {
+    "path": "backend/league_engine.py",
+    "sha256": "d1573473f545936f33f47d3c796437649877da934ce55db236fe6bf7947501a1"
+  },
+  {
+    "path": "backend/league_replay.py",
+    "sha256": "851d12bb2b99c455ea6aa288a5d3690fb8e3ef9ab4ce560e07edc5b1303be437"
+  },
+  {
+    "path": "backend/league_schedule.py",
+    "sha256": "5f362a2e65369cc3245ed5fa9d0c5c8b1a5c3ae5c33159070e05d95534508fda"
+  },
+  {
+    "path": "backend/match_math.py",
+    "sha256": "561589aaf6a55954d2ee60756f3cabb3f6b4db1b28fe4ae514fdfe5005d9b8ad"
+  },
+  {
+    "path": "backend/match_rating.py",
+    "sha256": "c14e735f2b140ab9356dbe38a48aa12fde5d6687ec940447a7f8440e582fd4dd"
+  },
+  {
+    "path": "backend/off_ball.py",
+    "sha256": "ebb8d58e42dd929c10f8bad2a5a9def6a58d7e4d35e282dcb3a41491680b26ae"
+  },
+  {
+    "path": "backend/player_motion.py",
+    "sha256": "be91746078943b218f64f7574cb52951fec662ff463796cef98a4844f2665188"
+  },
+  {
+    "path": "backend/scenario_library.py",
+    "sha256": "8b5a11598d356f745c62d4807fadea5eed919c6dafb2265459138513cbfbfa98"
+  },
+  {
+    "path": "backend/server.py",
+    "sha256": "151e85b39de9c6b8ceab20777f9801eeaf2bc749ba4336f67257c0eefe254727"
+  },
+  {
+    "path": "backend/tests/test_action_phase.py",
+    "sha256": "5f7ee2e2ff9a83ca2d84885be4fea24d35a958524ce6d5ee4f8fde12429912ab"
+  },
+  {
+    "path": "backend/tests/test_attacking_play.py",
+    "sha256": "a24d09af90fddf56ae234ef2f2b36338d70c8092a1b5872b34f39ef3202e37d4"
+  },
+  {
+    "path": "backend/tests/test_broadcast.py",
+    "sha256": "a3e0cfa0718e8278b4f6749bf8b15dda17a3a82c45ca5e4b3f53cdc828c664b8"
+  },
+  {
+    "path": "backend/tests/test_club_engine.py",
+    "sha256": "23a6d89a31aab19d3e4c8ac8dfcec7a59da30b9d59119eeabf5c575b55fed164"
+  },
+  {
+    "path": "backend/tests/test_football_reference.py",
+    "sha256": "5255d45daaaa50f4caa5c02771f7bfb682ebe731d0e004dd0c9f473d593af136"
+  },
+  {
+    "path": "backend/tests/test_friendly_engine.py",
+    "sha256": "0c8b1bab267a08476b7acf9ac291be9ece2ed8a9d925a35afd9613ee95681630"
+  },
+  {
+    "path": "backend/tests/test_friendly_simulation.py",
+    "sha256": "92ef894d9ab7dcaac1aa6a9283239a9f777aa0394c9828a758e2ece3e1b4a321"
+  },
+  {
+    "path": "backend/tests/test_kickoff.py",
+    "sha256": "941a3b9505b751d2e38accfa92bdcd553fc9bb75f93fefe7e0e2da1d52c84462"
+  },
+  {
+    "path": "backend/tests/test_league_replay.py",
+    "sha256": "0c1a4ffebe489548aba053c580a4b3a409cb2ae2e31b8affdb627039fce23076"
+  },
+  {
+    "path": "backend/tests/test_league_schedule.py",
+    "sha256": "232231da83b0bfefa5e29e21f8e02bd054f0b893bb00ff654ed3af9c03573476"
+  },
+  {
+    "path": "backend/tests/test_off_ball.py",
+    "sha256": "fdf3b91af4fc46ce75ac5af066d3247fc0046b410c5aa6dc145123effa09d03f"
+  },
+  {
+    "path": "backend/tests/test_player_motion.py",
+    "sha256": "974643efbd399cc85573b790548df16108af0b6f93c397a8a3a0a1ff02470850"
+  },
+  {
+    "path": "backend/tests/test_scenario_system.py",
+    "sha256": "a94715af6bf2228e9a5582689323281c3cc5f2b068a642883495d595bc94f539"
+  }
+]

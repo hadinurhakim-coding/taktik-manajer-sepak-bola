@@ -1,0 +1,1654 @@
+{
+  "blender_version": "5.2.2 LTS",
+  "files": [
+    {
+      "path": "art/animation/football_20261015/football_actions.blend",
+      "inspection": "bpy.data.libraries.load; no scene execution or save",
+      "mesh_names": [
+        "nico_pazmesh.004",
+        "Icosphere"
+      ],
+      "armatures": [
+        {
+          "name": "Armature_NicoPaz",
+          "bones": [
+            {
+              "name": "mixamorig:Hips",
+              "parent": null
+            },
+            {
+              "name": "mixamorig:LeftUpLeg",
+              "parent": "mixamorig:Hips"
+            },
+            {
+              "name": "mixamorig:LeftLeg",
+              "parent": "mixamorig:LeftUpLeg"
+            },
+            {
+              "name": "mixamorig:LeftFoot",
+              "parent": "mixamorig:LeftLeg"
+            },
+            {
+              "name": "mixamorig:LeftToeBase",
+              "parent": "mixamorig:LeftFoot"
+            },
+            {
+              "name": "mixamorig:LeftToe_End",
+              "parent": "mixamorig:LeftToeBase"
+            },
+            {
+              "name": "mixamorig:RightUpLeg",
+              "parent": "mixamorig:Hips"
+            },
+            {
+              "name": "mixamorig:RightLeg",
+              "parent": "mixamorig:RightUpLeg"
+            },
+            {
+              "name": "mixamorig:RightFoot",
+              "parent": "mixamorig:RightLeg"
+            },
+            {
+              "name": "mixamorig:RightToeBase",
+              "parent": "mixamorig:RightFoot"
+            },
+            {
+              "name": "mixamorig:RightToe_End",
+              "parent": "mixamorig:RightToeBase"
+            },
+            {
+              "name": "mixamorig:Spine",
+              "parent": "mixamorig:Hips"
+            },
+            {
+              "name": "mixamorig:Spine1",
+              "parent": "mixamorig:Spine"
+            },
+            {
+              "name": "mixamorig:Spine2",
+              "parent": "mixamorig:Spine1"
+            },
+            {
+              "name": "mixamorig:LeftShoulder",
+              "parent": "mixamorig:Spine2"
+            },
+            {
+              "name": "mixamorig:LeftArm",
+              "parent": "mixamorig:LeftShoulder"
+            },
+            {
+              "name": "mixamorig:LeftForeArm",
+              "parent": "mixamorig:LeftArm"
+            },
+            {
+              "name": "mixamorig:LeftHand",
+              "parent": "mixamorig:LeftForeArm"
+            },
+            {
+              "name": "mixamorig:Neck",
+              "parent": "mixamorig:Spine2"
+            },
+            {
+              "name": "mixamorig:Head",
+              "parent": "mixamorig:Neck"
+            },
+            {
+              "name": "mixamorig:HeadTop_End",
+              "parent": "mixamorig:Head"
+            },
+            {
+              "name": "mixamorig:RightShoulder",
+              "parent": "mixamorig:Spine2"
+            },
+            {
+              "name": "mixamorig:RightArm",
+              "parent": "mixamorig:RightShoulder"
+            },
+            {
+              "name": "mixamorig:RightForeArm",
+              "parent": "mixamorig:RightArm"
+            },
+            {
+              "name": "mixamorig:RightHand",
+              "parent": "mixamorig:RightForeArm"
+            }
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "name": "shield",
+          "frame_range": [
+            0.0,
+            30.0
+          ]
+        },
+        {
+          "name": "receive",
+          "frame_range": [
+            0.0,
+            21.0
+          ]
+        },
+        {
+          "name": "react_miss",
+          "frame_range": [
+            0.0,
+            54.0
+          ]
+        },
+        {
+          "name": "gk_smother",
+          "frame_range": [
+            0.0,
+            45.0
+          ]
+        },
+        {
+          "name": "gk_ready",
+          "frame_range": [
+            0.0,
+            36.0
+          ]
+        },
+        {
+          "name": "gk_high",
+          "frame_range": [
+            0.0,
+            39.0
+          ]
+        },
+        {
+          "name": "gk_dive_right",
+          "frame_range": [
+            0.0,
+            48.0
+          ]
+        },
+        {
+          "name": "gk_dive_left",
+          "frame_range": [
+            0.0,
+            48.0
+          ]
+        },
+        {
+          "name": "defend_shuffle",
+          "frame_range": [
+            0.0,
+            30.0
+          ]
+        }
+      ]
+    },
+    {
+      "path": "art/characters/Nico_Paz_ComfyUI_20261013/Nico_Paz.blend",
+      "inspection": "bpy.data.libraries.load; no scene execution or save",
+      "mesh_names": [
+        "Nico_Paz_Mesh"
+      ],
+      "armatures": [],
+      "actions": []
+    },
+    {
+      "path": "art/characters/Nico_Paz_Refined_v2_20261013/Nico_Paz_v2.blend",
+      "inspection": "bpy.data.libraries.load; no scene execution or save",
+      "mesh_names": [
+        "Nico_Paz_Body_Mesh",
+        "HairSweep_5"
+      ],
+      "armatures": [],
+      "actions": []
+    },
+    {
+      "path": "build/nico-paz/blender-session-autosave.blend",
+      "inspection": "bpy.data.libraries.load; no scene execution or save",
+      "mesh_names": [
+        "temp_mesh.ply.004",
+        "temp_mesh.ply.003",
+        "temp_mesh.ply.002",
+        "nico_pazmesh.004",
+        "Nico_Paz_Mesh",
+        "Nico_Paz_Body_Mesh.001",
+        "Nico_Paz_Body_Mesh",
+        "Icosphere",
+        "HairSweep_5.001",
+        "HairSweep_5"
+      ],
+      "armatures": [
+        {
+          "name": "Armature_NicoPaz",
+          "bones": [
+            {
+              "name": "mixamorig:Hips",
+              "parent": null
+            },
+            {
+              "name": "mixamorig:LeftUpLeg",
+              "parent": "mixamorig:Hips"
+            },
+            {
+              "name": "mixamorig:LeftLeg",
+              "parent": "mixamorig:LeftUpLeg"
+            },
+            {
+              "name": "mixamorig:LeftFoot",
+              "parent": "mixamorig:LeftLeg"
+            },
+            {
+              "name": "mixamorig:LeftToeBase",
+              "parent": "mixamorig:LeftFoot"
+            },
+            {
+              "name": "mixamorig:LeftToe_End",
+              "parent": "mixamorig:LeftToeBase"
+            },
+            {
+              "name": "mixamorig:RightUpLeg",
+              "parent": "mixamorig:Hips"
+            },
+            {
+              "name": "mixamorig:RightLeg",
+              "parent": "mixamorig:RightUpLeg"
+            },
+            {
+              "name": "mixamorig:RightFoot",
+              "parent": "mixamorig:RightLeg"
+            },
+            {
+              "name": "mixamorig:RightToeBase",
+              "parent": "mixamorig:RightFoot"
+            },
+            {
+              "name": "mixamorig:RightToe_End",
+              "parent": "mixamorig:RightToeBase"
+            },
+            {
+              "name": "mixamorig:Spine",
+              "parent": "mixamorig:Hips"
+            },
+            {
+              "name": "mixamorig:Spine1",
+              "parent": "mixamorig:Spine"
+            },
+            {
+              "name": "mixamorig:Spine2",
+              "parent": "mixamorig:Spine1"
+            },
+            {
+              "name": "mixamorig:LeftShoulder",
+              "parent": "mixamorig:Spine2"
+            },
+            {
+              "name": "mixamorig:LeftArm",
+              "parent": "mixamorig:LeftShoulder"
+            },
+            {
+              "name": "mixamorig:LeftForeArm",
+              "parent": "mixamorig:LeftArm"
+            },
+            {
+              "name": "mixamorig:LeftHand",
+              "parent": "mixamorig:LeftForeArm"
+            },
+            {
+              "name": "mixamorig:Neck",
+              "parent": "mixamorig:Spine2"
+            },
+            {
+              "name": "mixamorig:Head",
+              "parent": "mixamorig:Neck"
+            },
+            {
+              "name": "mixamorig:HeadTop_End",
+              "parent": "mixamorig:Head"
+            },
+            {
+              "name": "mixamorig:RightShoulder",
+              "parent": "mixamorig:Spine2"
+            },
+            {
+              "name": "mixamorig:RightArm",
+              "parent": "mixamorig:RightShoulder"
+            },
+            {
+              "name": "mixamorig:RightForeArm",
+              "parent": "mixamorig:RightArm"
+            },
+            {
+              "name": "mixamorig:RightHand",
+              "parent": "mixamorig:RightForeArm"
+            }
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "name": "turn_walk",
+          "frame_range": [
+            0.8000000715255737,
+            26.400001525878906
+          ]
+        },
+        {
+          "name": "turn_sprint",
+          "frame_range": [
+            0.8000000715255737,
+            24.799999237060547
+          ]
+        },
+        {
+          "name": "turn_spin",
+          "frame_range": [
+            0.8000000715255737,
+            31.19999885559082
+          ]
+        },
+        {
+          "name": "turn_left",
+          "frame_range": [
+            0.8000000715255737,
+            53.599998474121094
+          ]
+        },
+        {
+          "name": "tackle_stand",
+          "frame_range": [
+            0.8000000715255737,
+            66.4000015258789
+          ]
+        },
+        {
+          "name": "tackle_slide",
+          "frame_range": [
+            0.8000000715255737,
+            56.0
+          ]
+        },
+        {
+          "name": "tackle_lunge",
+          "frame_range": [
+            0.8000000715255737,
+            43.19999694824219
+          ]
+        },
+        {
+          "name": "sprint",
+          "frame_range": [
+            0.8000000715255737,
+            13.600000381469727
+          ]
+        },
+        {
+          "name": "skill_juggle",
+          "frame_range": [
+            0.8000000715255737,
+            32.79999923706055
+          ]
+        },
+        {
+          "name": "shot",
+          "frame_range": [
+            0.8000000715255737,
+            32.0
+          ]
+        },
+        {
+          "name": "penalty",
+          "frame_range": [
+            0.8000000715255737,
+            36.79999923706055
+          ]
+        },
+        {
+          "name": "pass",
+          "frame_range": [
+            0.8000000715255737,
+            39.20000076293945
+          ]
+        },
+        {
+          "name": "jog",
+          "frame_range": [
+            0.8000000715255737,
+            20.799999237060547
+          ]
+        },
+        {
+          "name": "idle",
+          "frame_range": [
+            0.8000000715255737,
+            189.60000610351562
+          ]
+        },
+        {
+          "name": "header",
+          "frame_range": [
+            0.8000000715255737,
+            46.39999771118164
+          ]
+        },
+        {
+          "name": "gk_pass",
+          "frame_range": [
+            0.8000000715255737,
+            76.0
+          ]
+        },
+        {
+          "name": "dribble",
+          "frame_range": [
+            0.8000000715255737,
+            42.400001525878906
+          ]
+        },
+        {
+          "name": "defend_stance",
+          "frame_range": [
+            0.8000000715255737,
+            87.20000457763672
+          ]
+        }
+      ]
+    },
+    {
+      "path": "build/nico-paz/Nico_Paz_previous_export.blend",
+      "inspection": "bpy.data.libraries.load; no scene execution or save",
+      "mesh_names": [
+        "Nico_Paz_Mesh"
+      ],
+      "armatures": [],
+      "actions": []
+    },
+    {
+      "path": "Mixar/soccer_match.blend",
+      "inspection": "bpy.data.libraries.load; no scene execution or save",
+      "mesh_names": [
+        "SoccerBall_Panels",
+        "Pitch_Grass",
+        "Pitch_Base",
+        "nico_pazmesh.004",
+        "Gawang_South_RightRoofStay",
+        "Gawang_South_RightRearSupport",
+        "Gawang_South_RightPost",
+        "Gawang_South_RightGroundRail",
+        "Gawang_South_RearTopRail",
+        "Gawang_South_RearGroundRail",
+        "Gawang_South_Net",
+        "Gawang_South_LeftRoofStay",
+        "Gawang_South_LeftRearSupport",
+        "Gawang_South_LeftPost",
+        "Gawang_South_LeftGroundRail",
+        "Gawang_South_Crossbar",
+        "Gawang_North_RightRoofStay",
+        "Gawang_North_RightRearSupport",
+        "Gawang_North_RightPost",
+        "Gawang_North_RightGroundRail",
+        "Gawang_North_RearTopRail",
+        "Gawang_North_RearGroundRail",
+        "Gawang_North_NetCage",
+        "Gawang_North_LeftRoofStay",
+        "Gawang_North_LeftRearSupport",
+        "Gawang_North_LeftPost",
+        "Gawang_North_LeftGroundRail",
+        "Gawang_North_Crossbar",
+        "Garis_Lapangan_SW_Flagpole_Mesh",
+        "Garis_Lapangan_SW_Flag_Mesh",
+        "Garis_Lapangan_SW_Corner_Arc_Mesh",
+        "Garis_Lapangan_South_Penalty_Mark_Mesh",
+        "Garis_Lapangan_South_Penalty_D_Mesh",
+        "Garis_Lapangan_South_Penalty_Area_Mesh",
+        "Garis_Lapangan_South_Goal_Area_Mesh",
+        "Garis_Lapangan_SE_Flagpole_Mesh",
+        "Garis_Lapangan_SE_Flag_Mesh",
+        "Garis_Lapangan_SE_Corner_Arc_Mesh",
+        "Garis_Lapangan_NW_Flagpole_Mesh",
+        "Garis_Lapangan_NW_Flag_Mesh",
+        "Garis_Lapangan_NW_Corner_Arc_Mesh",
+        "Garis_Lapangan_North_Penalty_Mark_Mesh",
+        "Garis_Lapangan_North_Penalty_D_Mesh",
+        "Garis_Lapangan_North_Penalty_Area_Mesh",
+        "Garis_Lapangan_North_Goal_Area_Mesh",
+        "Garis_Lapangan_NE_Flagpole_Mesh",
+        "Garis_Lapangan_NE_Flag_Mesh",
+        "Garis_Lapangan_NE_Corner_Arc_Mesh",
+        "Garis_Lapangan_Halfway_Mesh",
+        "Garis_Lapangan_Center_Spot_Mesh",
+        "Garis_Lapangan_Center_Circle_Mesh",
+        "Garis_Lapangan_Boundary_Mesh"
+      ],
+      "armatures": [
+        {
+          "name": "Armature_NicoPaz.001",
+          "bones": [
+            {
+              "name": "mixamorig:Hips",
+              "parent": null
+            },
+            {
+              "name": "mixamorig:LeftUpLeg",
+              "parent": "mixamorig:Hips"
+            },
+            {
+              "name": "mixamorig:LeftLeg",
+              "parent": "mixamorig:LeftUpLeg"
+            },
+            {
+              "name": "mixamorig:LeftFoot",
+              "parent": "mixamorig:LeftLeg"
+            },
+            {
+              "name": "mixamorig:LeftToeBase",
+              "parent": "mixamorig:LeftFoot"
+            },
+            {
+              "name": "mixamorig:LeftToe_End",
+              "parent": "mixamorig:LeftToeBase"
+            },
+            {
+              "name": "mixamorig:RightUpLeg",
+              "parent": "mixamorig:Hips"
+            },
+            {
+              "name": "mixamorig:RightLeg",
+              "parent": "mixamorig:RightUpLeg"
+            },
+            {
+              "name": "mixamorig:RightFoot",
+              "parent": "mixamorig:RightLeg"
+            },
+            {
+              "name": "mixamorig:RightToeBase",
+              "parent": "mixamorig:RightFoot"
+            },
+            {
+              "name": "mixamorig:RightToe_End",
+              "parent": "mixamorig:RightToeBase"
+            },
+            {
+              "name": "mixamorig:Spine",
+              "parent": "mixamorig:Hips"
+            },
+            {
+              "name": "mixamorig:Spine1",
+              "parent": "mixamorig:Spine"
+            },
+            {
+              "name": "mixamorig:Spine2",
+              "parent": "mixamorig:Spine1"
+            },
+            {
+              "name": "mixamorig:LeftShoulder",
+              "parent": "mixamorig:Spine2"
+            },
+            {
+              "name": "mixamorig:LeftArm",
+              "parent": "mixamorig:LeftShoulder"
+            },
+            {
+              "name": "mixamorig:LeftForeArm",
+              "parent": "mixamorig:LeftArm"
+            },
+            {
+              "name": "mixamorig:LeftHand",
+              "parent": "mixamorig:LeftForeArm"
+            },
+            {
+              "name": "mixamorig:Neck",
+              "parent": "mixamorig:Spine2"
+            },
+            {
+              "name": "mixamorig:Head",
+              "parent": "mixamorig:Neck"
+            },
+            {
+              "name": "mixamorig:HeadTop_End",
+              "parent": "mixamorig:Head"
+            },
+            {
+              "name": "mixamorig:RightShoulder",
+              "parent": "mixamorig:Spine2"
+            },
+            {
+              "name": "mixamorig:RightArm",
+              "parent": "mixamorig:RightShoulder"
+            },
+            {
+              "name": "mixamorig:RightForeArm",
+              "parent": "mixamorig:RightArm"
+            },
+            {
+              "name": "mixamorig:RightHand",
+              "parent": "mixamorig:RightForeArm"
+            }
+          ]
+        },
+        {
+          "name": "Armature_NicoPaz",
+          "bones": [
+            {
+              "name": "mixamorig:Hips",
+              "parent": null
+            },
+            {
+              "name": "mixamorig:LeftUpLeg",
+              "parent": "mixamorig:Hips"
+            },
+            {
+              "name": "mixamorig:LeftLeg",
+              "parent": "mixamorig:LeftUpLeg"
+            },
+            {
+              "name": "mixamorig:LeftFoot",
+              "parent": "mixamorig:LeftLeg"
+            },
+            {
+              "name": "mixamorig:LeftToeBase",
+              "parent": "mixamorig:LeftFoot"
+            },
+            {
+              "name": "mixamorig:LeftToe_End",
+              "parent": "mixamorig:LeftToeBase"
+            },
+            {
+              "name": "mixamorig:RightUpLeg",
+              "parent": "mixamorig:Hips"
+            },
+            {
+              "name": "mixamorig:RightLeg",
+              "parent": "mixamorig:RightUpLeg"
+            },
+            {
+              "name": "mixamorig:RightFoot",
+              "parent": "mixamorig:RightLeg"
+            },
+            {
+              "name": "mixamorig:RightToeBase",
+              "parent": "mixamorig:RightFoot"
+            },
+            {
+              "name": "mixamorig:RightToe_End",
+              "parent": "mixamorig:RightToeBase"
+            },
+            {
+              "name": "mixamorig:Spine",
+              "parent": "mixamorig:Hips"
+            },
+            {
+              "name": "mixamorig:Spine1",
+              "parent": "mixamorig:Spine"
+            },
+            {
+              "name": "mixamorig:Spine2",
+              "parent": "mixamorig:Spine1"
+            },
+            {
+              "name": "mixamorig:LeftShoulder",
+              "parent": "mixamorig:Spine2"
+            },
+            {
+              "name": "mixamorig:LeftArm",
+              "parent": "mixamorig:LeftShoulder"
+            },
+            {
+              "name": "mixamorig:LeftForeArm",
+              "parent": "mixamorig:LeftArm"
+            },
+            {
+              "name": "mixamorig:LeftHand",
+              "parent": "mixamorig:LeftForeArm"
+            },
+            {
+              "name": "mixamorig:Neck",
+              "parent": "mixamorig:Spine2"
+            },
+            {
+              "name": "mixamorig:Head",
+              "parent": "mixamorig:Neck"
+            },
+            {
+              "name": "mixamorig:HeadTop_End",
+              "parent": "mixamorig:Head"
+            },
+            {
+              "name": "mixamorig:RightShoulder",
+              "parent": "mixamorig:Spine2"
+            },
+            {
+              "name": "mixamorig:RightArm",
+              "parent": "mixamorig:RightShoulder"
+            },
+            {
+              "name": "mixamorig:RightForeArm",
+              "parent": "mixamorig:RightArm"
+            },
+            {
+              "name": "mixamorig:RightHand",
+              "parent": "mixamorig:RightForeArm"
+            }
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "name": "turn_walk.001",
+          "frame_range": [
+            0.8000000715255737,
+            26.400001525878906
+          ]
+        },
+        {
+          "name": "turn_sprint.001",
+          "frame_range": [
+            0.8000000715255737,
+            24.799999237060547
+          ]
+        },
+        {
+          "name": "turn_spin.001",
+          "frame_range": [
+            0.8000000715255737,
+            31.19999885559082
+          ]
+        },
+        {
+          "name": "turn_left.001",
+          "frame_range": [
+            0.8000000715255737,
+            53.599998474121094
+          ]
+        },
+        {
+          "name": "tackle_stand.001",
+          "frame_range": [
+            0.8000000715255737,
+            66.4000015258789
+          ]
+        },
+        {
+          "name": "tackle_slide.001",
+          "frame_range": [
+            0.8000000715255737,
+            56.0
+          ]
+        },
+        {
+          "name": "tackle_lunge.001",
+          "frame_range": [
+            0.8000000715255737,
+            43.19999694824219
+          ]
+        },
+        {
+          "name": "sprint.001",
+          "frame_range": [
+            0.8000000715255737,
+            13.600000381469727
+          ]
+        },
+        {
+          "name": "SoccerBall_KickoffPassCrossShot",
+          "frame_range": [
+            1.0,
+            480.0
+          ]
+        },
+        {
+          "name": "Soccer_shot",
+          "frame_range": [
+            0.8000000715255737,
+            32.0
+          ]
+        },
+        {
+          "name": "Soccer_pass",
+          "frame_range": [
+            0.8000000715255737,
+            39.20000076293945
+          ]
+        },
+        {
+          "name": "Soccer_jog",
+          "frame_range": [
+            0.8000000715255737,
+            20.799999237060547
+          ]
+        },
+        {
+          "name": "Soccer_idle",
+          "frame_range": [
+            0.8000000715255737,
+            189.60000610351562
+          ]
+        },
+        {
+          "name": "Soccer_defend_stance",
+          "frame_range": [
+            0.8000000715255737,
+            87.20000457763672
+          ]
+        },
+        {
+          "name": "skill_juggle.001",
+          "frame_range": [
+            0.8000000715255737,
+            32.79999923706055
+          ]
+        },
+        {
+          "name": "penalty.001",
+          "frame_range": [
+            0.8000000715255737,
+            36.79999923706055
+          ]
+        },
+        {
+          "name": "MatchClip_shot",
+          "frame_range": [
+            0.8000000715255737,
+            32.0
+          ]
+        },
+        {
+          "name": "MatchClip_pass",
+          "frame_range": [
+            0.8000000715255737,
+            39.20000076293945
+          ]
+        },
+        {
+          "name": "MatchClip_jog",
+          "frame_range": [
+            0.8000000715255737,
+            20.799999237060547
+          ]
+        },
+        {
+          "name": "MatchClip_idle",
+          "frame_range": [
+            0.8000000715255737,
+            189.60000610351562
+          ]
+        },
+        {
+          "name": "Home_11_MatchMovement.001",
+          "frame_range": [
+            1.0,
+            480.0
+          ]
+        },
+        {
+          "name": "Home_10_MatchMovement",
+          "frame_range": [
+            1.0,
+            480.0
+          ]
+        },
+        {
+          "name": "Home_09_MatchMovement",
+          "frame_range": [
+            1.0,
+            480.0
+          ]
+        },
+        {
+          "name": "Home_08_MatchMovement",
+          "frame_range": [
+            1.0,
+            480.0
+          ]
+        },
+        {
+          "name": "Home_07_MatchMovement",
+          "frame_range": [
+            1.0,
+            480.0
+          ]
+        },
+        {
+          "name": "Home_06_MatchMovement",
+          "frame_range": [
+            1.0,
+            480.0
+          ]
+        },
+        {
+          "name": "Home_05_MatchMovement",
+          "frame_range": [
+            1.0,
+            480.0
+          ]
+        },
+        {
+          "name": "Home_04_MatchMovement",
+          "frame_range": [
+            1.0,
+            480.0
+          ]
+        },
+        {
+          "name": "Home_03_MatchMovement",
+          "frame_range": [
+            1.0,
+            480.0
+          ]
+        },
+        {
+          "name": "Home_02_MatchMovement",
+          "frame_range": [
+            1.0,
+            480.0
+          ]
+        },
+        {
+          "name": "Home_01_MatchMovement",
+          "frame_range": [
+            1.0,
+            480.0
+          ]
+        },
+        {
+          "name": "header.001",
+          "frame_range": [
+            0.8000000715255737,
+            46.39999771118164
+          ]
+        },
+        {
+          "name": "gk_pass.001",
+          "frame_range": [
+            0.8000000715255737,
+            76.0
+          ]
+        },
+        {
+          "name": "dribble.001",
+          "frame_range": [
+            0.8000000715255737,
+            42.400001525878906
+          ]
+        },
+        {
+          "name": "defend_stance.001",
+          "frame_range": [
+            0.8000000715255737,
+            87.20000457763672
+          ]
+        },
+        {
+          "name": "Away_11_MatchMovement",
+          "frame_range": [
+            1.0,
+            480.0
+          ]
+        },
+        {
+          "name": "Away_10_MatchMovement",
+          "frame_range": [
+            1.0,
+            480.0
+          ]
+        },
+        {
+          "name": "Away_09_MatchMovement",
+          "frame_range": [
+            1.0,
+            480.0
+          ]
+        },
+        {
+          "name": "Away_08_MatchMovement",
+          "frame_range": [
+            1.0,
+            480.0
+          ]
+        },
+        {
+          "name": "Away_07_MatchMovement",
+          "frame_range": [
+            1.0,
+            480.0
+          ]
+        },
+        {
+          "name": "Away_06_MatchMovement",
+          "frame_range": [
+            1.0,
+            480.0
+          ]
+        },
+        {
+          "name": "Away_05_MatchMovement",
+          "frame_range": [
+            1.0,
+            480.0
+          ]
+        },
+        {
+          "name": "Away_04_MatchMovement",
+          "frame_range": [
+            1.0,
+            480.0
+          ]
+        },
+        {
+          "name": "Away_03_MatchMovement",
+          "frame_range": [
+            1.0,
+            480.0
+          ]
+        },
+        {
+          "name": "Away_02_MatchMovement",
+          "frame_range": [
+            1.0,
+            480.0
+          ]
+        },
+        {
+          "name": "Away_01_MatchMovement",
+          "frame_range": [
+            1.0,
+            480.0
+          ]
+        }
+      ]
+    },
+    {
+      "path": "Mixar/soccer_match_optimized.blend",
+      "inspection": "bpy.data.libraries.load; no scene execution or save",
+      "mesh_names": [
+        "SoccerBall_Panels",
+        "Pitch_Grass",
+        "Pitch_Base",
+        "nico_pazmesh.004",
+        "Gawang_South_RightRoofStay",
+        "Gawang_South_RightRearSupport",
+        "Gawang_South_RightPost",
+        "Gawang_South_RightGroundRail",
+        "Gawang_South_RearTopRail",
+        "Gawang_South_RearGroundRail",
+        "Gawang_South_Net.002",
+        "Gawang_South_Net",
+        "Gawang_South_LeftRoofStay",
+        "Gawang_South_LeftRearSupport",
+        "Gawang_South_LeftPost",
+        "Gawang_South_LeftGroundRail",
+        "Gawang_South_Crossbar",
+        "Gawang_North_RightRoofStay",
+        "Gawang_North_RightRearSupport",
+        "Gawang_North_RightPost",
+        "Gawang_North_RightGroundRail",
+        "Gawang_North_RearTopRail",
+        "Gawang_North_RearGroundRail",
+        "Gawang_North_NetCage.004",
+        "Gawang_North_NetCage",
+        "Gawang_North_LeftRoofStay",
+        "Gawang_North_LeftRearSupport",
+        "Gawang_North_LeftPost",
+        "Gawang_North_LeftGroundRail",
+        "Gawang_North_Crossbar",
+        "Garis_Lapangan_SW_Flagpole_Mesh",
+        "Garis_Lapangan_SW_Flag_Mesh",
+        "Garis_Lapangan_SW_Corner_Arc_Mesh",
+        "Garis_Lapangan_South_Penalty_Mark_Mesh",
+        "Garis_Lapangan_South_Penalty_D_Mesh",
+        "Garis_Lapangan_South_Penalty_Area_Mesh",
+        "Garis_Lapangan_South_Goal_Area_Mesh",
+        "Garis_Lapangan_SE_Flagpole_Mesh",
+        "Garis_Lapangan_SE_Flag_Mesh",
+        "Garis_Lapangan_SE_Corner_Arc_Mesh",
+        "Garis_Lapangan_NW_Flagpole_Mesh",
+        "Garis_Lapangan_NW_Flag_Mesh",
+        "Garis_Lapangan_NW_Corner_Arc_Mesh",
+        "Garis_Lapangan_North_Penalty_Mark_Mesh",
+        "Garis_Lapangan_North_Penalty_D_Mesh",
+        "Garis_Lapangan_North_Penalty_Area_Mesh",
+        "Garis_Lapangan_North_Goal_Area_Mesh",
+        "Garis_Lapangan_NE_Flagpole_Mesh",
+        "Garis_Lapangan_NE_Flag_Mesh",
+        "Garis_Lapangan_NE_Corner_Arc_Mesh",
+        "Garis_Lapangan_Halfway_Mesh",
+        "Garis_Lapangan_Center_Spot_Mesh",
+        "Garis_Lapangan_Center_Circle_Mesh",
+        "Garis_Lapangan_Boundary_Mesh"
+      ],
+      "armatures": [
+        {
+          "name": "Armature_NicoPaz.001",
+          "bones": [
+            {
+              "name": "mixamorig:Hips",
+              "parent": null
+            },
+            {
+              "name": "mixamorig:LeftUpLeg",
+              "parent": "mixamorig:Hips"
+            },
+            {
+              "name": "mixamorig:LeftLeg",
+              "parent": "mixamorig:LeftUpLeg"
+            },
+            {
+              "name": "mixamorig:LeftFoot",
+              "parent": "mixamorig:LeftLeg"
+            },
+            {
+              "name": "mixamorig:LeftToeBase",
+              "parent": "mixamorig:LeftFoot"
+            },
+            {
+              "name": "mixamorig:LeftToe_End",
+              "parent": "mixamorig:LeftToeBase"
+            },
+            {
+              "name": "mixamorig:RightUpLeg",
+              "parent": "mixamorig:Hips"
+            },
+            {
+              "name": "mixamorig:RightLeg",
+              "parent": "mixamorig:RightUpLeg"
+            },
+            {
+              "name": "mixamorig:RightFoot",
+              "parent": "mixamorig:RightLeg"
+            },
+            {
+              "name": "mixamorig:RightToeBase",
+              "parent": "mixamorig:RightFoot"
+            },
+            {
+              "name": "mixamorig:RightToe_End",
+              "parent": "mixamorig:RightToeBase"
+            },
+            {
+              "name": "mixamorig:Spine",
+              "parent": "mixamorig:Hips"
+            },
+            {
+              "name": "mixamorig:Spine1",
+              "parent": "mixamorig:Spine"
+            },
+            {
+              "name": "mixamorig:Spine2",
+              "parent": "mixamorig:Spine1"
+            },
+            {
+              "name": "mixamorig:LeftShoulder",
+              "parent": "mixamorig:Spine2"
+            },
+            {
+              "name": "mixamorig:LeftArm",
+              "parent": "mixamorig:LeftShoulder"
+            },
+            {
+              "name": "mixamorig:LeftForeArm",
+              "parent": "mixamorig:LeftArm"
+            },
+            {
+              "name": "mixamorig:LeftHand",
+              "parent": "mixamorig:LeftForeArm"
+            },
+            {
+              "name": "mixamorig:Neck",
+              "parent": "mixamorig:Spine2"
+            },
+            {
+              "name": "mixamorig:Head",
+              "parent": "mixamorig:Neck"
+            },
+            {
+              "name": "mixamorig:HeadTop_End",
+              "parent": "mixamorig:Head"
+            },
+            {
+              "name": "mixamorig:RightShoulder",
+              "parent": "mixamorig:Spine2"
+            },
+            {
+              "name": "mixamorig:RightArm",
+              "parent": "mixamorig:RightShoulder"
+            },
+            {
+              "name": "mixamorig:RightForeArm",
+              "parent": "mixamorig:RightArm"
+            },
+            {
+              "name": "mixamorig:RightHand",
+              "parent": "mixamorig:RightForeArm"
+            }
+          ]
+        },
+        {
+          "name": "Armature_NicoPaz",
+          "bones": [
+            {
+              "name": "mixamorig:Hips",
+              "parent": null
+            },
+            {
+              "name": "mixamorig:LeftUpLeg",
+              "parent": "mixamorig:Hips"
+            },
+            {
+              "name": "mixamorig:LeftLeg",
+              "parent": "mixamorig:LeftUpLeg"
+            },
+            {
+              "name": "mixamorig:LeftFoot",
+              "parent": "mixamorig:LeftLeg"
+            },
+            {
+              "name": "mixamorig:LeftToeBase",
+              "parent": "mixamorig:LeftFoot"
+            },
+            {
+              "name": "mixamorig:LeftToe_End",
+              "parent": "mixamorig:LeftToeBase"
+            },
+            {
+              "name": "mixamorig:RightUpLeg",
+              "parent": "mixamorig:Hips"
+            },
+            {
+              "name": "mixamorig:RightLeg",
+              "parent": "mixamorig:RightUpLeg"
+            },
+            {
+              "name": "mixamorig:RightFoot",
+              "parent": "mixamorig:RightLeg"
+            },
+            {
+              "name": "mixamorig:RightToeBase",
+              "parent": "mixamorig:RightFoot"
+            },
+            {
+              "name": "mixamorig:RightToe_End",
+              "parent": "mixamorig:RightToeBase"
+            },
+            {
+              "name": "mixamorig:Spine",
+              "parent": "mixamorig:Hips"
+            },
+            {
+              "name": "mixamorig:Spine1",
+              "parent": "mixamorig:Spine"
+            },
+            {
+              "name": "mixamorig:Spine2",
+              "parent": "mixamorig:Spine1"
+            },
+            {
+              "name": "mixamorig:LeftShoulder",
+              "parent": "mixamorig:Spine2"
+            },
+            {
+              "name": "mixamorig:LeftArm",
+              "parent": "mixamorig:LeftShoulder"
+            },
+            {
+              "name": "mixamorig:LeftForeArm",
+              "parent": "mixamorig:LeftArm"
+            },
+            {
+              "name": "mixamorig:LeftHand",
+              "parent": "mixamorig:LeftForeArm"
+            },
+            {
+              "name": "mixamorig:Neck",
+              "parent": "mixamorig:Spine2"
+            },
+            {
+              "name": "mixamorig:Head",
+              "parent": "mixamorig:Neck"
+            },
+            {
+              "name": "mixamorig:HeadTop_End",
+              "parent": "mixamorig:Head"
+            },
+            {
+              "name": "mixamorig:RightShoulder",
+              "parent": "mixamorig:Spine2"
+            },
+            {
+              "name": "mixamorig:RightArm",
+              "parent": "mixamorig:RightShoulder"
+            },
+            {
+              "name": "mixamorig:RightForeArm",
+              "parent": "mixamorig:RightArm"
+            },
+            {
+              "name": "mixamorig:RightHand",
+              "parent": "mixamorig:RightForeArm"
+            }
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "name": "turn_walk.001",
+          "frame_range": [
+            0.8000000715255737,
+            26.400001525878906
+          ]
+        },
+        {
+          "name": "turn_sprint.001",
+          "frame_range": [
+            0.8000000715255737,
+            24.799999237060547
+          ]
+        },
+        {
+          "name": "turn_spin.001",
+          "frame_range": [
+            0.8000000715255737,
+            31.19999885559082
+          ]
+        },
+        {
+          "name": "turn_left.001",
+          "frame_range": [
+            0.8000000715255737,
+            53.599998474121094
+          ]
+        },
+        {
+          "name": "tackle_stand.001",
+          "frame_range": [
+            0.8000000715255737,
+            66.4000015258789
+          ]
+        },
+        {
+          "name": "tackle_slide.001",
+          "frame_range": [
+            0.8000000715255737,
+            56.0
+          ]
+        },
+        {
+          "name": "tackle_lunge.001",
+          "frame_range": [
+            0.8000000715255737,
+            43.19999694824219
+          ]
+        },
+        {
+          "name": "sprint.001",
+          "frame_range": [
+            0.8000000715255737,
+            13.600000381469727
+          ]
+        },
+        {
+          "name": "SoccerBall_KickoffPassCrossShot",
+          "frame_range": [
+            1.0,
+            480.0
+          ]
+        },
+        {
+          "name": "Soccer_shot",
+          "frame_range": [
+            0.8000000715255737,
+            32.0
+          ]
+        },
+        {
+          "name": "Soccer_pass",
+          "frame_range": [
+            0.8000000715255737,
+            39.20000076293945
+          ]
+        },
+        {
+          "name": "Soccer_jog",
+          "frame_range": [
+            0.8000000715255737,
+            20.799999237060547
+          ]
+        },
+        {
+          "name": "Soccer_idle",
+          "frame_range": [
+            0.8000000715255737,
+            189.60000610351562
+          ]
+        },
+        {
+          "name": "Soccer_defend_stance",
+          "frame_range": [
+            0.8000000715255737,
+            87.20000457763672
+          ]
+        },
+        {
+          "name": "skill_juggle.001",
+          "frame_range": [
+            0.8000000715255737,
+            32.79999923706055
+          ]
+        },
+        {
+          "name": "penalty.001",
+          "frame_range": [
+            0.8000000715255737,
+            36.79999923706055
+          ]
+        },
+        {
+          "name": "MatchClip_shot",
+          "frame_range": [
+            0.8000000715255737,
+            32.0
+          ]
+        },
+        {
+          "name": "MatchClip_pass",
+          "frame_range": [
+            0.8000000715255737,
+            39.20000076293945
+          ]
+        },
+        {
+          "name": "MatchClip_jog",
+          "frame_range": [
+            0.8000000715255737,
+            20.799999237060547
+          ]
+        },
+        {
+          "name": "MatchClip_idle",
+          "frame_range": [
+            0.8000000715255737,
+            189.60000610351562
+          ]
+        },
+        {
+          "name": "Home_11_MatchMovement.001",
+          "frame_range": [
+            1.0,
+            480.0
+          ]
+        },
+        {
+          "name": "Home_10_MatchMovement",
+          "frame_range": [
+            1.0,
+            480.0
+          ]
+        },
+        {
+          "name": "Home_09_MatchMovement",
+          "frame_range": [
+            1.0,
+            480.0
+          ]
+        },
+        {
+          "name": "Home_08_MatchMovement",
+          "frame_range": [
+            1.0,
+            480.0
+          ]
+        },
+        {
+          "name": "Home_07_MatchMovement",
+          "frame_range": [
+            1.0,
+            480.0
+          ]
+        },
+        {
+          "name": "Home_06_MatchMovement",
+          "frame_range": [
+            1.0,
+            480.0
+          ]
+        },
+        {
+          "name": "Home_05_MatchMovement",
+          "frame_range": [
+            1.0,
+            480.0
+          ]
+        },
+        {
+          "name": "Home_04_MatchMovement",
+          "frame_range": [
+            1.0,
+            480.0
+          ]
+        },
+        {
+          "name": "Home_03_MatchMovement",
+          "frame_range": [
+            1.0,
+            480.0
+          ]
+        },
+        {
+          "name": "Home_02_MatchMovement",
+          "frame_range": [
+            1.0,
+            480.0
+          ]
+        },
+        {
+          "name": "Home_01_MatchMovement",
+          "frame_range": [
+            1.0,
+            480.0
+          ]
+        },
+        {
+          "name": "header.001",
+          "frame_range": [
+            0.8000000715255737,
+            46.39999771118164
+          ]
+        },
+        {
+          "name": "gk_pass.001",
+          "frame_range": [
+            0.8000000715255737,
+            76.0
+          ]
+        },
+        {
+          "name": "dribble.001",
+          "frame_range": [
+            0.8000000715255737,
+            42.400001525878906
+          ]
+        },
+        {
+          "name": "defend_stance.001",
+          "frame_range": [
+            0.8000000715255737,
+            87.20000457763672
+          ]
+        },
+        {
+          "name": "Away_11_MatchMovement",
+          "frame_range": [
+            1.0,
+            480.0
+          ]
+        },
+        {
+          "name": "Away_10_MatchMovement",
+          "frame_range": [
+            1.0,
+            480.0
+          ]
+        },
+        {
+          "name": "Away_09_MatchMovement",
+          "frame_range": [
+            1.0,
+            480.0
+          ]
+        },
+        {
+          "name": "Away_08_MatchMovement",
+          "frame_range": [
+            1.0,
+            480.0
+          ]
+        },
+        {
+          "name": "Away_07_MatchMovement",
+          "frame_range": [
+            1.0,
+            480.0
+          ]
+        },
+        {
+          "name": "Away_06_MatchMovement",
+          "frame_range": [
+            1.0,
+            480.0
+          ]
+        },
+        {
+          "name": "Away_05_MatchMovement",
+          "frame_range": [
+            1.0,
+            480.0
+          ]
+        },
+        {
+          "name": "Away_04_MatchMovement",
+          "frame_range": [
+            1.0,
+            480.0
+          ]
+        },
+        {
+          "name": "Away_03_MatchMovement",
+          "frame_range": [
+            1.0,
+            480.0
+          ]
+        },
+        {
+          "name": "Away_02_MatchMovement",
+          "frame_range": [
+            1.0,
+            480.0
+          ]
+        },
+        {
+          "name": "Away_01_MatchMovement",
+          "frame_range": [
+            1.0,
+            480.0
+          ]
+        }
+      ]
+    }
+  ]
+}

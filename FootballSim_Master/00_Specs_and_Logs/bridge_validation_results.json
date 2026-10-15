@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "validated_at": "2026-10-15T16:07:28.309562+07:00",
+  "json_parsing": "PASS",
+  "source_references_verified": 71,
+  "table_definitions_verified": 25,
+  "asset_inspections_verified": 36,
+  "model_paths_verified": 90,
+  "external_model_paths_verified": 5,
+  "source_and_asset_integrity": "PASS",
+  "toolchain_build_and_run": "PASS",
+  "scope": "Documentation/paths/integrity and C++ smoke build; no Android playback or ComfyUI inference test"
+}

@@ -1,0 +1,104 @@
+{
+  "stage": "2.2",
+  "status": "SUCCESS",
+  "completed_at": "2026-10-15T18:14:59.9470667+07:00",
+  "engine": "Unreal Engine 5.8.3",
+  "project": "D:\\Hadi\\proyek\\football-manager\\FootballSim_Master\\05_UE5_MatchViewer_3D\\FootballReplayViewer.uproject",
+  "launcher": "D:\\Hadi\\proyek\\football-manager\\FootballSim_Master\\05_UE5_MatchViewer_3D\\RunViewer.cmd",
+  "scope": "Offline FSIM replay viewer: pitch, 22 placeholder players, ball, score, controls, half-speed playback",
+  "plugin": "D:\\Hadi\\proyek\\football-manager\\FootballSim_Master\\05_UE5_MatchViewer_3D\\Plugins\\FootballMatchBridge",
+  "reader_header": "D:\\Hadi\\proyek\\football-manager\\FootballSim_Master\\05_UE5_MatchViewer_3D\\Plugins\\FootballMatchBridge\\Source\\FootballMatchBridge\\Public\\FSimReplay.h",
+  "reader_source": "D:\\Hadi\\proyek\\football-manager\\FootballSim_Master\\05_UE5_MatchViewer_3D\\Plugins\\FootballMatchBridge\\Source\\FootballMatchBridge\\Private\\FSimReplay.cpp",
+  "build": {
+    "target": "FootballReplayViewerEditor Win64 Development",
+    "result": "Succeeded",
+    "game_module": "D:\\Hadi\\proyek\\football-manager\\FootballSim_Master\\05_UE5_MatchViewer_3D\\Binaries\\Win64\\UnrealEditor-FootballReplayViewer.dll",
+    "plugin_module": "D:\\Hadi\\proyek\\football-manager\\FootballSim_Master\\05_UE5_MatchViewer_3D\\Plugins\\FootballMatchBridge\\Binaries\\Win64\\UnrealEditor-FootballMatchBridge.dll",
+    "log": "D:\\Hadi\\proyek\\football-manager\\FootballSim_Master\\05_UE5_MatchViewer_3D\\Saved\\Stage2_2_UBT.log",
+    "prerequisite_installed": "Microsoft.Net.Component.4.8.SDK via existing Visual Studio Build Tools 2022 installer"
+  },
+  "automation": {
+    "succeeded": 2,
+    "failed": 0,
+    "tests": [
+      {
+        "name": "FootballMatchBridge.Playback.PauseRateSeekAndRestart",
+        "result": "Success"
+      },
+      {
+        "name": "FootballMatchBridge.Reader.ValidAndCorruptFiles",
+        "result": "Success"
+      }
+    ],
+    "report": "D:\\Hadi\\proyek\\football-manager\\FootballSim_Master\\05_UE5_MatchViewer_3D\\Saved\\Automation\\index.json"
+  },
+  "desktop_verification": {
+    "status": "PASS",
+    "resumed_after_user_escape": true,
+    "controls": [
+      {
+        "name": "Putar / Jeda",
+        "result": "PASS",
+        "evidence": "Click starts playback; pause freezes clip at 2.7 seconds and match time 03:33 across successive observations."
+      },
+      {
+        "name": "Ulang / R",
+        "result": "PASS",
+        "evidence": "Button and keyboard R reset clip to start and play; score returns to 0-0 in goal clip."
+      },
+      {
+        "name": "Speed toggle",
+        "result": "PASS",
+        "evidence": "Button changes 0.5x to 1.0x and back; runtime logs confirm both rates. Native automation validates time scaling."
+      },
+      {
+        "name": "Seek slider",
+        "result": "PASS",
+        "evidence": "Drag while paused changes clip position to 7.5 seconds and updates player positions and match time 04:02."
+      },
+      {
+        "name": "Space shortcut",
+        "result": "PASS",
+        "evidence": "Space resumes playback and pauses again."
+      },
+      {
+        "name": "Automatic end / goal",
+        "result": "PASS",
+        "evidence": "Playback reaches 15.0 seconds, changes button to Putar, score 1-0, time 04:47, GOL banner."
+      },
+      {
+        "name": "Akhir laga",
+        "result": "PASS",
+        "evidence": "Loads second clip at 88:30, score 26-15. Seek to end shows 90:00, SELESAI, score 27-15."
+      },
+      {
+        "name": "Klip gol",
+        "result": "PASS",
+        "evidence": "Reloads first clip at 03:17, score 0-0, clip start paused."
+      }
+    ],
+    "final_state": "Viewer open, goal clip paused around 5.6 seconds, playback rate 0.5x",
+    "runtime_log": "D:\\Hadi\\proyek\\football-manager\\FootballSim_Master\\05_UE5_MatchViewer_3D\\Saved\\Stage2_2_Viewer.log"
+  },
+  "replay": {
+    "format": "FSIM v1",
+    "samples": [
+      "Content/Replays/first_goal_last15s.fsim",
+      "Content/Replays/fulltime_last15s.fsim"
+    ],
+    "frames_per_clip": 301,
+    "presentation_seconds_per_clip": 15,
+    "half_speed_wall_seconds": 30,
+    "native_to_unreal": "metres (x,y-up,z) -> centimetres (X,Y,Z-up) = 100*(x,z,y)"
+  },
+  "limitations": [
+    "Players use basic shapes; final character meshes, skeletal animation and production stadium are not included.",
+    "Current camera is distant and field markings have low contrast; visual polish remains.",
+    "Sample clips contain only the last 15 presentation seconds from the stage 2.1 replay ring buffer, not a complete 15-minute highlight.",
+    "Final sample score 27-15 reflects existing prototype simulation data; AI realism has not been tuned in this viewer task.",
+    "Live C-API DLL integration, Android packaging and a standalone Shipping build are not included."
+  ],
+  "errors": [],
+  "screenshot": "D:\\Hadi\\proyek\\football-manager\\FootballSim_Master\\00_Specs_and_Logs\\stage2_2_viewer.png",
+  "screenshot_note": "Saved during the initial successful runtime inspection before resumed control testing."
+}

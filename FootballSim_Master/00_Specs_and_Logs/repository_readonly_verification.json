@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "source_files_checked": 117,
+  "asset_files_checked": 36,
+  "changed_sources": [],
+  "changed_assets": [],
+  "method": "SHA-256 before and after; does not claim to monitor every file in repository",
+  "audit_writes_to_old_repository": false,
+  "old_backend_imported_or_executed": false,
+  "sqlite_database_opened": false,
+  "blender_method": "--background --factory-startup --disable-autoexec; load armature/action datablocks only; never save"
+}

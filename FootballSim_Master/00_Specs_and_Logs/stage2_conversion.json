@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "output": "D:\\Hadi\\proyek\\football-manager\\FootballSim_Master\\01_SimulationCore_CPP\\replay_samples\\converted_match_input.json",
+  "clubs": 2,
+  "roster_players": 36,
+  "starting_players": 22,
+  "warnings": [],
+  "source_read": {
+    "source_database": "D:\\Hadi\\proyek\\manajer-sepak-bola\\backend\\football_manager.db",
+    "source_files": {
+      "": {
+        "bytes": 151785472,
+        "mtime_ns": 1792052808697217300,
+        "sha256": "fa6271a2d12899c98af561839850e697855db076593bb3299ec64aba0e0203f5"
+      }
+    },
+    "source_repo_writes": false,
+    "sqlite_open_mode": "mode=ro and query_only on private DB/WAL copy",
+    "source_unchanged": true
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "validated_at": "2026-10-15T15:47:46.278802+07:00",
+  "json_parse": "PASS",
+  "exact_requested_constants": "PASS",
+  "presentation_value_types": "PASS",
+  "directory_tree": "PASS",
+  "subdirectories_verified": 19,
+  "directories_including_root": 20,
+  "schema_sha256": "25943251903ee22ee8784c1a0999fe9107c4bbd9a0bfb0e29071c210f7ccde93",
+  "directories": [
+    "00_Specs_and_Logs",
+    "01_SimulationCore_CPP",
+    "01_SimulationCore_CPP/include",
+    "01_SimulationCore_CPP/src",
+    "01_SimulationCore_CPP/replay_samples",
+    "02_ComfyUI_AssetFactory",
+    "02_ComfyUI_AssetFactory/workflows_api",
+    "02_ComfyUI_AssetFactory/input_refs",
+    "02_ComfyUI_AssetFactory/scripts",
+    "03_Blender_AutoRig_Mocap",
+    "04_Exported_GameAssets",
+    "04_Exported_GameAssets/characters_lod",
+    "04_Exported_GameAssets/kits_textures",
+    "04_Exported_GameAssets/animations_locomotion",
+    "04_Exported_GameAssets/animations_onball",
+    "04_Exported_GameAssets/animations_goalkeeper",
+    "04_Exported_GameAssets/animations_setpieces",
+    "05_UE5_MatchViewer_3D",
+    "06_Backend_and_ManagementUI"
+  ]
+}

@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.20)
+project(FootballSimToolchainCheck LANGUAGES CXX)
+add_executable(toolchain_check toolchain_check.cpp)
+set_target_properties(toolchain_check PROPERTIES CXX_STANDARD 20 CXX_STANDARD_REQUIRED YES CXX_EXTENSIONS NO)
+if(MSVC)
+    target_compile_options(toolchain_check PRIVATE /Zc:__cplusplus /W4 /permissive-)
+endif()

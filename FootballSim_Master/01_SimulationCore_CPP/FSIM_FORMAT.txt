@@ -1,0 +1,79 @@
+FSIM binary replay v1 - Tahap 2.1
+
+Tujuan: kontrak file yang dapat diimplementasikan oleh reader UE/Android nanti.
+Belum ada integrasi UE5.8 atau dukungan format ini dalam viewer lama.
+Semua integer LITTLE-ENDIAN. Koordinat/kecepatan IEEE754 binary32 little-endian.
+Jangan membaca file dengan memcpy ke struct native; alignment/padding berbeda.
+Implementasi referensi independen: read_fsim.py, hanya Python standard library.
+
+Header tetap 40 byte
+Offset   Ukuran   Field
+0        8        Magic byte: 46 53 49 4D 0D 0A 1A 0A (FSIM CR LF SUB LF)
+8        4        uint32 format_version = 1
+12       4        uint32 header_bytes = 40
+16       4        uint32 metadata_bytes (maksimum 1 MiB)
+20       4        uint32 frame_count (1..301)
+24       4        uint32 frame_bytes = 412
+28       4        uint32 sample_ticks = 3
+32       4        uint32 presentation_ticks_per_second = 60
+36       4        uint32 game_ticks_per_second = 10
+
+Berikutnya metadata_bytes byte JSON UTF-8, tanpa NUL dan tanpa padding.
+Metadata menyimpan format='fsim.replay.v1', engine_version, seed string,
+teams [home,away], 22 identitas pemain dalam urutan frame, actions enum,
+coordinates, time_base='presentation', time_scale=6, first_tick, last_tick,
+last_goal_status, dan penjelasan flags. Player index 0..10 adalah home,
+11..21 away; identitas masing-masing memuat id, team, lineup_index.
+last_goal_status adalah status saat ekspor. Apabila ekspor di luar grid
+3 tick, status tersebut dapat 1..2 tick lebih baru dari sampel terakhir.
+
+Frame tetap 412 byte, diulang frame_count kali dalam urutan kronologis
+Offset   Ukuran   Field
+0        8        uint64 tick absolut sejak awal pertandingan
+8        4        uint32 home_score
+12       4        uint32 away_score
+16       4        uint32 phase: 0 first_half, 1 second_half, 2 completed
+20       4        uint32 flags (bitmask di bawah)
+24       8        uint64 goal_sequence (jumlah gol kedua tim sejauh ini)
+32       4        int32 ball_owner: -1 bebas, 0..21 index pemain
+36       12       float32 ball_x, ball_y, ball_z (meter)
+48       12       float32 ball_vx, ball_vy, ball_vz (meter/detik GAME)
+60       352      22 entri pemain, masing-masing 16 byte:
+                   float32 x,y,z lalu uint32 action
+
+Action: 0 short_pass, 1 dribble, 2 shoot, 3 tackle, 4 off_ball_movement.
+Action adalah keputusan terkini, bukan jaminan suatu kick terjadi pada frame
+tersebut. Statistik snapshot memisahkan jumlah kick/tekel yang dieksekusi.
+Flags mencakup event sejak sampel sebelumnya:
+  1 = terjadi gol
+  2 = restart, posisi dapat berpindah tanpa lintasan kontinu
+  4 = pergantian babak, arah serang berbalik
+Viewer sebaiknya tidak menginterpolasi melintasi frame dengan flag 2 atau 4.
+Sequence monoton tidak dikosongkan setelah pembacaan dan tetap benar setelah
+ring-buffer menimpa sampel lama. Gol lama mungkin berada di luar klip saat ini.
+
+Clock dan ukuran buffer
+1 tick = 1/60 detik presentasi = 0.1 detik game. Sampel setiap 3 tick
+= 0.05 detik presentasi = 0.3 detik game. 301 frame meliputi 300 interval,
+yaitu 15 detik presentasi (90 detik game) dengan kedua endpoint.
+Sebelum 15 detik, frame_count lebih kecil. Sampel terakhir adalah tick kelipatan
+3 paling baru. Contoh full time: tick 53100..54000, step 3, 301 frame.
+Ring hanya mempertahankan jendela terakhir, bukan seluruh pertandingan.
+Tangkap klip melalui C-API saat/pasca gol untuk mempertahankan kejadian itu.
+Tidak ada kompresi, checksum internal, atau penggabungan highlight pada v1.
+Ukuran file persis: 40 + metadata_bytes + frame_count * 412.
+
+Koordinat dan pemutaran
+x sepanjang lapangan 105 m, z sepanjang lebar 68 m, y ke atas.
+Pemain ada di tanah y=0, pusat bola y>=0.11. Gol bidang x=+/-52.61
+(seluruh bola radius 0.11 melewati garis x=+/-52.5).
+Waktu presentasi = tick/60. Pemutaran 0.5x menggandakan durasi klip menjadi
+30 detik untuk jendela penuh; tidak mengubah tick atau nilai kecepatan tersimpan.
+UE memakai satuan cm dan sumbu Z-up; adapter perlu konversi eksplisit misalnya
+UE(X,Y,Z)=100*(fsim.x, fsim.z, fsim.y), beserta orientasi model/kamera.
+
+Validasi reader
+Verifikasi magic/version/ukuran terlebih dahulu. Tolak data terpotong, trailing
+bytes, nilai nonfinite, tick tidak berurutan, enum di luar rentang, score turun,
+atau identitas pemain tidak lengkap. Reader referensi melakukan pemeriksaan ini.
+CLI: python -B read_fsim.py replay_samples/stage2_1/fulltime_last15s.fsim

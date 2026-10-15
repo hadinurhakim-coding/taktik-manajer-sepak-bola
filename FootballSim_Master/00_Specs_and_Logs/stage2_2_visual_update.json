@@ -1,0 +1,47 @@
+{
+  "task": "TAHAP 2.2 - Perbaikan tampilan viewer",
+  "status": "SUCCESS",
+  "completed_at": "2026-10-15T18:23:52.9647691+07:00",
+  "changes": {
+    "camera": "Explicit horizontal orthographic framing, resized to fit pitch between HUD bars; max(11800, 8500 * viewport aspect) cm",
+    "pitch_lines_cm": {
+      "before": 8,
+      "after": 24
+    },
+    "turf": "Dark green unlit stripes; white raised unlit markings",
+    "players": "Larger body, 220 cm dark locator rim, 185 cm team-colour base, larger 165 cm number labels",
+    "ball": "70 cm visual sphere, dark patch, 230 cm yellow ground ring with dark outline",
+    "lighting": "Fixed manual exposure, no bloom, reduced sun and sky intensity"
+  },
+  "validation": {
+    "build": "FootballReplayViewerEditor Win64 Development: Succeeded",
+    "material_commandlet": "Succeeded, 0 errors, 0 warnings",
+    "native_ui": [
+      "1440x900: complete pitch visible, clear lines and team colours, ball locator visible",
+      "1920x1009 maximized: camera reframes successfully, entire pitch stays clear of HUD",
+      "Play at 0.5x: players and ball marker move with replay",
+      "Space pauses playback successfully"
+    ],
+    "estimated_pitch_width_pixels_1440": {
+      "before": 674,
+      "after": 1112
+    },
+    "build_log": "D:\\Hadi\\proyek\\football-manager\\FootballSim_Master\\05_UE5_MatchViewer_3D\\Saved\\Stage2_2_UBT.log",
+    "runtime_log": "D:\\Hadi\\proyek\\football-manager\\FootballSim_Master\\05_UE5_MatchViewer_3D\\Saved\\Stage2_2_VisualPolish.log",
+    "asset_log": "D:\\Hadi\\proyek\\football-manager\\FootballSim_Master\\05_UE5_MatchViewer_3D\\Saved\\Stage2_2_Assets.log"
+  },
+  "updated_files": [
+    "Source/FootballReplayViewer/MatchReplayActor.cpp",
+    "Source/FootballReplayViewer/MatchReplayActor.h",
+    "Scripts/setup_assets.py",
+    "Content/Viewer/M_ViewerFlat.uasset",
+    "README_VIEWER.txt"
+  ],
+  "screenshot": "D:\\Hadi\\proyek\\football-manager\\FootballSim_Master\\00_Specs_and_Logs\\stage2_2_viewer_improved.jpg",
+  "final_state": "Viewer open and maximized, paused at 0.5x",
+  "limitations": [
+    "Prototype player shapes remain; skeletal character animation is a later task.",
+    "Number labels and markers can overlap when players occupy nearby replay positions."
+  ],
+  "runtime_notes": "Unreal editor widget-factory registration warnings are present; no viewer runtime errors were observed."
+}

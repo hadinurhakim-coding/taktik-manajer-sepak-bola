@@ -1,0 +1,58 @@
+{
+  "stage": "2.0",
+  "status": "SUCCESS",
+  "checked_at_utc": "2026-10-15T09:37:49.936703+00:00",
+  "core": "D:\\Hadi\\proyek\\football-manager\\FootballSim_Master\\01_SimulationCore_CPP",
+  "build": {
+    "configuration": "Release x64",
+    "compiler": "MSVC 19.44.35222",
+    "cpp_standard": 20,
+    "ctest_targets_passed": 3,
+    "ctest_targets_failed": 0,
+    "python_cases_passed": 8
+  },
+  "artifacts": [
+    "D:\\Hadi\\proyek\\football-manager\\FootballSim_Master\\01_SimulationCore_CPP\\include\\MatchEngine.h",
+    "D:\\Hadi\\proyek\\football-manager\\FootballSim_Master\\01_SimulationCore_CPP\\src\\MatchEngine.cpp",
+    "D:\\Hadi\\proyek\\football-manager\\FootballSim_Master\\01_SimulationCore_CPP\\include\\match_bridge_api.h",
+    "D:\\Hadi\\proyek\\football-manager\\FootballSim_Master\\01_SimulationCore_CPP\\src\\match_bridge_api.cpp",
+    "D:\\Hadi\\proyek\\football-manager\\FootballSim_Master\\01_SimulationCore_CPP\\convert_old_data_to_cpp.py",
+    "D:\\Hadi\\proyek\\football-manager\\FootballSim_Master\\01_SimulationCore_CPP\\match_bridge.py",
+    "D:\\Hadi\\proyek\\football-manager\\FootballSim_Master\\01_SimulationCore_CPP\\ENGINE_CONTRACT.txt",
+    "D:\\Hadi\\proyek\\football-manager\\FootballSim_Master\\01_SimulationCore_CPP\\CMakeLists.txt",
+    "D:\\Hadi\\proyek\\football-manager\\FootballSim_Master\\01_SimulationCore_CPP\\build_engine.cmd",
+    "D:\\Hadi\\proyek\\football-manager\\FootballSim_Master\\01_SimulationCore_CPP\\build\\engine\\Release\\fsim_core.lib",
+    "D:\\Hadi\\proyek\\football-manager\\FootballSim_Master\\01_SimulationCore_CPP\\build\\engine\\Release\\match_bridge.dll",
+    "D:\\Hadi\\proyek\\football-manager\\FootballSim_Master\\01_SimulationCore_CPP\\build\\engine\\Release\\core_tests.exe",
+    "D:\\Hadi\\proyek\\football-manager\\FootballSim_Master\\01_SimulationCore_CPP\\build\\engine\\Release\\c_api_smoke.exe",
+    "D:\\Hadi\\proyek\\football-manager\\FootballSim_Master\\01_SimulationCore_CPP\\replay_samples\\converted_match_input.json",
+    "D:\\Hadi\\proyek\\football-manager\\FootballSim_Master\\01_SimulationCore_CPP\\replay_samples\\converted_match_snapshots.json"
+  ],
+  "source_repository_modified": false,
+  "source_database_sha256_unchanged": "fa6271a2d12899c98af561839850e697855db076593bb3299ec64aba0e0203f5",
+  "real_db_test": {
+    "home": "AS Roma",
+    "away": "AC Milan",
+    "roster_players": 36,
+    "starting_players": 22,
+    "warnings": []
+  },
+  "clock_test": {
+    "fixed_ticks": 54000,
+    "logical_presentation_seconds": 900,
+    "in_game_seconds": 5400,
+    "scale": 6.0
+  },
+  "limitations": [
+    "Clock and initial state only; no football AI, movement, scoring or highlight selection yet.",
+    "Snapshot JSON is a new versioned contract, not an existing Android replay or a .fsim file.",
+    "Android NDK/JNI and Unreal Engine 5.8 adapters/builds are not implemented or tested.",
+    "Unmapped legacy styles fail by default; explicit --unknown-style balanced produces a warning."
+  ],
+  "logs": [
+    "D:\\Hadi\\proyek\\football-manager\\FootballSim_Master\\00_Specs_and_Logs\\stage2_build.log",
+    "D:\\Hadi\\proyek\\football-manager\\FootballSim_Master\\00_Specs_and_Logs\\stage2_conversion.json",
+    "D:\\Hadi\\proyek\\football-manager\\FootballSim_Master\\00_Specs_and_Logs\\stage2_native_integration.json"
+  ],
+  "errors": []
+}

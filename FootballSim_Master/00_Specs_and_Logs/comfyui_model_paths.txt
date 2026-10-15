@@ -1,0 +1,126 @@
+Root: D:\ComfyUI_windows_portable\ComfyUI\models
+
+MODEL WEIGHTS (22):
+background_removal/birefnet.safetensors	444473596 bytes
+checkpoints/sd_xl_base_1.0.safetensors	6938078334 bytes
+clip_vision/dino_v3_L_naf_fp32.safetensors	1215214176 bytes
+controlnet/controlnet-openpose-sdxl-1.0.safetensors	2502139104 bytes
+diffusers/hunyuan3d-paint-v2-0-turbo/text_encoder/pytorch_model.bin	1361671895 bytes
+diffusers/hunyuan3d-paint-v2-0-turbo/unet/diffusion_pytorch_model.safetensors	3722161032 bytes
+diffusers/hunyuan3d-paint-v2-0-turbo/vae/diffusion_pytorch_model.bin	334707217 bytes
+diffusion_models/hy3dgen/hunyuan3d-dit-v2-0-fp16.safetensors	4928151594 bytes
+diffusion_models/pixal3d_multiview_int8_convrot.safetensors	5584555824 bytes
+diffusion_models/qwen_image_2.1_int8_convrot.safetensors	7256783064 bytes
+text_encoders/qwen3vl_8b_int8_convrot.safetensors	9350798360 bytes
+text_encoders/qwen_3_4b.safetensors	8044982048 bytes
+upscale_models/4x_foolhardy_Remacri.pth	67025055 bytes
+vae/qwen_image_2.1_vae_bf16.safetensors	675509688 bytes
+vae/trellis_2_shape_vae_bf16.safetensors	1095844024 bytes
+vae/trellis_2_texture_vae_bf16.safetensors	948461364 bytes
+vae_approx/taef1_decoder.safetensors	2464414 bytes
+vae_approx/taef1_encoder.safetensors	2464424 bytes
+vae_approx/taesd_decoder.safetensors	2450590 bytes
+vae_approx/taesd_encoder.safetensors	2450568 bytes
+vae_approx/taesdxl_decoder.safetensors	2450590 bytes
+vae_approx/taesdxl_encoder.safetensors	2450568 bytes
+
+EXTERNAL PAINTPBR 2.1 ROOT: D:\AI\Hunyuan3D-Paint-2.1\models
+dinov2-giant/model.safetensors	4546005432 bytes
+Hunyuan3D-2.1/hunyuan3d-paintpbr-v2-1/image_encoder/model.safetensors	1264217240 bytes
+Hunyuan3D-2.1/hunyuan3d-paintpbr-v2-1/text_encoder/pytorch_model.bin	1361671895 bytes
+Hunyuan3D-2.1/hunyuan3d-paintpbr-v2-1/unet/diffusion_pytorch_model.bin	3925293863 bytes
+Hunyuan3D-2.1/hunyuan3d-paintpbr-v2-1/vae/diffusion_pytorch_model.bin	334707217 bytes
+
+LoRA: no model weights; only loras/put_loras_here
+
+ALL FILES UNDER COMFYUI models/ (including configs/placeholders):
+audio_encoders/put_audio_encoder_models_here
+background_removal/birefnet.safetensors
+background_removal/put_background_removal_models_here
+checkpoints/put_checkpoints_here
+checkpoints/sd_xl_base_1.0.safetensors
+clip/put_clip_or_text_encoder_models_here
+clip_vision/dino_v3_L_naf_fp32.safetensors
+clip_vision/put_clip_vision_models_here
+configs/anything_v3.yaml
+configs/v1-inference.yaml
+configs/v1-inference_clip_skip_2.yaml
+configs/v1-inference_clip_skip_2_fp16.yaml
+configs/v1-inference_fp16.yaml
+configs/v1-inpainting-inference.yaml
+configs/v2-inference-v.yaml
+configs/v2-inference-v_fp32.yaml
+configs/v2-inference.yaml
+configs/v2-inference_fp32.yaml
+configs/v2-inpainting-inference.yaml
+controlnet/controlnet-openpose-sdxl-1.0.safetensors
+controlnet/put_controlnets_and_t2i_here
+detection/put_detection_models_here
+diffusers/.cache/huggingface/.gitignore
+diffusers/.cache/huggingface/CACHEDIR.TAG
+diffusers/.cache/huggingface/download/hunyuan3d-paint-v2-0-turbo/.gitattributes.metadata
+diffusers/.cache/huggingface/download/hunyuan3d-paint-v2-0-turbo/feature_extractor/preprocessor_config.json.metadata
+diffusers/.cache/huggingface/download/hunyuan3d-paint-v2-0-turbo/model_index.json.metadata
+diffusers/.cache/huggingface/download/hunyuan3d-paint-v2-0-turbo/README.md.metadata
+diffusers/.cache/huggingface/download/hunyuan3d-paint-v2-0-turbo/scheduler/scheduler_config.json.metadata
+diffusers/.cache/huggingface/download/hunyuan3d-paint-v2-0-turbo/text_encoder/config.json.metadata
+diffusers/.cache/huggingface/download/hunyuan3d-paint-v2-0-turbo/text_encoder/pytorch_model.bin.metadata
+diffusers/.cache/huggingface/download/hunyuan3d-paint-v2-0-turbo/tokenizer/merges.txt.metadata
+diffusers/.cache/huggingface/download/hunyuan3d-paint-v2-0-turbo/tokenizer/special_tokens_map.json.metadata
+diffusers/.cache/huggingface/download/hunyuan3d-paint-v2-0-turbo/tokenizer/tokenizer_config.json.metadata
+diffusers/.cache/huggingface/download/hunyuan3d-paint-v2-0-turbo/tokenizer/vocab.json.metadata
+diffusers/.cache/huggingface/download/hunyuan3d-paint-v2-0-turbo/unet/config.json.metadata
+diffusers/.cache/huggingface/download/hunyuan3d-paint-v2-0-turbo/unet/diffusion_pytorch_model.safetensors.metadata
+diffusers/.cache/huggingface/download/hunyuan3d-paint-v2-0-turbo/unet/modules.py.metadata
+diffusers/.cache/huggingface/download/hunyuan3d-paint-v2-0-turbo/vae/config.json.metadata
+diffusers/.cache/huggingface/download/hunyuan3d-paint-v2-0-turbo/vae/diffusion_pytorch_model.bin.metadata
+diffusers/.cache/huggingface/trees/9cd649ba6913f7a852e3286bad86bfa9a2d83dcf.json
+diffusers/hunyuan3d-paint-v2-0-turbo/.gitattributes
+diffusers/hunyuan3d-paint-v2-0-turbo/feature_extractor/preprocessor_config.json
+diffusers/hunyuan3d-paint-v2-0-turbo/model_index.json
+diffusers/hunyuan3d-paint-v2-0-turbo/README.md
+diffusers/hunyuan3d-paint-v2-0-turbo/scheduler/scheduler_config.json
+diffusers/hunyuan3d-paint-v2-0-turbo/text_encoder/config.json
+diffusers/hunyuan3d-paint-v2-0-turbo/text_encoder/pytorch_model.bin
+diffusers/hunyuan3d-paint-v2-0-turbo/tokenizer/merges.txt
+diffusers/hunyuan3d-paint-v2-0-turbo/tokenizer/special_tokens_map.json
+diffusers/hunyuan3d-paint-v2-0-turbo/tokenizer/tokenizer_config.json
+diffusers/hunyuan3d-paint-v2-0-turbo/tokenizer/vocab.json
+diffusers/hunyuan3d-paint-v2-0-turbo/unet/config.json
+diffusers/hunyuan3d-paint-v2-0-turbo/unet/diffusion_pytorch_model.safetensors
+diffusers/hunyuan3d-paint-v2-0-turbo/unet/modules.py
+diffusers/hunyuan3d-paint-v2-0-turbo/vae/config.json
+diffusers/hunyuan3d-paint-v2-0-turbo/vae/diffusion_pytorch_model.bin
+diffusers/put_diffusers_models_here
+diffusion_models/hy3dgen/hunyuan3d-dit-v2-0-fp16.safetensors
+diffusion_models/pixal3d_multiview_int8_convrot.safetensors
+diffusion_models/put_diffusion_model_files_here
+diffusion_models/qwen_image_2.1_int8_convrot.safetensors
+embeddings/put_embeddings_or_textual_inversion_concepts_here
+frame_interpolation/put_frame_interpolation_models_here
+geometry_estimation/put_geometry_estimation_models_here
+gligen/put_gligen_models_here
+hypernetworks/put_hypernetworks_here
+latent_upscale_models/put_latent_upscale_models_here
+loras/put_loras_here
+model_patches/put_model_patches_here
+optical_flow/put_optical_flow_models_here
+photomaker/put_photomaker_models_here
+style_models/put_t2i_style_model_here
+text_encoders/put_text_encoder_files_here
+text_encoders/qwen3vl_8b_int8_convrot.safetensors
+text_encoders/qwen_3_4b.safetensors
+unet/put_unet_files_here
+upscale_models/4x_foolhardy_Remacri.pth
+upscale_models/put_esrgan_and_other_upscale_models_here
+vae/put_vae_here
+vae/qwen_image_2.1_vae_bf16.safetensors
+vae/trellis_2_shape_vae_bf16.safetensors
+vae/trellis_2_texture_vae_bf16.safetensors
+vae_approx/put_taesd_encoder_pth_and_taesd_decoder_pth_here
+vae_approx/taef1_decoder.safetensors
+vae_approx/taef1_encoder.safetensors
+vae_approx/taesd_decoder.safetensors
+vae_approx/taesd_encoder.safetensors
+vae_approx/taesdxl_decoder.safetensors
+vae_approx/taesdxl_encoder.safetensors

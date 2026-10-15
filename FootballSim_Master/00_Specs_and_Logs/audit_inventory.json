@@ -1,0 +1,483 @@
+{
+  "audit_stage": "1.1",
+  "recorded_at": "2026-10-15T15:46:45.8583159+07:00",
+  "timezone": "Asia/Bangkok",
+  "status": "SUCCESS",
+  "status_meaning": "Requested audit and scaffolding completed; missing build prerequisites are findings.",
+  "hardware": {
+    "gpu": "NVIDIA GeForce RTX 4070 SUPER",
+    "vram_mib": 12282,
+    "vram_source": "nvidia-smi --query-gpu=name,memory.total,driver_version --format=csv,noheader",
+    "nvidia_driver": "610.88",
+    "cpu": "12th Gen Intel(R) Core(TM) i9-12900F",
+    "cpu_cores": 16,
+    "cpu_logical_processors": 24,
+    "ram_bytes": 34185752576,
+    "ram_gib": 31.84,
+    "motherboard_model": "Micro-Star International Co., Ltd. MS-7E06",
+    "os": "Microsoft Windows 11 Pro",
+    "os_version": "10.0.26300",
+    "architecture": "64-bit",
+    "disks": [
+      {
+        "drive": "C:\\",
+        "free_gib": 22.18,
+        "used_gib": 221.07
+      },
+      {
+        "drive": "D:\\",
+        "free_gib": 471.72,
+        "used_gib": 237.89
+      }
+    ]
+  },
+  "tools": {
+    "python": {
+      "version": "3.14.2",
+      "path": "C:\\Python314\\python.exe",
+      "version_executed": true
+    },
+    "comfyui_python": {
+      "version": "3.12.10",
+      "path": "D:\\ComfyUI_windows_portable\\python_embeded\\python.exe",
+      "version_executed": true
+    },
+    "git": {
+      "version": "2.55.0.windows.5",
+      "path": "C:\\Program Files\\Git\\cmd\\git.exe",
+      "version_executed": true
+    },
+    "cmake": {
+      "version": null,
+      "status": "not found in PATH or searched installation directories"
+    },
+    "cpp_compilers": {
+      "cl": null,
+      "gpp": null,
+      "clangpp": null,
+      "status": "not found in PATH or searched installation directories",
+      "msvc_component_detected": false
+    },
+    "visual_studio_build_tools": {
+      "version": "17.14.25",
+      "installation_version": "17.14.36915.13",
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools",
+      "detected_subdirectories": [
+        "Common7",
+        "Licenses",
+        "MSBuild"
+      ]
+    },
+    "blender": [
+      {
+        "version": "4.5.10 LTS",
+        "path": "C:\\Program Files\\Blender Foundation\\Blender 4.5\\blender.exe",
+        "in_path": true,
+        "version_executed": true
+      },
+      {
+        "version": "5.2.2 LTS",
+        "path": "D:\\Blender\\blender.exe",
+        "in_path": false,
+        "version_executed": true
+      }
+    ],
+    "unreal_engine": {
+      "version": "5.8.3",
+      "path": "D:\\Epic Games\\UE_5.8",
+      "editor_path": "D:\\Epic Games\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor.exe",
+      "changelist": 58210709,
+      "version_source": "Engine\\Build\\Build.version and UnrealEditor.exe metadata",
+      "editor_launched": false
+    }
+  },
+  "comfyui": {
+    "root": "D:\\ComfyUI_windows_portable\\ComfyUI",
+    "version": "0.39.0",
+    "main_py_exists": true,
+    "desktop_directory": "D:\\ComfyUI-Desktop",
+    "desktop_directory_entry_count": 0,
+    "custom_nodes": [
+      {
+        "name": "__pycache__",
+        "kind": "directory",
+        "path": "D:\\ComfyUI_windows_portable\\ComfyUI\\custom_nodes\\__pycache__"
+      },
+      {
+        "name": "comfyui_controlnet_aux",
+        "kind": "directory",
+        "path": "D:\\ComfyUI_windows_portable\\ComfyUI\\custom_nodes\\comfyui_controlnet_aux"
+      },
+      {
+        "name": "ComfyUI-GGUF",
+        "kind": "directory",
+        "path": "D:\\ComfyUI_windows_portable\\ComfyUI\\custom_nodes\\ComfyUI-GGUF"
+      },
+      {
+        "name": "ComfyUI-Hunyuan3DWrapper",
+        "kind": "directory",
+        "path": "D:\\ComfyUI_windows_portable\\ComfyUI\\custom_nodes\\ComfyUI-Hunyuan3DWrapper"
+      },
+      {
+        "name": "ComfyUI-HunyuanPaint21-LocalD",
+        "kind": "directory",
+        "path": "D:\\ComfyUI_windows_portable\\ComfyUI\\custom_nodes\\ComfyUI-HunyuanPaint21-LocalD"
+      },
+      {
+        "name": "ComfyUI-Manager",
+        "kind": "directory",
+        "path": "D:\\ComfyUI_windows_portable\\ComfyUI\\custom_nodes\\ComfyUI-Manager"
+      },
+      {
+        "name": "example_node.py.example",
+        "kind": "file",
+        "path": "D:\\ComfyUI_windows_portable\\ComfyUI\\custom_nodes\\example_node.py.example"
+      },
+      {
+        "name": "websocket_image_save.py",
+        "kind": "file",
+        "path": "D:\\ComfyUI_windows_portable\\ComfyUI\\custom_nodes\\websocket_image_save.py"
+      }
+    ],
+    "checkpoints": [
+      {
+        "path": "D:\\ComfyUI_windows_portable\\ComfyUI\\models\\checkpoints\\put_checkpoints_here",
+        "kind": "file",
+        "bytes": 0
+      },
+      {
+        "path": "D:\\ComfyUI_windows_portable\\ComfyUI\\models\\checkpoints\\sd_xl_base_1.0.safetensors",
+        "kind": "file",
+        "bytes": 6938078334
+      }
+    ],
+    "model_files": [
+      {
+        "path": "D:\\AI\\Hunyuan3D-Paint-2.1\\models\\dinov2-giant\\model.safetensors",
+        "bytes": 4546005432,
+        "gib": 4.234
+      },
+      {
+        "path": "D:\\AI\\Hunyuan3D-Paint-2.1\\models\\Hunyuan3D-2.1\\hunyuan3d-paintpbr-v2-1\\image_encoder\\model.safetensors",
+        "bytes": 1264217240,
+        "gib": 1.177
+      },
+      {
+        "path": "D:\\AI\\Hunyuan3D-Paint-2.1\\models\\Hunyuan3D-2.1\\hunyuan3d-paintpbr-v2-1\\text_encoder\\pytorch_model.bin",
+        "bytes": 1361671895,
+        "gib": 1.268
+      },
+      {
+        "path": "D:\\AI\\Hunyuan3D-Paint-2.1\\models\\Hunyuan3D-2.1\\hunyuan3d-paintpbr-v2-1\\unet\\diffusion_pytorch_model.bin",
+        "bytes": 3925293863,
+        "gib": 3.656
+      },
+      {
+        "path": "D:\\AI\\Hunyuan3D-Paint-2.1\\models\\Hunyuan3D-2.1\\hunyuan3d-paintpbr-v2-1\\vae\\diffusion_pytorch_model.bin",
+        "bytes": 334707217,
+        "gib": 0.312
+      },
+      {
+        "path": "D:\\ComfyUI_windows_portable\\ComfyUI\\custom_nodes\\comfyui_controlnet_aux\\src\\custom_controlnet_aux\\diffusion_edge\\taming\\modules\\autoencoder\\lpips\\vgg.pth",
+        "bytes": 7289,
+        "gib": 0.0
+      },
+      {
+        "path": "D:\\ComfyUI_windows_portable\\ComfyUI\\custom_nodes\\comfyui_controlnet_aux\\src\\custom_mesh_graphormer\\modeling\\data\\mano_195_adjmat_indices.pt",
+        "bytes": 21639,
+        "gib": 0.0
+      },
+      {
+        "path": "D:\\ComfyUI_windows_portable\\ComfyUI\\custom_nodes\\comfyui_controlnet_aux\\src\\custom_mesh_graphormer\\modeling\\data\\mano_195_adjmat_size.pt",
+        "bytes": 173,
+        "gib": 0.0
+      },
+      {
+        "path": "D:\\ComfyUI_windows_portable\\ComfyUI\\custom_nodes\\comfyui_controlnet_aux\\src\\custom_mesh_graphormer\\modeling\\data\\mano_195_adjmat_values.pt",
+        "bytes": 5663,
+        "gib": 0.0
+      },
+      {
+        "path": "D:\\ComfyUI_windows_portable\\ComfyUI\\custom_nodes\\comfyui_controlnet_aux\\src\\custom_mesh_graphormer\\modeling\\data\\smpl_431_adjmat_indices.pt",
+        "bytes": 48423,
+        "gib": 0.0
+      },
+      {
+        "path": "D:\\ComfyUI_windows_portable\\ComfyUI\\custom_nodes\\comfyui_controlnet_aux\\src\\custom_mesh_graphormer\\modeling\\data\\smpl_431_adjmat_size.pt",
+        "bytes": 175,
+        "gib": 0.0
+      },
+      {
+        "path": "D:\\ComfyUI_windows_portable\\ComfyUI\\custom_nodes\\comfyui_controlnet_aux\\src\\custom_mesh_graphormer\\modeling\\data\\smpl_431_adjmat_values.pt",
+        "bytes": 12359,
+        "gib": 0.0
+      },
+      {
+        "path": "D:\\ComfyUI_windows_portable\\ComfyUI\\models\\background_removal\\birefnet.safetensors",
+        "bytes": 444473596,
+        "gib": 0.414
+      },
+      {
+        "path": "D:\\ComfyUI_windows_portable\\ComfyUI\\models\\checkpoints\\sd_xl_base_1.0.safetensors",
+        "bytes": 6938078334,
+        "gib": 6.462
+      },
+      {
+        "path": "D:\\ComfyUI_windows_portable\\ComfyUI\\models\\clip_vision\\dino_v3_L_naf_fp32.safetensors",
+        "bytes": 1215214176,
+        "gib": 1.132
+      },
+      {
+        "path": "D:\\ComfyUI_windows_portable\\ComfyUI\\models\\controlnet\\controlnet-openpose-sdxl-1.0.safetensors",
+        "bytes": 2502139104,
+        "gib": 2.33
+      },
+      {
+        "path": "D:\\ComfyUI_windows_portable\\ComfyUI\\models\\diffusers\\hunyuan3d-paint-v2-0-turbo\\text_encoder\\pytorch_model.bin",
+        "bytes": 1361671895,
+        "gib": 1.268
+      },
+      {
+        "path": "D:\\ComfyUI_windows_portable\\ComfyUI\\models\\diffusers\\hunyuan3d-paint-v2-0-turbo\\unet\\diffusion_pytorch_model.safetensors",
+        "bytes": 3722161032,
+        "gib": 3.467
+      },
+      {
+        "path": "D:\\ComfyUI_windows_portable\\ComfyUI\\models\\diffusers\\hunyuan3d-paint-v2-0-turbo\\vae\\diffusion_pytorch_model.bin",
+        "bytes": 334707217,
+        "gib": 0.312
+      },
+      {
+        "path": "D:\\ComfyUI_windows_portable\\ComfyUI\\models\\diffusion_models\\hy3dgen\\hunyuan3d-dit-v2-0-fp16.safetensors",
+        "bytes": 4928151594,
+        "gib": 4.59
+      },
+      {
+        "path": "D:\\ComfyUI_windows_portable\\ComfyUI\\models\\diffusion_models\\pixal3d_multiview_int8_convrot.safetensors",
+        "bytes": 5584555824,
+        "gib": 5.201
+      },
+      {
+        "path": "D:\\ComfyUI_windows_portable\\ComfyUI\\models\\diffusion_models\\qwen_image_2.1_int8_convrot.safetensors",
+        "bytes": 7256783064,
+        "gib": 6.758
+      },
+      {
+        "path": "D:\\ComfyUI_windows_portable\\ComfyUI\\models\\text_encoders\\qwen_3_4b.safetensors",
+        "bytes": 8044982048,
+        "gib": 7.492
+      },
+      {
+        "path": "D:\\ComfyUI_windows_portable\\ComfyUI\\models\\text_encoders\\qwen3vl_8b_int8_convrot.safetensors",
+        "bytes": 9350798360,
+        "gib": 8.709
+      },
+      {
+        "path": "D:\\ComfyUI_windows_portable\\ComfyUI\\models\\upscale_models\\4x_foolhardy_Remacri.pth",
+        "bytes": 67025055,
+        "gib": 0.062
+      },
+      {
+        "path": "D:\\ComfyUI_windows_portable\\ComfyUI\\models\\vae_approx\\taef1_decoder.safetensors",
+        "bytes": 2464414,
+        "gib": 0.002
+      },
+      {
+        "path": "D:\\ComfyUI_windows_portable\\ComfyUI\\models\\vae_approx\\taef1_encoder.safetensors",
+        "bytes": 2464424,
+        "gib": 0.002
+      },
+      {
+        "path": "D:\\ComfyUI_windows_portable\\ComfyUI\\models\\vae_approx\\taesd_decoder.safetensors",
+        "bytes": 2450590,
+        "gib": 0.002
+      },
+      {
+        "path": "D:\\ComfyUI_windows_portable\\ComfyUI\\models\\vae_approx\\taesd_encoder.safetensors",
+        "bytes": 2450568,
+        "gib": 0.002
+      },
+      {
+        "path": "D:\\ComfyUI_windows_portable\\ComfyUI\\models\\vae_approx\\taesdxl_decoder.safetensors",
+        "bytes": 2450590,
+        "gib": 0.002
+      },
+      {
+        "path": "D:\\ComfyUI_windows_portable\\ComfyUI\\models\\vae_approx\\taesdxl_encoder.safetensors",
+        "bytes": 2450568,
+        "gib": 0.002
+      },
+      {
+        "path": "D:\\ComfyUI_windows_portable\\ComfyUI\\models\\vae\\qwen_image_2.1_vae_bf16.safetensors",
+        "bytes": 675509688,
+        "gib": 0.629
+      },
+      {
+        "path": "D:\\ComfyUI_windows_portable\\ComfyUI\\models\\vae\\trellis_2_shape_vae_bf16.safetensors",
+        "bytes": 1095844024,
+        "gib": 1.021
+      },
+      {
+        "path": "D:\\ComfyUI_windows_portable\\ComfyUI\\models\\vae\\trellis_2_texture_vae_bf16.safetensors",
+        "bytes": 948461364,
+        "gib": 0.883
+      }
+    ],
+    "extra_model_paths_yaml_exists": false,
+    "external_model_root": "D:\\AI\\Hunyuan3D-Paint-2.1\\models",
+    "dedicated_video_to_animation_model": "not identified in scanned model paths",
+    "inference_tested": false
+  },
+  "existing_code": {
+    "current_workspace": "D:\\Hadi\\proyek\\football-manager",
+    "current_workspace_initial_entry_count": 0,
+    "current_workspace_initial_git_repository": false,
+    "repository": "D:\\Hadi\\proyek\\manajer-sepak-bola",
+    "is_git_repository": true,
+    "last_commit": "185cfdb",
+    "last_commit_date": "2026-10-10",
+    "last_commit_subject": "Add initial Mixar scenario files",
+    "tracked_uncommitted_changes": true,
+    "git_status_scope": "tracked files only (-uno)",
+    "backend": "Python standard-library http.server.ThreadingHTTPServer with SQLite",
+    "backend_directory": "D:\\Hadi\\proyek\\manajer-sepak-bola\\backend",
+    "backend_python_files": [
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\backend\\tests\\test_scenario_system.py",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\backend\\tests\\test_player_motion.py",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\backend\\tests\\test_off_ball.py",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\backend\\tests\\test_league_schedule.py",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\backend\\tests\\test_league_replay.py",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\backend\\tests\\test_kickoff.py",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\backend\\tests\\test_friendly_simulation.py",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\backend\\tests\\test_friendly_engine.py",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\backend\\tests\\test_football_reference.py",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\backend\\tests\\test_club_engine.py",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\backend\\tests\\test_broadcast.py",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\backend\\tests\\test_attacking_play.py",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\backend\\tests\\test_action_phase.py",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\backend\\server.py",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\backend\\scenario_library.py",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\backend\\player_motion.py",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\backend\\off_ball.py",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\backend\\match_rating.py",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\backend\\match_math.py",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\backend\\league_schedule.py",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\backend\\league_replay.py",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\backend\\league_engine.py",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\backend\\friendly_simulation.py",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\backend\\friendly_engine.py",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\backend\\database.py",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\backend\\club_tactics.py",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\backend\\club_specialists.py",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\backend\\club_positions.py",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\backend\\club_engine.py",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\backend\\broadcast.py",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\backend\\ball_trajectory.py",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\backend\\attacking_play.py",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\backend\\action_phase.py"
+    ],
+    "management_ui": "Android Kotlin / Jetpack Compose",
+    "ui_directory": "D:\\Hadi\\proyek\\manajer-sepak-bola\\app",
+    "kotlin_files": [
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\test\\java\\com\\example\\GreetingScreenshotTest.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\test\\java\\com\\example\\friendly\\FriendlyReplayFormatTest.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\test\\java\\com\\example\\friendly\\FriendlyApiUrlTest.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\test\\java\\com\\example\\ExampleUnitTest.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\test\\java\\com\\example\\ExampleRobolectricTest.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\test\\java\\com\\example\\club\\TempoSliderTest.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\test\\java\\com\\example\\club\\TacticsPositionsTest.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\test\\java\\com\\example\\club\\TacticsOptimizerTest.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\test\\java\\com\\example\\club\\TacticsDragTest.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\test\\java\\com\\example\\club\\TacticsAutosaveTest.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\test\\java\\com\\example\\club\\MatchScheduleTest.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\test\\java\\com\\example\\club\\LineupDraftTest.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\test\\java\\com\\example\\club\\ClubRepositoryTest.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\test\\java\\com\\example\\club\\CareerProfileTest.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\main\\java\\com\\example\\ui\\theme\\Type.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\main\\java\\com\\example\\ui\\theme\\Theme.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\main\\java\\com\\example\\ui\\theme\\ComoHeaderColors.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\main\\java\\com\\example\\ui\\theme\\ComoColors.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\main\\java\\com\\example\\ui\\theme\\Color.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\androidTest\\java\\com\\example\\ExampleInstrumentedTest.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\main\\java\\com\\example\\ui\\screens\\TacticsTempo.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\debug\\java\\com\\example\\friendly\\FriendlyHarnessActivity.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\main\\java\\com\\example\\ui\\screens\\TacticsScreen.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\main\\java\\com\\example\\ui\\screens\\TacticsDrag.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\main\\java\\com\\example\\ui\\screens\\ManagerSectionScreens.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\main\\java\\com\\example\\ui\\screens\\ManagerProfileScreen.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\main\\java\\com\\example\\ui\\screens\\LoadingViewModel.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\main\\java\\com\\example\\ui\\screens\\LoadingScreen.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\main\\java\\com\\example\\ui\\screens\\DashboardScreen.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\main\\java\\com\\example\\ui\\screens\\ClubScreens.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\main\\java\\com\\example\\ui\\screens\\ClubController.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\main\\java\\com\\example\\ui\\screens\\CareerScreen.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\debug\\java\\com\\example\\club\\ClubHarnessActivity.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\main\\java\\com\\example\\ui\\components\\AccountModalDialog.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\main\\java\\com\\example\\MainActivity.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\main\\java\\com\\example\\ui\\components\\ClubRatingBadge.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\main\\java\\com\\example\\ui\\components\\ClubLogoHelper.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\main\\java\\com\\example\\ui\\components\\AccountSettingsDialog.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\main\\java\\com\\example\\ui\\components\\CreateLeagueDialog.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\main\\java\\com\\example\\ui\\components\\ComoWaveProgressBar.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\main\\java\\com\\example\\ui\\components\\DeviceDisplayRotation.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\main\\java\\com\\example\\ui\\components\\FloatingLoadingCard.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\main\\java\\com\\example\\friendly\\FriendlyAgendaScreen.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\main\\java\\com\\example\\friendly\\FriendlyRepository.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\main\\java\\com\\example\\friendly\\FriendlyReplayFormat.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\main\\java\\com\\example\\friendly\\FriendlyMatchActivity.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\main\\java\\com\\example\\ui\\components\\JoinLeagueDialog.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\main\\java\\com\\example\\ui\\components\\GlassBackdrop.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\main\\java\\com\\example\\ui\\components\\FootballToggleButton.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\main\\java\\com\\example\\ui\\components\\LoginDialogCard.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\main\\java\\com\\example\\ui\\components\\KeyboardAwareClose.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\main\\java\\com\\example\\ui\\components\\ManagerSidebar.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\main\\java\\com\\example\\ui\\components\\StadiumManagerScene.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\main\\java\\com\\example\\ui\\components\\SoccerBall3D.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\main\\java\\com\\example\\ui\\components\\SidebarBalances.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\main\\java\\com\\example\\ui\\components\\SettingsModalCard.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\main\\java\\com\\example\\ui\\components\\RollingBallProgressBar.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\main\\java\\com\\example\\ui\\components\\NotificationDropdown.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\main\\java\\com\\example\\ui\\components\\ManagerTopBar.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\main\\java\\com\\example\\data\\club\\TacticsPositions.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\main\\java\\com\\example\\data\\club\\TacticsOptimizer.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\main\\java\\com\\example\\data\\club\\TacticsDraft.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\main\\java\\com\\example\\data\\club\\MatchSchedule.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\main\\java\\com\\example\\data\\club\\ClubRepository.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\main\\java\\com\\example\\data\\auth\\LocalAuthRepository.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\main\\java\\com\\example\\data\\career\\CareerRepository.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\main\\java\\com\\example\\data\\career\\CareerModels.kt",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\app\\src\\main\\java\\com\\example\\data\\auth\\AuthRepository.kt"
+    ],
+    "match_viewer": "Godot integration under app\\src\\main\\assets\\lawatan",
+    "existing_3d_assets": [
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\Mixar\\soccer_match_optimized.blend",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\Mixar\\soccer_match.blend",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\art\\animation\\football_20261015\\football_actions.glb",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\art\\animation\\football_20261015\\football_actions.blend",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\art\\characters\\Nico_Paz_Refined_v2_20261013\\Nico_Paz_v2.glb",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\art\\characters\\Nico_Paz_Refined_v2_20261013\\Nico_Paz_v2.blend",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\art\\characters\\Nico_Paz_Refined_v2_20261013\\head_raw.glb",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\art\\characters\\Nico_Paz_ComfyUI_20261013\\Nico_Paz_shape.glb",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\art\\characters\\Nico_Paz_ComfyUI_20261013\\Nico_Paz_hunyuan_raw.glb",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\art\\characters\\Nico_Paz_ComfyUI_20261013\\Nico_Paz.glb",
+      "D:\\Hadi\\proyek\\manajer-sepak-bola\\art\\characters\\Nico_Paz_ComfyUI_20261013\\Nico_Paz.blend"
+    ],
+    "existing_code_modified_by_audit": false
+  },
+  "project": {
+    "root": "D:\\Hadi\\proyek\\football-manager\\FootballSim_Master",
+    "expected_subdirectory_count": 19,
+    "schema": "00_Specs_and_Logs\\match_engine_schema.json",
+    "schema_format": "Constants JSON exactly as requested, not a JSON Schema validator document"
+  },
+  "limitations": [
+    "CIM reads initially failed in the sandbox; read-only elevated probes successfully returned hardware information.",
+    "Some Epic registry reads failed; UE version was verified using installed files.",
+    "D:\\Blender\\blender.exe and Git inspection of the existing repository required read-only elevated execution.",
+    "Compiler executable search could not enter C:\\Program Files\\WireGuard\\Data, C:\\Program Files\\WindowsApps, or C:\\Program Files\\Windows Defender Advanced Threat Protection\\Classification\\Configuration.",
+    "Compiler search covered PATH, C:\\Program Files, C:\\Program Files (x86), C:\\Python314, user AppData\\Local\\Programs, user AppData\\Local\\Android, and D:\\; it is not proof that no compiler exists in any other location.",
+    "Win32_VideoController.AdapterRAM reported an unreliable near-4-GiB value; VRAM uses nvidia-smi.",
+    "Audit verifies files and versions; no ComfyUI inference, C++ build, or UE editor launch was performed.",
+    "GDD 105-point content was not supplied; only its requested containing directory was created."
+  ]
+}

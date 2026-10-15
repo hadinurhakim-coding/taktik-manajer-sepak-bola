@@ -1,0 +1,67 @@
+Implementasi dan batas cakupan Tahap 2.1
+
+BallPhysics.h/.cpp
+Posisi dan kecepatan 3D, gravitasi 9.81 m/s^2, drag udara, gesekan tanah,
+restitusi vertikal 0.55, substep <=0.01 detik game. Deteksi perpotongan segmen
+terhadap batas lapangan mencegah bola cepat melewati gawang tanpa terdeteksi.
+Gol mensyaratkan seluruh bola melewati garis dan muat di bawah mistar serta
+di antara tiang. Bola melebar/tinggi menjadi bola keluar, bukan gol.
+Belum ada tumbukan benda tegar pada tiang, mistar, jaring, atau tubuh pemain.
+
+MatchAI.h/.cpp dan MatchEngine
+Utility dievaluasi untuk 22 pemain setiap 3 fixed tick (0.3 detik game).
+Dribble: kecepatan, ruang bebas, mentalitas, gaya counter.
+Short pass: passing, progres maju, jarak, ruang penerima, possession/direct,
+tekanan lawan, dan tempo. Umpan dapat meleset atau diintersep.
+Shoot: finishing, jarak/sudut, mentalitas dan tempo. Akurasi dan kekuatan kick
+bergantung atribut. Gol ditentukan fisika bola, tidak diacak sebagai skor.
+Tackle: kedekatan ke pembawa bola; peluang berhasil memakai tackling vs control.
+Off-ball: positioning, bentuk formasi, dukungan depan, width/wing play,
+pressing/high press. Kecepatan dan akselerasi mempengaruhi gerak tiap tick.
+Kiper (slot lineup 0) mengikuti sisi bola dan mencoba menangkap/intersep.
+Catch/interception/tackle dan kick error memakai SplitMix64 dari input seed.
+Keputusan satu slice membaca state yang sama sebelum gerak; prioritas resolusi
+dibuat deterministik. Batched tick dan tick tunggal menghasilkan replay sama.
+
+Ketika gol, skor naik tepat sekali, last_goal.sequence naik monoton dan berisi
+tick, tim pencetak, pemain sentuhan terakhir, own_goal, serta titik crossing.
+Tahan selama 20 tick (2 detik game), lalu kick-off tim kebobolan. Bola keluar
+memakai restart sederhana: sideline ke lawan sentuhan terakhir, endline sebagai
+goal-kick/corner sederhana. Restart diberi flag diskontinuitas; belum ada
+implementasi lengkap aturan jarak, lemparan, tendangan sudut atau free kick.
+Babak kedua membalik sumbu x/z formasi dan memulai kick-off away pada tick27000.
+
+ReplayBuffer.h/.cpp
+Circular storage tetap 301 frame di heap, tanpa pertumbuhan memori selama
+simulasi. Sampling setiap 3 tick, hanya 15 detik presentasi terbaru.
+Ekspor C-API adalah buffer binary FSIM v1. Caller menulis byte tersebut ke file.
+Format tidak bergantung sizeof/packing C++, lihat FSIM_FORMAT.txt.
+
+C-API tetap dalam src/match_bridge_api.cpp (nama file dari Tahap 2.0).
+get_match_snapshot mengeluarkan fsim.match_snapshot.v2, dengan velocity,
+action, ball_owner, statistik, status gol, dan status kapasitas replay.
+get_match_goal_status mengembalikan latest + sequence + score tanpa menghapusnya.
+export_match_replay mengembalikan bytes; sizing/retry dan caller ownership sama
+seperti API JSON, tetapi required_size binary TIDAK menyertakan NUL.
+Signature sebelumnya tidak berubah; get_match_api_version tetap 1 (ABI v1).
+Consumer JSON perlu membaca versi snapshot v2 sebelum memproses fitur baru.
+
+Pengujian
+4 target CTest: regresi core, ABI C murni, physics/AI/replay, Python/SQLite/ABI.
+Physics mencakup bounce, rolling stop, kedua gawang, tembakan cepat, di atas
+mistar, clipping tiang, crossing parsial, corner-boundary, dan dt tidak valid.
+Replay mencakup overwrite/wrap, little-endian offsets, buffer kurang tanpa
+truncation, sample order, file rusak, roundtrip, dan freeze setelah full time.
+AI mencakup pilihan pass/dribble/shoot/tackle serta width dan mentalitas.
+run_stage2_1_demo.py menjalankan AS Roma vs AC Milan dari input tahap sebelumnya,
+memverifikasi gerak 22 pemain, bola, seluruh gol, clock 90 menit, hash database,
+dan identitas snapshot/replay saat laga diulang dengan batch tick berbeda.
+
+Batas kualitas
+Hasil laga adalah prototipe fungsional, bukan distribusi sepak bola realistis.
+Baseline seed20261015 menghasilkan skor terlalu tinggi; AI, pertahanan, kiper,
+tempo dan peluang perlu dikalibrasi terhadap target statistik pada tahap lanjut.
+Belum ada offside, pelanggaran/kartu, pergantian pemain, stamina dinamis,
+animasi, renderer, atau integrasi Unreal/Android. Jadwal liga/DB lama tidak
+diubah. Determinisme diuji pada binary Windows x64 yang sama; operasi floating
+point belum dijamin bit-identik lintas compiler/arsitektur.

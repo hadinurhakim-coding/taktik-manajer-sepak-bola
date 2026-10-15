@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "installed_using": "Visual Studio Installer CLI modify (additive components)",
+  "installation_path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools",
+  "components": [
+    "Microsoft.VisualStudio.Workload.VCTools",
+    "Microsoft.VisualStudio.Component.VC.Tools.x86.x64",
+    "Microsoft.VisualStudio.Component.Windows11SDK.26100",
+    "Microsoft.VisualStudio.Component.VC.CMake.Project"
+  ],
+  "msvc_version": "19.44.35222.0",
+  "toolset_directory": "14.44.35207",
+  "cl_path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+  "cmake_version": "3.31.6-msvc6",
+  "cmake_path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe",
+  "windows_sdk": "10.0.26100.0",
+  "is_complete": true,
+  "is_reboot_required": false,
+  "activation": "D:\\Hadi\\proyek\\football-manager\\FootballSim_Master\\01_SimulationCore_CPP\\activate_toolchain.cmd",
+  "activation_usage": "In cmd.exe: call activate_toolchain.cmd. This initializes x64 include/lib/PATH for that terminal.",
+  "global_path_changed": false,
+  "test_source": "D:\\Hadi\\proyek\\football-manager\\FootballSim_Master\\01_SimulationCore_CPP\\tests\\toolchain_check.cpp",
+  "reproduce_build": "D:\\Hadi\\proyek\\football-manager\\FootballSim_Master\\01_SimulationCore_CPP\\run_toolchain_check.cmd",
+  "generator": "Visual Studio 17 2022",
+  "architecture": "x64",
+  "configuration": "Release",
+  "cpp_standard": "C++20",
+  "cplusplus": 202002,
+  "msc_ver": 1944,
+  "sizeof_pointer": 8,
+  "sizeof_Vec3": 12,
+  "sizeof_PlayerState": 20,
+  "alignof_PlayerState": 4,
+  "windows_sdk_header_and_link_probe": "GetCurrentProcessId from windows.h: OK",
+  "build_and_executable_exit_code": 0,
+  "exe_path": "D:\\Hadi\\proyek\\football-manager\\FootballSim_Master\\01_SimulationCore_CPP\\build\\toolchain_check\\Release\\toolchain_check.exe",
+  "exe_sha256": "a848993a664e2a72e12e79f04478a73dc8c5285d61851409658af0eced14221c",
+  "struct_note": "Probe structs only; no .fsim serialization contract is defined by this test.",
+  "logs": [
+    "toolchain_install.log",
+    "toolchain_build.log"
+  ],
+  "official_references": [
+    "https://learn.microsoft.com/en-us/visualstudio/install/use-command-line-parameters-to-install-visual-studio?view=vs-2022",
+    "https://learn.microsoft.com/en-us/visualstudio/install/workload-component-id-vs-build-tools?view=vs-2022"
+  ]
+}

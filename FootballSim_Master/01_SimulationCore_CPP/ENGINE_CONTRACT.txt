@@ -1,0 +1,149 @@
+FootballSim Match Engine - Tahap 2.1
+
+Cakupan
+Core headless C++20: input tervalidasi, utility AI, gerak 22 pemain, fisika bola,
+gol, clock deterministik, dan ring-buffer replay .fsim. Skor berasal dari bola
+yang melewati bidang gawang; score_is_final_simulated_result=true saat selesai.
+AI masih prototipe dengan skor terlalu tinggi; kalibrasi belum dilakukan.
+Belum ada offside, kartu, pergantian pemain, aturan lengkap bola mati, tumbukan
+tiang/jaring, seleksi highlight otomatis, atau renderer UE/Android. Snapshot ini
+belum dapat dikirim langsung ke viewer replay lama. seed menggerakkan PRNG.
+Lihat FSIM_FORMAT.txt untuk kontrak binary dan STAGE2_1_NOTES.txt untuk detail.
+
+Build Windows x64
+Dari folder ini jalankan .\build_engine.cmd. Skrip mengaktifkan MSVC 2022
+untuk sesi proses tersebut, menjalankan CMake Release, kemudian CTest.
+Hasil build/engine/Release:
+  fsim_core.lib    : library statis C++
+  match_bridge.dll: C-API untuk caller eksternal
+  match_bridge.lib: import library DLL, bukan library statis core
+  core_tests.exe, c_api_smoke.exe, physics_replay_tests.exe: pengujian native
+Python hanya diperlukan untuk konverter dan pengujian integrasi.
+Parser JSON nlohmann/json 3.12.0 tersedia lokal dalam third_party/nlohmann;
+lisensi MIT dan provenance disertakan. Build tidak mengunduh dependency.
+
+Dual clock
+Satu fixed tick = 1/60 detik presentasi = 0.1 detik game, rasio 6.0x.
+Tick integer adalah sumber waktu sehingga batch tick dan tick tunggal setara.
+0..26999: first_half; 27000..53999: second_half; 54000: completed.
+Babak kedua mulai pada 450 detik presentasi / 2700 detik game.
+Full time tepat 900 detik presentasi / 5400 detik game. Tick tambahan diabaikan.
+Clock belum menambahkan injury time. Ada tahanan singkat saat restart yang
+tetap menghabiskan waktu pertandingan. Pergantian babak membalik arah serang.
+real_elapsed_seconds merupakan waktu presentasi LOGIS. Engine tidak sleep:
+backend dapat menyelesaikan clock secepat CPU; host interaktif mengatur pacing
+60 tick/detik memakai accumulator dan monotonic clock, bukan satu tick/frame.
+Replay speed 0.5 adalah aturan presentasi terpisah, tidak mengubah rasio 6x.
+
+Kontrak input fsim.match_input.v1
+Contoh lengkap: replay_samples/converted_match_input.json.
+Top level: input_version, seed (string desimal uint64), teams [home, away].
+String seed menghindari pembulatan uint64 di runtime JSON berbasis double.
+Tim: id, league_id, name, short_name, rating, fitness, club_revision,
+     tactics, players (11..64 pemain roster), lineup (11 ID terurut).
+Pemain: id, name, number, role (GK/DF/MF/FW), primary_position,
+        secondary_positions, anchor [x,z], attributes (10 angka 0..100).
+Taktik: formation, play_style, mentality, pressing, tempo, width,
+        pressing_intensity, tempo_intensity, specialists, specialist_backups.
+Enum persis mengikuti ../00_Specs_and_Logs/match_engine_schema.json.
+Penugasan specialist utama wajib menunjuk pemain starter. Backup opsional
+harus ada di roster dan berbeda dari penugasan utamanya.
+lineup menentukan urutan slot formasi: kiper, baris pertahanan hingga depan.
+Source anchor dipertahankan dalam input. Posisi dibentuk dari formasi dan
+bergerak selama simulasi. Lapangan 105 x 68 meter, y ke atas, x memanjang,
+z melebar. Babak pertama home mengarah +x, away -x; babak kedua berbalik.
+Kick-off memindahkan pemain ke daerah tim sendiri dan taker ke tengah;
+aturan jarak kick-off dan bola mati belum merupakan implementasi hukum lengkap.
+Identitas string dari SQLite dipertahankan tanpa hashing/re-numbering.
+
+Konverter SQLite
+Contoh dari folder ini:
+  python -B convert_old_data_to_cpp.py --list-teams
+  python -B convert_old_data_to_cpp.py --home-team tm_15531ff404756aa6 --away-team tm_1a1cdacb819699d1 --seed 20261015 --output replay_samples/another_match.json
+--db dapat mengganti lokasi sumber. Default:
+  D:\Hadi\proyek\manajer-sepak-bola\backend\football_manager.db
+Output yang sudah ada memerlukan --force. --report menyimpan bukti baca.
+Semua output dan staging wajib di luar repository sumber.
+Tabel dibaca: league_teams, club_states, club_players (JSON body).
+Alias atribut: body.control -> attributes.ball_control, tanpa mengubah nilai.
+Data roster mentah dipertahankan; penalti posisi legacy tidak diterapkan.
+fitness adalah nilai tersimpan, tanpa menghitung pemulihan waktu atau latihan.
+pressing/tempo 0..33 -> low/slow; 34..66 -> medium/normal;
+67..100 -> high/fast. Ini kebijakan adapter; nilai numerik asli juga disimpan.
+mentality Defensive/Balanced/Attacking diubah ke huruf kecil.
+Alias style eksplisit:
+  Balanced / Kombinasi Taktikal Seimbang -> balanced
+  Possession / Penguasaan Bola (Possession) -> possession
+  Counter / Serangan Balik Cepat (Counter) -> counter_attack
+  Pressing / Tekanan Tinggi (High-Press) -> high_press
+  Wide / Serangan Sayap & Umpan Silang -> wing_play
+  Direct / Direct Play Intensitas -> direct_pass
+Keenam nilai canonical juga diterima. Style legacy lainnya ditolak secara
+default karena belum ada pemetaan semantik yang disepakati. Pilihan eksplisit
+--unknown-style balanced menerima fallback dengan warning dan taktik asli
+disimpan di source_metadata. Atribut hilang atau lineup salah tidak direkayasa.
+
+Perlindungan sumber
+Konverter menyalin DB dan WAL bila ada ke folder temporer dalam build.
+Hash, ukuran, waktu modifikasi, dan daftar sidecar diverifikasi stabil sebelum
+dan sesudah pembacaan. SQLite hanya membuka salinan dengan mode=ro dan
+query_only; tidak mengimpor backend, migrasi, checkpoint, atau menulis sumber.
+Salinan lolos PRAGMA quick_check. Sumber yang berubah saat audit atau memiliki
+rollback journal ditolak: jalankan ulang ketika tidak ada penulisan aktif.
+WAL aktif dengan commit stabil didukung dan diuji dengan fixture lokal.
+
+C ABI v1 (include/match_bridge_api.h)
+  get_match_api_version() -> 1
+  init_match(json_utf8, byte_count, out_handle)
+  tick_match_fixed(handle, tick_count)
+  get_match_snapshot(handle, output, capacity, required_size)
+  get_match_goal_status(handle, output, capacity, required_size)
+  export_match_replay(handle, output_bytes, capacity, required_size)
+  get_engine_schema(output, capacity, required_size)
+  destroy_match(handle)
+  get_match_last_error(output, capacity, required_size)
+Handle adalah uint64 token lokal proses; 0 tidak valid. Hancurkan tepat satu
+kali. Semua alokasi engine dikelola DLL. Caller mengelola buffer output.
+Input maksimal 1 MiB, kedalaman JSON maksimal 64; byte_count tanpa NUL.
+Untuk output, panggil dengan output=NULL/capacity=0 untuk memperoleh ukuran,
+alokasikan required_size byte, lalu panggil ulang. required_size termasuk NUL.
+Ekspor binary replay menggunakan ukuran byte persis TANPA NUL. Snapshot kini
+fsim.match_snapshot.v2; ABI tetap v1 karena signature sebelumnya tidak berubah.
+Status gol memiliki sequence monoton, skor, dan latest (null sebelum gol).
+Membaca status tidak mengonsumsi event. Poll sequence untuk mendeteksi gol baru.
+Buffer kecil mengembalikan kode 3 tanpa menulis/truncate. Retry bila ukuran
+berubah karena caller lain melakukan tick. JSON keluar adalah UTF-8.
+Status: 0 OK, 1 invalid_argument, 2 invalid_handle, 3 buffer_too_small,
+4 internal_error. Exception C++ ditangkap; pesan error thread-local harus
+dibaca segera di thread yang sama. Panggilan berikutnya dapat menghapus pesan.
+Registry diserialisasi mutex; host tetap mengendalikan urutan tick/snapshot.
+Objek MatchEngine C++ langsung tidak otomatis thread-safe.
+
+Caller Python
+match_bridge.py menyediakan MatchLibrary melalui ctypes (tanpa paket tambahan):
+  import json
+  from pathlib import Path
+  from match_bridge import MatchLibrary
+  data = json.loads(Path('replay_samples/converted_match_input.json').read_text(encoding='utf-8'))
+  library = MatchLibrary('build/engine/Release/match_bridge.dll')
+  with library.create(data) as match:
+      match.tick(54000)
+      print(match.snapshot())
+      print(match.goals())
+      Path('replay_samples/new_last15s.fsim').write_bytes(match.replay_bytes())
+
+Integrasi selanjutnya
+Android memerlukan build Android NDK dan adapter JNI; gunakan BUILD_TESTING=OFF
+ketika cross-compile. UE dapat memanggil C-API DLL atau mengintegrasikan core
+melalui aturan build modul UE. Artefak yang telah diuji baru Windows x64;
+build Android dan UE 5.8 belum dilakukan. Tidak ada perubahan pada Kotlin,
+backend produksi, format friendly-*, maupun viewer yang sudah ada.
+
+Bukti pengujian
+../00_Specs_and_Logs/stage2_1_build.log: MSVC/CMake dan 4 target CTest.
+../00_Specs_and_Logs/stage2_1_simulation.json: laga 90 menit dari data asli,
+gerak 22 pemain, gol, repeatability, hash sumber, dan hash artefak.
+replay_samples/stage2_1/: klip gol, 15 detik terakhir, snapshot, daftar gol.
+Jalankan python -B run_stage2_1_demo.py untuk mereproduksi artefak ini.
+Log stage2_* tanpa _1 dan converted_match_snapshots.json adalah arsip tahap 2.0,
+bukan keluaran versi engine saat ini.

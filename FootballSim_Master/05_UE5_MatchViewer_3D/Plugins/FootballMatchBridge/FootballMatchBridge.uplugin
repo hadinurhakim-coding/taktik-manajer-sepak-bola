@@ -1,0 +1,10 @@
+{
+  "FileVersion": 3,
+  "Version": 1,
+  "VersionName": "0.2.2",
+  "FriendlyName": "Football Match Bridge",
+  "Description": "Validated FSIM v1 reader and offline replay playback. No simulation DLL dependency.",
+  "Category": "FootballSim",
+  "CanContainContent": false,
+  "Modules": [{"Name": "FootballMatchBridge", "Type": "Runtime", "LoadingPhase": "Default"}]
+}

@@ -1,0 +1,81 @@
+{
+  "status": "PASS",
+  "stage": "2.1",
+  "checked_at_utc": "2026-10-15T10:31:47.924793+00:00",
+  "input": "D:\\Hadi\\proyek\\football-manager\\FootballSim_Master\\01_SimulationCore_CPP\\replay_samples\\converted_match_input.json",
+  "seed": "20261015",
+  "teams": [
+    "AS Roma",
+    "AC Milan"
+  ],
+  "score": [
+    27,
+    15
+  ],
+  "goal_events": 42,
+  "statistics": {
+    "actions": {
+      "dribble": 2872,
+      "off_ball_movement": 368521,
+      "shoot": 85,
+      "short_pass": 1180,
+      "tackle": 496
+    },
+    "ai_slices": 17086,
+    "interceptions": 998,
+    "restarts": 240,
+    "saves": 28
+  },
+  "clock": {
+    "ticks": 54000,
+    "presentation_seconds": 900,
+    "game_seconds": 5400,
+    "scale": 6
+  },
+  "players_observed_moving": 22,
+  "ball_observed_moving": true,
+  "simulator_and_polling_wall_seconds": 0.7988939000060782,
+  "repeatability_same_build": "bit-identical snapshots and replay for batched vs three-tick calls",
+  "replay": {
+    "format": "FSIM v1 little-endian",
+    "frames": 301,
+    "sample_presentation_seconds": 0.05,
+    "window_presentation_seconds": 15,
+    "first_tick": 53100,
+    "last_tick": 54000,
+    "reference_reader_roundtrip": "PASS"
+  },
+  "source_database_unchanged": true,
+  "source_database_sha256": "fa6271a2d12899c98af561839850e697855db076593bb3299ec64aba0e0203f5",
+  "library_sha256": "d5b8c0041a72be44ccb263d60932dcf772af85e0c3d3995dddd7000f13c10aa7",
+  "artifacts": {
+    "first_goal_last15s.fsim": {
+      "path": "D:\\Hadi\\proyek\\football-manager\\FootballSim_Master\\01_SimulationCore_CPP\\replay_samples\\stage2_1\\first_goal_last15s.fsim",
+      "bytes": 126063,
+      "sha256": "d9006c8bcfc6dfc582c3db403d7ace5239ab80bb367d190bde53e81f4a72985f"
+    },
+    "fulltime_last15s.fsim": {
+      "path": "D:\\Hadi\\proyek\\football-manager\\FootballSim_Master\\01_SimulationCore_CPP\\replay_samples\\stage2_1\\fulltime_last15s.fsim",
+      "bytes": 126067,
+      "sha256": "da7de80b4d79a72a8de69c62d3f17b03ff0316c5a7f4d4198d62b633e89ae80b"
+    },
+    "match_events.json": {
+      "path": "D:\\Hadi\\proyek\\football-manager\\FootballSim_Master\\01_SimulationCore_CPP\\replay_samples\\stage2_1\\match_events.json",
+      "bytes": 14281,
+      "sha256": "71cd8e3bf913ca34aabdabb4d36412f9c510a9be2bcb6089df8c06b7478afb04"
+    },
+    "snapshots.json": {
+      "path": "D:\\Hadi\\proyek\\football-manager\\FootballSim_Master\\01_SimulationCore_CPP\\replay_samples\\stage2_1\\snapshots.json",
+      "bytes": 30115,
+      "sha256": "f971155a52cd6befd3fcb11914f688c5e9d8068cb20db5616252367ee5c7a461"
+    }
+  },
+  "limitations": [
+    "Prototype AI generates too many goals; football balance is not calibrated.",
+    "No offside, fouls/cards, substitutions, full set-piece laws or physical post/net collisions.",
+    "Restart repositioning is discontinuous and flagged in replay; the game clock advances through brief restart holds.",
+    "The ring retains only the latest 15 presentation seconds, not the whole match.",
+    "UE5.8/Android readers and rendering are not implemented or tested.",
+    "Determinism is verified for the same Windows x64 build; cross-platform floating point identity is not promised."
+  ]
+}

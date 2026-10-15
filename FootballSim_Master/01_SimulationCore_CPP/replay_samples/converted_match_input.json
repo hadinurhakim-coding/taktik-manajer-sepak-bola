@@ -1,0 +1,1162 @@
+{
+  "input_version": "fsim.match_input.v1",
+  "seed": "20261015",
+  "teams": [
+    {
+      "id": "tm_15531ff404756aa6",
+      "league_id": "lg_04474d88e4a360ef",
+      "name": "AS Roma",
+      "short_name": "ROM",
+      "rating": 81,
+      "fitness": 96.0,
+      "club_revision": 9,
+      "tactics": {
+        "formation": "3-4-2-1",
+        "play_style": "balanced",
+        "mentality": "balanced",
+        "pressing": "medium",
+        "tempo": "normal",
+        "pressing_intensity": 50,
+        "tempo_intensity": 50,
+        "width": 50,
+        "specialists": {
+          "captain": "tm_15531ff404756aa6:5",
+          "penalty_taker": "tm_15531ff404756aa6:9",
+          "free_kick_taker": "tm_15531ff404756aa6:9",
+          "corner_left_taker": "tm_15531ff404756aa6:7",
+          "corner_right_taker": "tm_15531ff404756aa6:7"
+        },
+        "specialist_backups": {
+          "captain": "tm_15531ff404756aa6:9",
+          "penalty_taker": "tm_15531ff404756aa6:bench:9",
+          "free_kick_taker": "tm_15531ff404756aa6:bench:6",
+          "corner_left_taker": "tm_15531ff404756aa6:4",
+          "corner_right_taker": "tm_15531ff404756aa6:4"
+        }
+      },
+      "players": [
+        {
+          "id": "tm_15531ff404756aa6:0",
+          "name": "Pemain Sintetis 01",
+          "number": 1,
+          "role": "GK",
+          "primary_position": "GK",
+          "secondary_positions": [],
+          "anchor": [
+            -49.0,
+            0.0
+          ],
+          "attributes": {
+            "speed": 77,
+            "acceleration": 87,
+            "stamina": 71,
+            "passing": 77,
+            "ball_control": 70,
+            "finishing": 72,
+            "heading": 74,
+            "tackling": 75,
+            "positioning": 72,
+            "goalkeeping": 79
+          }
+        },
+        {
+          "id": "tm_15531ff404756aa6:1",
+          "name": "Pemain Sintetis 02",
+          "number": 2,
+          "role": "DF",
+          "primary_position": "CB",
+          "secondary_positions": [
+            "LB",
+            "RB",
+            "DM"
+          ],
+          "anchor": [
+            -30.0,
+            -15.0
+          ],
+          "attributes": {
+            "speed": 88,
+            "acceleration": 73,
+            "stamina": 84,
+            "passing": 85,
+            "ball_control": 75,
+            "finishing": 64,
+            "heading": 80,
+            "tackling": 94,
+            "positioning": 88,
+            "goalkeeping": 15
+          }
+        },
+        {
+          "id": "tm_15531ff404756aa6:10",
+          "name": "Pemain Sintetis 11",
+          "number": 11,
+          "role": "FW",
+          "primary_position": "ST",
+          "secondary_positions": [
+            "LW",
+            "RW",
+            "AM"
+          ],
+          "anchor": [
+            25.0,
+            0.0
+          ],
+          "attributes": {
+            "speed": 88,
+            "acceleration": 77,
+            "stamina": 85,
+            "passing": 92,
+            "ball_control": 71,
+            "finishing": 90,
+            "heading": 95,
+            "tackling": 73,
+            "positioning": 85,
+            "goalkeeping": 15
+          }
+        },
+        {
+          "id": "tm_15531ff404756aa6:2",
+          "name": "Pemain Sintetis 03",
+          "number": 3,
+          "role": "DF",
+          "primary_position": "CB",
+          "secondary_positions": [
+            "LB",
+            "RB",
+            "DM"
+          ],
+          "anchor": [
+            -30.0,
+            0.0
+          ],
+          "attributes": {
+            "speed": 78,
+            "acceleration": 83,
+            "stamina": 70,
+            "passing": 80,
+            "ball_control": 74,
+            "finishing": 61,
+            "heading": 80,
+            "tackling": 86,
+            "positioning": 77,
+            "goalkeeping": 15
+          }
+        },
+        {
+          "id": "tm_15531ff404756aa6:3",
+          "name": "Pemain Sintetis 04",
+          "number": 4,
+          "role": "DF",
+          "primary_position": "CB",
+          "secondary_positions": [
+            "LB",
+            "RB",
+            "DM"
+          ],
+          "anchor": [
+            -30.0,
+            15.0
+          ],
+          "attributes": {
+            "speed": 88,
+            "acceleration": 70,
+            "stamina": 80,
+            "passing": 85,
+            "ball_control": 74,
+            "finishing": 59,
+            "heading": 73,
+            "tackling": 86,
+            "positioning": 80,
+            "goalkeeping": 15
+          }
+        },
+        {
+          "id": "tm_15531ff404756aa6:4",
+          "name": "Pemain Sintetis 05",
+          "number": 5,
+          "role": "MF",
+          "primary_position": "DM",
+          "secondary_positions": [
+            "CM",
+            "CB"
+          ],
+          "anchor": [
+            -11.667,
+            -18.0
+          ],
+          "attributes": {
+            "speed": 88,
+            "acceleration": 89,
+            "stamina": 72,
+            "passing": 92,
+            "ball_control": 84,
+            "finishing": 75,
+            "heading": 74,
+            "tackling": 88,
+            "positioning": 73,
+            "goalkeeping": 15
+          }
+        },
+        {
+          "id": "tm_15531ff404756aa6:5",
+          "name": "Pemain Sintetis 06",
+          "number": 6,
+          "role": "MF",
+          "primary_position": "DM",
+          "secondary_positions": [
+            "CM",
+            "CB"
+          ],
+          "anchor": [
+            -11.667,
+            -6.0
+          ],
+          "attributes": {
+            "speed": 86,
+            "acceleration": 70,
+            "stamina": 83,
+            "passing": 88,
+            "ball_control": 78,
+            "finishing": 75,
+            "heading": 85,
+            "tackling": 84,
+            "positioning": 89,
+            "goalkeeping": 15
+          }
+        },
+        {
+          "id": "tm_15531ff404756aa6:6",
+          "name": "Pemain Sintetis 07",
+          "number": 7,
+          "role": "MF",
+          "primary_position": "DM",
+          "secondary_positions": [
+            "CM",
+            "CB"
+          ],
+          "anchor": [
+            -11.667,
+            6.0
+          ],
+          "attributes": {
+            "speed": 90,
+            "acceleration": 77,
+            "stamina": 78,
+            "passing": 80,
+            "ball_control": 76,
+            "finishing": 80,
+            "heading": 82,
+            "tackling": 78,
+            "positioning": 88,
+            "goalkeeping": 15
+          }
+        },
+        {
+          "id": "tm_15531ff404756aa6:7",
+          "name": "Pemain Sintetis 08",
+          "number": 8,
+          "role": "MF",
+          "primary_position": "DM",
+          "secondary_positions": [
+            "CM",
+            "CB"
+          ],
+          "anchor": [
+            -11.667,
+            18.0
+          ],
+          "attributes": {
+            "speed": 75,
+            "acceleration": 91,
+            "stamina": 84,
+            "passing": 82,
+            "ball_control": 80,
+            "finishing": 86,
+            "heading": 81,
+            "tackling": 69,
+            "positioning": 87,
+            "goalkeeping": 15
+          }
+        },
+        {
+          "id": "tm_15531ff404756aa6:8",
+          "name": "Pemain Sintetis 09",
+          "number": 9,
+          "role": "MF",
+          "primary_position": "CM",
+          "secondary_positions": [
+            "DM",
+            "AM",
+            "LM",
+            "RM"
+          ],
+          "anchor": [
+            6.667,
+            -7.5
+          ],
+          "attributes": {
+            "speed": 91,
+            "acceleration": 79,
+            "stamina": 84,
+            "passing": 72,
+            "ball_control": 73,
+            "finishing": 72,
+            "heading": 88,
+            "tackling": 84,
+            "positioning": 88,
+            "goalkeeping": 15
+          }
+        },
+        {
+          "id": "tm_15531ff404756aa6:9",
+          "name": "Pemain Sintetis 10",
+          "number": 10,
+          "role": "MF",
+          "primary_position": "CM",
+          "secondary_positions": [
+            "DM",
+            "AM",
+            "LM",
+            "RM"
+          ],
+          "anchor": [
+            6.667,
+            7.5
+          ],
+          "attributes": {
+            "speed": 81,
+            "acceleration": 70,
+            "stamina": 86,
+            "passing": 78,
+            "ball_control": 89,
+            "finishing": 73,
+            "heading": 73,
+            "tackling": 78,
+            "positioning": 83,
+            "goalkeeping": 15
+          }
+        },
+        {
+          "id": "tm_15531ff404756aa6:bench:0",
+          "name": "Pemain Sintetis 12",
+          "number": 12,
+          "role": "GK",
+          "primary_position": "GK",
+          "secondary_positions": [],
+          "anchor": [
+            -49.0,
+            0.0
+          ],
+          "attributes": {
+            "speed": 74,
+            "acceleration": 86,
+            "stamina": 76,
+            "passing": 78,
+            "ball_control": 80,
+            "finishing": 76,
+            "heading": 80,
+            "tackling": 71,
+            "positioning": 73,
+            "goalkeeping": 77
+          }
+        },
+        {
+          "id": "tm_15531ff404756aa6:bench:1",
+          "name": "Pemain Sintetis 13",
+          "number": 13,
+          "role": "DF",
+          "primary_position": "LB",
+          "secondary_positions": [
+            "LWB",
+            "CB"
+          ],
+          "anchor": [
+            -30.0,
+            -18.0
+          ],
+          "attributes": {
+            "speed": 75,
+            "acceleration": 86,
+            "stamina": 66,
+            "passing": 79,
+            "ball_control": 66,
+            "finishing": 61,
+            "heading": 81,
+            "tackling": 76,
+            "positioning": 82,
+            "goalkeeping": 15
+          }
+        },
+        {
+          "id": "tm_15531ff404756aa6:bench:2",
+          "name": "Pemain Sintetis 14",
+          "number": 14,
+          "role": "DF",
+          "primary_position": "CB",
+          "secondary_positions": [
+            "LB",
+            "RB",
+            "DM"
+          ],
+          "anchor": [
+            -30.0,
+            -6.0
+          ],
+          "attributes": {
+            "speed": 67,
+            "acceleration": 75,
+            "stamina": 74,
+            "passing": 74,
+            "ball_control": 82,
+            "finishing": 66,
+            "heading": 84,
+            "tackling": 74,
+            "positioning": 84,
+            "goalkeeping": 15
+          }
+        },
+        {
+          "id": "tm_15531ff404756aa6:bench:5",
+          "name": "Pemain Sintetis 15",
+          "number": 15,
+          "role": "MF",
+          "primary_position": "CM",
+          "secondary_positions": [
+            "DM",
+            "AM",
+            "LM",
+            "RM"
+          ],
+          "anchor": [
+            -2.5,
+            -15.0
+          ],
+          "attributes": {
+            "speed": 86,
+            "acceleration": 79,
+            "stamina": 67,
+            "passing": 76,
+            "ball_control": 82,
+            "finishing": 77,
+            "heading": 80,
+            "tackling": 85,
+            "positioning": 73,
+            "goalkeeping": 15
+          }
+        },
+        {
+          "id": "tm_15531ff404756aa6:bench:6",
+          "name": "Pemain Sintetis 16",
+          "number": 16,
+          "role": "MF",
+          "primary_position": "CM",
+          "secondary_positions": [
+            "DM",
+            "AM",
+            "LM",
+            "RM"
+          ],
+          "anchor": [
+            -2.5,
+            0.0
+          ],
+          "attributes": {
+            "speed": 88,
+            "acceleration": 76,
+            "stamina": 82,
+            "passing": 80,
+            "ball_control": 88,
+            "finishing": 85,
+            "heading": 78,
+            "tackling": 80,
+            "positioning": 66,
+            "goalkeeping": 15
+          }
+        },
+        {
+          "id": "tm_15531ff404756aa6:bench:8",
+          "name": "Pemain Sintetis 17",
+          "number": 17,
+          "role": "FW",
+          "primary_position": "LW",
+          "secondary_positions": [
+            "LM",
+            "ST",
+            "AM"
+          ],
+          "anchor": [
+            25.0,
+            -15.0
+          ],
+          "attributes": {
+            "speed": 81,
+            "acceleration": 85,
+            "stamina": 78,
+            "passing": 86,
+            "ball_control": 78,
+            "finishing": 88,
+            "heading": 86,
+            "tackling": 66,
+            "positioning": 78,
+            "goalkeeping": 15
+          }
+        },
+        {
+          "id": "tm_15531ff404756aa6:bench:9",
+          "name": "Pemain Sintetis 18",
+          "number": 18,
+          "role": "FW",
+          "primary_position": "ST",
+          "secondary_positions": [
+            "LW",
+            "RW",
+            "AM"
+          ],
+          "anchor": [
+            25.0,
+            0.0
+          ],
+          "attributes": {
+            "speed": 87,
+            "acceleration": 69,
+            "stamina": 70,
+            "passing": 79,
+            "ball_control": 74,
+            "finishing": 91,
+            "heading": 94,
+            "tackling": 83,
+            "positioning": 80,
+            "goalkeeping": 15
+          }
+        }
+      ],
+      "lineup": [
+        "tm_15531ff404756aa6:0",
+        "tm_15531ff404756aa6:1",
+        "tm_15531ff404756aa6:2",
+        "tm_15531ff404756aa6:3",
+        "tm_15531ff404756aa6:4",
+        "tm_15531ff404756aa6:5",
+        "tm_15531ff404756aa6:6",
+        "tm_15531ff404756aa6:7",
+        "tm_15531ff404756aa6:8",
+        "tm_15531ff404756aa6:9",
+        "tm_15531ff404756aa6:10"
+      ],
+      "source_metadata": {
+        "legacy_tactics": {
+          "captain": "tm_15531ff404756aa6:5",
+          "captainBackup": "tm_15531ff404756aa6:9",
+          "corner": "tm_15531ff404756aa6:7",
+          "cornerLeft": "tm_15531ff404756aa6:7",
+          "cornerLeftBackup": "tm_15531ff404756aa6:4",
+          "cornerRight": "tm_15531ff404756aa6:7",
+          "cornerRightBackup": "tm_15531ff404756aa6:4",
+          "formation": "3-4-2-1",
+          "freeKick": "tm_15531ff404756aa6:9",
+          "freeKickBackup": "tm_15531ff404756aa6:bench:6",
+          "mentality": "Balanced",
+          "penalty": "tm_15531ff404756aa6:9",
+          "penaltyBackup": "tm_15531ff404756aa6:bench:9",
+          "pressing": 50,
+          "style": "Kombinasi Taktikal Seimbang",
+          "tempo": 50,
+          "width": 50
+        },
+        "attribute_alias": {
+          "control": "ball_control"
+        },
+        "warnings": []
+      }
+    },
+    {
+      "id": "tm_1a1cdacb819699d1",
+      "league_id": "lg_04474d88e4a360ef",
+      "name": "AC Milan",
+      "short_name": "MIL",
+      "rating": 84,
+      "fitness": 96.0,
+      "club_revision": 9,
+      "tactics": {
+        "formation": "4-2-3-1",
+        "play_style": "possession",
+        "mentality": "balanced",
+        "pressing": "medium",
+        "tempo": "normal",
+        "pressing_intensity": 50,
+        "tempo_intensity": 50,
+        "width": 50,
+        "specialists": {
+          "captain": "tm_1a1cdacb819699d1:5",
+          "penalty_taker": "tm_1a1cdacb819699d1:9",
+          "free_kick_taker": "tm_1a1cdacb819699d1:9",
+          "corner_left_taker": "tm_1a1cdacb819699d1:7",
+          "corner_right_taker": "tm_1a1cdacb819699d1:7"
+        },
+        "specialist_backups": {
+          "captain": "tm_1a1cdacb819699d1:2",
+          "penalty_taker": "tm_1a1cdacb819699d1:10",
+          "free_kick_taker": "tm_1a1cdacb819699d1:10",
+          "corner_left_taker": "tm_1a1cdacb819699d1:4",
+          "corner_right_taker": "tm_1a1cdacb819699d1:4"
+        }
+      },
+      "players": [
+        {
+          "id": "tm_1a1cdacb819699d1:0",
+          "name": "Pemain Sintetis 01",
+          "number": 1,
+          "role": "GK",
+          "primary_position": "GK",
+          "secondary_positions": [],
+          "anchor": [
+            -49.0,
+            0.0
+          ],
+          "attributes": {
+            "speed": 82,
+            "acceleration": 77,
+            "stamina": 80,
+            "passing": 83,
+            "ball_control": 81,
+            "finishing": 74,
+            "heading": 87,
+            "tackling": 89,
+            "positioning": 87,
+            "goalkeeping": 86
+          }
+        },
+        {
+          "id": "tm_1a1cdacb819699d1:1",
+          "name": "Pemain Sintetis 02",
+          "number": 2,
+          "role": "DF",
+          "primary_position": "LB",
+          "secondary_positions": [
+            "LWB",
+            "CB"
+          ],
+          "anchor": [
+            -30.0,
+            -18.0
+          ],
+          "attributes": {
+            "speed": 78,
+            "acceleration": 94,
+            "stamina": 84,
+            "passing": 86,
+            "ball_control": 94,
+            "finishing": 63,
+            "heading": 79,
+            "tackling": 93,
+            "positioning": 83,
+            "goalkeeping": 15
+          }
+        },
+        {
+          "id": "tm_1a1cdacb819699d1:10",
+          "name": "Pemain Sintetis 11",
+          "number": 11,
+          "role": "FW",
+          "primary_position": "ST",
+          "secondary_positions": [
+            "LW",
+            "RW",
+            "AM"
+          ],
+          "anchor": [
+            25.0,
+            0.0
+          ],
+          "attributes": {
+            "speed": 86,
+            "acceleration": 85,
+            "stamina": 83,
+            "passing": 89,
+            "ball_control": 95,
+            "finishing": 92,
+            "heading": 91,
+            "tackling": 88,
+            "positioning": 79,
+            "goalkeeping": 15
+          }
+        },
+        {
+          "id": "tm_1a1cdacb819699d1:2",
+          "name": "Pemain Sintetis 03",
+          "number": 3,
+          "role": "DF",
+          "primary_position": "CB",
+          "secondary_positions": [
+            "LB",
+            "RB",
+            "DM"
+          ],
+          "anchor": [
+            -30.0,
+            -6.0
+          ],
+          "attributes": {
+            "speed": 83,
+            "acceleration": 81,
+            "stamina": 94,
+            "passing": 87,
+            "ball_control": 91,
+            "finishing": 76,
+            "heading": 84,
+            "tackling": 82,
+            "positioning": 81,
+            "goalkeeping": 15
+          }
+        },
+        {
+          "id": "tm_1a1cdacb819699d1:3",
+          "name": "Pemain Sintetis 04",
+          "number": 4,
+          "role": "DF",
+          "primary_position": "CB",
+          "secondary_positions": [
+            "LB",
+            "RB",
+            "DM"
+          ],
+          "anchor": [
+            -30.0,
+            6.0
+          ],
+          "attributes": {
+            "speed": 74,
+            "acceleration": 86,
+            "stamina": 88,
+            "passing": 90,
+            "ball_control": 90,
+            "finishing": 75,
+            "heading": 90,
+            "tackling": 82,
+            "positioning": 80,
+            "goalkeeping": 15
+          }
+        },
+        {
+          "id": "tm_1a1cdacb819699d1:4",
+          "name": "Pemain Sintetis 05",
+          "number": 5,
+          "role": "DF",
+          "primary_position": "RB",
+          "secondary_positions": [
+            "RWB",
+            "CB"
+          ],
+          "anchor": [
+            -30.0,
+            18.0
+          ],
+          "attributes": {
+            "speed": 75,
+            "acceleration": 81,
+            "stamina": 80,
+            "passing": 93,
+            "ball_control": 90,
+            "finishing": 73,
+            "heading": 77,
+            "tackling": 99,
+            "positioning": 73,
+            "goalkeeping": 15
+          }
+        },
+        {
+          "id": "tm_1a1cdacb819699d1:5",
+          "name": "Pemain Sintetis 06",
+          "number": 6,
+          "role": "MF",
+          "primary_position": "DM",
+          "secondary_positions": [
+            "CM",
+            "CB"
+          ],
+          "anchor": [
+            -11.667,
+            -7.5
+          ],
+          "attributes": {
+            "speed": 93,
+            "acceleration": 91,
+            "stamina": 94,
+            "passing": 90,
+            "ball_control": 91,
+            "finishing": 90,
+            "heading": 99,
+            "tackling": 88,
+            "positioning": 93,
+            "goalkeeping": 15
+          }
+        },
+        {
+          "id": "tm_1a1cdacb819699d1:6",
+          "name": "Pemain Sintetis 07",
+          "number": 7,
+          "role": "MF",
+          "primary_position": "DM",
+          "secondary_positions": [
+            "CM",
+            "CB"
+          ],
+          "anchor": [
+            -11.667,
+            7.5
+          ],
+          "attributes": {
+            "speed": 85,
+            "acceleration": 80,
+            "stamina": 91,
+            "passing": 95,
+            "ball_control": 75,
+            "finishing": 84,
+            "heading": 79,
+            "tackling": 87,
+            "positioning": 74,
+            "goalkeeping": 15
+          }
+        },
+        {
+          "id": "tm_1a1cdacb819699d1:7",
+          "name": "Pemain Sintetis 08",
+          "number": 8,
+          "role": "MF",
+          "primary_position": "LW",
+          "secondary_positions": [
+            "LM",
+            "ST",
+            "AM"
+          ],
+          "anchor": [
+            6.667,
+            -15.0
+          ],
+          "attributes": {
+            "speed": 95,
+            "acceleration": 89,
+            "stamina": 74,
+            "passing": 93,
+            "ball_control": 92,
+            "finishing": 73,
+            "heading": 73,
+            "tackling": 78,
+            "positioning": 82,
+            "goalkeeping": 15
+          }
+        },
+        {
+          "id": "tm_1a1cdacb819699d1:8",
+          "name": "Pemain Sintetis 09",
+          "number": 9,
+          "role": "MF",
+          "primary_position": "AM",
+          "secondary_positions": [
+            "CM",
+            "ST",
+            "LW",
+            "RW"
+          ],
+          "anchor": [
+            6.667,
+            0.0
+          ],
+          "attributes": {
+            "speed": 75,
+            "acceleration": 84,
+            "stamina": 81,
+            "passing": 73,
+            "ball_control": 93,
+            "finishing": 88,
+            "heading": 86,
+            "tackling": 73,
+            "positioning": 79,
+            "goalkeeping": 15
+          }
+        },
+        {
+          "id": "tm_1a1cdacb819699d1:9",
+          "name": "Pemain Sintetis 10",
+          "number": 10,
+          "role": "MF",
+          "primary_position": "RW",
+          "secondary_positions": [
+            "RM",
+            "ST",
+            "AM"
+          ],
+          "anchor": [
+            6.667,
+            15.0
+          ],
+          "attributes": {
+            "speed": 91,
+            "acceleration": 75,
+            "stamina": 75,
+            "passing": 90,
+            "ball_control": 78,
+            "finishing": 83,
+            "heading": 82,
+            "tackling": 76,
+            "positioning": 83,
+            "goalkeeping": 15
+          }
+        },
+        {
+          "id": "tm_1a1cdacb819699d1:bench:0",
+          "name": "Pemain Sintetis 12",
+          "number": 12,
+          "role": "GK",
+          "primary_position": "GK",
+          "secondary_positions": [],
+          "anchor": [
+            -49.0,
+            0.0
+          ],
+          "attributes": {
+            "speed": 90,
+            "acceleration": 78,
+            "stamina": 79,
+            "passing": 75,
+            "ball_control": 74,
+            "finishing": 82,
+            "heading": 87,
+            "tackling": 86,
+            "positioning": 83,
+            "goalkeeping": 85
+          }
+        },
+        {
+          "id": "tm_1a1cdacb819699d1:bench:1",
+          "name": "Pemain Sintetis 13",
+          "number": 13,
+          "role": "DF",
+          "primary_position": "LB",
+          "secondary_positions": [
+            "LWB",
+            "CB"
+          ],
+          "anchor": [
+            -30.0,
+            -18.0
+          ],
+          "attributes": {
+            "speed": 90,
+            "acceleration": 81,
+            "stamina": 87,
+            "passing": 79,
+            "ball_control": 82,
+            "finishing": 75,
+            "heading": 75,
+            "tackling": 79,
+            "positioning": 79,
+            "goalkeeping": 15
+          }
+        },
+        {
+          "id": "tm_1a1cdacb819699d1:bench:2",
+          "name": "Pemain Sintetis 14",
+          "number": 14,
+          "role": "DF",
+          "primary_position": "CB",
+          "secondary_positions": [
+            "LB",
+            "RB",
+            "DM"
+          ],
+          "anchor": [
+            -30.0,
+            -6.0
+          ],
+          "attributes": {
+            "speed": 80,
+            "acceleration": 85,
+            "stamina": 91,
+            "passing": 90,
+            "ball_control": 81,
+            "finishing": 74,
+            "heading": 93,
+            "tackling": 88,
+            "positioning": 90,
+            "goalkeeping": 15
+          }
+        },
+        {
+          "id": "tm_1a1cdacb819699d1:bench:5",
+          "name": "Pemain Sintetis 15",
+          "number": 15,
+          "role": "MF",
+          "primary_position": "CM",
+          "secondary_positions": [
+            "DM",
+            "AM",
+            "LM",
+            "RM"
+          ],
+          "anchor": [
+            -2.5,
+            -15.0
+          ],
+          "attributes": {
+            "speed": 90,
+            "acceleration": 85,
+            "stamina": 82,
+            "passing": 84,
+            "ball_control": 85,
+            "finishing": 90,
+            "heading": 81,
+            "tackling": 81,
+            "positioning": 77,
+            "goalkeeping": 15
+          }
+        },
+        {
+          "id": "tm_1a1cdacb819699d1:bench:6",
+          "name": "Pemain Sintetis 16",
+          "number": 16,
+          "role": "MF",
+          "primary_position": "CM",
+          "secondary_positions": [
+            "DM",
+            "AM",
+            "LM",
+            "RM"
+          ],
+          "anchor": [
+            -2.5,
+            0.0
+          ],
+          "attributes": {
+            "speed": 73,
+            "acceleration": 72,
+            "stamina": 77,
+            "passing": 83,
+            "ball_control": 74,
+            "finishing": 74,
+            "heading": 77,
+            "tackling": 82,
+            "positioning": 75,
+            "goalkeeping": 15
+          }
+        },
+        {
+          "id": "tm_1a1cdacb819699d1:bench:8",
+          "name": "Pemain Sintetis 17",
+          "number": 17,
+          "role": "FW",
+          "primary_position": "LW",
+          "secondary_positions": [
+            "LM",
+            "ST",
+            "AM"
+          ],
+          "anchor": [
+            25.0,
+            -15.0
+          ],
+          "attributes": {
+            "speed": 73,
+            "acceleration": 90,
+            "stamina": 83,
+            "passing": 78,
+            "ball_control": 91,
+            "finishing": 87,
+            "heading": 93,
+            "tackling": 82,
+            "positioning": 79,
+            "goalkeeping": 15
+          }
+        },
+        {
+          "id": "tm_1a1cdacb819699d1:bench:9",
+          "name": "Pemain Sintetis 18",
+          "number": 18,
+          "role": "FW",
+          "primary_position": "ST",
+          "secondary_positions": [
+            "LW",
+            "RW",
+            "AM"
+          ],
+          "anchor": [
+            25.0,
+            0.0
+          ],
+          "attributes": {
+            "speed": 91,
+            "acceleration": 81,
+            "stamina": 84,
+            "passing": 74,
+            "ball_control": 69,
+            "finishing": 79,
+            "heading": 90,
+            "tackling": 79,
+            "positioning": 77,
+            "goalkeeping": 15
+          }
+        }
+      ],
+      "lineup": [
+        "tm_1a1cdacb819699d1:0",
+        "tm_1a1cdacb819699d1:1",
+        "tm_1a1cdacb819699d1:2",
+        "tm_1a1cdacb819699d1:3",
+        "tm_1a1cdacb819699d1:4",
+        "tm_1a1cdacb819699d1:5",
+        "tm_1a1cdacb819699d1:6",
+        "tm_1a1cdacb819699d1:7",
+        "tm_1a1cdacb819699d1:8",
+        "tm_1a1cdacb819699d1:9",
+        "tm_1a1cdacb819699d1:10"
+      ],
+      "source_metadata": {
+        "legacy_tactics": {
+          "captain": "tm_1a1cdacb819699d1:5",
+          "captainBackup": "tm_1a1cdacb819699d1:2",
+          "corner": "tm_1a1cdacb819699d1:7",
+          "cornerLeft": "tm_1a1cdacb819699d1:7",
+          "cornerLeftBackup": "tm_1a1cdacb819699d1:4",
+          "cornerRight": "tm_1a1cdacb819699d1:7",
+          "cornerRightBackup": "tm_1a1cdacb819699d1:4",
+          "formation": "4-2-3-1",
+          "freeKick": "tm_1a1cdacb819699d1:9",
+          "freeKickBackup": "tm_1a1cdacb819699d1:10",
+          "mentality": "Balanced",
+          "penalty": "tm_1a1cdacb819699d1:9",
+          "penaltyBackup": "tm_1a1cdacb819699d1:10",
+          "pressing": 50,
+          "style": "Penguasaan Bola (Possession)",
+          "tempo": 50,
+          "width": 50
+        },
+        "attribute_alias": {
+          "control": "ball_control"
+        },
+        "warnings": []
+      }
+    }
+  ],
+  "conversion": {
+    "adapter_version": "sqlite-to-fsim-1",
+    "unknown_style_policy": "error",
+    "numeric_bucket_policy": "0..33 low/slow; 34..66 medium/normal; 67..100 high/fast; exact values also retained",
+    "fitness_policy": "stored club_states.fitness; no time recovery or training mutation",
+    "attributes_policy": "raw roster attributes; positional penalties are not applied or fabricated",
+    "legacy_replay_compatible": false,
+    "source_read": {
+      "source_database": "D:\\Hadi\\proyek\\manajer-sepak-bola\\backend\\football_manager.db",
+      "source_files": {
+        "": {
+          "bytes": 151785472,
+          "mtime_ns": 1792052808697217300,
+          "sha256": "fa6271a2d12899c98af561839850e697855db076593bb3299ec64aba0e0203f5"
+        }
+      },
+      "source_repo_writes": false,
+      "sqlite_open_mode": "mode=ro and query_only on private DB/WAL copy",
+      "source_unchanged": true
+    }
+  }
+}
