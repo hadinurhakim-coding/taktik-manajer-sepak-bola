@@ -25,6 +25,7 @@ struct FOOTBALLMATCHBRIDGE_API FFSimReplay
     TArray<FFSimReplaySegment> Segments;
     FString HomeName, AwayName, Seed;
     TArray<FString> PlayerIds;
+    TArray<FString> PlayerNames;
     TArray<FFSimReplayFrame> Frames;
     double Duration() const { return Version == 2 ? TimelineSeconds : Frames.Num() > 1 ? double(Frames.Last().Tick - Frames[0].Tick) / 60.0 : 0; }
 };

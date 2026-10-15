@@ -1,74 +1,71 @@
-FootballSim Replay Viewer - Tahap 2.2
+FootballSim Broadcast Replay Viewer - Tahap 3.2
 
-Membuka viewer
-Jalankan RunViewer.cmd. Jendela game memakai Unreal Engine 5.8.3 terpasang di
-D:\Epic Games\UE_5.8. Proyek: FootballReplayViewer.uproject.
-Klip gol pertama dimuat, mulai dalam keadaan jeda, dengan kecepatan 0.5x.
-Putar/Jeda: tombol layar atau SPASI. Ulang dari awal: tombol Ulang atau R.
-Slider: pilih posisi waktu klip. Tombol 0.5x/1.0x: ganti kecepatan.
-Klip gol / Akhir laga: pilih salah satu dari dua rekaman contoh.
-Replay berhenti di ujung klip; tekan Putar atau Ulang untuk memulai lagi.
-Tutup jendela untuk keluar. Tidak menjalankan backend atau mengubah database.
+Menjalankan viewer
+RunViewer.cmd membuka game windowed UE5.8.3. Highlight 900 detik dimuat dalam
+keadaan jeda. Putar/Jeda: tombol layar atau Spasi. Ulang: tombol atau R.
+Slider memilih waktu highlight. Tombol 1x/0.5x mengubah laju pemutaran.
+Segmen replay otomatis mempunyai laju 0.5x dan kamera rendah.
+RunViewer.cmd -ReplayAutoplay memulai pemutaran otomatis.
+RunViewer.cmd -ReplayFile="D:\path\rekaman.fsim" memuat rekaman lain.
+FSIM_UE_ROOT menentukan lokasi engine jika berbeda dari D:\Epic Games\UE_5.8.
 
-File lain
-RunViewer.cmd -ReplayFile="D:\path\rekaman.fsim"
-Tambahkan -ReplayAutoplay untuk memulai otomatis.
-FSIM_UE_ROOT dapat diatur pada sesi terminal untuk lokasi engine lain.
-Saat memakai Unreal Editor penuh, buka .uproject lalu tekan Play.
-Scene dibuat saat BeginPlay; viewport edit map Entry kosong sebelum Play.
+Kamera dan scene
+Kamera utama perspektif FOV 35, target X=0.75*X bola, Y=-5000cm, Z=1650cm.
+Interpolasi posisi dan rotasi mengikuti bola; pitch dibatasi -23 sampai -26.
+Koreksi proyeksi vertikal menjaga bola masuk frame meskipun bola di sisi jauh.
+Replay memakai FOV 50, Z=240cm, dan jarak 800-1200cm dari bola, di sisi aksi
+sehingga jaring tidak menghalangi pandangan. Kamera melakukan cut saat ganti
+segmen dan beralih kembali ke broadcast setelah replay.
+22 skeletal mesh memakai basis NicoPaz (tinggi bind pose 180cm), tekstur PBR,
+warna kit per tim, serta animasi gerak/aksi/kiper yang tersedia. Posisi dari
+FSIM tetap menjadi otoritas; perpindahan Hips bawaan animasi dinetralkan di
+bidang horizontal agar mesh dan indikator penguasaan bola tidak bergeser.
+Tidak ada token besar atau angka di atas kepala. Hanya penguasa bola memiliki
+cincin tipis. Radar 240x150 unit Slate berada di bawah tengah, skor di kiri
+atas, nama pemain dari metadata di kedua pojok bawah.
+Stadion prosedural meliputi rumput lit, garis lapangan, gawang berjaring,
+adboard, tribun bertingkat, bangku dan penonton sederhana. Matahari dinamis
+berpitch -40 derajat menghasilkan bayangan; skylight mengisi sisi gelap.
 
-Tampilan
-Lapangan 105x68 m, garis, dua gawang, kamera keseluruhan lapangan.
-Kamera menyesuaikan ukuran jendela agar lapangan besar dan tetap utuh di antara
-panel skor dan kontrol. Garis putih 24 cm memakai material tanpa pencahayaan
-di atas rumput hijau gelap untuk menjaga kontras pada sudut kamera jauh.
-22 pemain sederhana: home biru, away merah; kiper kuning dan ungu.
-Tubuh, nomor, dan alas pemain diperbesar; alas warna tim diberi tepi gelap.
-Nomor di atas pemain menunjukkan slot lineup 1..11, bukan nomor jersey sumber
-karena metadata FSIM v1 hanya menyimpan ID dan indeks lineup.
-Bola putih dengan panel gelap berdiameter visual 70 cm, dengan cincin kuning
-di tanah yang mengikuti posisi horizontal bola, termasuk saat bola melambung.
-Pembesaran objek hanya untuk keterbacaan; koordinat replay tetap sama.
-Skor dan jam pertandingan berasal dari frame, terpisah dari waktu klip.
-Indikator GOL muncul berdasarkan penanda kejadian dalam rekaman.
-Tidak ada model karakter final, rig, animasi kaki, atau stadion produksi.
+Data
+FSIM v1 tetap didukung untuk klip ring buffer. FSIM v2 menyimpan 18001 frame
+sumber 90 menit dengan urutan segmen highlight 900 detik. Segmen normal
+memakai detik pertandingan 1x; replay otomatis 0.5x sudah dihitung dalam
+anggaran 900 detik. Skor dan jam mengikuti sumber, termasuk lompatan waktu.
+Konversi FSIM metre x/y-up/z -> UE centimetre X/Y/Z-up = 100*(x,z,y).
+Reader dan playback tetap berada dalam plugin FootballMatchBridge.
+Tidak memerlukan DLL simulasi untuk playback offline.
 
-Waktu dan interpolasi
-Input setiap 0.05 detik presentasi; klip 301 frame mencakup 15 detik.
-Pada 0.5x klip tersebut berlangsung 30 detik waktu pemutaran.
-Ini replay jendela 15 detik terakhir dari simulasi, bukan video seluruh laga.
-Posisi pemain/bola diinterpolasi linear. Skor mengikuti frame secara diskret.
-Pada flag restart atau pergantian babak, posisi ditahan hingga frame baru lalu
-berpindah, sehingga tidak diinterpolasi melintasi reset posisi.
-FSIM metre x/y-up/z -> Unreal cm X/Y/Z-up = 100*(x,z,y).
-
-Struktur
-Plugins/FootballMatchBridge/: plugin Runtime, reader binary dan playback model.
-  Public/FSimReplay.h dan Private/FSimReplay.cpp mendefinisikan kontrak reader.
-  Private/FSimReplayTests.cpp memuat tes native Unreal Automation.
-Source/FootballReplayViewer/: scene, kamera, Slate HUD, kontrol input.
-Content/Replays/: salinan klip .fsim dari tahap 2.1; sumber asli dipertahankan.
-Content/Viewer/M_ViewerColor.uasset: material berparameter Tint.
-Content/Viewer/M_ViewerFlat.uasset: material tanpa pencahayaan untuk kontras
-rumput, garis, dan penanda. Eksposur kamera tetap dan bloom dimatikan.
-Reader tidak memerlukan match_bridge.dll/.lib. Integrasi live engine C-API
-dapat ditambahkan ke plugin yang sama pada tahap berikutnya.
-
-Build ulang
+Build dan aset
 1. powershell -File build_viewer.ps1
-2. powershell -File setup_assets.ps1  (membuat kedua material yang belum ada)
+2. powershell -File setup_assets.ps1
 3. powershell -File test_viewer.ps1
 4. RunViewer.cmd
-Prasyarat: UE5.8, MSVC 2022 C++ x64, Windows SDK, .NET Framework SDK 4.8+
-(SwarmInterface editor), bundled .NET runtime dari instalasi Unreal.
-Gunakan -EngineRoot pada ketiga skrip PowerShell bila engine berada di lokasi lain.
-Hasil build Editor ada di Binaries/Win64 dan Plugins/FootballMatchBridge/Binaries.
-Belum dibuat paket game shipping atau build Android.
+Prasyarat: UE5.8, MSVC 2022 x64, Windows SDK, .NET Framework SDK 4.8+.
+Gunakan -EngineRoot pada skrip PowerShell bila lokasi engine berbeda.
+setup_assets.py mengimpor FBX dengan importer legacy, menyimpan skeleton
+beserta dependensinya, 27 AnimSequence dan LOD0-LOD2, lalu membuat material
+rumput/kit/langit. Tekstur PNG tersedia di 04_Exported_GameAssets/kits_textures.
+Untuk mengekspor ulang dari sumber lokal, jalankan script Blender headless
+export_assets_to_ue5.py dan export_character_textures.py. Sumber lama hanya
+dibaca dan tidak disimpan ulang.
 
-Validasi dan log
-Saved/Stage2_2_UBT.log: hasil kompilasi UnrealBuildTool.
-Saved/Stage2_2_Assets.log: setup material.
-Saved/Stage2_2_Tests.log dan Saved/Automation/: hasil Unreal Automation.
-Tes: fixture FSIM asli, file korup, layout endian, identitas, transform sumbu,
-0.5x, jeda, seek, batas akhir, interpolasi, dan diskontinuitas restart.
-Laporan akhir dan bukti tampilan disimpan di ../00_Specs_and_Logs/.
+Screenshot tanpa UI
+powershell -File capture_stage3_2.ps1
+Proses game berjalan tersembunyi dengan -RenderOffscreen; tidak mengirim
+input mouse/keyboard dan menutup diri setelah selesai. FScreenshotRequest
+menyimpan dua PNG 1600x900 dan diagnostik JSON di ../00_Specs_and_Logs:
+stage3_2_broadcast_3d.png dan stage3_2_replay_closeup.png.
+Opsional -BroadcastAt / -CloseupAt memilih detik timeline untuk capture.
+Skrip menolak screenshot lama, shader gagal kompilasi, atau skeleton hilang.
+
+Validasi
+5 tes Unreal: reader/corrupt input, pause/rate/seek, timeline highlight,
+framing kamera di kedua touchline/garis gawang, serta skeleton dan animasi
+persisten. Log di Saved/Stage2_2_Tests.log dan Saved/Automation/.
+Laporan stage3_2_report.json menyimpan hasil verifikasi render dan build.
+
+Batas
+Stadion/penonton masih prosedural. Semua pemain memakai mesh dasar yang sama;
+nama pada sampel berasal dari roster sintetis, bukan roster pemain asli.
+Belum ada integrasi live C-API, build Android, atau paket Shipping.

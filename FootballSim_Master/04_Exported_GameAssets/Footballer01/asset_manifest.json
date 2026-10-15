@@ -1,0 +1,343 @@
+{
+  "status": "EXPORTED_PENDING_VISUAL_QA",
+  "source": {
+    "path": "02_ComfyUI_AssetFactory/generated/footballer01/paint_retry.glb",
+    "bytes": 4358976,
+    "sha256": "2a0d20e1e2dcfcf5dc74ac4f562e7ccdd4d13373f95677545f5b9e47d6623daa"
+  },
+  "legacy_inputs": [],
+  "rig": "Footballer01_Rig",
+  "height_m": 1.8,
+  "bones": [
+    "Root",
+    "Pelvis",
+    "Spine_01",
+    "Spine_02",
+    "Neck",
+    "Head",
+    "Clavicle_L",
+    "UpperArm_L",
+    "Forearm_L",
+    "Hand_L",
+    "Index_01_L",
+    "Index_02_L",
+    "Middle_01_L",
+    "Middle_02_L",
+    "Ring_01_L",
+    "Ring_02_L",
+    "Pinky_01_L",
+    "Pinky_02_L",
+    "Thumb_01_L",
+    "Thumb_02_L",
+    "Clavicle_R",
+    "UpperArm_R",
+    "Forearm_R",
+    "Hand_R",
+    "Index_01_R",
+    "Index_02_R",
+    "Middle_01_R",
+    "Middle_02_R",
+    "Ring_01_R",
+    "Ring_02_R",
+    "Pinky_01_R",
+    "Pinky_02_R",
+    "Thumb_01_R",
+    "Thumb_02_R",
+    "Thigh_L",
+    "Calf_L",
+    "Foot_L",
+    "Toe_L",
+    "Thigh_R",
+    "Calf_R",
+    "Foot_R",
+    "Toe_R"
+  ],
+  "skinning": "Blender bone heat; normalized top 4 influences",
+  "animation_origin": "new procedural keyframes with analytic two-bone IK",
+  "hand_repair": "Both AI webbed hands replaced by five-finger geometry",
+  "textures": [
+    {
+      "role": "basecolor",
+      "path": "04_Exported_GameAssets/Footballer01/textures/basecolor.png",
+      "bytes": 2455608,
+      "sha256": "0cf1a1d208bb8f5a4fe5813a72ebc478fec423e878d88806e669769f4a576036"
+    },
+    {
+      "role": "metallic_roughness",
+      "path": "04_Exported_GameAssets/Footballer01/textures/metallic_roughness.png",
+      "bytes": 1318188,
+      "sha256": "25b09cbd836a1793aad6469cc6a2af4f023d7651d5adae9c56edf449eec12cb1"
+    }
+  ],
+  "character_lods": [
+    {
+      "path": "04_Exported_GameAssets/Footballer01/characters_lod/Footballer01_LOD0.fbx",
+      "bytes": 4644332,
+      "sha256": "97c4c47753503b652adf931b174bae089e852afaab02eb8ef9e108edd64d6ce9",
+      "lod": 0,
+      "triangles": 73832,
+      "vertices": 36916
+    },
+    {
+      "path": "04_Exported_GameAssets/Footballer01/characters_lod/Footballer01_LOD1.fbx",
+      "bytes": 3663020,
+      "sha256": "f0a84492570158e5e83969809963d6e8e08d0b3d9974ad626a8aaa787362cb5b",
+      "lod": 1,
+      "triangles": 40607,
+      "vertices": 20304
+    },
+    {
+      "path": "04_Exported_GameAssets/Footballer01/characters_lod/Footballer01_LOD2.fbx",
+      "bytes": 2907564,
+      "sha256": "3e02d8548da108cc4c9b6904e2e655b033fb3855e1fcad6ca356564202dfeb41",
+      "lod": 2,
+      "triangles": 20671,
+      "vertices": 10336
+    }
+  ],
+  "animations": [
+    {
+      "path": "04_Exported_GameAssets/Footballer01/animations_locomotion/idle.fbx",
+      "bytes": 457148,
+      "sha256": "6f6430e27adb774f87c263277ebaba51d77624fc7e1319bf802119bf0f10d81a",
+      "name": "idle",
+      "group": "animations_locomotion",
+      "seconds": 2.4,
+      "fps": 30
+    },
+    {
+      "path": "04_Exported_GameAssets/Footballer01/animations_locomotion/jog.fbx",
+      "bytes": 339228,
+      "sha256": "508fd4bd105a9b1eb47ae22f979cccd16ea113e9925029793fe9b188a859d596",
+      "name": "jog",
+      "group": "animations_locomotion",
+      "seconds": 0.7,
+      "fps": 30
+    },
+    {
+      "path": "04_Exported_GameAssets/Footballer01/animations_locomotion/sprint.fbx",
+      "bytes": 319868,
+      "sha256": "2ad356773b7216cdd3848f4d3cf74d79bf036e6c3b97dff57b5ad2816bb1f839",
+      "name": "sprint",
+      "group": "animations_locomotion",
+      "seconds": 0.5333333333333333,
+      "fps": 30
+    },
+    {
+      "path": "04_Exported_GameAssets/Footballer01/animations_locomotion/turn_left.fbx",
+      "bytes": 339228,
+      "sha256": "61e5982fefa19c95fe7c895f28d4e4c3b5976209779454046fbd27125c5f5e36",
+      "name": "turn_left",
+      "group": "animations_locomotion",
+      "seconds": 0.7,
+      "fps": 30
+    },
+    {
+      "path": "04_Exported_GameAssets/Footballer01/animations_locomotion/turn_spin.fbx",
+      "bytes": 395100,
+      "sha256": "9533aeceb036932cb7518c37fea4193e1ad50614c08e012bbaa0283ddf6c9d3a",
+      "name": "turn_spin",
+      "group": "animations_locomotion",
+      "seconds": 1.4,
+      "fps": 30
+    },
+    {
+      "path": "04_Exported_GameAssets/Footballer01/animations_locomotion/turn_sprint.fbx",
+      "bytes": 319868,
+      "sha256": "dcc7971aea6383a77893501aa857006aa31ab174cc68aca31d9c759d246d40ea",
+      "name": "turn_sprint",
+      "group": "animations_locomotion",
+      "seconds": 0.5333333333333333,
+      "fps": 30
+    },
+    {
+      "path": "04_Exported_GameAssets/Footballer01/animations_locomotion/turn_walk.fbx",
+      "bytes": 339228,
+      "sha256": "849a63733c80b9332fb3d13018de00311167d22d8751aa0ef4b3531f8159fee9",
+      "name": "turn_walk",
+      "group": "animations_locomotion",
+      "seconds": 0.7,
+      "fps": 30
+    },
+    {
+      "path": "04_Exported_GameAssets/Footballer01/animations_locomotion/defend_stance.fbx",
+      "bytes": 456572,
+      "sha256": "63da29d31e12542ade3efd6a3b05be2e1c0f6290cc0c91a9a578fb1b734a2075",
+      "name": "defend_stance",
+      "group": "animations_locomotion",
+      "seconds": 2.4,
+      "fps": 30
+    },
+    {
+      "path": "04_Exported_GameAssets/Footballer01/animations_locomotion/defend_shuffle.fbx",
+      "bytes": 339228,
+      "sha256": "5a3d359c9496f6552d1a99d241fc6340a9248a659ebd0be7514b0b00b297daa3",
+      "name": "defend_shuffle",
+      "group": "animations_locomotion",
+      "seconds": 0.7,
+      "fps": 30
+    },
+    {
+      "path": "04_Exported_GameAssets/Footballer01/animations_onball/dribble.fbx",
+      "bytes": 339228,
+      "sha256": "b11725fc4d22e251228139f3a9e23a5375eed023873b78187693a7b7c57e9cfa",
+      "name": "dribble",
+      "group": "animations_onball",
+      "seconds": 0.7,
+      "fps": 30
+    },
+    {
+      "path": "04_Exported_GameAssets/Footballer01/animations_onball/pass.fbx",
+      "bytes": 393692,
+      "sha256": "4cf9484e71241dea69bacf0e547ffac7b3cd24a9ee90167aad6b4d024dffb3d2",
+      "name": "pass",
+      "group": "animations_onball",
+      "seconds": 1.4,
+      "fps": 30
+    },
+    {
+      "path": "04_Exported_GameAssets/Footballer01/animations_onball/shot.fbx",
+      "bytes": 393692,
+      "sha256": "8dc927e35665c4193d3a982b743fcb3b521f12f946121f0431187453cd3cd2f8",
+      "name": "shot",
+      "group": "animations_onball",
+      "seconds": 1.4,
+      "fps": 30
+    },
+    {
+      "path": "04_Exported_GameAssets/Footballer01/animations_onball/header.fbx",
+      "bytes": 393660,
+      "sha256": "d3fd4afb8e57ba0f4e0dd7a4836b40099cfb6328786762c2cc4d759f6a9cb992",
+      "name": "header",
+      "group": "animations_onball",
+      "seconds": 1.4,
+      "fps": 30
+    },
+    {
+      "path": "04_Exported_GameAssets/Footballer01/animations_onball/receive.fbx",
+      "bytes": 393724,
+      "sha256": "4752d86fa48b7719ba9b7f5adf16846124aeda5674fd4bf97982388b3add89e8",
+      "name": "receive",
+      "group": "animations_onball",
+      "seconds": 1.4,
+      "fps": 30
+    },
+    {
+      "path": "04_Exported_GameAssets/Footballer01/animations_onball/shield.fbx",
+      "bytes": 379852,
+      "sha256": "abeb2057034e31a5d174e0c4e926ecc0489ef4f24fddcd64f93fa3d28d6fde12",
+      "name": "shield",
+      "group": "animations_onball",
+      "seconds": 1.4,
+      "fps": 30
+    },
+    {
+      "path": "04_Exported_GameAssets/Footballer01/animations_onball/skill_juggle.fbx",
+      "bytes": 393692,
+      "sha256": "aabef148169f0a3a961e9748b428498e36d46cd9e2fc776e8ee00ffde955f95d",
+      "name": "skill_juggle",
+      "group": "animations_onball",
+      "seconds": 1.4,
+      "fps": 30
+    },
+    {
+      "path": "04_Exported_GameAssets/Footballer01/animations_onball/tackle_stand.fbx",
+      "bytes": 379852,
+      "sha256": "43a2f6305338c6dbcda0e1b44b731901f84535e6da6a378fa68c08a45c6001eb",
+      "name": "tackle_stand",
+      "group": "animations_onball",
+      "seconds": 1.4,
+      "fps": 30
+    },
+    {
+      "path": "04_Exported_GameAssets/Footballer01/animations_onball/tackle_lunge.fbx",
+      "bytes": 393692,
+      "sha256": "df2f34b1936f91371eae97ac5a138f302f967284b149b60eda19eb495159bd9a",
+      "name": "tackle_lunge",
+      "group": "animations_onball",
+      "seconds": 1.4,
+      "fps": 30
+    },
+    {
+      "path": "04_Exported_GameAssets/Footballer01/animations_onball/tackle_slide.fbx",
+      "bytes": 393260,
+      "sha256": "07cc6cf25bea9032741c4dc0902c37105588ed9b74bb3ff1d06bbe926f14ff2b",
+      "name": "tackle_slide",
+      "group": "animations_onball",
+      "seconds": 1.4,
+      "fps": 30
+    },
+    {
+      "path": "04_Exported_GameAssets/Footballer01/animations_onball/react_miss.fbx",
+      "bytes": 387180,
+      "sha256": "484bbed788a92c0f184026275a268083c687cae8dcded6d0c6e8496bca7112b4",
+      "name": "react_miss",
+      "group": "animations_onball",
+      "seconds": 1.4,
+      "fps": 30
+    },
+    {
+      "path": "04_Exported_GameAssets/Footballer01/animations_goalkeeper/gk_ready.fbx",
+      "bytes": 456572,
+      "sha256": "0ccbd1f4376d83f778d8ad805345b42e6195e42937d1cee7b70fff0ea2ed599c",
+      "name": "gk_ready",
+      "group": "animations_goalkeeper",
+      "seconds": 2.4,
+      "fps": 30
+    },
+    {
+      "path": "04_Exported_GameAssets/Footballer01/animations_goalkeeper/gk_dive_left.fbx",
+      "bytes": 394988,
+      "sha256": "a5688c3b1b4ab1fdd3ba0f26587a8b2e2ea5c86c1db15fdf0e0fcc5a862ce858",
+      "name": "gk_dive_left",
+      "group": "animations_goalkeeper",
+      "seconds": 1.4,
+      "fps": 30
+    },
+    {
+      "path": "04_Exported_GameAssets/Footballer01/animations_goalkeeper/gk_dive_right.fbx",
+      "bytes": 395036,
+      "sha256": "0d4c4eea99ec63689aab6210684d78d52f125e7c02697fd43bb7b32f99660e22",
+      "name": "gk_dive_right",
+      "group": "animations_goalkeeper",
+      "seconds": 1.4,
+      "fps": 30
+    },
+    {
+      "path": "04_Exported_GameAssets/Footballer01/animations_goalkeeper/gk_high.fbx",
+      "bytes": 393676,
+      "sha256": "e8585f9d71a0b3975dead50a63dd1800fe492ecb72592819cb2ca49e58ce23ea",
+      "name": "gk_high",
+      "group": "animations_goalkeeper",
+      "seconds": 1.4,
+      "fps": 30
+    },
+    {
+      "path": "04_Exported_GameAssets/Footballer01/animations_goalkeeper/gk_smother.fbx",
+      "bytes": 392876,
+      "sha256": "c9ea864fc45625e035b405e73f94c2905abf679e2d2c5c1206eed2eec2dab881",
+      "name": "gk_smother",
+      "group": "animations_goalkeeper",
+      "seconds": 1.4,
+      "fps": 30
+    },
+    {
+      "path": "04_Exported_GameAssets/Footballer01/animations_goalkeeper/gk_pass.fbx",
+      "bytes": 393692,
+      "sha256": "27ceeb8bf1fa19f20c28c096be7a1da68477d40e0486e23aefb3c2064c2d0355",
+      "name": "gk_pass",
+      "group": "animations_goalkeeper",
+      "seconds": 1.4,
+      "fps": 30
+    },
+    {
+      "path": "04_Exported_GameAssets/Footballer01/animations_setpieces/penalty.fbx",
+      "bytes": 393692,
+      "sha256": "6641eac64a899502ef9c3afd3553e70285f8edfbde203cb24a1652249d369be6",
+      "name": "penalty",
+      "group": "animations_setpieces",
+      "seconds": 1.4,
+      "fps": 30
+    }
+  ]
+}

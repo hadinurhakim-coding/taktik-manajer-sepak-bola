@@ -1,0 +1,68 @@
+[
+  {
+    "material": "nico_paz",
+    "image": "nico_paz_basecolor",
+    "path": "D:\\Hadi\\proyek\\football-manager\\FootballSim_Master\\04_Exported_GameAssets\\kits_textures\\nico_material_0_0.png",
+    "outputs": [
+      [
+        "Principled BSDF",
+        "Base Color"
+      ]
+    ]
+  },
+  {
+    "material": "nico_paz",
+    "image": "nico_paz_metallic-nico_paz_roughness",
+    "path": "D:\\Hadi\\proyek\\football-manager\\FootballSim_Master\\04_Exported_GameAssets\\kits_textures\\nico_material_0_1.png",
+    "outputs": [
+      [
+        "Separate Color",
+        "Color"
+      ]
+    ]
+  },
+  {
+    "material": "nico_paz",
+    "image": "nico_paz_normal",
+    "path": "D:\\Hadi\\proyek\\football-manager\\FootballSim_Master\\04_Exported_GameAssets\\kits_textures\\nico_material_0_2.png",
+    "outputs": [
+      [
+        "Normal Map",
+        "Color"
+      ]
+    ]
+  },
+  {
+    "material": "perbaikan_wajah_local_portrait",
+    "image": "nico_paz_basecolor",
+    "path": "D:\\Hadi\\proyek\\football-manager\\FootballSim_Master\\04_Exported_GameAssets\\kits_textures\\nico_material_1_3.png",
+    "outputs": [
+      [
+        "Principled BSDF",
+        "Base Color"
+      ]
+    ]
+  },
+  {
+    "material": "perbaikan_wajah_local_portrait",
+    "image": "nico_paz_metallic-nico_paz_roughness",
+    "path": "D:\\Hadi\\proyek\\football-manager\\FootballSim_Master\\04_Exported_GameAssets\\kits_textures\\nico_material_1_4.png",
+    "outputs": [
+      [
+        "Separate Color",
+        "Color"
+      ]
+    ]
+  },
+  {
+    "material": "perbaikan_wajah_local_portrait",
+    "image": "nico_paz_normal",
+    "path": "D:\\Hadi\\proyek\\football-manager\\FootballSim_Master\\04_Exported_GameAssets\\kits_textures\\nico_material_1_5.png",
+    "outputs": [
+      [
+        "Normal Map",
+        "Color"
+      ]
+    ]
+  }
+]

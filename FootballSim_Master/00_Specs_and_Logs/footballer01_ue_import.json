@@ -1,0 +1,116 @@
+{
+  "mesh": "/Game/Footballer01/Characters/SK_Footballer01.SK_Footballer01",
+  "skeleton": "/Game/Footballer01/Characters/SK_Footballer01_Skeleton.SK_Footballer01_Skeleton",
+  "lod_count": 3,
+  "animations": [
+    {
+      "name": "idle",
+      "seconds": 2.4000000953674316
+    },
+    {
+      "name": "jog",
+      "seconds": 0.699999988079071
+    },
+    {
+      "name": "sprint",
+      "seconds": 0.5333333611488342
+    },
+    {
+      "name": "turn_left",
+      "seconds": 0.699999988079071
+    },
+    {
+      "name": "turn_spin",
+      "seconds": 1.399999976158142
+    },
+    {
+      "name": "turn_sprint",
+      "seconds": 0.5333333611488342
+    },
+    {
+      "name": "turn_walk",
+      "seconds": 0.699999988079071
+    },
+    {
+      "name": "defend_stance",
+      "seconds": 2.4000000953674316
+    },
+    {
+      "name": "defend_shuffle",
+      "seconds": 0.699999988079071
+    },
+    {
+      "name": "dribble",
+      "seconds": 0.699999988079071
+    },
+    {
+      "name": "pass",
+      "seconds": 1.399999976158142
+    },
+    {
+      "name": "shot",
+      "seconds": 1.399999976158142
+    },
+    {
+      "name": "header",
+      "seconds": 1.399999976158142
+    },
+    {
+      "name": "receive",
+      "seconds": 1.399999976158142
+    },
+    {
+      "name": "shield",
+      "seconds": 1.399999976158142
+    },
+    {
+      "name": "skill_juggle",
+      "seconds": 1.399999976158142
+    },
+    {
+      "name": "tackle_stand",
+      "seconds": 1.399999976158142
+    },
+    {
+      "name": "tackle_lunge",
+      "seconds": 1.399999976158142
+    },
+    {
+      "name": "tackle_slide",
+      "seconds": 1.399999976158142
+    },
+    {
+      "name": "react_miss",
+      "seconds": 1.399999976158142
+    },
+    {
+      "name": "gk_ready",
+      "seconds": 2.4000000953674316
+    },
+    {
+      "name": "gk_dive_left",
+      "seconds": 1.399999976158142
+    },
+    {
+      "name": "gk_dive_right",
+      "seconds": 1.399999976158142
+    },
+    {
+      "name": "gk_high",
+      "seconds": 1.399999976158142
+    },
+    {
+      "name": "gk_smother",
+      "seconds": 1.399999976158142
+    },
+    {
+      "name": "gk_pass",
+      "seconds": 1.399999976158142
+    },
+    {
+      "name": "penalty",
+      "seconds": 1.399999976158142
+    }
+  ],
+  "status": "SUCCESS"
+}

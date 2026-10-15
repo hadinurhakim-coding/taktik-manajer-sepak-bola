@@ -1,0 +1,92 @@
+{
+  "stage": "3.2",
+  "status": "SUCCESS",
+  "engine": "Unreal Engine 5.8.3",
+  "ue_build": "SUCCESS",
+  "ue_tests_passed": 5,
+  "native_test_groups_passed": 4,
+  "mouse_keyboard_automation_used": false,
+  "capture_method": "FScreenshotRequest / RenderOffscreen / hidden process",
+  "captures": [
+    {
+      "path": "D:\\Hadi\\proyek\\football-manager\\FootballSim_Master\\00_Specs_and_Logs\\stage3_2_broadcast_3d.png",
+      "resolution": [
+        1600,
+        900
+      ],
+      "sha256": "d1e4b3a6ff87c9f34f43bcd142feb1e26fd7a132969691704899c1768498dcc0",
+      "fov": 35,
+      "camera": [
+        856.997,
+        -5000.0,
+        1650.0
+      ],
+      "match_tick": 17930.010626986623,
+      "playback_rate": 1,
+      "skeletal_players": 22,
+      "animation_states": [
+        "dribble",
+        "gk_ready",
+        "jog",
+        "pass",
+        "sprint"
+      ]
+    },
+    {
+      "path": "D:\\Hadi\\proyek\\football-manager\\FootballSim_Master\\00_Specs_and_Logs\\stage3_2_replay_closeup.png",
+      "resolution": [
+        1600,
+        900
+      ],
+      "sha256": "1fc8cfe46da5e6de67cb4cf6ca8978a984bbb4b77ef0e524915251dd3ece24b1",
+      "fov": 50,
+      "camera": [
+        3895.721,
+        -205.062,
+        240.0
+      ],
+      "match_tick": 10427.008696988225,
+      "playback_rate": 0.5,
+      "skeletal_players": 22,
+      "animation_states": [
+        "jog",
+        "shot",
+        "sprint"
+      ]
+    }
+  ],
+  "assets": {
+    "skeletal_players": 22,
+    "bind_height_cm": 180,
+    "mesh_lods": 3,
+    "imported_animation_assets": 27
+  },
+  "scene": [
+    "perspective broadcast camera",
+    "low action replay camera",
+    "lit turf and dynamic shadows",
+    "3D goal frames and nets",
+    "perimeter adboards",
+    "four-sided tiered stands",
+    "instanced seats and procedural spectators",
+    "240x150 Slate radar",
+    "possession nameplates"
+  ],
+  "repairs": [
+    "persisted missing skeleton dependency",
+    "restored shared-skeleton animation imports",
+    "explicit PBR texture export and kit shader",
+    "cancelled horizontal hip travel to preserve FSIM position",
+    "vertical lens shift preserves framing with prescribed camera pitch"
+  ],
+  "source_blend_unchanged": {
+    "D:\\Hadi\\proyek\\manajer-sepak-bola\\build\\nico-paz\\blender-session-autosave.blend": true,
+    "D:\\Hadi\\proyek\\manajer-sepak-bola\\art\\animation\\football_20261015\\football_actions.blend": true
+  },
+  "render_errors": [],
+  "limitations": [
+    "All 22 players share the NicoPaz base mesh; sample roster names are synthetic.",
+    "Stadium and spectators use simple procedural geometry, not finished production art.",
+    "Offline replay viewer; no Shipping or Android package produced."
+  ]
+}

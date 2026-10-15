@@ -1,0 +1,122 @@
+{
+  "1": {
+    "class_type": "CheckpointLoaderSimple",
+    "inputs": {
+      "ckpt_name": "sd_xl_base_1.0.safetensors"
+    }
+  },
+  "2": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "1",
+        1
+      ],
+      "text": "Full body front orthographic view of one fictional adult male professional football player, realistic game character concept, athletic lean natural proportions, 180 cm tall, short dark hair, neutral friendly face, symmetrical relaxed A pose, both straight arms spread diagonally down away from torso, hands open palms forward, both legs straight separated at shoulder width, plain royal blue short sleeve soccer jersey, plain white football shorts ending mid thigh, blue knee socks, black football boots, entire body head to both feet inside image with margin, even flat studio lighting, clean white background, high quality anatomy, sharp details, no logos, no letters, no ball, single character"
+    }
+  },
+  "3": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "1",
+        1
+      ],
+      "text": "cropped, close up, portrait, extra person, multiple views, text, logo, watermark, ball, stadium, running, bent arms, crossed limbs, extra arms, extra legs, missing hands, deformed hands, long sleeves, pants, cloak, muscular bodybuilder, cartoon, illustration, wide angle"
+    }
+  },
+  "4": {
+    "class_type": "EmptyLatentImage",
+    "inputs": {
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 1
+    }
+  },
+  "5": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "new_apose_control.png"
+    }
+  },
+  "6": {
+    "class_type": "ControlNetLoader",
+    "inputs": {
+      "control_net_name": "controlnet-openpose-sdxl-1.0.safetensors"
+    }
+  },
+  "7": {
+    "class_type": "ControlNetApplyAdvanced",
+    "inputs": {
+      "positive": [
+        "2",
+        0
+      ],
+      "negative": [
+        "3",
+        0
+      ],
+      "control_net": [
+        "6",
+        0
+      ],
+      "image": [
+        "5",
+        0
+      ],
+      "strength": 0.85,
+      "start_percent": 0.0,
+      "end_percent": 0.9
+    }
+  },
+  "8": {
+    "class_type": "KSampler",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "positive": [
+        "7",
+        0
+      ],
+      "negative": [
+        "7",
+        1
+      ],
+      "latent_image": [
+        "4",
+        0
+      ],
+      "seed": 2026101501,
+      "steps": 30,
+      "cfg": 6.5,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "karras",
+      "denoise": 1.0
+    }
+  },
+  "9": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "8",
+        0
+      ],
+      "vae": [
+        "1",
+        2
+      ]
+    }
+  },
+  "10": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "9",
+        0
+      ],
+      "filename_prefix": "FootballSim_Fresh/footballer01_reference"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "material": "/Game/Viewer/M_StadiumSurface",
+  "bounds_origin": [
+    1.239776611328125e-05,
+    4.7206878662109375e-05,
+    95.17034759374837
+  ],
+  "bounds_extent": [
+    29.03849506378174,
+    14.937297344207764,
+    95.17036590722819
+  ],
+  "materials": [
+    {
+      "slot": "nico_paz",
+      "path": "/Game/Viewer/M_PlayerKit.M_PlayerKit",
+      "textures": []
+    },
+    {
+      "slot": "perbaikan_wajah_local_portrait",
+      "path": "/Game/Viewer/M_PlayerKit.M_PlayerKit",
+      "textures": []
+    }
+  ]
+}

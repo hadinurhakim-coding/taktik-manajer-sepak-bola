@@ -78,6 +78,10 @@ bool FFSimReplayReader::Decode(const TArray<uint8>& Bytes, FFSimReplay& Out, FSt
         if (!Player.IsValid() || !Player->TryGetStringField(TEXT("id"), Id) || Id.IsEmpty() || Id.Len() > 256 || Unique.Contains(Id) ||
             !NumberEquals(Player, TEXT("team"), I / 11) || !NumberEquals(Player, TEXT("lineup_index"), I % 11)) return Fail(TEXT("Urutan/identitas pemain tidak valid."));
         Unique.Add(Id); Parsed.PlayerIds.Add(Id);
+        FString PlayerName;
+        if (!Player->TryGetStringField(TEXT("name"), PlayerName) || PlayerName.IsEmpty() || PlayerName.Len() > 256)
+            PlayerName = FString::Printf(TEXT("Pemain %d"), I % 11 + 1);
+        Parsed.PlayerNames.Add(PlayerName);
     }
     R.Offset = 40 + static_cast<int32>(MetaSize);
     Parsed.Frames.Reserve(static_cast<int32>(Count));

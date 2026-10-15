@@ -1,0 +1,241 @@
+{
+	"source_tick": 17930.010626986623,
+	"timeline_seconds": 180.2010626986623,
+	"projection": "Perspective",
+	"fov": 35,
+	"camera_position": "X=856.997 Y=-5000.000 Z=1650.000",
+	"camera_rotation": "P=-23.000000 Y=85.738454 R=0.000000",
+	"ball_position": "X=1262.478 Y=-1124.927 Z=11.000",
+	"skeletal_players": 22,
+	"playing": true,
+	"low_angle": false,
+	"bone_names": [
+		"Armature_NicoPaz",
+		"Hips",
+		"LeftUpLeg",
+		"LeftLeg",
+		"LeftFoot",
+		"LeftToeBase",
+		"LeftToe_End",
+		"RightUpLeg",
+		"RightLeg",
+		"RightFoot",
+		"RightToeBase",
+		"RightToe_End",
+		"Spine",
+		"Spine1",
+		"Spine2",
+		"LeftShoulder",
+		"LeftArm",
+		"LeftForeArm",
+		"LeftHand",
+		"Neck",
+		"Head",
+		"HeadTop_End",
+		"RightShoulder",
+		"RightArm",
+		"RightForeArm",
+		"RightHand"
+	],
+	"effective_rate": 1,
+	"players": [
+		{
+			"index": 0,
+			"animation": "gk_ready",
+			"mesh_bounds": "X=14.126 Y=27.461 Z=90.000",
+			"location": "X=-5000.000 Y=-300.000 Z=0.000",
+			"head": "X=-4999.578 Y=-300.000 Z=148.951",
+			"left_hand": "X=-4967.529 Y=-318.821 Z=107.672",
+			"pose_seconds": 0.20099145174026489
+		},
+		{
+			"index": 1,
+			"animation": "jog",
+			"mesh_bounds": "X=29.491 Y=18.665 Z=90.000",
+			"location": "X=-1497.272 Y=-843.229 Z=0.000",
+			"head": "X=-1495.773 Y=-862.758 Z=153.714",
+			"left_hand": "X=-1503.370 Y=-879.658 Z=103.927",
+			"pose_seconds": 0.37209323048591614
+		},
+		{
+			"index": 2,
+			"animation": "jog",
+			"mesh_bounds": "X=21.892 Y=30.475 Z=90.000",
+			"location": "X=-1573.544 Y=332.218 Z=0.000",
+			"head": "X=-1555.448 Y=326.466 Z=156.903",
+			"left_hand": "X=-1540.214 Y=314.726 Z=114.067",
+			"pose_seconds": 0.44309324026107788
+		},
+		{
+			"index": 3,
+			"animation": "jog",
+			"mesh_bounds": "X=28.631 Y=16.563 Z=90.000",
+			"location": "X=-1612.719 Y=567.440 Z=0.000",
+			"head": "X=-1617.209 Y=583.900 Z=155.944",
+			"left_hand": "X=-1610.763 Y=603.213 Z=115.545",
+			"pose_seconds": 0.51409322023391724
+		},
+		{
+			"index": 4,
+			"animation": "jog",
+			"mesh_bounds": "X=28.209 Y=30.256 Z=90.000",
+			"location": "X=216.736 Y=-1443.654 Z=0.000",
+			"head": "X=231.549 Y=-1449.984 Z=151.810",
+			"left_hand": "X=232.591 Y=-1471.424 Z=102.547",
+			"pose_seconds": 0.58509320020675659
+		},
+		{
+			"index": 5,
+			"animation": "dribble",
+			"mesh_bounds": "X=20.092 Y=29.983 Z=90.000",
+			"location": "X=1207.478 Y=-1124.927 Z=0.000",
+			"head": "X=1200.756 Y=-1116.616 Z=149.376",
+			"left_hand": "X=1214.254 Y=-1103.228 Z=97.792",
+			"pose_seconds": 0.25613230466842651
+		},
+		{
+			"index": 6,
+			"animation": "jog",
+			"mesh_bounds": "X=26.315 Y=30.806 Z=90.000",
+			"location": "X=1828.597 Y=-846.170 Z=0.000",
+			"head": "X=1844.960 Y=-852.607 Z=151.782",
+			"left_hand": "X=1815.481 Y=-870.299 Z=94.369",
+			"pose_seconds": 0.027093240991234779
+		},
+		{
+			"index": 7,
+			"animation": "jog",
+			"mesh_bounds": "X=20.523 Y=30.115 Z=90.000",
+			"location": "X=1337.979 Y=1699.981 Z=0.000",
+			"head": "X=1321.183 Y=1702.386 Z=155.743",
+			"left_hand": "X=1347.342 Y=1725.111 Z=99.622",
+			"pose_seconds": 0.098093241453170776
+		},
+		{
+			"index": 8,
+			"animation": "jog",
+			"mesh_bounds": "X=28.043 Y=30.334 Z=90.000",
+			"location": "X=2497.868 Y=-886.357 Z=0.000",
+			"head": "X=2510.844 Y=-875.823 Z=156.868",
+			"left_hand": "X=2514.536 Y=-908.954 Z=102.341",
+			"pose_seconds": 0.16909323632717133
+		},
+		{
+			"index": 9,
+			"animation": "jog",
+			"mesh_bounds": "X=16.988 Y=28.817 Z=90.000",
+			"location": "X=1933.832 Y=632.618 Z=0.000",
+			"head": "X=1951.680 Y=632.929 Z=153.218",
+			"left_hand": "X=1946.633 Y=604.037 Z=98.519",
+			"pose_seconds": 0.24009324610233307
+		},
+		{
+			"index": 10,
+			"animation": "jog",
+			"mesh_bounds": "X=16.099 Y=28.422 Z=90.000",
+			"location": "X=2396.333 Y=-113.660 Z=0.000",
+			"head": "X=2377.185 Y=-112.455 Z=151.179",
+			"left_hand": "X=2368.041 Y=-91.941 Z=96.476",
+			"pose_seconds": 0.31109324097633362
+		},
+		{
+			"index": 11,
+			"animation": "gk_ready",
+			"mesh_bounds": "X=27.461 Y=14.126 Z=90.000",
+			"location": "X=5000.000 Y=-300.000 Z=0.000",
+			"head": "X=5000.000 Y=-300.422 Z=148.951",
+			"left_hand": "X=4981.179 Y=-332.471 Z=107.672",
+			"pose_seconds": 0.9819914698600769
+		},
+		{
+			"index": 12,
+			"animation": "sprint",
+			"mesh_bounds": "X=25.135 Y=30.881 Z=90.000",
+			"location": "X=3016.343 Y=1586.059 Z=0.000",
+			"head": "X=3042.287 Y=1608.144 Z=134.642",
+			"left_hand": "X=3034.570 Y=1566.397 Z=111.615",
+			"pose_seconds": 0.45305505394935608
+		},
+		{
+			"index": 13,
+			"animation": "jog",
+			"mesh_bounds": "X=24.329 Y=30.853 Z=90.000",
+			"location": "X=2455.841 Y=608.028 Z=0.000",
+			"head": "X=2439.528 Y=611.995 Z=155.461",
+			"left_hand": "X=2426.377 Y=627.926 Z=114.685",
+			"pose_seconds": 0.52409321069717407
+		},
+		{
+			"index": 14,
+			"animation": "pass",
+			"mesh_bounds": "X=30.762 Y=23.452 Z=90.000",
+			"location": "X=699.982 Y=-670.645 Z=0.000",
+			"head": "X=706.177 Y=-669.028 Z=154.188",
+			"left_hand": "X=665.046 Y=-709.786 Z=114.065",
+			"pose_seconds": 0.80106270313262939
+		},
+		{
+			"index": 15,
+			"animation": "jog",
+			"mesh_bounds": "X=16.916 Y=28.786 Z=90.000",
+			"location": "X=2496.067 Y=-2073.493 Z=0.000",
+			"head": "X=2513.827 Y=-2071.171 Z=149.996",
+			"left_hand": "X=2502.998 Y=-2099.806 Z=91.964",
+			"pose_seconds": 0.66609323024749756
+		},
+		{
+			"index": 16,
+			"animation": "jog",
+			"mesh_bounds": "X=14.884 Y=27.843 Z=90.000",
+			"location": "X=1574.647 Y=633.252 Z=0.000",
+			"head": "X=1591.826 Y=636.637 Z=152.125",
+			"left_hand": "X=1576.259 Y=605.871 Z=94.818",
+			"pose_seconds": 0.037093251943588257
+		},
+		{
+			"index": 17,
+			"animation": "jog",
+			"mesh_bounds": "X=27.188 Y=30.634 Z=90.000",
+			"location": "X=1549.433 Y=-895.057 Z=0.000",
+			"head": "X=1562.428 Y=-884.177 Z=156.172",
+			"left_hand": "X=1562.264 Y=-918.685 Z=100.267",
+			"pose_seconds": 0.1080932542681694
+		},
+		{
+			"index": 18,
+			"animation": "jog",
+			"mesh_bounds": "X=15.327 Y=28.059 Z=90.000",
+			"location": "X=-591.956 Y=1399.352 Z=0.000",
+			"head": "X=-575.112 Y=1398.665 Z=156.487",
+			"left_hand": "X=-592.825 Y=1370.919 Z=102.080",
+			"pose_seconds": 0.17909325659275055
+		},
+		{
+			"index": 19,
+			"animation": "jog",
+			"mesh_bounds": "X=14.850 Y=27.826 Z=90.000",
+			"location": "X=-212.599 Y=-114.167 Z=0.000",
+			"head": "X=-194.529 Y=-115.491 Z=152.585",
+			"left_hand": "X=-199.979 Y=-143.580 Z=97.621",
+			"pose_seconds": 0.2500932514667511
+		},
+		{
+			"index": 20,
+			"animation": "jog",
+			"mesh_bounds": "X=30.872 Y=24.674 Z=90.000",
+			"location": "X=658.690 Y=-1262.238 Z=0.000",
+			"head": "X=669.368 Y=-1246.107 Z=151.438",
+			"left_hand": "X=690.702 Y=-1245.863 Z=97.300",
+			"pose_seconds": 0.32109326124191284
+		},
+		{
+			"index": 21,
+			"animation": "sprint",
+			"mesh_bounds": "X=26.917 Y=30.700 Z=90.000",
+			"location": "X=-911.440 Y=67.850 Z=0.000",
+			"head": "X=-934.674 Y=91.243 Z=139.039",
+			"left_hand": "X=-936.516 Y=87.124 Z=102.665",
+			"pose_seconds": 0.15872173011302948
+		}
+	]
+}

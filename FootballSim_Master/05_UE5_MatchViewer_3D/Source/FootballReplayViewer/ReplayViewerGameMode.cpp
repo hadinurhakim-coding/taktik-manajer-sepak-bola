@@ -3,6 +3,7 @@
 #include "Components/InputComponent.h"
 #include "EngineUtils.h"
 #include "InputCoreTypes.h"
+#include "Misc/CommandLine.h"
 
 AReplayViewerGameMode::AReplayViewerGameMode()
 {
@@ -17,6 +18,7 @@ void AReplayViewerGameMode::BeginPlay()
 void AReplayViewerController::BeginPlay()
 {
     Super::BeginPlay();
+    if (FParse::Param(FCommandLine::Get(), TEXT("RenderOffscreen"))) { bShowMouseCursor = false; return; }
     bShowMouseCursor = true;
     FInputModeGameAndUI Mode;
     Mode.SetHideCursorDuringCapture(false);

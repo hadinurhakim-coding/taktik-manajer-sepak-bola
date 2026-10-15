@@ -1,0 +1,149 @@
+{
+  "prompt": [
+    3,
+    "daecea78-cc94-4ba2-baaf-8bf8f57dc907",
+    {
+      "1": {
+        "class_type": "LoadImage",
+        "inputs": {
+          "image": "reference_footballer01_reference_00001_.png"
+        }
+      },
+      "2": {
+        "class_type": "Load3DAdvanced",
+        "inputs": {
+          "model_file": "footballer01_uv.glb",
+          "viewport_state": {},
+          "width": 512,
+          "height": 512
+        }
+      },
+      "3": {
+        "class_type": "HunyuanPaint21LocalD",
+        "inputs": {
+          "model_3d": [
+            "2",
+            0
+          ],
+          "reference": [
+            "1",
+            0
+          ],
+          "steps": 20,
+          "view_size": 512,
+          "texture_size": 2048,
+          "seed": 2026101501,
+          "reuse_result": true
+        }
+      },
+      "4": {
+        "class_type": "SaveGLB",
+        "inputs": {
+          "mesh": [
+            "3",
+            0
+          ],
+          "filename_prefix": "FootballSim_Fresh/footballer01_painted"
+        }
+      },
+      "5": {
+        "class_type": "SaveImage",
+        "inputs": {
+          "images": [
+            "3",
+            1
+          ],
+          "filename_prefix": "FootballSim_Fresh/footballer01_albedo"
+        }
+      },
+      "6": {
+        "class_type": "SaveImage",
+        "inputs": {
+          "images": [
+            "3",
+            2
+          ],
+          "filename_prefix": "FootballSim_Fresh/footballer01_mr"
+        }
+      }
+    },
+    {
+      "client_id": "footballer01-a6775f0f46574f63be88bd20bd4bd86c",
+      "create_time": 1792071548778
+    },
+    [
+      "4",
+      "5",
+      "6"
+    ]
+  ],
+  "outputs": {},
+  "status": {
+    "status_str": "error",
+    "completed": false,
+    "messages": [
+      [
+        "execution_start",
+        {
+          "prompt_id": "daecea78-cc94-4ba2-baaf-8bf8f57dc907",
+          "timestamp": 1792071548778
+        }
+      ],
+      [
+        "execution_cached",
+        {
+          "nodes": [],
+          "prompt_id": "daecea78-cc94-4ba2-baaf-8bf8f57dc907",
+          "timestamp": 1792071548778
+        }
+      ],
+      [
+        "execution_error",
+        {
+          "prompt_id": "daecea78-cc94-4ba2-baaf-8bf8f57dc907",
+          "node_id": "3",
+          "node_type": "HunyuanPaint21LocalD",
+          "executed": [
+            "2",
+            "1"
+          ],
+          "exception_message": "Hunyuan local worker failed. Log: D:\\AI\\Hunyuan3D-Paint-2.1\\outputs\\job_0460919e0fa3\\generation.log\nSTAGE render: geometry 29344 vertices 45000 faces\nSTAGE diffusion: loading local Paint 2.1 weights\n\n",
+          "exception_type": "RuntimeError",
+          "traceback": [
+            "  File \"D:\\ComfyUI_windows_portable\\ComfyUI\\execution.py\", line 547, in execute\n    output_data, output_ui, has_subgraph, has_pending_tasks = await get_output_data(prompt_id, unique_id, obj, input_data_all, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)\n                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+            "  File \"D:\\ComfyUI_windows_portable\\ComfyUI\\execution.py\", line 352, in get_output_data\n    return_values = await _async_map_node_over_list(prompt_id, unique_id, obj, input_data_all, obj.FUNCTION, allow_interrupt=True, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+            "  File \"D:\\ComfyUI_windows_portable\\ComfyUI\\execution.py\", line 326, in _async_map_node_over_list\n    await process_inputs(input_dict, i)\n",
+            "  File \"D:\\ComfyUI_windows_portable\\ComfyUI\\execution.py\", line 314, in process_inputs\n    result = f(**inputs)\n             ^^^^^^^^^^^\n",
+            "  File \"D:\\ComfyUI_windows_portable\\ComfyUI\\custom_nodes\\ComfyUI-HunyuanPaint21-LocalD\\__init__.py\", line 81, in paint\n    raise RuntimeError(f'Hunyuan local worker failed. Log: {log_path}\\n{tail}')\n"
+          ],
+          "current_inputs": {
+            "model_3d": [
+              "File3D(source='D:\\\\Hadi\\\\proyek\\\\football-manager\\\\FootballSim_Master\\\\02_ComfyUI_AssetFactory\\\\Saved\\\\ComfyRuntime\\\\input\\\\footballer01_uv.glb', format='glb')"
+            ],
+            "reference": [
+              "tensor([[[[0.6627, 0.6980, 0.7529],\n          [0.6627, 0.6980, 0.7529],\n          [0.6627, 0.7020, 0.7529],\n          ...,\n          [0.6941, 0.7373, 0.7961],\n          [0.6902, 0.7333, 0.7961],\n          [0.7020, 0.7333, 0.7961]],\n\n         [[0.6667, 0.6941, 0.7529],\n          [0.6588, 0.6980, 0.7490],\n          [0.6627, 0.6941, 0.7529],\n          ...,\n          [0.6980, 0.7333, 0.7922],\n          [0.6941, 0.7373, 0.7843],\n          [0.7020, 0.7294, 0.8000]],\n\n         [[0.6588, 0.6980, 0.7451],\n          [0.6588, 0.7020, 0.7451],\n          [0.6549, 0.7020, 0.7412],\n          ...,\n          [0.6941, 0.7373, 0.7843],\n          [0.6902, 0.7412, 0.7804],\n          [0.6941, 0.7373, 0.7961]],\n\n         ...,\n\n         [[0.8627, 0.9059, 0.9451],\n          [0.8627, 0.9059, 0.9333],\n          [0.8588, 0.9098, 0.9373],\n          ...,\n          [0.9490, 0.9961, 0.9961],\n          [0.9608, 0.9922, 1.0000],\n          [0.9686, 0.9843, 1.0000]],\n\n         [[1.0000, 0.8157, 0.8745],\n          [0.7098, 0.9961, 0.9686],\n          [0.8745, 0.9020, 0.9373],\n          ...,\n          [0.9765, 0.9843, 0.9922],\n          [0.9804, 0.9882, 1.0000],\n          [0.9804, 0.9843, 1.0000]],\n\n         [[0.6078, 1.0000, 0.9843],\n          [1.0000, 0.6980, 1.0000],\n          [0.8784, 0.8980, 0.9843],\n          ...,\n          [0.9725, 0.9765, 1.0000],\n          [0.9804, 0.9843, 1.0000],\n          [0.9804, 0.9804, 1.0000]]]])"
+            ],
+            "steps": [
+              20
+            ],
+            "view_size": [
+              512
+            ],
+            "texture_size": [
+              2048
+            ],
+            "seed": [
+              2026101501
+            ],
+            "reuse_result": [
+              true
+            ]
+          },
+          "current_outputs": [],
+          "timestamp": 1792071567007
+        }
+      ]
+    ]
+  },
+  "meta": {}
+}

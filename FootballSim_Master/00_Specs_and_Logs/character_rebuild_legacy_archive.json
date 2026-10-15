@@ -1,0 +1,422 @@
+{
+  "archive": "D:\\Hadi\\proyek\\football-manager\\FootballSim_Master\\04_Exported_GameAssets\\Saved\\Legacy_NicoPaz_20261015\\legacy_assets.zip",
+  "verified": true,
+  "operation": "copy_only",
+  "files": [
+    {
+      "path": "04_Exported_GameAssets/characters_lod/.gitkeep",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "04_Exported_GameAssets/characters_lod/NicoPaz_LOD0.fbm/nico_paz_basecolor",
+      "size": 5266875,
+      "sha256": "c13da27ae13b75c7c2936985deacb86a018110df5489736213edced8b8d19cf8"
+    },
+    {
+      "path": "04_Exported_GameAssets/characters_lod/NicoPaz_LOD0.fbm/nico_paz_normal",
+      "size": 3365734,
+      "sha256": "f599d0676b23dfb7f0c8ba1bfd691563454ebd06d864f901f95b03e0b1cae164"
+    },
+    {
+      "path": "04_Exported_GameAssets/characters_lod/NicoPaz_LOD0.fbx",
+      "size": 14275404,
+      "sha256": "4d7eeaaa8e724192d2fc2282502ef12776f8d0a392e8373a1160df3f0b8b220a"
+    },
+    {
+      "path": "04_Exported_GameAssets/characters_lod/NicoPaz_LOD1.fbm/nico_paz_basecolor",
+      "size": 5266875,
+      "sha256": "c13da27ae13b75c7c2936985deacb86a018110df5489736213edced8b8d19cf8"
+    },
+    {
+      "path": "04_Exported_GameAssets/characters_lod/NicoPaz_LOD1.fbm/nico_paz_normal",
+      "size": 3365734,
+      "sha256": "f599d0676b23dfb7f0c8ba1bfd691563454ebd06d864f901f95b03e0b1cae164"
+    },
+    {
+      "path": "04_Exported_GameAssets/characters_lod/NicoPaz_LOD1.fbx",
+      "size": 11689436,
+      "sha256": "7336de47a4c19d7ca2f744454a6ef33c60c310ec46d3ab7c8bae1614b19f6f96"
+    },
+    {
+      "path": "04_Exported_GameAssets/characters_lod/NicoPaz_LOD2.fbm/nico_paz_basecolor",
+      "size": 5266875,
+      "sha256": "c13da27ae13b75c7c2936985deacb86a018110df5489736213edced8b8d19cf8"
+    },
+    {
+      "path": "04_Exported_GameAssets/characters_lod/NicoPaz_LOD2.fbm/nico_paz_normal",
+      "size": 3365734,
+      "sha256": "f599d0676b23dfb7f0c8ba1bfd691563454ebd06d864f901f95b03e0b1cae164"
+    },
+    {
+      "path": "04_Exported_GameAssets/characters_lod/NicoPaz_LOD2.fbx",
+      "size": 10074076,
+      "sha256": "df7fe608b34178498ad972419773e974fc7e4c1efc89cd3daa00017cecb352e9"
+    },
+    {
+      "path": "04_Exported_GameAssets/animations_locomotion/.gitkeep",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "04_Exported_GameAssets/animations_locomotion/defend_shuffle.fbx",
+      "size": 230844,
+      "sha256": "0c2bd98c9c503b8efd75e40300542995818e38539b256b69d40d87e67d3b998d"
+    },
+    {
+      "path": "04_Exported_GameAssets/animations_locomotion/defend_stance.fbx",
+      "size": 327404,
+      "sha256": "e3eeb81a5650c3934d87af5489946ebb2efb7c1400ed3b320e15ff5fb008fb9a"
+    },
+    {
+      "path": "04_Exported_GameAssets/animations_locomotion/idle.fbx",
+      "size": 490492,
+      "sha256": "07eda80a249d1c04803ff57fb77e74b0c0474156020f1dc09ea6833cdb8f4f8e"
+    },
+    {
+      "path": "04_Exported_GameAssets/animations_locomotion/jog.fbx",
+      "size": 209324,
+      "sha256": "86c1647e2977dd50946dc558a3983bb7647eb814cd102357a4f2a6fc79e7b7dd"
+    },
+    {
+      "path": "04_Exported_GameAssets/animations_locomotion/sprint.fbx",
+      "size": 197852,
+      "sha256": "69372a50de184cf8c0861303999f0e3ab5aed50b7af8e45308950bad6bdefcf5"
+    },
+    {
+      "path": "04_Exported_GameAssets/animations_locomotion/turn_left.fbx",
+      "size": 267900,
+      "sha256": "6c193bc5c5b90359924d0c835632bc29d3a28b4a235c921bf9bf2438f22028b2"
+    },
+    {
+      "path": "04_Exported_GameAssets/animations_locomotion/turn_spin.fbx",
+      "size": 226652,
+      "sha256": "1d01638300c1ec27f6e0421f79cca5694552adbce8d25c0c62ed45e712aef584"
+    },
+    {
+      "path": "04_Exported_GameAssets/animations_locomotion/turn_sprint.fbx",
+      "size": 218908,
+      "sha256": "68a1e664c660e88fdd2b01bd98df08cde5147d88ecb5d9ca5eae1765fdd5f187"
+    },
+    {
+      "path": "04_Exported_GameAssets/animations_locomotion/turn_walk.fbx",
+      "size": 223820,
+      "sha256": "9a0a140d82a7a144fdf0459b3bf9fa75f6657875f4f7b0ebcd57d46caf781e3d"
+    },
+    {
+      "path": "04_Exported_GameAssets/animations_onball/.gitkeep",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "04_Exported_GameAssets/animations_onball/dribble.fbx",
+      "size": 248236,
+      "sha256": "384608c122273ae3f3e15359c4cd44b9190e9d4e34e49b0c840c7850f9081e9f"
+    },
+    {
+      "path": "04_Exported_GameAssets/animations_onball/header.fbx",
+      "size": 254460,
+      "sha256": "e2b0edfad74afd6757caa0e4bfc71a8b6bdf498dfb6d23159c10236b00052b68"
+    },
+    {
+      "path": "04_Exported_GameAssets/animations_onball/pass.fbx",
+      "size": 241740,
+      "sha256": "528923e0a48b099460d8d2a4fd2d1911c32f105ee4a2db6d93f780384516bb83"
+    },
+    {
+      "path": "04_Exported_GameAssets/animations_onball/react_miss.fbx",
+      "size": 244380,
+      "sha256": "79065489a411afacbc8f145f799c51e8e97bd5904d8e9652f3f73746da011fe0"
+    },
+    {
+      "path": "04_Exported_GameAssets/animations_onball/receive.fbx",
+      "size": 209324,
+      "sha256": "c6004eacfd86e79edeb43cf2778eb4f3b898670c961d5869ba8b744ae7ec39ed"
+    },
+    {
+      "path": "04_Exported_GameAssets/animations_onball/shield.fbx",
+      "size": 230844,
+      "sha256": "5c6d1885c08fa861b924fd9982c8a2f100bc6c28e22646c321fae26f1cdd2e50"
+    },
+    {
+      "path": "04_Exported_GameAssets/animations_onball/shot.fbx",
+      "size": 226444,
+      "sha256": "9c7335f262a515e983c6c3c1e506fb7711d46267febb7ae0bb460987a0dbf0eb"
+    },
+    {
+      "path": "04_Exported_GameAssets/animations_onball/skill_juggle.fbx",
+      "size": 227644,
+      "sha256": "6316fb16cea298c44c430c7969e56fd42f670d3f810713a1e5aea3fada3877ae"
+    },
+    {
+      "path": "04_Exported_GameAssets/animations_onball/tackle_lunge.fbx",
+      "size": 250332,
+      "sha256": "5fae11cebad877f051db6ea38cce99c8638fea94b1724244075a80cbdd0e1b92"
+    },
+    {
+      "path": "04_Exported_GameAssets/animations_onball/tackle_slide.fbx",
+      "size": 270732,
+      "sha256": "8159790e45d080c0839de37331c45f53f489565b8672a4aa83043ec4a5d00a3d"
+    },
+    {
+      "path": "04_Exported_GameAssets/animations_onball/tackle_stand.fbx",
+      "size": 289644,
+      "sha256": "811edf67f98d6fe5c8a2ded241f0051c85a1e08b5defe028e149fe8a019da890"
+    },
+    {
+      "path": "04_Exported_GameAssets/animations_goalkeeper/.gitkeep",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "04_Exported_GameAssets/animations_goalkeeper/gk_dive_left.fbx",
+      "size": 245612,
+      "sha256": "d35445072cfa9506f40b1ceebbe936ca5422f523f20ef50987d1425f95e2b73f"
+    },
+    {
+      "path": "04_Exported_GameAssets/animations_goalkeeper/gk_dive_right.fbx",
+      "size": 245628,
+      "sha256": "1c502d629e056b63ae082c2713d81f00d266f957a58459613a8ce9472de4082b"
+    },
+    {
+      "path": "04_Exported_GameAssets/animations_goalkeeper/gk_high.fbx",
+      "size": 224156,
+      "sha256": "7aa094fd301fe63209b742497f849260f3092bda017efb3053ae85fe23ef95ea"
+    },
+    {
+      "path": "04_Exported_GameAssets/animations_goalkeeper/gk_pass.fbx",
+      "size": 307116,
+      "sha256": "f48def4a0c8ef854a1f802d6e5c2a0fbfcbb9407a7973a8f1877836ff46aa507"
+    },
+    {
+      "path": "04_Exported_GameAssets/animations_goalkeeper/gk_ready.fbx",
+      "size": 213980,
+      "sha256": "4edb64ccfc95efcdd71e76342a91265fa8720393a0bb6e61fb1fbbd7e2f0e1f4"
+    },
+    {
+      "path": "04_Exported_GameAssets/animations_goalkeeper/gk_smother.fbx",
+      "size": 240460,
+      "sha256": "3ee1960bd9dcd659bbbba295c2c80cab9bd33e02c77f4437e4029fd4208c97d6"
+    },
+    {
+      "path": "04_Exported_GameAssets/animations_setpieces/.gitkeep",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "04_Exported_GameAssets/animations_setpieces/penalty.fbx",
+      "size": 235868,
+      "sha256": "b4d713e0c0eb729f4fb3b0500cefb723549715ff3b889bdefd7b97adc0ad1a1a"
+    },
+    {
+      "path": "04_Exported_GameAssets/kits_textures/.gitkeep",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "04_Exported_GameAssets/kits_textures/nico_material_0_0.png",
+      "size": 5266541,
+      "sha256": "c1bb83546cd61829656b4d83d6c3e0cf82f2d8c36b810c48900b89e537826948"
+    },
+    {
+      "path": "04_Exported_GameAssets/kits_textures/nico_material_0_1.png",
+      "size": 2024486,
+      "sha256": "ba4caebd665079b7537daaea6224999279f62837ea85d2a0cb9656328840fd0b"
+    },
+    {
+      "path": "04_Exported_GameAssets/kits_textures/nico_material_0_2.png",
+      "size": 4193756,
+      "sha256": "9049c8350905fdf1b687b2988ec4f51add97342fba975ef4db21ed3e2889bcf1"
+    },
+    {
+      "path": "04_Exported_GameAssets/kits_textures/nico_material_1_3.png",
+      "size": 5266541,
+      "sha256": "c1bb83546cd61829656b4d83d6c3e0cf82f2d8c36b810c48900b89e537826948"
+    },
+    {
+      "path": "04_Exported_GameAssets/kits_textures/nico_material_1_4.png",
+      "size": 2024486,
+      "sha256": "ba4caebd665079b7537daaea6224999279f62837ea85d2a0cb9656328840fd0b"
+    },
+    {
+      "path": "04_Exported_GameAssets/kits_textures/nico_material_1_5.png",
+      "size": 4193756,
+      "sha256": "9049c8350905fdf1b687b2988ec4f51add97342fba975ef4db21ed3e2889bcf1"
+    },
+    {
+      "path": "04_Exported_GameAssets/kits_textures/texture_manifest.json",
+      "size": 1879,
+      "sha256": "6b71f8de8e65d711eb6ebfd1565aba71954217838fc81c5e8a113b00ad9bfe1b"
+    },
+    {
+      "path": "04_Exported_GameAssets/asset_manifest.json",
+      "size": 12815,
+      "sha256": "5f78cd05ea5e8d7958b6681eb8f4b438661bffdec61d3099ea713365f1261592"
+    },
+    {
+      "path": "05_UE5_MatchViewer_3D/Content/Football/Animations/A_defend_shuffle.uasset",
+      "size": 38437,
+      "sha256": "1bb2bd04983089f3b87f2a1c3f4fb669fc07ac35e1e13bddb4a61af24a889424"
+    },
+    {
+      "path": "05_UE5_MatchViewer_3D/Content/Football/Animations/A_defend_stance.uasset",
+      "size": 211903,
+      "sha256": "ac23be09437a9156db365bc22a7499f59acc7cfeb0322eb52614c628569b8eea"
+    },
+    {
+      "path": "05_UE5_MatchViewer_3D/Content/Football/Animations/A_dribble.uasset",
+      "size": 121139,
+      "sha256": "0d3fab6fcaa6228773e1a45261a83256cfa8f417db4c84a9bc9c5da172b9b7f3"
+    },
+    {
+      "path": "05_UE5_MatchViewer_3D/Content/Football/Animations/A_gk_dive_left.uasset",
+      "size": 60697,
+      "sha256": "49239844baef3cf34b23ee8b110e93f40154dbf7e5254ed5bb57a35477124c48"
+    },
+    {
+      "path": "05_UE5_MatchViewer_3D/Content/Football/Animations/A_gk_dive_right.uasset",
+      "size": 62271,
+      "sha256": "9e0d568dd57ae701dd66d6300a352bac1ca72f9083b9be68dc935237299fc881"
+    },
+    {
+      "path": "05_UE5_MatchViewer_3D/Content/Football/Animations/A_gk_high.uasset",
+      "size": 49083,
+      "sha256": "5a69ea082404c3d51124d2cc6288407987f811738cb9acecc84636a8754590a4"
+    },
+    {
+      "path": "05_UE5_MatchViewer_3D/Content/Football/Animations/A_gk_pass.uasset",
+      "size": 187675,
+      "sha256": "36bac8254095aede99427699d6827e58d66f39cb1e9dea4a9f7a7377656e5831"
+    },
+    {
+      "path": "05_UE5_MatchViewer_3D/Content/Football/Animations/A_gk_ready.uasset",
+      "size": 32449,
+      "sha256": "c5361b291dbeffcfc73598603528258cf380134149e563b5c2b5b432082633fe"
+    },
+    {
+      "path": "05_UE5_MatchViewer_3D/Content/Football/Animations/A_gk_smother.uasset",
+      "size": 78093,
+      "sha256": "9d30a7c7405f6aa16d560fe6c012cb5f8f598e7431b64ea96935ea1b59f02ce6"
+    },
+    {
+      "path": "05_UE5_MatchViewer_3D/Content/Football/Animations/A_header.uasset",
+      "size": 129197,
+      "sha256": "6758c42b14042e54a45bef8643ba1725369a2535c325b42dfc167f6cff0846d9"
+    },
+    {
+      "path": "05_UE5_MatchViewer_3D/Content/Football/Animations/A_idle.uasset",
+      "size": 417485,
+      "sha256": "a4462bf02c74c569a3f563c9e6d8d16aececf329a4eb3345bcd78cbb4c127181"
+    },
+    {
+      "path": "05_UE5_MatchViewer_3D/Content/Football/Animations/A_jog.uasset",
+      "size": 76771,
+      "sha256": "16db95147e7cf95cb230fb9ede84dacf874696fe615d750c2c0295c57aff5e21"
+    },
+    {
+      "path": "05_UE5_MatchViewer_3D/Content/Football/Animations/A_pass.uasset",
+      "size": 115073,
+      "sha256": "cc1b3db4f2c5b431f86ae0f0191252bddb9b474d3bb60d2112cee8afb0fcb44b"
+    },
+    {
+      "path": "05_UE5_MatchViewer_3D/Content/Football/Animations/A_penalty.uasset",
+      "size": 116345,
+      "sha256": "40b49ab4b0452d37cc8c6e0c5559a377e85b542eba504180a2a7036c4bf158a0"
+    },
+    {
+      "path": "05_UE5_MatchViewer_3D/Content/Football/Animations/A_react_miss.uasset",
+      "size": 55333,
+      "sha256": "7714d3f7d587590c6289924a8426b9dca5d6baf787974c0da7e4c27ea42224ae"
+    },
+    {
+      "path": "05_UE5_MatchViewer_3D/Content/Football/Animations/A_receive.uasset",
+      "size": 50035,
+      "sha256": "78518dc7b28382815cafaf6a9e6f3c8eedff6ae27529f635dc1dfd76ab0e9462"
+    },
+    {
+      "path": "05_UE5_MatchViewer_3D/Content/Football/Animations/A_shield.uasset",
+      "size": 32429,
+      "sha256": "14c9f79e72aaf65dae9aa9a71e9d314b365ae0e6399923cb80fcc75960962f38"
+    },
+    {
+      "path": "05_UE5_MatchViewer_3D/Content/Football/Animations/A_shot.uasset",
+      "size": 98945,
+      "sha256": "9443c64a5fdb45459eec444f45fc82ef55996986ed2239ec2167f2dc503f3916"
+    },
+    {
+      "path": "05_UE5_MatchViewer_3D/Content/Football/Animations/A_skill_juggle.uasset",
+      "size": 101009,
+      "sha256": "be01d60bd1c78c0f28ae9354ffaf46ca5652798e7a8ef9ca4d74962f6bd4fa0c"
+    },
+    {
+      "path": "05_UE5_MatchViewer_3D/Content/Football/Animations/A_sprint.uasset",
+      "size": 62677,
+      "sha256": "2cc35089df3bb370aab4c409433ee5d83d454b51de994f1e9acc817493110ca9"
+    },
+    {
+      "path": "05_UE5_MatchViewer_3D/Content/Football/Animations/A_tackle_lunge.uasset",
+      "size": 123185,
+      "sha256": "59feaeb11efa4c06bebdb39227a70d98c6fb7cc9609d192cab57ae9093fd62e4"
+    },
+    {
+      "path": "05_UE5_MatchViewer_3D/Content/Football/Animations/A_tackle_slide.uasset",
+      "size": 147377,
+      "sha256": "f3cd11624a62b617d73201a827b9205825efbb74f02da2971b171ea6f7764269"
+    },
+    {
+      "path": "05_UE5_MatchViewer_3D/Content/Football/Animations/A_tackle_stand.uasset",
+      "size": 169553,
+      "sha256": "55feceda3e4a3464f402b3b7276eafb447aa58d9104eb9314fe46ecd139a5875"
+    },
+    {
+      "path": "05_UE5_MatchViewer_3D/Content/Football/Animations/A_turn_left.uasset",
+      "size": 143335,
+      "sha256": "4d52b13c43f257ff640498ae7690d6b460cf7af20fa74234854597536e38a684"
+    },
+    {
+      "path": "05_UE5_MatchViewer_3D/Content/Football/Animations/A_turn_spin.uasset",
+      "size": 98983,
+      "sha256": "c0f1999ab43872ebe8893b492419b9959b4ed97d3ac788e104eec2d94217a81b"
+    },
+    {
+      "path": "05_UE5_MatchViewer_3D/Content/Football/Animations/A_turn_sprint.uasset",
+      "size": 84883,
+      "sha256": "5ef67b02f48d70afbca12d9eadf7eceba00c8f712e5efbbcfacb2a51fdf898de"
+    },
+    {
+      "path": "05_UE5_MatchViewer_3D/Content/Football/Animations/A_turn_walk.uasset",
+      "size": 88903,
+      "sha256": "c0dd00bcfb03c711ef9d4b342c90692d74bd36d123a4abcbbbff692d86498c5e"
+    },
+    {
+      "path": "05_UE5_MatchViewer_3D/Content/Football/Characters/SK_NicoPaz.uasset",
+      "size": 30499562,
+      "sha256": "d95761a5c35e3304fa61e608787945ffa339ccfdfb3f73d63bdb9ff54e47283f"
+    },
+    {
+      "path": "05_UE5_MatchViewer_3D/Content/Football/Characters/SK_NicoPaz_Skeleton.uasset",
+      "size": 7367,
+      "sha256": "33a1a84192f5e737e32010a1970cb9dad991d9036878162f265142ea83b6700a"
+    },
+    {
+      "path": "05_UE5_MatchViewer_3D/Content/Football/Textures/T_Nico_BaseColor.uasset",
+      "size": 4780563,
+      "sha256": "12404d71edfffccbe6a2e58d04070368c618613fc61cb5545eb8a2e49398d674"
+    },
+    {
+      "path": "05_UE5_MatchViewer_3D/Content/Football/Textures/T_Nico_Normal.uasset",
+      "size": 4074236,
+      "sha256": "bf3796755bc316e09c21ec8002792edd08dd8bf3b1a3dc1bde989e1f188837d3"
+    },
+    {
+      "path": "05_UE5_MatchViewer_3D/Content/Football/Textures/T_Nico_ORM.uasset",
+      "size": 1640783,
+      "sha256": "e87c95955852a0d151e5a0cdbe562f4f44ee2ba3b8c7030de55fd91ad4a2109f"
+    },
+    {
+      "path": "05_UE5_MatchViewer_3D/Content/Viewer/M_PlayerKit.uasset",
+      "size": 13481,
+      "sha256": "47f894d9fc99755b45c601ee9b6924f044df36c98668d564d1188eac0b6c321f"
+    }
+  ]
+}

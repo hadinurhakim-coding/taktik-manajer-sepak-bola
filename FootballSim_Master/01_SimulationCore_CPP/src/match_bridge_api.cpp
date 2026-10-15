@@ -162,7 +162,11 @@ json snapshot_json(const fsim::MatchEngine& engine) {
 }
 std::vector<std::uint8_t> replay_bytes(const fsim::MatchEngine& engine, bool archive = false) {
     json identities = json::array();
-    for (const auto& p : engine.snapshot().players) identities.push_back({{"id", p.player_id}, {"team", p.team_index}, {"lineup_index", p.lineup_index}});
+    for (const auto& p : engine.snapshot().players) {
+        const auto& roster = engine.input().teams[p.team_index].players;
+        const auto found = std::find_if(roster.begin(), roster.end(), [&](const auto& player) { return player.id == p.player_id; });
+        identities.push_back({{"id", p.player_id}, {"name", found->name}, {"team", p.team_index}, {"lineup_index", p.lineup_index}});
+    }
     json teams = json::array();
     for (const auto& t : engine.input().teams) teams.push_back({{"id", t.id}, {"name", t.name}});
     const auto& r = archive ? engine.archive() : engine.replay();

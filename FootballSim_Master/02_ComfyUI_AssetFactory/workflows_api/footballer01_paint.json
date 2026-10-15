@@ -1,0 +1,65 @@
+{
+  "1": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "reference_footballer01_reference_00001_.png"
+    }
+  },
+  "2": {
+    "class_type": "Load3DAdvanced",
+    "inputs": {
+      "model_file": "footballer01_uv.glb",
+      "viewport_state": {},
+      "width": 512,
+      "height": 512
+    }
+  },
+  "3": {
+    "class_type": "HunyuanPaint21LocalD",
+    "inputs": {
+      "model_3d": [
+        "2",
+        0
+      ],
+      "reference": [
+        "1",
+        0
+      ],
+      "steps": 20,
+      "view_size": 512,
+      "texture_size": 2048,
+      "seed": 2026101501,
+      "reuse_result": true
+    }
+  },
+  "4": {
+    "class_type": "SaveGLB",
+    "inputs": {
+      "mesh": [
+        "3",
+        0
+      ],
+      "filename_prefix": "FootballSim_Fresh/footballer01_painted"
+    }
+  },
+  "5": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "3",
+        1
+      ],
+      "filename_prefix": "FootballSim_Fresh/footballer01_albedo"
+    }
+  },
+  "6": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "3",
+        2
+      ],
+      "filename_prefix": "FootballSim_Fresh/footballer01_mr"
+    }
+  }
+}

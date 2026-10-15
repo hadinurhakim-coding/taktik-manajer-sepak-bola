@@ -4,6 +4,13 @@ from pathlib import Path
 import unreal
 
 def import_characters():
+    world=unreal.get_editor_subsystem(unreal.UnrealEditorSubsystem).get_editor_world()
+    unreal.SystemLibrary.execute_console_command(world,'Interchange.FeatureFlags.Import.FBX 0')
+    canonical='/Game/Football/Characters/SK_NicoPaz_Skeleton'
+    generated='/Game/Football/Characters/NicoPaz_LOD0_Skeleton'
+    if not unreal.EditorAssetLibrary.does_asset_exist(canonical) and unreal.EditorAssetLibrary.does_asset_exist(generated):
+        if not unreal.EditorAssetLibrary.rename_asset(generated,canonical): raise RuntimeError('Cannot restore canonical skeleton package')
+        unreal.EditorAssetLibrary.save_asset(canonical,only_if_is_dirty=False)
     project = Path(unreal.Paths.project_dir()).resolve()
     root = project.parent
     manifest_path = root/'04_Exported_GameAssets/asset_manifest.json'
@@ -32,12 +39,16 @@ def import_characters():
     options.set_editor_property('import_as_skeletal',True)
     options.set_editor_property('import_mesh',True)
     options.set_editor_property('import_animations',False)
-    options.set_editor_property('import_materials',True)
-    options.set_editor_property('import_textures',True)
+    options.set_editor_property('import_materials',False)
+    options.set_editor_property('import_textures',False)
+    if unreal.EditorAssetLibrary.does_asset_exist(canonical): options.set_editor_property('skeleton',unreal.load_asset(canonical))
     assets=run_import(root/manifest['character_lods'][0]['path'],'/Game/Football/Characters','SK_NicoPaz',options)
     mesh=next((a for a in assets if isinstance(a,unreal.SkeletalMesh)),None)
     if mesh is None: raise RuntimeError('Character did not import as SkeletalMesh')
     skeleton=mesh.get_editor_property('skeleton')
+    if skeleton is None: raise RuntimeError('Imported mesh has no skeleton')
+    if not unreal.EditorAssetLibrary.save_loaded_asset(skeleton,only_if_is_dirty=False):
+        raise RuntimeError('Skeleton dependency could not be saved')
     subsystem=unreal.get_editor_subsystem(unreal.SkeletalMeshEditorSubsystem)
     for entry in manifest['character_lods'][1:]:
         result=subsystem.import_lod(mesh,entry['lod'],str(root/entry['path']))
@@ -66,6 +77,9 @@ def import_characters():
         report['animations'].append({'name':entry['name'],'path':anim.get_path_name(),'seconds':anim.get_play_length()})
         unreal.log('FSIM_ANIMATION_IMPORTED '+entry['name'])
     report['status']='SUCCESS'
+    # Import task.save covers primary assets; generated dependency packages must
+    # also be persisted so a fresh game process can resolve its skeleton.
+    unreal.EditorAssetLibrary.save_directory('/Game/Football',only_if_is_dirty=False,recursive=True)
     (root/'00_Specs_and_Logs/stage3_1_ue_import.json').write_text(json.dumps(report,indent=2),encoding='utf-8')
     unreal.log('FSIM_CHARACTER_IMPORT_OK')
 

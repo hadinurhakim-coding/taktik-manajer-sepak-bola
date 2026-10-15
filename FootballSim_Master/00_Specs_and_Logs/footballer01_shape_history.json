@@ -1,0 +1,154 @@
+{
+  "prompt": [
+    1,
+    "bad0568f-0e1f-45df-9807-71cf9704b80a",
+    {
+      "1": {
+        "class_type": "LoadImage",
+        "inputs": {
+          "image": "reference_footballer01_reference_00001_.png"
+        }
+      },
+      "2": {
+        "class_type": "LoadBackgroundRemovalModel",
+        "inputs": {
+          "bg_removal_name": "birefnet.safetensors"
+        }
+      },
+      "3": {
+        "class_type": "RemoveBackground",
+        "inputs": {
+          "bg_removal_model": [
+            "2",
+            0
+          ],
+          "image": [
+            "1",
+            0
+          ]
+        }
+      },
+      "4": {
+        "class_type": "Hy3DModelLoader",
+        "inputs": {
+          "model": "hy3dgen\\hunyuan3d-dit-v2-0-fp16.safetensors",
+          "attention_mode": "sdpa",
+          "cublas_ops": false
+        }
+      },
+      "5": {
+        "class_type": "Hy3DGenerateMesh",
+        "inputs": {
+          "pipeline": [
+            "4",
+            0
+          ],
+          "image": [
+            "1",
+            0
+          ],
+          "mask": [
+            "3",
+            0
+          ],
+          "guidance_scale": 5.5,
+          "steps": 35,
+          "seed": 2026101501,
+          "force_offload": true
+        }
+      },
+      "6": {
+        "class_type": "Hy3DVAEDecode",
+        "inputs": {
+          "vae": [
+            "4",
+            1
+          ],
+          "latents": [
+            "5",
+            0
+          ],
+          "box_v": 1.01,
+          "octree_resolution": 384,
+          "num_chunks": 4000,
+          "mc_level": 0.0,
+          "mc_algo": "mc",
+          "enable_flash_vdm": true,
+          "force_offload": true
+        }
+      },
+      "7": {
+        "class_type": "Hy3DPostprocessMesh",
+        "inputs": {
+          "trimesh": [
+            "6",
+            0
+          ],
+          "remove_floaters": true,
+          "remove_degenerate_faces": true,
+          "reduce_faces": true,
+          "max_facenum": 45000,
+          "smooth_normals": true
+        }
+      },
+      "8": {
+        "class_type": "Hy3DMeshUVWrap",
+        "inputs": {
+          "trimesh": [
+            "7",
+            0
+          ]
+        }
+      },
+      "9": {
+        "class_type": "Hy3DExportMesh",
+        "inputs": {
+          "trimesh": [
+            "8",
+            0
+          ],
+          "filename_prefix": "FootballSim_Fresh/footballer01_shape",
+          "file_format": "glb",
+          "save_file": true
+        }
+      }
+    },
+    {
+      "client_id": "footballer01-028210348b4f4afd8951b3fc7590323d",
+      "create_time": 1792071177042
+    },
+    [
+      "9"
+    ]
+  ],
+  "outputs": {},
+  "status": {
+    "status_str": "success",
+    "completed": true,
+    "messages": [
+      [
+        "execution_start",
+        {
+          "prompt_id": "bad0568f-0e1f-45df-9807-71cf9704b80a",
+          "timestamp": 1792071177043
+        }
+      ],
+      [
+        "execution_cached",
+        {
+          "nodes": [],
+          "prompt_id": "bad0568f-0e1f-45df-9807-71cf9704b80a",
+          "timestamp": 1792071177043
+        }
+      ],
+      [
+        "execution_success",
+        {
+          "prompt_id": "bad0568f-0e1f-45df-9807-71cf9704b80a",
+          "timestamp": 1792071241542
+        }
+      ]
+    ]
+  },
+  "meta": {}
+}

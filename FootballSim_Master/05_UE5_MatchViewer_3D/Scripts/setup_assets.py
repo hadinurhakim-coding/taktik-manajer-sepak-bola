@@ -41,5 +41,7 @@ unreal.log('FSIM_ASSET_SETUP_OK: ' + flat_path)
 import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from import_character_assets import import_characters
+from import_fresh_character import main as import_characters
 import_characters()
+from setup_broadcast_assets import setup
+setup()
