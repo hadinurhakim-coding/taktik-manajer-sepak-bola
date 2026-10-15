@@ -1,719 +1,293 @@
 {
-  "seed": "20261015",
-  "goals": [
+  "seed": "31001",
+  "events": [
     {
+      "tick": 2004,
+      "flags": 8,
+      "score": [
+        0,
+        0
+      ]
+    },
+    {
+      "tick": 2040,
+      "flags": 8,
+      "score": [
+        0,
+        0
+      ]
+    },
+    {
+      "tick": 2973,
+      "flags": 8,
+      "score": [
+        0,
+        0
+      ]
+    },
+    {
+      "tick": 3822,
+      "flags": 56,
+      "score": [
+        0,
+        0
+      ]
+    },
+    {
+      "tick": 4809,
+      "flags": 10,
+      "score": [
+        0,
+        0
+      ]
+    },
+    {
+      "tick": 10371,
+      "flags": 8,
+      "score": [
+        0,
+        0
+      ]
+    },
+    {
+      "tick": 10425,
+      "flags": 8,
+      "score": [
+        0,
+        0
+      ]
+    },
+    {
+      "tick": 10428,
+      "flags": 1,
       "score": [
         1,
         0
-      ],
-      "crossing": [
-        52.61,
-        0.6816831867352641,
-        0.18958738572840578
-      ],
-      "own_goal": false,
-      "scorer_id": "tm_15531ff404756aa6:10",
-      "scorer_index": 10,
-      "scoring_team": 0,
-      "sequence": 1,
-      "tick": 2811
+      ]
     },
     {
+      "tick": 11895,
+      "flags": 8,
+      "score": [
+        1,
+        0
+      ]
+    },
+    {
+      "tick": 12180,
+      "flags": 8,
+      "score": [
+        1,
+        0
+      ]
+    },
+    {
+      "tick": 17991,
+      "flags": 8,
+      "score": [
+        1,
+        0
+      ]
+    },
+    {
+      "tick": 18039,
+      "flags": 8,
+      "score": [
+        1,
+        0
+      ]
+    },
+    {
+      "tick": 19368,
+      "flags": 8,
+      "score": [
+        1,
+        0
+      ]
+    },
+    {
+      "tick": 19728,
+      "flags": 9,
       "score": [
         2,
         0
-      ],
-      "crossing": [
-        52.61,
-        0.3322128520445752,
-        0.028225092121034835
-      ],
-      "own_goal": false,
-      "scorer_id": "tm_15531ff404756aa6:10",
-      "scorer_index": 10,
-      "scoring_team": 0,
-      "sequence": 2,
-      "tick": 3262
+      ]
     },
     {
+      "tick": 20772,
+      "flags": 10,
       "score": [
-        3,
+        2,
         0
-      ],
-      "crossing": [
-        52.61,
-        0.5599213019135654,
-        0.3839496949276767
-      ],
-      "own_goal": false,
-      "scorer_id": "tm_15531ff404756aa6:8",
-      "scorer_index": 8,
-      "scoring_team": 0,
-      "sequence": 3,
-      "tick": 4363
+      ]
     },
     {
+      "tick": 22287,
+      "flags": 8,
       "score": [
-        4,
+        2,
         0
-      ],
-      "crossing": [
-        52.61,
-        1.2039004643183477,
-        -0.11819653674004642
-      ],
-      "own_goal": false,
-      "scorer_id": "tm_15531ff404756aa6:10",
-      "scorer_index": 10,
-      "scoring_team": 0,
-      "sequence": 4,
-      "tick": 4575
+      ]
     },
     {
+      "tick": 22290,
+      "flags": 1,
       "score": [
-        5,
-        0
-      ],
-      "crossing": [
-        52.61,
-        0.628225564040172,
-        1.8229094344485681
-      ],
-      "own_goal": false,
-      "scorer_id": "tm_15531ff404756aa6:10",
-      "scorer_index": 10,
-      "scoring_team": 0,
-      "sequence": 5,
-      "tick": 5427
-    },
-    {
-      "score": [
-        6,
-        0
-      ],
-      "crossing": [
-        52.61,
-        0.7691608240722811,
-        -1.5418339582936524
-      ],
-      "own_goal": false,
-      "scorer_id": "tm_15531ff404756aa6:10",
-      "scorer_index": 10,
-      "scoring_team": 0,
-      "sequence": 6,
-      "tick": 6356
-    },
-    {
-      "score": [
-        7,
-        0
-      ],
-      "crossing": [
-        52.61,
-        0.5276448219077883,
-        -1.6205732180035712
-      ],
-      "own_goal": false,
-      "scorer_id": "tm_15531ff404756aa6:10",
-      "scorer_index": 10,
-      "scoring_team": 0,
-      "sequence": 7,
-      "tick": 6979
-    },
-    {
-      "score": [
-        8,
-        0
-      ],
-      "crossing": [
-        52.61,
-        0.7810872421206358,
-        -0.8154841372080426
-      ],
-      "own_goal": false,
-      "scorer_id": "tm_15531ff404756aa6:8",
-      "scorer_index": 8,
-      "scoring_team": 0,
-      "sequence": 8,
-      "tick": 8047
-    },
-    {
-      "score": [
-        8,
+        2,
         1
-      ],
-      "crossing": [
-        -52.61,
-        0.5845172307116174,
-        2.8090496335073487
-      ],
-      "own_goal": false,
-      "scorer_id": "tm_1a1cdacb819699d1:10",
-      "scorer_index": 21,
-      "scoring_team": 1,
-      "sequence": 9,
-      "tick": 8646
+      ]
     },
     {
+      "tick": 23706,
+      "flags": 8,
       "score": [
-        9,
+        2,
         1
-      ],
-      "crossing": [
-        52.61,
-        0.11,
-        -2.0037251772991644
-      ],
-      "own_goal": true,
-      "scorer_id": "tm_1a1cdacb819699d1:9",
-      "scorer_index": 20,
-      "scoring_team": 0,
-      "sequence": 10,
-      "tick": 10137
+      ]
     },
     {
+      "tick": 28107,
+      "flags": 10,
       "score": [
-        10,
+        2,
         1
-      ],
-      "crossing": [
-        52.61,
-        1.2682105434060247,
-        -3.1404712825893903
-      ],
-      "own_goal": false,
-      "scorer_id": "tm_15531ff404756aa6:10",
-      "scorer_index": 10,
-      "scoring_team": 0,
-      "sequence": 11,
-      "tick": 10553
+      ]
     },
     {
+      "tick": 28275,
+      "flags": 8,
       "score": [
-        11,
+        2,
         1
-      ],
-      "crossing": [
-        52.61,
-        0.9008405465187337,
-        -3.28739779615128
-      ],
-      "own_goal": false,
-      "scorer_id": "tm_15531ff404756aa6:8",
-      "scorer_index": 8,
-      "scoring_team": 0,
-      "sequence": 12,
-      "tick": 10943
+      ]
     },
     {
+      "tick": 28278,
+      "flags": 48,
       "score": [
-        11,
-        2
-      ],
-      "crossing": [
-        -52.61,
-        1.3136984605180069,
-        -1.4991799338597778
-      ],
-      "own_goal": false,
-      "scorer_id": "tm_1a1cdacb819699d1:10",
-      "scorer_index": 21,
-      "scoring_team": 1,
-      "sequence": 13,
-      "tick": 11199
+        2,
+        1
+      ]
     },
     {
+      "tick": 32601,
+      "flags": 8,
       "score": [
-        11,
-        3
-      ],
-      "crossing": [
-        -52.61,
-        1.152327205548006,
-        1.0386696821377022
-      ],
-      "own_goal": false,
-      "scorer_id": "tm_1a1cdacb819699d1:10",
-      "scorer_index": 21,
-      "scoring_team": 1,
-      "sequence": 14,
-      "tick": 11677
+        2,
+        1
+      ]
     },
     {
+      "tick": 37059,
+      "flags": 8,
       "score": [
-        12,
-        3
-      ],
-      "crossing": [
-        52.61,
-        0.658203992203052,
-        0.7368103100398541
-      ],
-      "own_goal": false,
-      "scorer_id": "tm_15531ff404756aa6:10",
-      "scorer_index": 10,
-      "scoring_team": 0,
-      "sequence": 15,
-      "tick": 12386
+        2,
+        1
+      ]
     },
     {
+      "tick": 37113,
+      "flags": 8,
       "score": [
-        12,
-        4
-      ],
-      "crossing": [
-        -52.61,
-        0.6482269520646909,
-        -0.5390748030702721
-      ],
-      "own_goal": false,
-      "scorer_id": "tm_1a1cdacb819699d1:10",
-      "scorer_index": 21,
-      "scoring_team": 1,
-      "sequence": 16,
-      "tick": 15148
+        2,
+        1
+      ]
     },
     {
+      "tick": 38754,
+      "flags": 8,
       "score": [
-        13,
-        4
-      ],
-      "crossing": [
-        52.61,
-        0.9714914264651485,
-        -1.0214746799820456
-      ],
-      "own_goal": false,
-      "scorer_id": "tm_15531ff404756aa6:10",
-      "scorer_index": 10,
-      "scoring_team": 0,
-      "sequence": 17,
-      "tick": 15677
+        2,
+        1
+      ]
     },
     {
+      "tick": 39978,
+      "flags": 56,
       "score": [
-        14,
-        4
-      ],
-      "crossing": [
-        52.61,
-        1.6022068343984976,
-        0.9429131855363362
-      ],
-      "own_goal": false,
-      "scorer_id": "tm_15531ff404756aa6:9",
-      "scorer_index": 9,
-      "scoring_team": 0,
-      "sequence": 18,
-      "tick": 16079
+        2,
+        1
+      ]
     },
     {
+      "tick": 40755,
+      "flags": 56,
       "score": [
-        15,
-        4
-      ],
-      "crossing": [
-        -52.61,
-        1.1201488752762905,
-        -0.6455571933544335
-      ],
-      "own_goal": false,
-      "scorer_id": "tm_15531ff404756aa6:10",
-      "scorer_index": 10,
-      "scoring_team": 0,
-      "sequence": 19,
-      "tick": 29177
+        2,
+        1
+      ]
     },
     {
+      "tick": 41514,
+      "flags": 56,
       "score": [
-        16,
-        4
-      ],
-      "crossing": [
-        -52.61,
-        0.7644504292482849,
-        3.1958549052309735
-      ],
-      "own_goal": false,
-      "scorer_id": "tm_15531ff404756aa6:8",
-      "scorer_index": 8,
-      "scoring_team": 0,
-      "sequence": 20,
-      "tick": 30021
+        2,
+        1
+      ]
     },
     {
+      "tick": 42093,
+      "flags": 56,
       "score": [
-        16,
-        5
-      ],
-      "crossing": [
-        52.61,
-        1.2202960490810453,
-        2.482036867390285
-      ],
-      "own_goal": false,
-      "scorer_id": "tm_1a1cdacb819699d1:10",
-      "scorer_index": 21,
-      "scoring_team": 1,
-      "sequence": 21,
-      "tick": 30675
+        2,
+        1
+      ]
     },
     {
+      "tick": 42432,
+      "flags": 8,
       "score": [
-        17,
-        5
-      ],
-      "crossing": [
-        -52.61,
-        1.3227485560361025,
-        -2.134641926001518
-      ],
-      "own_goal": false,
-      "scorer_id": "tm_15531ff404756aa6:8",
-      "scorer_index": 8,
-      "scoring_team": 0,
-      "sequence": 22,
-      "tick": 33377
+        2,
+        1
+      ]
     },
     {
+      "tick": 45591,
+      "flags": 8,
       "score": [
-        18,
-        5
-      ],
-      "crossing": [
-        -52.61,
-        1.6336272696067942,
-        0.292371447074397
-      ],
-      "own_goal": false,
-      "scorer_id": "tm_15531ff404756aa6:10",
-      "scorer_index": 10,
-      "scoring_team": 0,
-      "sequence": 23,
-      "tick": 36026
+        2,
+        1
+      ]
     },
     {
+      "tick": 46200,
+      "flags": 56,
       "score": [
-        18,
-        6
-      ],
-      "crossing": [
-        52.61,
-        1.5873755185112464,
-        2.109832050364739
-      ],
-      "own_goal": false,
-      "scorer_id": "tm_1a1cdacb819699d1:10",
-      "scorer_index": 21,
-      "scoring_team": 1,
-      "sequence": 24,
-      "tick": 37976
+        2,
+        1
+      ]
     },
     {
+      "tick": 47646,
+      "flags": 8,
       "score": [
-        18,
-        7
-      ],
-      "crossing": [
-        52.61,
-        0.8487796084173276,
-        -2.961709166813995
-      ],
-      "own_goal": false,
-      "scorer_id": "tm_1a1cdacb819699d1:10",
-      "scorer_index": 21,
-      "scoring_team": 1,
-      "sequence": 25,
-      "tick": 38742
+        2,
+        1
+      ]
     },
     {
+      "tick": 49641,
+      "flags": 56,
       "score": [
-        19,
-        7
-      ],
-      "crossing": [
-        -52.61,
-        0.6135460051718095,
-        -1.2775194907701612
-      ],
-      "own_goal": false,
-      "scorer_id": "tm_15531ff404756aa6:10",
-      "scorer_index": 10,
-      "scoring_team": 0,
-      "sequence": 26,
-      "tick": 39483
+        2,
+        1
+      ]
     },
     {
+      "tick": 50043,
+      "flags": 8,
       "score": [
-        20,
-        7
-      ],
-      "crossing": [
-        -52.61,
-        0.6041265803245393,
-        2.4035690832556402
-      ],
-      "own_goal": false,
-      "scorer_id": "tm_15531ff404756aa6:9",
-      "scorer_index": 9,
-      "scoring_team": 0,
-      "sequence": 27,
-      "tick": 40464
+        2,
+        1
+      ]
     },
     {
+      "tick": 51786,
+      "flags": 8,
       "score": [
-        21,
-        7
-      ],
-      "crossing": [
-        -52.61,
-        0.8935936227621335,
-        0.36443801900063916
-      ],
-      "own_goal": false,
-      "scorer_id": "tm_15531ff404756aa6:8",
-      "scorer_index": 8,
-      "scoring_team": 0,
-      "sequence": 28,
-      "tick": 40681
-    },
-    {
-      "score": [
-        21,
-        8
-      ],
-      "crossing": [
-        52.61,
-        0.11,
-        -0.10050938229374437
-      ],
-      "own_goal": false,
-      "scorer_id": "tm_1a1cdacb819699d1:7",
-      "scorer_index": 18,
-      "scoring_team": 1,
-      "sequence": 29,
-      "tick": 42040
-    },
-    {
-      "score": [
-        21,
-        9
-      ],
-      "crossing": [
-        52.61,
-        0.8265463324470462,
-        0.502972486906723
-      ],
-      "own_goal": false,
-      "scorer_id": "tm_1a1cdacb819699d1:10",
-      "scorer_index": 21,
-      "scoring_team": 1,
-      "sequence": 30,
-      "tick": 42398
-    },
-    {
-      "score": [
-        22,
-        9
-      ],
-      "crossing": [
-        -52.61,
-        0.6952956522609759,
-        0.8091039121467641
-      ],
-      "own_goal": false,
-      "scorer_id": "tm_15531ff404756aa6:10",
-      "scorer_index": 10,
-      "scoring_team": 0,
-      "sequence": 31,
-      "tick": 43065
-    },
-    {
-      "score": [
-        22,
-        10
-      ],
-      "crossing": [
-        52.61,
-        1.567147971940673,
-        -2.0283846412766833
-      ],
-      "own_goal": false,
-      "scorer_id": "tm_1a1cdacb819699d1:7",
-      "scorer_index": 18,
-      "scoring_team": 1,
-      "sequence": 32,
-      "tick": 44346
-    },
-    {
-      "score": [
-        23,
-        10
-      ],
-      "crossing": [
-        -52.61,
-        1.1939467440094482,
-        0.3693815611880021
-      ],
-      "own_goal": false,
-      "scorer_id": "tm_15531ff404756aa6:8",
-      "scorer_index": 8,
-      "scoring_team": 0,
-      "sequence": 33,
-      "tick": 45225
-    },
-    {
-      "score": [
-        24,
-        10
-      ],
-      "crossing": [
-        -52.61,
-        1.3069533859939362,
-        -3.4482640903810333
-      ],
-      "own_goal": false,
-      "scorer_id": "tm_15531ff404756aa6:9",
-      "scorer_index": 9,
-      "scoring_team": 0,
-      "sequence": 34,
-      "tick": 45387
-    },
-    {
-      "score": [
-        24,
-        11
-      ],
-      "crossing": [
-        52.61,
-        1.003683199104327,
-        0.820770795442484
-      ],
-      "own_goal": false,
-      "scorer_id": "tm_1a1cdacb819699d1:8",
-      "scorer_index": 19,
-      "scoring_team": 1,
-      "sequence": 35,
-      "tick": 45685
-    },
-    {
-      "score": [
-        24,
-        12
-      ],
-      "crossing": [
-        52.61,
-        0.5647760495028132,
-        -0.18188067040841505
-      ],
-      "own_goal": false,
-      "scorer_id": "tm_1a1cdacb819699d1:5",
-      "scorer_index": 16,
-      "scoring_team": 1,
-      "sequence": 36,
-      "tick": 46891
-    },
-    {
-      "score": [
-        24,
-        13
-      ],
-      "crossing": [
-        52.61,
-        0.7984931462999493,
-        1.0909791948700693
-      ],
-      "own_goal": false,
-      "scorer_id": "tm_1a1cdacb819699d1:10",
-      "scorer_index": 21,
-      "scoring_team": 1,
-      "sequence": 37,
-      "tick": 49415
-    },
-    {
-      "score": [
-        25,
-        13
-      ],
-      "crossing": [
-        -52.61,
-        0.6164788409163316,
-        2.139170559366355
-      ],
-      "own_goal": false,
-      "scorer_id": "tm_15531ff404756aa6:10",
-      "scorer_index": 10,
-      "scoring_team": 0,
-      "sequence": 38,
-      "tick": 49586
-    },
-    {
-      "score": [
-        25,
-        14
-      ],
-      "crossing": [
-        52.61,
-        0.5057762982106173,
-        0.3057670034188659
-      ],
-      "own_goal": false,
-      "scorer_id": "tm_1a1cdacb819699d1:10",
-      "scorer_index": 21,
-      "scoring_team": 1,
-      "sequence": 39,
-      "tick": 49975
-    },
-    {
-      "score": [
-        25,
-        15
-      ],
-      "crossing": [
-        52.61,
-        0.6593066259414669,
-        -1.450919093852822
-      ],
-      "own_goal": false,
-      "scorer_id": "tm_1a1cdacb819699d1:10",
-      "scorer_index": 21,
-      "scoring_team": 1,
-      "sequence": 40,
-      "tick": 51374
-    },
-    {
-      "score": [
-        26,
-        15
-      ],
-      "crossing": [
-        -52.61,
-        1.3295354232091134,
-        0.03195855151966126
-      ],
-      "own_goal": false,
-      "scorer_id": "tm_15531ff404756aa6:10",
-      "scorer_index": 10,
-      "scoring_team": 0,
-      "sequence": 41,
-      "tick": 53033
-    },
-    {
-      "score": [
-        27,
-        15
-      ],
-      "crossing": [
-        -52.61,
-        1.6692655081277934,
-        -2.38487089816272
-      ],
-      "own_goal": false,
-      "scorer_id": "tm_15531ff404756aa6:8",
-      "scorer_index": 8,
-      "scoring_team": 0,
-      "sequence": 42,
-      "tick": 53319
+        2,
+        1
+      ]
     }
   ]
 }

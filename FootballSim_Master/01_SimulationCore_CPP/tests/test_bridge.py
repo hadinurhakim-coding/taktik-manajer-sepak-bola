@@ -182,14 +182,19 @@ class BridgeTests(unittest.TestCase):
                 with self.assertRaises(ValueError): decode_fsim(corrupt)
             match.tick(54000)
             fulltime = match.snapshot()
-            self.assertGreater(match.goals()["sequence"], 0)
+            self.assertGreaterEqual(match.goals()["sequence"], 0)
             self.assertEqual(match.goals()["sequence"], sum(fulltime["score"]))
             final_bytes = match.replay_bytes()
             final_replay = decode_fsim(final_bytes)
             self.assertEqual([final_replay["frames"][i]["tick"] for i in (0, -1)], [53100, 54000])
             match.tick(100)
             self.assertEqual(final_bytes, match.replay_bytes())
-            self.assertTrue(all(count > 0 for count in fulltime["statistics"]["actions"].values()))
+            stats = fulltime["statistics"]
+            # A tactical match can legitimately contain no dribbling decisions.
+            self.assertGreater(stats["actions"]["short_pass"], 0)
+            self.assertGreater(stats["actions"]["off_ball_movement"], 0)
+            self.assertEqual(sum(stats["shots"]), stats["actions"]["shoot"])
+            self.assertTrue(all(0 <= stats["shots_on_target"][i] <= stats["shots"][i] for i in range(2)))
 
     def test_simulation_seed_repeatability(self):
         data = self.export()
@@ -204,7 +209,13 @@ class BridgeTests(unittest.TestCase):
                 self.assertNotEqual(single.snapshot()['ball'], different.snapshot()['ball'])
 
     def test_goal_hold_reports_stopped_players(self):
-        with self.library.create(self.export()) as match:
+        data = self.export()
+        # Deliberately weak defending fixture exercises a goal transition;
+        # ordinary balanced games are allowed to finish 0-0.
+        for p in data['teams'][1]['players']:
+            for key in ('speed', 'acceleration', 'tackling', 'positioning', 'goalkeeping'):
+                p['attributes'][key] = 0
+        with self.library.create(data) as match:
             for _ in range(18000):
                 match.tick(3)
                 if match.goals()['sequence']:

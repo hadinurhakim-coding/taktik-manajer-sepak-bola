@@ -11,12 +11,22 @@ struct FOOTBALLMATCHBRIDGE_API FFSimReplayFrame
     uint32 Actions[22]{};
 };
 
+struct FOOTBALLMATCHBRIDGE_API FFSimReplaySegment
+{
+    int32 FirstFrame = 0, LastFrame = 0;
+    double Rate = 1, HoldSeconds = 0, StartSeconds = 0, Duration = 0;
+    FString Kind, Camera;
+};
+
 struct FOOTBALLMATCHBRIDGE_API FFSimReplay
 {
+    uint32 Version = 1;
+    double TimelineSeconds = 0;
+    TArray<FFSimReplaySegment> Segments;
     FString HomeName, AwayName, Seed;
     TArray<FString> PlayerIds;
     TArray<FFSimReplayFrame> Frames;
-    double Duration() const { return Frames.Num() > 1 ? double(Frames.Last().Tick - Frames[0].Tick) / 60.0 : 0; }
+    double Duration() const { return Version == 2 ? TimelineSeconds : Frames.Num() > 1 ? double(Frames.Last().Tick - Frames[0].Tick) / 60.0 : 0; }
 };
 
 class FOOTBALLMATCHBRIDGE_API FFSimReplayReader
@@ -41,6 +51,9 @@ public:
     double Rate() const { return PlaybackRate; }
     const FFSimReplay& GetReplay() const { return Replay; }
     bool Sample(FFSimReplayFrame& Out) const;
+    const FFSimReplaySegment* ActiveSegment() const;
+    double SourceFrame() const;
+    double SourceTick() const;
 private:
     FFSimReplay Replay;
     double Seconds = 0, PlaybackRate = 0.5;

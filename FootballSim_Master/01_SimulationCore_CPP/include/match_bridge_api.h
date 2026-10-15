@@ -45,6 +45,8 @@ FSIM_API int32_t FSIM_CALL get_match_goal_status(fsim_match_handle handle, char*
    protocol as snapshots. Caller may write the returned bytes to a .fsim file.
    Last 15 presentation seconds, sampled every 0.05 s, inclusive endpoints. */
 FSIM_API int32_t FSIM_CALL export_match_replay(fsim_match_handle handle, uint8_t* output, size_t capacity, size_t* required_size);
+/* FSIM v2 full archive plus source-time segments. Same two-call buffer contract. */
+FSIM_API int32_t FSIM_CALL export_match_archive(fsim_match_handle handle, uint8_t* output, size_t capacity, size_t* required_size);
 FSIM_API int32_t FSIM_CALL get_engine_schema(char* output, size_t capacity, size_t* required_size);
 FSIM_API int32_t FSIM_CALL destroy_match(fsim_match_handle handle);
 /* Thread-local message for the last call; success clears it. Copy failures

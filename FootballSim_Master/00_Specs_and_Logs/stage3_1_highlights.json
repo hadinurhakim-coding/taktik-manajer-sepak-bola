@@ -1,0 +1,631 @@
+{
+  "seed": "31001",
+  "score": [
+    2,
+    1
+  ],
+  "statistics": {
+    "actions": {
+      "dribble": 31,
+      "off_ball_movement": 365206,
+      "shoot": 33,
+      "short_pass": 985,
+      "tackle": 2239
+    },
+    "ai_slices": 17521,
+    "interceptions": 999,
+    "restarts": 12,
+    "saves": 8,
+    "shots": [
+      16,
+      17
+    ],
+    "shots_on_target": [
+      5,
+      8
+    ],
+    "team_saves": [
+      6,
+      2
+    ]
+  },
+  "timeline_seconds": 900.0,
+  "segments": [
+    {
+      "first_frame": 0,
+      "last_frame": 120,
+      "rate": 1.0,
+      "hold_seconds": 0.0,
+      "kind": "live",
+      "camera": "broadcast",
+      "event_frame": null
+    },
+    {
+      "first_frame": 638,
+      "last_frame": 690,
+      "rate": 1.0,
+      "hold_seconds": 0.0,
+      "kind": "live",
+      "camera": "broadcast",
+      "event_frame": null
+    },
+    {
+      "first_frame": 961,
+      "last_frame": 1001,
+      "rate": 1.0,
+      "hold_seconds": 0.0,
+      "kind": "live",
+      "camera": "broadcast",
+      "event_frame": null
+    },
+    {
+      "first_frame": 1234,
+      "last_frame": 1281,
+      "rate": 1.0,
+      "hold_seconds": 0.0,
+      "kind": "live",
+      "camera": "broadcast",
+      "event_frame": null
+    },
+    {
+      "first_frame": 1257,
+      "last_frame": 1281,
+      "rate": 0.5,
+      "hold_seconds": 0.0,
+      "kind": "replay",
+      "camera": "alternate",
+      "event_frame": 1274
+    },
+    {
+      "first_frame": 1281,
+      "last_frame": 1284,
+      "rate": 1.0,
+      "hold_seconds": 0.0,
+      "kind": "live",
+      "camera": "broadcast",
+      "event_frame": null
+    },
+    {
+      "first_frame": 1573,
+      "last_frame": 1613,
+      "rate": 1.0,
+      "hold_seconds": 0.0,
+      "kind": "live",
+      "camera": "broadcast",
+      "event_frame": null
+    },
+    {
+      "first_frame": 3427,
+      "last_frame": 3483,
+      "rate": 1.0,
+      "hold_seconds": 0.0,
+      "kind": "live",
+      "camera": "broadcast",
+      "event_frame": null
+    },
+    {
+      "first_frame": 3459,
+      "last_frame": 3483,
+      "rate": 0.5,
+      "hold_seconds": 0.0,
+      "kind": "replay",
+      "camera": "alternate",
+      "event_frame": 3476
+    },
+    {
+      "first_frame": 3483,
+      "last_frame": 3540,
+      "rate": 1.0,
+      "hold_seconds": 0.0,
+      "kind": "live",
+      "camera": "broadcast",
+      "event_frame": null
+    },
+    {
+      "first_frame": 3935,
+      "last_frame": 3975,
+      "rate": 1.0,
+      "hold_seconds": 0.0,
+      "kind": "live",
+      "camera": "broadcast",
+      "event_frame": null
+    },
+    {
+      "first_frame": 4030,
+      "last_frame": 4070,
+      "rate": 1.0,
+      "hold_seconds": 0.0,
+      "kind": "live",
+      "camera": "broadcast",
+      "event_frame": null
+    },
+    {
+      "first_frame": 5967,
+      "last_frame": 6023,
+      "rate": 1.0,
+      "hold_seconds": 0.0,
+      "kind": "live",
+      "camera": "broadcast",
+      "event_frame": null
+    },
+    {
+      "first_frame": 6180,
+      "last_frame": 6240,
+      "rate": 1.0,
+      "hold_seconds": 0.0,
+      "kind": "live",
+      "camera": "broadcast",
+      "event_frame": null
+    },
+    {
+      "first_frame": 6426,
+      "last_frame": 6466,
+      "rate": 1.0,
+      "hold_seconds": 0.0,
+      "kind": "live",
+      "camera": "broadcast",
+      "event_frame": null
+    },
+    {
+      "first_frame": 6536,
+      "last_frame": 6583,
+      "rate": 1.0,
+      "hold_seconds": 0.0,
+      "kind": "live",
+      "camera": "broadcast",
+      "event_frame": null
+    },
+    {
+      "first_frame": 6559,
+      "last_frame": 6583,
+      "rate": 0.5,
+      "hold_seconds": 0.0,
+      "kind": "replay",
+      "camera": "alternate",
+      "event_frame": 6576
+    },
+    {
+      "first_frame": 6583,
+      "last_frame": 6600,
+      "rate": 1.0,
+      "hold_seconds": 0.0,
+      "kind": "live",
+      "camera": "broadcast",
+      "event_frame": null
+    },
+    {
+      "first_frame": 6894,
+      "last_frame": 6934,
+      "rate": 1.0,
+      "hold_seconds": 0.0,
+      "kind": "live",
+      "camera": "broadcast",
+      "event_frame": null
+    },
+    {
+      "first_frame": 7390,
+      "last_frame": 7437,
+      "rate": 1.0,
+      "hold_seconds": 0.0,
+      "kind": "live",
+      "camera": "broadcast",
+      "event_frame": null
+    },
+    {
+      "first_frame": 7413,
+      "last_frame": 7437,
+      "rate": 0.5,
+      "hold_seconds": 0.0,
+      "kind": "replay",
+      "camera": "alternate",
+      "event_frame": 7430
+    },
+    {
+      "first_frame": 7437,
+      "last_frame": 7440,
+      "rate": 1.0,
+      "hold_seconds": 0.0,
+      "kind": "live",
+      "camera": "broadcast",
+      "event_frame": null
+    },
+    {
+      "first_frame": 7872,
+      "last_frame": 7912,
+      "rate": 1.0,
+      "hold_seconds": 0.0,
+      "kind": "live",
+      "camera": "broadcast",
+      "event_frame": null
+    },
+    {
+      "first_frame": 8160,
+      "last_frame": 8220,
+      "rate": 1.0,
+      "hold_seconds": 0.0,
+      "kind": "live",
+      "camera": "broadcast",
+      "event_frame": null
+    },
+    {
+      "first_frame": 8520,
+      "last_frame": 8542,
+      "rate": 1.0,
+      "hold_seconds": 0.0,
+      "kind": "live",
+      "camera": "broadcast",
+      "event_frame": null
+    },
+    {
+      "first_frame": 8700,
+      "last_frame": 8760,
+      "rate": 1.0,
+      "hold_seconds": 0.0,
+      "kind": "live",
+      "camera": "broadcast",
+      "event_frame": null
+    },
+    {
+      "first_frame": 8880,
+      "last_frame": 8940,
+      "rate": 1.0,
+      "hold_seconds": 0.0,
+      "kind": "live",
+      "camera": "broadcast",
+      "event_frame": null
+    },
+    {
+      "first_frame": 8950,
+      "last_frame": 9000,
+      "rate": 1.0,
+      "hold_seconds": 0.0,
+      "kind": "live",
+      "camera": "broadcast",
+      "event_frame": null
+    },
+    {
+      "first_frame": 9000,
+      "last_frame": 9000,
+      "rate": 1.0,
+      "hold_seconds": 6.0,
+      "kind": "halftime",
+      "camera": "broadcast",
+      "event_frame": null
+    },
+    {
+      "first_frame": 9000,
+      "last_frame": 9050,
+      "rate": 1.0,
+      "hold_seconds": 0.0,
+      "kind": "live",
+      "camera": "broadcast",
+      "event_frame": null
+    },
+    {
+      "first_frame": 9339,
+      "last_frame": 9379,
+      "rate": 1.0,
+      "hold_seconds": 0.0,
+      "kind": "live",
+      "camera": "broadcast",
+      "event_frame": null
+    },
+    {
+      "first_frame": 9386,
+      "last_frame": 9433,
+      "rate": 1.0,
+      "hold_seconds": 0.0,
+      "kind": "live",
+      "camera": "broadcast",
+      "event_frame": null
+    },
+    {
+      "first_frame": 9409,
+      "last_frame": 9433,
+      "rate": 0.5,
+      "hold_seconds": 0.0,
+      "kind": "replay",
+      "camera": "alternate",
+      "event_frame": 9426
+    },
+    {
+      "first_frame": 9433,
+      "last_frame": 9435,
+      "rate": 1.0,
+      "hold_seconds": 0.0,
+      "kind": "live",
+      "camera": "broadcast",
+      "event_frame": null
+    },
+    {
+      "first_frame": 9780,
+      "last_frame": 9840,
+      "rate": 1.0,
+      "hold_seconds": 0.0,
+      "kind": "live",
+      "camera": "broadcast",
+      "event_frame": null
+    },
+    {
+      "first_frame": 9960,
+      "last_frame": 10020,
+      "rate": 1.0,
+      "hold_seconds": 0.0,
+      "kind": "live",
+      "camera": "broadcast",
+      "event_frame": null
+    },
+    {
+      "first_frame": 10140,
+      "last_frame": 10200,
+      "rate": 1.0,
+      "hold_seconds": 0.0,
+      "kind": "live",
+      "camera": "broadcast",
+      "event_frame": null
+    },
+    {
+      "first_frame": 10680,
+      "last_frame": 10740,
+      "rate": 1.0,
+      "hold_seconds": 0.0,
+      "kind": "live",
+      "camera": "broadcast",
+      "event_frame": null
+    },
+    {
+      "first_frame": 10837,
+      "last_frame": 10877,
+      "rate": 1.0,
+      "hold_seconds": 0.0,
+      "kind": "live",
+      "camera": "broadcast",
+      "event_frame": null
+    },
+    {
+      "first_frame": 11040,
+      "last_frame": 11100,
+      "rate": 1.0,
+      "hold_seconds": 0.0,
+      "kind": "live",
+      "camera": "broadcast",
+      "event_frame": null
+    },
+    {
+      "first_frame": 11220,
+      "last_frame": 11280,
+      "rate": 1.0,
+      "hold_seconds": 0.0,
+      "kind": "live",
+      "camera": "broadcast",
+      "event_frame": null
+    },
+    {
+      "first_frame": 11760,
+      "last_frame": 11820,
+      "rate": 1.0,
+      "hold_seconds": 0.0,
+      "kind": "live",
+      "camera": "broadcast",
+      "event_frame": null
+    },
+    {
+      "first_frame": 12323,
+      "last_frame": 12381,
+      "rate": 1.0,
+      "hold_seconds": 0.0,
+      "kind": "live",
+      "camera": "broadcast",
+      "event_frame": null
+    },
+    {
+      "first_frame": 12660,
+      "last_frame": 12720,
+      "rate": 1.0,
+      "hold_seconds": 0.0,
+      "kind": "live",
+      "camera": "broadcast",
+      "event_frame": null
+    },
+    {
+      "first_frame": 12888,
+      "last_frame": 12928,
+      "rate": 1.0,
+      "hold_seconds": 0.0,
+      "kind": "live",
+      "camera": "broadcast",
+      "event_frame": null
+    },
+    {
+      "first_frame": 13286,
+      "last_frame": 13333,
+      "rate": 1.0,
+      "hold_seconds": 0.0,
+      "kind": "live",
+      "camera": "broadcast",
+      "event_frame": null
+    },
+    {
+      "first_frame": 13309,
+      "last_frame": 13333,
+      "rate": 0.5,
+      "hold_seconds": 0.0,
+      "kind": "replay",
+      "camera": "alternate",
+      "event_frame": 13326
+    },
+    {
+      "first_frame": 13333,
+      "last_frame": 13336,
+      "rate": 1.0,
+      "hold_seconds": 0.0,
+      "kind": "live",
+      "camera": "broadcast",
+      "event_frame": null
+    },
+    {
+      "first_frame": 13545,
+      "last_frame": 13592,
+      "rate": 1.0,
+      "hold_seconds": 0.0,
+      "kind": "live",
+      "camera": "broadcast",
+      "event_frame": null
+    },
+    {
+      "first_frame": 13568,
+      "last_frame": 13592,
+      "rate": 0.5,
+      "hold_seconds": 0.0,
+      "kind": "replay",
+      "camera": "alternate",
+      "event_frame": 13585
+    },
+    {
+      "first_frame": 13592,
+      "last_frame": 13595,
+      "rate": 1.0,
+      "hold_seconds": 0.0,
+      "kind": "live",
+      "camera": "broadcast",
+      "event_frame": null
+    },
+    {
+      "first_frame": 13808,
+      "last_frame": 13848,
+      "rate": 1.0,
+      "hold_seconds": 0.0,
+      "kind": "live",
+      "camera": "broadcast",
+      "event_frame": null
+    },
+    {
+      "first_frame": 14001,
+      "last_frame": 14041,
+      "rate": 1.0,
+      "hold_seconds": 0.0,
+      "kind": "live",
+      "camera": "broadcast",
+      "event_frame": null
+    },
+    {
+      "first_frame": 14114,
+      "last_frame": 14154,
+      "rate": 1.0,
+      "hold_seconds": 0.0,
+      "kind": "live",
+      "camera": "broadcast",
+      "event_frame": null
+    },
+    {
+      "first_frame": 14820,
+      "last_frame": 14880,
+      "rate": 1.0,
+      "hold_seconds": 0.0,
+      "kind": "live",
+      "camera": "broadcast",
+      "event_frame": null
+    },
+    {
+      "first_frame": 15000,
+      "last_frame": 15060,
+      "rate": 1.0,
+      "hold_seconds": 0.0,
+      "kind": "live",
+      "camera": "broadcast",
+      "event_frame": null
+    },
+    {
+      "first_frame": 15167,
+      "last_frame": 15207,
+      "rate": 1.0,
+      "hold_seconds": 0.0,
+      "kind": "live",
+      "camera": "broadcast",
+      "event_frame": null
+    },
+    {
+      "first_frame": 15360,
+      "last_frame": 15420,
+      "rate": 1.0,
+      "hold_seconds": 0.0,
+      "kind": "live",
+      "camera": "broadcast",
+      "event_frame": null
+    },
+    {
+      "first_frame": 15540,
+      "last_frame": 15600,
+      "rate": 1.0,
+      "hold_seconds": 0.0,
+      "kind": "live",
+      "camera": "broadcast",
+      "event_frame": null
+    },
+    {
+      "first_frame": 15852,
+      "last_frame": 15892,
+      "rate": 1.0,
+      "hold_seconds": 0.0,
+      "kind": "live",
+      "camera": "broadcast",
+      "event_frame": null
+    },
+    {
+      "first_frame": 16517,
+      "last_frame": 16557,
+      "rate": 1.0,
+      "hold_seconds": 0.0,
+      "kind": "live",
+      "camera": "broadcast",
+      "event_frame": null
+    },
+    {
+      "first_frame": 16651,
+      "last_frame": 16691,
+      "rate": 1.0,
+      "hold_seconds": 0.0,
+      "kind": "live",
+      "camera": "broadcast",
+      "event_frame": null
+    },
+    {
+      "first_frame": 17232,
+      "last_frame": 17272,
+      "rate": 1.0,
+      "hold_seconds": 0.0,
+      "kind": "live",
+      "camera": "broadcast",
+      "event_frame": null
+    },
+    {
+      "first_frame": 17700,
+      "last_frame": 17760,
+      "rate": 1.0,
+      "hold_seconds": 0.0,
+      "kind": "live",
+      "camera": "broadcast",
+      "event_frame": null
+    },
+    {
+      "first_frame": 17930,
+      "last_frame": 18000,
+      "rate": 1.0,
+      "hold_seconds": 0.0,
+      "kind": "live",
+      "camera": "broadcast",
+      "event_frame": null
+    }
+  ],
+  "archive_frames": 18001,
+  "goals": [
+    10428,
+    19728,
+    22290
+  ],
+  "files": {
+    "highlights_15min.fsim": 7426862,
+    "first_goal_last15s.fsim": 126095,
+    "fulltime_last15s.fsim": 126096
+  }
+}

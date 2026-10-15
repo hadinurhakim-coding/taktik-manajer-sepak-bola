@@ -29,7 +29,7 @@ bool NumberEquals(const TSharedPtr<FJsonObject>& Object, const TCHAR* Key, doubl
 bool FFSimReplayReader::LoadFile(const FString& Path, FFSimReplay& Out, FString& Error)
 {
     const int64 Size = IFileManager::Get().FileSize(*Path);
-    if (Size < 40 || Size > 2 * 1024 * 1024) { Error = TEXT("File replay tidak ditemukan atau ukurannya tidak valid."); return false; }
+    if (Size < 40 || Size > 16 * 1024 * 1024) { Error = TEXT("File replay tidak ditemukan atau ukurannya tidak valid."); return false; }
     TArray<uint8> Bytes;
     if (!FFileHelper::LoadFileToArray(Bytes, *Path)) { Error = TEXT("File replay tidak dapat dibaca."); return false; }
     return Decode(Bytes, Out, Error);
@@ -44,19 +44,20 @@ bool FFSimReplayReader::Decode(const TArray<uint8>& Bytes, FFSimReplay& Out, FSt
     FWireReader R{Bytes, 8};
     const uint32 Version = R.U32(), Header = R.U32(), MetaSize = R.U32(), Count = R.U32();
     const uint32 FrameSize = R.U32(), Step = R.U32(), RealRate = R.U32(), GameRate = R.U32();
-    if (Version != 1 || Header != 40 || FrameSize != 412 || Step != 3 || RealRate != 60 || GameRate != 10)
+    if ((Version != 1 && Version != 2) || Header != 40 || FrameSize != 412 || Step != 3 || RealRate != 60 || GameRate != 10)
         return Fail(TEXT("Versi/layout/clock FSIM tidak didukung."));
-    if (MetaSize > 1024 * 1024 || Count < 1 || Count > 301 || uint64(Bytes.Num()) != 40ULL + MetaSize + uint64(Count) * 412)
+    if (MetaSize > 1024 * 1024 || Count < 1 || Count > (Version == 1 ? 301U : 18001U) || uint64(Bytes.Num()) != 40ULL + MetaSize + uint64(Count) * 412)
         return Fail(TEXT("Ukuran FSIM terpotong atau mengandung byte tambahan."));
     const FUTF8ToTCHAR Text(reinterpret_cast<const ANSICHAR*>(Bytes.GetData() + 40), static_cast<int32>(MetaSize));
     const FString Json(Text.Length(), Text.Get());
     TSharedPtr<FJsonObject> Meta;
     if (!FJsonSerializer::Deserialize(TJsonReaderFactory<>::Create(Json), Meta) || !Meta.IsValid()) return Fail(TEXT("Metadata JSON tidak valid."));
     FString Format, TimeBase;
-    if (!Meta->TryGetStringField(TEXT("format"), Format) || Format != TEXT("fsim.replay.v1") ||
+    if (!Meta->TryGetStringField(TEXT("format"), Format) || Format != (Version == 1 ? TEXT("fsim.replay.v1") : TEXT("fsim.replay.v2")) ||
         !Meta->TryGetStringField(TEXT("time_base"), TimeBase) || TimeBase != TEXT("presentation") || !NumberEquals(Meta, TEXT("time_scale"), 6))
         return Fail(TEXT("Kontrak waktu/format metadata tidak valid."));
     FFSimReplay Parsed;
+    Parsed.Version = Version;
     const TArray<TSharedPtr<FJsonValue>>* Teams = nullptr;
     const TArray<TSharedPtr<FJsonValue>>* Identities = nullptr;
     if (!Meta->TryGetArrayField(TEXT("teams"), Teams) || Teams->Num() != 2 || !Meta->TryGetArrayField(TEXT("players"), Identities) || Identities->Num() != 22)
@@ -87,7 +88,7 @@ bool FFSimReplayReader::Decode(const TArray<uint8>& Bytes, FFSimReplay& Out, FSt
         F.GoalSequence = R.U64(); const uint32 OwnerBits = R.U32();
         F.BallOwner = OwnerBits == MAX_uint32 ? -1 : static_cast<int32>(OwnerBits);
         F.Ball = R.Vector(); F.BallVelocity = R.Vector();
-        if (F.Tick > 54000 || F.Tick % 3 || F.Phase != (F.Tick == 54000 ? 2U : F.Tick >= 27000 ? 1U : 0U) || (F.Flags & ~7U) ||
+        if (F.Tick > 54000 || F.Tick % 3 || F.Phase != (F.Tick == 54000 ? 2U : F.Tick >= 27000 ? 1U : 0U) || (F.Flags & ~(Version == 1 ? 7U : 63U)) ||
             (OwnerBits != MAX_uint32 && OwnerBits >= 22) || F.GoalSequence != uint64(F.HomeScore) + F.AwayScore ||
             !Finite(F.Ball) || !Finite(F.BallVelocity)) return Fail(TEXT("State frame/bola tidak valid."));
         if (I)
@@ -105,13 +106,41 @@ bool FFSimReplayReader::Decode(const TArray<uint8>& Bytes, FFSimReplay& Out, FSt
     }
     if (!NumberEquals(Meta, TEXT("first_tick"), double(Parsed.Frames[0].Tick)) || !NumberEquals(Meta, TEXT("last_tick"), double(Parsed.Frames.Last().Tick)))
         return Fail(TEXT("Timeline metadata berbeda dari frame."));
+    if (Version == 2)
+    {
+        const TArray<TSharedPtr<FJsonValue>>* Segments = nullptr;
+        if (!NumberEquals(Meta, TEXT("source_ticks_per_second"), 10) ||
+            !Meta->TryGetArrayField(TEXT("segments"), Segments) || Segments->IsEmpty() || Segments->Num() > 256)
+            return Fail(TEXT("Timeline highlight tidak valid."));
+        double Total = 0;
+        for (const auto& Value : *Segments)
+        {
+            const auto Object = Value->AsObject();
+            FFSimReplaySegment S;
+            double First, Last;
+            if (!Object || !Object->TryGetNumberField(TEXT("first_frame"), First) || !Object->TryGetNumberField(TEXT("last_frame"), Last) ||
+                !FMath::IsFinite(First) || !FMath::IsFinite(Last) || First < 0 || Last < First || Last >= Count ||
+                First != FMath::FloorToDouble(First) || Last != FMath::FloorToDouble(Last) ||
+                !Object->TryGetNumberField(TEXT("rate"), S.Rate) || (S.Rate != 0.5 && S.Rate != 1) ||
+                !Object->TryGetNumberField(TEXT("hold_seconds"), S.HoldSeconds) || !FMath::IsFinite(S.HoldSeconds) || S.HoldSeconds < 0 || S.HoldSeconds > 10 ||
+                !Object->TryGetStringField(TEXT("kind"), S.Kind) || (S.Kind != TEXT("live") && S.Kind != TEXT("replay") && S.Kind != TEXT("halftime")) ||
+                !Object->TryGetStringField(TEXT("camera"), S.Camera) || (S.Camera != TEXT("broadcast") && S.Camera != TEXT("alternate")))
+                return Fail(TEXT("Segmen highlight tidak valid."));
+            S.FirstFrame = int32(First); S.LastFrame = int32(Last); S.StartSeconds = Total;
+            S.Duration = double(Parsed.Frames[S.LastFrame].Tick - Parsed.Frames[S.FirstFrame].Tick) / 10.0 / S.Rate + S.HoldSeconds;
+            if (S.Duration <= 0) return Fail(TEXT("Durasi segmen harus positif."));
+            Total += S.Duration; Parsed.Segments.Add(S);
+        }
+        if (!Meta->TryGetNumberField(TEXT("timeline_seconds"), Parsed.TimelineSeconds) || !FMath::IsFinite(Parsed.TimelineSeconds) ||
+            !FMath::IsNearlyEqual(Total, Parsed.TimelineSeconds, 0.001)) return Fail(TEXT("Durasi timeline tidak cocok."));
+    }
     Out = MoveTemp(Parsed); // Transactional: a rejected file never replaces a good replay.
     return true;
 }
 
 void FFSimReplayPlayback::SetReplay(FFSimReplay InReplay)
 {
-    Replay = MoveTemp(InReplay); Seconds = 0; bPlaying = false;
+    Replay = MoveTemp(InReplay); Seconds = 0; bPlaying = false; PlaybackRate = Replay.Version == 2 ? 1.0 : 0.5;
 }
 void FFSimReplayPlayback::Advance(double WallSeconds)
 {
@@ -132,10 +161,25 @@ void FFSimReplayPlayback::SetRate(double Value)
 {
     if (FMath::IsFinite(Value) && (Value == 0.5 || Value == 1.0)) PlaybackRate = Value;
 }
+const FFSimReplaySegment* FFSimReplayPlayback::ActiveSegment() const
+{
+    for (const auto& S : Replay.Segments) if (Seconds < S.StartSeconds + S.Duration - 1e-8) return &S;
+    return Replay.Segments.IsEmpty() ? nullptr : &Replay.Segments.Last();
+}
+double FFSimReplayPlayback::SourceFrame() const
+{
+    if (const auto* S = ActiveSegment())
+        return FMath::Clamp(S->FirstFrame + (Seconds - S->StartSeconds) * S->Rate / 0.3, double(S->FirstFrame), double(S->LastFrame));
+    return FMath::Clamp(Seconds * 20.0, 0.0, double(FMath::Max(0, Replay.Frames.Num() - 1)));
+}
+double FFSimReplayPlayback::SourceTick() const
+{
+    return Replay.Frames.IsEmpty() ? 0 : Replay.Frames[0].Tick + SourceFrame() * 3.0;
+}
 bool FFSimReplayPlayback::Sample(FFSimReplayFrame& Out) const
 {
     if (Replay.Frames.IsEmpty()) return false;
-    const double Offset = Seconds * 20.0;
+    const double Offset = SourceFrame();
     const int32 Index = FMath::Clamp(FMath::FloorToInt(Offset + 1e-9), 0, Replay.Frames.Num() - 1);
     Out = Replay.Frames[Index];
     if (Index + 1 < Replay.Frames.Num())

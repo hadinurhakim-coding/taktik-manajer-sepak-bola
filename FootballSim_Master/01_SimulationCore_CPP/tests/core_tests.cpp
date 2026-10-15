@@ -55,7 +55,8 @@ int main() {
         check(individual.snapshot().clock.tick == batch.snapshot().clock.tick, "Tick partition invariance");
         check(individual.replay().export_fsim("{}") == batch.replay().export_fsim("{}"), "Simulation and replay invariant under tick batching");
         check(batch.snapshot().last_goal.sequence == batch.snapshot().score[0] + batch.snapshot().score[1], "Goal sequence agrees with score");
-        check(batch.snapshot().last_goal.sequence > 0, "Full match produces goals from physics");
+        check(batch.snapshot().last_goal.sequence == batch.snapshot().score[0] + batch.snapshot().score[1], "Goal events match score, including a legitimate 0-0");
+        check(batch.archive().size() == 18001 && batch.archive().at(0).tick == 0, "Full archive preserves kickoff through full time");
         for (const auto count : batch.snapshot().statistics.actions) check(count > 0, "Full match exercises all five action categories");
         for (std::size_t formation = 0; formation < fsim::schema::formations.size(); ++formation) {
             auto input = fixture(); input.teams[0].tactics.formation = static_cast<fsim::Formation>(formation);

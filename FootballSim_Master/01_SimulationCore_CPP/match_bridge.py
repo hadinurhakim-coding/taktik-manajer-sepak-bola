@@ -17,6 +17,7 @@ class MatchLibrary:
             "get_match_snapshot": ([handle, buffer, C.c_size_t, size_out], C.c_int32),
             "get_match_goal_status": ([handle, buffer, C.c_size_t, size_out], C.c_int32),
             "export_match_replay": ([handle, C.POINTER(C.c_uint8), C.c_size_t, size_out], C.c_int32),
+            "export_match_archive": ([handle, C.POINTER(C.c_uint8), C.c_size_t, size_out], C.c_int32),
             "get_engine_schema": ([buffer, C.c_size_t, size_out], C.c_int32),
             "destroy_match": ([handle], C.c_int32),
             "get_match_last_error": ([buffer, C.c_size_t, size_out], C.c_int32),
@@ -73,9 +74,9 @@ class MatchSession:
     def goals(self):
         return self.library.read_json(self.library.api.get_match_goal_status, self.handle)
 
-    def replay_bytes(self):
+    def replay_bytes(self, archive=False):
         required = C.c_size_t()
-        method = self.library.api.export_match_replay
+        method = self.library.api.export_match_archive if archive else self.library.api.export_match_replay
         status = method(self.handle, None, 0, C.byref(required))
         if status != 3:
             self.library.check(status)

@@ -4,6 +4,10 @@
 #include "Components/DirectionalLightComponent.h"
 #include "Components/SkyLightComponent.h"
 #include "Components/StaticMeshComponent.h"
+#include "Components/SkeletalMeshComponent.h"
+#include "Animation/AnimSequence.h"
+#include "Engine/SkeletalMesh.h"
+#include "GameFramework/SpringArmComponent.h"
 #include "Components/TextRenderComponent.h"
 #include "Engine/DirectionalLight.h"
 #include "Engine/Engine.h"
@@ -38,6 +42,15 @@ AMatchReplayActor::AMatchReplayActor()
 {
     PrimaryActorTick.bCanEverTick = true;
     SetRootComponent(CreateDefaultSubobject<USceneComponent>(TEXT("ReplayScene")));
+    CameraBoom = CreateDefaultSubobject<USpringArmComponent>(TEXT("BroadcastSpring"));
+    CameraBoom->SetupAttachment(GetRootComponent());
+    CameraBoom->TargetArmLength = 15000;
+    CameraBoom->SetRelativeRotation(FRotator(-55,90,0));
+    CameraBoom->bDoCollisionTest = false;
+    CameraBoom->bEnableCameraLag = true;
+    CameraBoom->CameraLagSpeed = 3;
+    CameraBoom->bEnableCameraRotationLag = true;
+    CameraBoom->CameraRotationLagSpeed = 3;
 }
 UMaterialInstanceDynamic* AMatchReplayActor::Material(FLinearColor Color, bool bFlat)
 {
@@ -111,6 +124,13 @@ void AMatchReplayActor::BuildScene()
         for (int32 N = 0; N < 5; ++N)
             Shape(Cube, FVector(X+Side*180,0,61*N), FVector(0.025,7.32,0.025), FLinearColor(0.35f,0.43f,0.45f));
     }
+    CharacterMesh = LoadObject<USkeletalMesh>(nullptr, TEXT("/Game/Football/Characters/SK_NicoPaz.SK_NicoPaz"));
+    for (const TCHAR* Name : {TEXT("idle"),TEXT("jog"),TEXT("sprint"),TEXT("dribble"),TEXT("pass"),TEXT("shot"),TEXT("tackle_stand"),
+        TEXT("gk_ready"),TEXT("gk_dive_left"),TEXT("gk_dive_right"),TEXT("gk_high"),TEXT("gk_smother"),TEXT("gk_pass")})
+    {
+        const FString Path = FString::Printf(TEXT("/Game/Football/Animations/A_%s.A_%s"),Name,Name);
+        if (auto* Animation = LoadObject<UAnimSequence>(nullptr,*Path)) Animations.Add(FName(Name),Animation);
+    }
     for (int32 I = 0; I < 22; ++I)
     {
         auto* P = NewObject<USceneComponent>(this); P->SetupAttachment(RootComponent); P->RegisterComponent(); PlayerRoots.Add(P);
@@ -118,8 +138,24 @@ void AMatchReplayActor::BuildScene()
         // Dark rim and team-colour base remain distinct over white pitch markings.
         Shape(Cylinder, FVector(0,0,18), FVector(2.2,2.2,0.06), Outline, P, true);
         Shape(Cylinder, FVector(0,0,23), FVector(1.85,1.85,0.06), Color, P, true);
-        Shape(Cylinder, FVector(0,0,100), FVector(1.1,1.1,1.4), Color, P);
-        Shape(Sphere, FVector(0,0,180), FVector(0.72), FLinearColor(0.72f,0.53f,0.36f), P);
+        USkeletalMeshComponent* Skel = nullptr;
+        if (CharacterMesh)
+        {
+            Skel = NewObject<USkeletalMeshComponent>(this); Skel->SetupAttachment(P);
+            Skel->SetSkeletalMeshAsset(CharacterMesh);
+            Skel->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+            Skel->SetAnimationMode(EAnimationMode::AnimationSingleNode);
+            Skel->VisibilityBasedAnimTickOption = EVisibilityBasedAnimTickOption::AlwaysTickPoseAndRefreshBones;
+            Skel->SetRelativeLocation(FVector(0,0,28));
+            Skel->SetRelativeScale3D(FVector(1.25)); // Readable at broadcast distance.
+            Skel->RegisterComponent(); Skel->bPauseAnims = true;
+        }
+        else
+        {
+            Shape(Cylinder, FVector(0,0,100), FVector(1.1,1.1,1.4), Color, P);
+            Shape(Sphere, FVector(0,0,180), FVector(0.72), FLinearColor(0.72f,0.53f,0.36f), P);
+        }
+        SkeletalPlayers.Add(Skel);
         auto* Label = NewObject<UTextRenderComponent>(this); Label->SetupAttachment(P);
         Label->SetRelativeLocation(FVector(0,0,300)); Label->SetWorldSize(165);
         Label->SetHorizontalAlignment(EHTA_Center); Label->SetVerticalAlignment(EVRTA_TextCenter);
@@ -140,8 +176,7 @@ void AMatchReplayActor::BuildScene()
     Sky->GetLightComponent()->SetIntensity(0.3f);
     Sky->GetLightComponent()->SetLowerHemisphereColor(FLinearColor(0.25f,0.3f,0.35f));
     Camera = GetWorld()->SpawnActor<ACameraActor>();
-    const FVector Eye(0,-9000,12500), Aim(0,0,0);
-    Camera->SetActorLocation(Eye); Camera->SetActorRotation((Aim-Eye).Rotation());
+    Camera->AttachToComponent(CameraBoom, FAttachmentTransformRules::SnapToTargetNotIncludingScale, USpringArmComponent::SocketName);
     auto* C = Camera->GetCameraComponent(); C->ProjectionMode = ECameraProjectionMode::Orthographic;
     C->OrthoWidth = 13600; C->bConstrainAspectRatio = false;
     C->bOverrideAspectRatioAxisConstraint = true;
@@ -156,7 +191,7 @@ void AMatchReplayActor::BuildScene()
     C->PostProcessSettings.BloomIntensity = 0;
     UpdateCameraFraming();
     if (auto* PC = UGameplayStatics::GetPlayerController(this, 0)) PC->SetViewTarget(Camera);
-    UE_LOG(LogTemp, Display, TEXT("[ReplayViewer] Scene created: 22 players, ball, 105x68m pitch, camera."));
+    UE_LOG(LogTemp, Display, TEXT("[ReplayViewer] Scene created: 22 players, skeletal=%d, animation assets=%d, Broadcast Spring."),CharacterMesh != nullptr,Animations.Num());
 }
 void AMatchReplayActor::UpdateCameraFraming()
 {
@@ -176,7 +211,8 @@ bool AMatchReplayActor::LoadReplay(const FString& File)
     if (!FFSimReplayReader::LoadFile(File, Data, ErrorMessage))
     { UE_LOG(LogTemp, Error, TEXT("[ReplayViewer] %s: %s"), *File, *ErrorMessage); return false; }
     Playback.SetReplay(MoveTemp(Data));
-    ClipLabel = FPaths::GetBaseFilename(File).Contains(TEXT("first_goal")) ? TEXT("Gol pertama") : TEXT("Akhir pertandingan");
+    ClipLabel = Playback.GetReplay().Version == 2 ? TEXT("Highlight 15 menit") : FPaths::GetBaseFilename(File).Contains(TEXT("first_goal")) ? TEXT("Gol pertama") : TEXT("Akhir pertandingan");
+    LastSourceTick = -1;
     ErrorMessage.Reset(); ApplyFrame();
     UE_LOG(LogTemp, Display, TEXT("[ReplayViewer] Loaded %s: %d frames, %.2fs, rate %.1fx"), *File, Playback.GetReplay().Frames.Num(), Playback.GetReplay().Duration(), Playback.Rate());
     return true;
@@ -185,7 +221,7 @@ void AMatchReplayActor::BeginPlay()
 {
     Super::BeginPlay();
     BuildScene();
-    FString File = Example(TEXT("first_goal_last15s.fsim"));
+    FString File = Example(TEXT("highlights_15min.fsim"));
     FParse::Value(FCommandLine::Get(), TEXT("ReplayFile="), File);
     LoadReplay(File);
     if (FParse::Param(FCommandLine::Get(), TEXT("ReplayAutoplay"))) Playback.SetPlaying(true);
@@ -197,23 +233,83 @@ void AMatchReplayActor::ApplyFrame()
     for (int32 I = 0; I < PlayerRoots.Num(); ++I)
     {
         PlayerRoots[I]->SetWorldLocation(FFSimReplayReader::ToUnreal(Current.Players[I]));
+        AnimatePlayer(I);
         Numbers[I]->SetWorldRotation((Camera->GetActorLocation() - Numbers[I]->GetComponentLocation()).Rotation());
     }
     const FVector BallPosition = FFSimReplayReader::ToUnreal(Current.Ball);
     if (BallRoot) BallRoot->SetWorldLocation(BallPosition);
     if (BallMarker) BallMarker->SetWorldLocation(FVector(BallPosition.X,BallPosition.Y,0));
+    LastSourceTick = Playback.SourceTick();
+}
+void AMatchReplayActor::AnimatePlayer(int32 I)
+{
+    auto* Mesh = SkeletalPlayers[I].Get();
+    if (!Mesh) return;
+    const auto& Frames = Playback.GetReplay().Frames;
+    const int32 Frame = FMath::Clamp(FMath::FloorToInt(Playback.SourceFrame()),0,Frames.Num()-1);
+    FVector Motion = FVector::ZeroVector;
+    if (Frame + 1 < Frames.Num() && !(Frames[Frame+1].Flags & 6)) Motion = Frames[Frame+1].Players[I] - Frames[Frame].Players[I];
+    const double Speed = Motion.Size() / 0.3;
+    FName Name = Speed < 0.2 ? TEXT("idle") : Speed < 5 ? TEXT("jog") : TEXT("sprint");
+    const bool Keeper = I % 11 == 0;
+    if (Keeper && Speed < 1) Name = TEXT("gk_ready");
+    // Action states are intentions; only the carrier/shot marker triggers a kick.
+    if (Current.BallOwner == I)
+    {
+        if (Current.Actions[I] == 0) Name = Keeper ? TEXT("gk_pass") : TEXT("pass");
+        else if (Current.Actions[I] == 1) Name = TEXT("dribble");
+        else if (Current.Actions[I] == 2) Name = TEXT("shot");
+    }
+    if (Current.Actions[I] == 3 && FVector::Dist(Current.Players[I],Current.Ball) < 2) Name = TEXT("tackle_stand");
+    // A save marker persists visually for the first second of its captured action.
+    for (int32 F = Frame; F >= FMath::Max(0,Frame-3); --F)
+        if (Keeper && Frames[F].BallOwner == I && (Frames[F].Flags & 16))
+        { Name = (Frames[F].Flags & 32) ? (Frames[F].Ball.Z >= Frames[F].Players[I].Z ? TEXT("gk_dive_right") : TEXT("gk_dive_left")) : TEXT("gk_smother"); break; }
+    const double Tick = Playback.SourceTick();
+    const bool Discontinuous = LastSourceTick < 0 || Tick < LastSourceTick || Tick - LastSourceTick > 10;
+    if (Name != LastAnimations[I] || Discontinuous)
+    {
+        LastAnimations[I] = Name; AnimationStartTick[I] = Tick;
+        if (const auto* Anim = Animations.Find(Name)) Mesh->PlayAnimation(*Anim,true);
+        Mesh->bPauseAnims = true;
+    }
+    if (const auto* Anim = Animations.Find(Name))
+    {
+        const double Duration = (*Anim)->GetPlayLength();
+        const double Elapsed = (Tick - AnimationStartTick[I]) / 10.0;
+        if (Duration > 0) Mesh->SetPosition(float(FMath::Fmod(Elapsed,Duration)),false);
+    }
+    if (Motion.SizeSquared() > 0.0001)
+        PlayerRoots[I]->SetWorldRotation(FRotator(0,FFSimReplayReader::ToUnreal(Motion).Rotation().Yaw,0));
+}
+void AMatchReplayActor::UpdateBroadcastCamera(float DeltaSeconds)
+{
+    if (!Camera) return;
+    const auto* Segment = Playback.ActiveSegment();
+    const bool Alternate = Segment && Segment->Camera == TEXT("alternate");
+    const FVector Ball = FFSimReplayReader::ToUnreal(Current.Ball);
+    const FVector Focus = Alternate ? FVector(FMath::Clamp(Ball.X,-4800.0,4800.0),FMath::Clamp(Ball.Y,-2600.0,2600.0),50) : FVector(FMath::Clamp(Ball.X * 0.10,-500.0,500.0),0,0);
+    CameraBoom->SetRelativeLocation(Focus);
+    CameraBoom->SetRelativeRotation(Alternate ? FRotator(-38,Ball.X >= 0 ? 150 : 30,0) : FRotator(-55,90,0));
+    const float FullWidth = FMath::Max(11800.0f,FramedViewport.Y > 0 ? 8500.0f * FramedViewport.X / FramedViewport.Y : 11800.0f);
+    const float Width = Alternate ? 4400.0f : FullWidth;
+    auto* C = Camera->GetCameraComponent();
+    C->SetOrthoWidth(FMath::FInterpTo(C->OrthoWidth,Width,DeltaSeconds,3));
 }
 void AMatchReplayActor::Tick(float DeltaSeconds)
 {
     Super::Tick(DeltaSeconds); StartupSeconds += DeltaSeconds;
-    UpdateCameraFraming(); Playback.Advance(DeltaSeconds); ApplyFrame();
+    UpdateCameraFraming(); Playback.Advance(DeltaSeconds); ApplyFrame(); UpdateBroadcastCamera(DeltaSeconds);
     FString Capture;
     if (!bCaptureDone && StartupSeconds > 8 && FParse::Value(FCommandLine::Get(), TEXT("ReplayCapture="), Capture))
     {
-        double At = 14.3; FParse::Value(FCommandLine::Get(), TEXT("ReplayCaptureAt="), At);
-        Playback.SetPlaying(false); Playback.Seek(At); ApplyFrame();
-        FScreenshotRequest::RequestScreenshot(Capture, true, false);
-        bCaptureDone = true;
+        if (CaptureSeekTime < 0)
+        {
+            double At = 14.3; FParse::Value(FCommandLine::Get(), TEXT("ReplayCaptureAt="), At);
+            Playback.SetPlaying(false); Playback.Seek(At); ApplyFrame(); CaptureSeekTime = StartupSeconds;
+        }
+        else if (StartupSeconds - CaptureSeekTime > 3)
+        { FScreenshotRequest::RequestScreenshot(Capture, true, false); bCaptureDone = true; }
     }
 }
 void AMatchReplayActor::TogglePlayback()
@@ -233,8 +329,7 @@ void AMatchReplayActor::SeekFraction(float Fraction)
 }
 FText AMatchReplayActor::ClockText() const
 {
-    const auto& R = Playback.GetReplay();
-    const int32 Seconds = R.Frames.IsEmpty() ? 0 : FMath::FloorToInt((double(R.Frames[0].Tick) + Playback.Position() * 60) / 10);
+    const int32 Seconds = FMath::FloorToInt(Playback.SourceTick() / 10);
     return FText::FromString(FString::Printf(TEXT("%02d:%02d   |   %s"), Seconds / 60, Seconds % 60,
         Current.Phase == 2 ? TEXT("SELESAI") : Current.Phase == 1 ? TEXT("BABAK 2") : TEXT("BABAK 1")));
 }
@@ -244,6 +339,11 @@ FText AMatchReplayActor::ProgressText() const
 }
 FText AMatchReplayActor::GoalText() const
 {
+    if (const auto* Segment = Playback.ActiveSegment())
+    {
+        if (Segment->Kind == TEXT("halftime")) return FText::FromString(TEXT("JEDA BABAK"));
+        if (Segment->Kind == TEXT("replay")) return FText::FromString(TEXT("REPLAY  0.5x"));
+    }
     const auto& Frames = Playback.GetReplay().Frames;
     for (int32 I = Frames.Num() - 1; I >= 0; --I)
         if (Frames[I].Tick <= Current.Tick && (Frames[I].Flags & 1))
@@ -304,6 +404,7 @@ void AMatchReplayActor::BuildOverlay()
                         [SNew(STextBlock).Text_Lambda([this]{return FText::FromString(Playback.Rate()==0.5?TEXT("0.5x"):TEXT("1.0x"));}).Font(FCoreStyle::GetDefaultFontStyle("Bold",13))]]
                 + SHorizontalBox::Slot().FillWidth(1).VAlign(VAlign_Center).Padding(12,0)
                     [SNew(STextBlock).Text(FText::FromString(TEXT("SPASI  putar / jeda     R  ulang"))).ColorAndOpacity(Muted).Font(FCoreStyle::GetDefaultFontStyle("Regular",11))]
+                + SHorizontalBox::Slot().AutoWidth().Padding(0,0,8,0)[Button(FText::FromString(TEXT("Highlight")),FOnClicked::CreateLambda([this]{LoadReplay(Example(TEXT("highlights_15min.fsim")));return FReply::Handled();}))]
                 + SHorizontalBox::Slot().AutoWidth().Padding(0,0,8,0)[Button(FText::FromString(TEXT("Klip gol")),FOnClicked::CreateLambda([this]{LoadReplay(Example(TEXT("first_goal_last15s.fsim")));return FReply::Handled();}))]
                 + SHorizontalBox::Slot().AutoWidth()[Button(FText::FromString(TEXT("Akhir laga")),FOnClicked::CreateLambda([this]{LoadReplay(Example(TEXT("fulltime_last15s.fsim")));return FReply::Handled();}))]]]];
     GEngine->GameViewport->AddViewportWidgetContent(Overlay.ToSharedRef(), 10);

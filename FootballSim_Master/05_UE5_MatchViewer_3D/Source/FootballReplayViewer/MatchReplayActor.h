@@ -11,6 +11,10 @@ class UMaterialInstanceDynamic;
 class UTextRenderComponent;
 class ACameraActor;
 class SWidget;
+class USkeletalMeshComponent;
+class USkeletalMesh;
+class UAnimSequence;
+class USpringArmComponent;
 
 UCLASS()
 class AMatchReplayActor : public AActor
@@ -28,6 +32,8 @@ private:
     void BuildScene();
     void BuildOverlay();
     void UpdateCameraFraming();
+    void UpdateBroadcastCamera(float DeltaSeconds);
+    void AnimatePlayer(int32 Index);
     void ApplyFrame();
     void SeekFraction(float Fraction);
     FText ClockText() const;
@@ -41,6 +47,10 @@ private:
     FString ErrorMessage, ClipLabel;
     bool bScrubWasPlaying = false, bCaptureDone = false;
     double StartupSeconds = 0;
+    double CaptureSeekTime = -1;
+    FName LastAnimations[22]{};
+    double AnimationStartTick[22]{};
+    double LastSourceTick = -1;
     FIntPoint FramedViewport = FIntPoint::ZeroValue;
     UPROPERTY() TObjectPtr<UStaticMesh> Cube;
     UPROPERTY() TObjectPtr<UStaticMesh> Sphere;
@@ -49,6 +59,10 @@ private:
     UPROPERTY() TObjectPtr<UMaterialInterface> FlatMaterial;
     UPROPERTY() TArray<TObjectPtr<UMaterialInstanceDynamic>> Materials;
     UPROPERTY() TArray<TObjectPtr<USceneComponent>> PlayerRoots;
+    UPROPERTY() TObjectPtr<USkeletalMesh> CharacterMesh;
+    UPROPERTY() TArray<TObjectPtr<USkeletalMeshComponent>> SkeletalPlayers;
+    UPROPERTY() TMap<FName, TObjectPtr<UAnimSequence>> Animations;
+    UPROPERTY() TObjectPtr<USpringArmComponent> CameraBoom;
     UPROPERTY() TArray<TObjectPtr<UTextRenderComponent>> Numbers;
     UPROPERTY() TObjectPtr<USceneComponent> BallRoot;
     UPROPERTY() TObjectPtr<USceneComponent> BallMarker;

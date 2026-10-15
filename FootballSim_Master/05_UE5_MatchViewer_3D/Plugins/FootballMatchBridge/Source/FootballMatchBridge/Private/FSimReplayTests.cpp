@@ -25,7 +25,7 @@ bool FFSimReaderTest::RunTest(const FString& Parameters)
     auto Bad = Bytes; Bad[0] = 'X'; Reject(Bad, TEXT("Bad magic"));
     Bad = Bytes; Bad.SetNum(Bad.Num()-1); Reject(Bad, TEXT("Truncated"));
     Bad = Bytes; Bad.Add(0); Reject(Bad, TEXT("Trailing bytes"));
-    Bad = Bytes; Bad[8] = 2; Reject(Bad, TEXT("Unsupported version"));
+    Bad = Bytes; Bad[8] = 3; Reject(Bad, TEXT("Unsupported version"));
     Bad = Bytes; Bad[28] = 6; Reject(Bad, TEXT("Unsupported sample interval"));
     const uint32 MetaSize = uint32(Bytes[16]) | (uint32(Bytes[17])<<8) | (uint32(Bytes[18])<<16) | (uint32(Bytes[19])<<24);
     const int32 First = 40 + static_cast<int32>(MetaSize);
@@ -59,6 +59,45 @@ bool FFSimPlaybackTest::RunTest(const FString& Parameters)
     P.Seek(0.05); P.Sample(Sample);
     TestEqual(TEXT("Jump exactly at restart"), Sample.Players[0].X, 10.0);
     TestEqual(TEXT("Score updates at frame"), Sample.HomeScore, 1U);
+    return true;
+}
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FFSimHighlightTest, "FootballMatchBridge.Highlight.TimelineAndAutomaticReplay", EAutomationTestFlags::EditorContext | EAutomationTestFlags::EngineFilter)
+bool FFSimHighlightTest::RunTest(const FString& Parameters)
+{
+    FFSimReplay Replay; FString Error;
+    if (!FFSimReplayReader::LoadFile(FPaths::Combine(FPaths::ProjectContentDir(),TEXT("Replays/highlights_15min.fsim")),Replay,Error)) { AddError(Error); return false; }
+    TestEqual(TEXT("Complete source archive"),Replay.Frames.Num(),18001);
+    TestTrue(TEXT("Exactly 900 seconds"),FMath::IsNearlyEqual(Replay.Duration(),900.0,0.001));
+    FFSimReplayPlayback P; P.SetReplay(Replay);
+    TestEqual(TEXT("Highlight default 1x"),P.Rate(),1.0);
+    int32 Replays = 0, Halftimes = 0;
+    for (const auto& S : Replay.Segments)
+    {
+        P.Seek(S.StartSeconds + 0.001);
+        TestEqual(TEXT("Correct segment at jump"),P.ActiveSegment()->FirstFrame,S.FirstFrame);
+        if (S.Kind == TEXT("replay"))
+        {
+            ++Replays;
+            TestEqual(TEXT("Replay alternate camera"),S.Camera,FString(TEXT("alternate")));
+            TestEqual(TEXT("Automatic half speed"),S.Rate,0.5);
+            const double SourceSeconds = (Replay.Frames[S.LastFrame].Tick - Replay.Frames[S.FirstFrame].Tick) / 10.0;
+            TestTrue(TEXT("Replay source window 5-8 seconds"),SourceSeconds >= 5 && SourceSeconds <= 8);
+            const double Tick = P.SourceTick(); P.SetPlaying(true); P.Advance(2);
+            TestTrue(TEXT("Two wall seconds = one source second"),FMath::IsNearlyEqual(P.SourceTick()-Tick,10.0,0.001));
+            P.SetPlaying(false); const double Paused = P.SourceTick(); P.Advance(2);
+            TestEqual(TEXT("Pause freezes slow replay"),P.SourceTick(),Paused);
+        }
+        if (S.Kind == TEXT("halftime"))
+        {
+            ++Halftimes; const double Tick = P.SourceTick(); P.SetPlaying(true); P.Advance(2);
+            TestEqual(TEXT("Halftime freezes source clock"),P.SourceTick(),Tick);
+        }
+    }
+    TestTrue(TEXT("Goals/saves have replays"),Replays >= 2);
+    TestEqual(TEXT("One halftime interval"),Halftimes,1);
+    P.Seek(900); FFSimReplayFrame End; P.Sample(End);
+    TestEqual(TEXT("Timeline reaches full time"),End.Tick,54000ULL);
+    TestFalse(TEXT("Stops at 900 seconds"),P.IsPlaying());
     return true;
 }
 #endif

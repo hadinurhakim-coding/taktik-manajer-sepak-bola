@@ -83,6 +83,7 @@ MatchEngine::MatchEngine(MatchInput input) : input_(std::move(input)) {
     rng_ = input_.seed;
     kickoff(0);
     replay_.record(state_, replay_flags_);
+    archive_.record(state_, replay_flags_);
     replay_flags_ = 0;
 }
 double MatchEngine::random_unit() noexcept {
@@ -138,21 +139,38 @@ void MatchEngine::decide_and_act() {
         const auto& p = state_.players[i]; const auto& carrier = state_.players[oi];
         if (p.team_index == carrier.team_index || std::hypot(p.position.x - carrier.position.x, p.position.z - carrier.position.z) > 1.6) continue;
         ++state_.statistics.actions[3]; cooldown_[i] = 12;
-        const double chance = std::clamp(0.3 + (attributes_[i].tackling - attributes_[oi].ball_control) * 0.005, 0.08, 0.8);
+        const double chance = std::clamp(0.34 + (attributes_[i].tackling - attributes_[oi].ball_control) * 0.004
+            + (attributes_[i].positioning - 50) * 0.002, 0.08, 0.8);
         if (random_unit() < chance) { take_possession(static_cast<std::int32_t>(i)); return; }
     }
     const auto& action = decisions_[oi];
-    if (cooldown_[oi] || state_.clock.tick - possession_since_ < 7 ||
+    if (cooldown_[oi] || state_.clock.tick - possession_since_ < 28 ||
         (action.action != AIAction::short_pass && action.action != AIAction::shoot)) return;
     const auto& attr = attributes_[oi];
     Vec3 target = action.target;
     double speed{};
     if (action.action == AIAction::shoot) {
-        const double error = (100 - attr.finishing) * 0.075;
-        target.z = (random_unit() * 2 - 1) * (2.0 + error);
-        target.y = 0.5 + random_unit() * 1.2;
+        target.x = direction(state_.players[oi].team_index) * (BallPhysics::half_length + BallPhysics::radius);
+        double pressure = 0;
+        for (std::size_t j = 0; j < 22; ++j) if (state_.players[j].team_index != state_.players[oi].team_index) {
+            const double d = std::hypot(state_.players[j].position.x - ball_.position.x, state_.players[j].position.z - ball_.position.z);
+            pressure += std::max(0.0, 1.0 - d / 5.0) * (0.35 + (attributes_[j].tackling + attributes_[j].positioning) / 200.0);
+        }
+        const double distance = std::hypot(target.x - ball_.position.x, ball_.position.z);
+        const double accuracy = std::clamp(0.24 + attr.finishing * 0.003 - std::max(0.0, distance - 12) * 0.008 - pressure * 0.13, 0.12, 0.7);
+        const bool on_target = random_unit() < accuracy;
+        shot_on_target_ = on_target;
+        target.z = (random_unit() * 2 - 1) * 3.3;
+        target.y = 0.3 + random_unit() * 1.7;
+        if (!on_target) {
+            if (random_unit() < 0.7) target.z = (random_unit() < 0.5 ? -1 : 1) * (5.0 + random_unit() * 5.0);
+            else target.y = 4.8 + random_unit() * 3.0;
+        }
+        ++state_.statistics.shots[state_.players[oi].team_index];
+        if (on_target) ++state_.statistics.shots_on_target[state_.players[oi].team_index];
         speed = 20 + attr.finishing * 0.09;
         shot_in_flight_ = true;
+        replay_flags_ |= replay_shot;
     } else {
         if (action.pass_target < 0) return;
         const auto& receiver = state_.players[static_cast<std::size_t>(action.pass_target)];
@@ -164,6 +182,9 @@ void MatchEngine::decide_and_act() {
     }
     const double dx = target.x - ball_.position.x, dz = target.z - ball_.position.z;
     const double length = std::max(0.1, std::hypot(dx, dz));
+    // Pace passes to their receiver. A fixed 18 m/s short pass used to roll
+    // another 50+ metres and could become an accidental shot on goal.
+    if (!shot_in_flight_) speed = std::clamp(std::sqrt(2.0 * 2.8 * length) + 1.0, 6.0, 20.0);
     ball_.velocity = {dx / length * speed, 0.5, dz / length * speed};
     if (shot_in_flight_) {
         const double flight = length / speed;
@@ -223,7 +244,7 @@ void MatchEngine::restart_out(const BallStepResult& result) {
     auto& p = state_.players[static_cast<std::size_t>(taker)];
     p.position = spot; p.velocity = {};
     take_possession(taker);
-    state_.restart_ticks_remaining = 10;
+    state_.restart_ticks_remaining = 120; // 12 game seconds for a throw/corner/goal kick
     replay_flags_ |= replay_restart; ++state_.statistics.restarts;
 }
 void MatchEngine::update_free_ball() {
@@ -239,18 +260,23 @@ void MatchEngine::update_free_ball() {
         const double t = length2 > 1e-9 ? std::clamp(((p.position.x - before.x) * dx + (p.position.z - before.z) * dz) / length2, 0.0, 1.0) : 0;
         const double y = before.y + (ball_.position.y - before.y) * t;
         const bool keeper = p.lineup_index == 0;
-        if (y > (keeper ? 2.5 : 1.2)) continue;
-        const double reach = keeper ? 1.6 : 1.0;
+        if (y > (keeper ? 2.0 + attributes_[i].goalkeeping * 0.012 : 1.2)) continue;
+        const double reach = keeper ? 1.1 + attributes_[i].goalkeeping * 0.021 : 0.7 + attributes_[i].positioning * 0.006;
         if (std::hypot(p.position.x - before.x - dx * t, p.position.z - before.z - dz * t) <= reach) candidates[i] = {t, i};
     }
     std::sort(candidates.begin(), candidates.end(), [](const auto& a, const auto& b) { return a.t != b.t ? a.t < b.t : a.index < b.index; });
     for (const auto& c : candidates) if (c.t <= 1) {
         const bool keeper = state_.players[c.index].lineup_index == 0;
-        const double chance = shot_in_flight_ ? (keeper ? 0.3 + attributes_[c.index].goalkeeping * 0.005 : 0.1 + attributes_[c.index].tackling * 0.002)
-                                              : 0.4 + attributes_[c.index].ball_control * 0.005;
+        const double chance = shot_in_flight_ ? (keeper ? 0.50 + attributes_[c.index].goalkeeping * 0.0045 : 0.14 + attributes_[c.index].tackling * 0.003)
+                                              : keeper ? 0.55 + attributes_[c.index].goalkeeping * 0.004 : 0.4 + attributes_[c.index].ball_control * 0.005;
         cooldown_[c.index] = 10;
         if (random_unit() < chance) {
-            if (keeper && shot_in_flight_) ++state_.statistics.saves;
+            if (keeper && shot_in_flight_ && shot_on_target_ && last_touch_ >= 0 &&
+                state_.players[c.index].team_index != state_.players[static_cast<std::size_t>(last_touch_)].team_index) {
+                ++state_.statistics.saves; ++state_.statistics.team_saves[state_.players[c.index].team_index];
+                replay_flags_ |= replay_save;
+                if (std::hypot(ball_.velocity.x, ball_.velocity.z) > 20 || ball_.position.y > 1.5) replay_flags_ |= replay_big_save;
+            }
             else ++state_.statistics.interceptions;
             take_possession(static_cast<std::int32_t>(c.index)); return;
         }
@@ -262,7 +288,7 @@ void MatchEngine::update_free_ball() {
         state_.last_goal = {state_.last_goal.sequence + 1, state_.clock.tick, team, last_touch_,
                            last_touch_ >= 0 && state_.players[static_cast<std::size_t>(last_touch_)].team_index != team, result.crossing};
         replay_flags_ |= replay_goal;
-        kickoff_team_ = 1 - team; pending_kickoff_ = true; state_.restart_ticks_remaining = 20;
+        kickoff_team_ = 1 - team; pending_kickoff_ = true; state_.restart_ticks_remaining = 200;
         ball_.velocity = {}; shot_in_flight_ = false;
     } else if (result.boundary != BallBoundary::none) restart_out(result);
 }
@@ -287,7 +313,7 @@ void MatchEngine::step() {
     state_.ball = ball_.position; state_.ball_velocity = ball_.velocity;
     state_.phase = state_.clock.tick == DualClock::total_ticks ? MatchPhase::completed :
                    state_.clock.tick >= 27000 ? MatchPhase::second_half : MatchPhase::first_half;
-    if (state_.clock.tick % ReplayBuffer::sample_ticks == 0) { replay_.record(state_, replay_flags_); replay_flags_ = 0; }
+    if (state_.clock.tick % ReplayBuffer::sample_ticks == 0) { replay_.record(state_, replay_flags_); archive_.record(state_, replay_flags_); replay_flags_ = 0; }
 }
 void MatchEngine::tick_fixed(std::uint32_t tick_count) {
     const auto remaining = std::min<std::uint64_t>(tick_count, DualClock::total_ticks - state_.clock.tick);

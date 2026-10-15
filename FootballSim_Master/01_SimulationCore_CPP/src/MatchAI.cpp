@@ -28,9 +28,10 @@ AIDecision MatchAI::decide(const MatchInput& input, const MatchSnapshot& s,
     }
     if (has_ball) {
         AIDecision best{AIAction::dribble, field({p.position.x + dir * 12, 0, p.position.z}), -1,
-                        keeper ? -1.0 : 0.42 + a.speed * 0.003 + std::min(pressure, 8.0) * 0.025 + mentality * 0.06};
+                        keeper ? -1.0 : 0.32 + a.speed * 0.003 + std::min(pressure, 8.0) * 0.025 + mentality * 0.06};
         if (t.play_style == PlayStyle::counter_attack) best.utility += 0.14;
         if (pressure < 5) best.target.z = std::clamp(p.position.z + (p.position.z >= nearest.z ? 4.0 : -4.0), -30.0, 30.0);
+        if (dir * p.position.x > 28 && std::abs(p.position.z) > 12) best.target = field({p.position.x + dir * 3, 0, p.position.z * 0.6});
         for (std::size_t j = 0; j < s.players.size(); ++j) {
             const auto& other = s.players[j];
             if (j == index || other.team_index != team || other.lineup_index == 0) continue;
@@ -40,15 +41,16 @@ AIDecision MatchAI::decide(const MatchInput& input, const MatchSnapshot& s,
             for (const auto& defender : s.players) if (defender.team_index != team)
                 clearance = std::min(clearance, distance(other.position, defender.position));
             const double forward = dir * (other.position.x - p.position.x);
-            const double utility = 0.23 + a.passing * 0.004 + forward * 0.016 + std::min(clearance, 10.0) * 0.025 - d * 0.009
+            const double utility = 0.36 + a.passing * 0.004 + forward * 0.008 + std::min(clearance, 10.0) * 0.025 - d * 0.006
                 + (pressure < 3 ? 0.25 : 0) + (t.play_style == PlayStyle::possession ? 0.24 : 0)
                 + (t.play_style == PlayStyle::direct_pass ? std::max(0.0, forward) * 0.009 : 0) + tempo * 0.04;
             if (utility > best.utility) best = {AIAction::short_pass, other.position, static_cast<std::int32_t>(j), utility};
         }
         const double goal_distance = std::hypot(52.5 - dir * p.position.x, p.position.z);
         if (!keeper && goal_distance < 32) {
-            const double shoot = 0.08 + a.finishing * 0.005 + (1 - goal_distance / 32) * 1.15
-                - std::abs(p.position.z) * 0.007 + mentality * 0.12 + tempo * 0.04;
+            const double shoot = 0.16 + a.finishing * 0.005 + (1 - goal_distance / 32) * 1.15
+                - std::abs(p.position.z) * 0.012 + mentality * 0.08 + tempo * 0.03
+                - std::max(0.0, 5.0 - pressure) * 0.12;
             if (shoot > best.utility) best = {AIAction::shoot, {dir * 54, 1.2, 0}, -1, shoot};
         }
         // A keeper always releases the ball, even if all teammates are distant.
@@ -59,7 +61,10 @@ AIDecision MatchAI::decide(const MatchInput& input, const MatchSnapshot& s,
         return best;
     }
     if (keeper) {
-        return {AIAction::off_ball, {-dir * 49.0, 0, std::clamp(s.ball.z * 0.35, -3.2, 3.2)}, -1, 1};
+        // Stay goal-side; anticipate the ball's path across the keeper plane.
+        const double keeper_x = -dir * 50.0;
+        const double flight = std::abs(s.ball_velocity.x) > 1 ? std::clamp((keeper_x - s.ball.x) / s.ball_velocity.x, 0.0, 0.8) : 0.0;
+        return {AIAction::off_ball, {keeper_x, 0, std::clamp(s.ball.z * 0.55 + s.ball_velocity.z * flight * a.goalkeeping / 100.0, -3.0, 3.0)}, -1, 1};
     }
     const Vec3 carrier = owner >= 0 ? s.players[static_cast<std::size_t>(owner)].position : s.ball;
     const double ball_distance = distance(p.position, carrier);
@@ -85,6 +90,16 @@ AIDecision MatchAI::decide(const MatchInput& input, const MatchSnapshot& s,
     target.z *= 0.65 + t.width * 0.007 + (t.play_style == PlayStyle::wing_play ? 0.2 : 0);
     if (team_ball && p.lineup_index >= 7) target.x = s.ball.x + dir * (7 + (p.lineup_index % 3) * 4);
     target.z += s.ball.z * 0.12;
+    if (!team_ball && p.lineup_index <= 4) {
+        // Cover a nearby forward on the goal side instead of retreating all the
+        // way behind the keeper. Pressers still challenge the ball above.
+        double best = 24;
+        for (const auto& attacker : s.players) if (attacker.team_index != team && attacker.lineup_index > 4) {
+            const double d = distance(anchor, attacker.position);
+            if (d < best) { best = d; target = {attacker.position.x - dir * 1.2, 0, attacker.position.z}; }
+        }
+        target.x = std::clamp(target.x, -48.0, 48.0);
+    }
     return {AIAction::off_ball, field(target), -1, 0.4 + a.positioning * 0.004};
 }
 }

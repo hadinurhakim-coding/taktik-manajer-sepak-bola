@@ -107,6 +107,7 @@ struct GoalEvent {
 };
 struct MatchStatistics {
     std::array<std::uint64_t, 5> actions{}; // executed kicks/tackles; movement decisions
+    std::array<std::uint32_t, 2> shots{}, shots_on_target{}, team_saves{};
     std::uint64_t saves{}, interceptions{}, restarts{}, ai_slices{};
 };
 struct MatchSnapshot {
@@ -130,6 +131,7 @@ public:
     [[nodiscard]] const MatchSnapshot& snapshot() const noexcept { return state_; }
     [[nodiscard]] const MatchInput& input() const noexcept { return input_; }
     [[nodiscard]] const ReplayBuffer& replay() const noexcept { return replay_; }
+    [[nodiscard]] const ReplayBuffer& archive() const noexcept { return archive_; }
 private:
     void step();
     void kickoff(std::uint32_t team);
@@ -144,6 +146,7 @@ private:
     MatchSnapshot state_;
     BallState ball_;
     ReplayBuffer replay_;
+    ReplayBuffer archive_{18001};
     std::array<PlayerAttributes, 22> attributes_{};
     std::array<Vec3, 22> formation_{};
     std::array<AIDecision, 22> decisions_{};
@@ -151,7 +154,7 @@ private:
     std::uint64_t rng_{}, possession_since_{}, kicked_at_{};
     std::int32_t last_touch_{-1};
     std::uint32_t kickoff_team_{}, replay_flags_{};
-    bool pending_kickoff_{}, shot_in_flight_{};
+    bool pending_kickoff_{}, shot_in_flight_{}, shot_on_target_{};
 };
 
 inline constexpr double replay_speed_multiplier = 0.5; // presentation only, not the 6x clock

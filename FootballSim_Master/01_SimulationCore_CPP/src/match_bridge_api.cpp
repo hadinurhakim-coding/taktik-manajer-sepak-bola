@@ -156,22 +156,28 @@ json snapshot_json(const fsim::MatchEngine& engine) {
             {"score", s.score}, {"score_is_final_simulated_result", s.phase == fsim::MatchPhase::completed}, {"teams", teams}, {"players", players},
             {"ball", {s.ball.x, s.ball.y, s.ball.z}}, {"ball_velocity", {s.ball_velocity.x, s.ball_velocity.y, s.ball_velocity.z}},
             {"ball_owner", s.ball_owner}, {"goals", goal_json(engine)}, {"restart_ticks_remaining", s.restart_ticks_remaining},
-            {"statistics", {{"actions", actions}, {"saves", s.statistics.saves}, {"interceptions", s.statistics.interceptions},
+            {"statistics", {{"actions", actions}, {"shots", s.statistics.shots}, {"shots_on_target", s.statistics.shots_on_target}, {"team_saves", s.statistics.team_saves}, {"saves", s.statistics.saves}, {"interceptions", s.statistics.interceptions},
                             {"restarts", s.statistics.restarts}, {"ai_slices", s.statistics.ai_slices}}},
             {"replay", {{"frames", engine.replay().size()}, {"capacity", fsim::ReplayBuffer::capacity}, {"sample_presentation_seconds", 0.05}, {"window_presentation_seconds", 15}}}};
 }
-std::vector<std::uint8_t> replay_bytes(const fsim::MatchEngine& engine) {
+std::vector<std::uint8_t> replay_bytes(const fsim::MatchEngine& engine, bool archive = false) {
     json identities = json::array();
     for (const auto& p : engine.snapshot().players) identities.push_back({{"id", p.player_id}, {"team", p.team_index}, {"lineup_index", p.lineup_index}});
     json teams = json::array();
     for (const auto& t : engine.input().teams) teams.push_back({{"id", t.id}, {"name", t.name}});
-    const auto& r = engine.replay();
-    const json metadata = {{"format", "fsim.replay.v1"}, {"engine_version", "0.2.1"}, {"seed", std::to_string(engine.input().seed)},
+    const auto& r = archive ? engine.archive() : engine.replay();
+    json metadata = {{"format", archive ? "fsim.replay.v2" : "fsim.replay.v1"}, {"engine_version", "0.3.1"}, {"seed", std::to_string(engine.input().seed)},
         {"teams", teams}, {"players", identities}, {"actions", fsim::ai_action_names},
         {"coordinates", "metres; x length, y up, z width"}, {"time_base", "presentation"}, {"time_scale", 6.0},
         {"first_tick", r.at(0).tick}, {"last_tick", r.at(r.size()-1).tick}, {"last_goal_status", goal_json(engine)},
         {"flags", {{"goal_since_previous_sample", 1}, {"restart_discontinuity", 2}, {"halftime_discontinuity", 4}}}};
-    return r.export_fsim(metadata.dump());
+    if (archive) {
+        metadata["segments"] = json::array({{{"first_frame", 0}, {"last_frame", r.size()-1}, {"rate", 1.0}, {"hold_seconds", 0.0}, {"kind", "live"}, {"camera", "broadcast"}}});
+        metadata["timeline_seconds"] = (r.at(r.size()-1).tick-r.at(0).tick)/10.0;
+        metadata["source_ticks_per_second"] = 10;
+        metadata["flags"]["shot"] = 8; metadata["flags"]["save"] = 16; metadata["flags"]["big_save"] = 32;
+    }
+    return r.export_fsim(metadata.dump(), archive ? 2 : 1);
 }
 json schema_json() {
     using namespace fsim::schema;
@@ -250,6 +256,19 @@ int32_t FSIM_CALL export_match_replay(fsim_match_handle handle, uint8_t* output,
         const auto bytes = replay_bytes(*found->second);
         *required_size = bytes.size();
         if (!output || capacity < bytes.size()) { error_text("Replay buffer too small"); return FSIM_BUFFER_TOO_SMALL; }
+        std::memcpy(output, bytes.data(), bytes.size());
+        return FSIM_OK;
+    });
+}
+int32_t FSIM_CALL export_match_archive(fsim_match_handle handle, uint8_t* output, size_t capacity, size_t* required_size) {
+    return guarded([&]() -> int32_t {
+        std::lock_guard lock(registry_mutex);
+        const auto found = matches.find(handle);
+        if (found == matches.end()) { error_text("Invalid or destroyed match handle"); return FSIM_INVALID_HANDLE; }
+        require(required_size && (output || capacity == 0), "Invalid archive output pointers");
+        const auto bytes = replay_bytes(*found->second, true);
+        *required_size = bytes.size();
+        if (!output || capacity < bytes.size()) return FSIM_BUFFER_TOO_SMALL;
         std::memcpy(output, bytes.data(), bytes.size());
         return FSIM_OK;
     });

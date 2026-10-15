@@ -37,3 +37,9 @@ if not unreal.EditorAssetLibrary.does_asset_exist(flat_path):
     if not unreal.EditorAssetLibrary.save_loaded_asset(flat):
         raise RuntimeError('Could not save flat viewer material')
 unreal.log('FSIM_ASSET_SETUP_OK: ' + flat_path)
+
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from import_character_assets import import_characters
+import_characters()

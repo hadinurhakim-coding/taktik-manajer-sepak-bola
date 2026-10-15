@@ -1,0 +1,314 @@
+{
+  "seeds": [
+    31001,
+    31010
+  ],
+  "matches": [
+    {
+      "seed": 31001,
+      "score": [
+        2,
+        1
+      ],
+      "actions": {
+        "dribble": 31,
+        "off_ball_movement": 365206,
+        "shoot": 33,
+        "short_pass": 985,
+        "tackle": 2239
+      },
+      "ai_slices": 17521,
+      "interceptions": 999,
+      "restarts": 12,
+      "saves": 8,
+      "shots": [
+        16,
+        17
+      ],
+      "shots_on_target": [
+        5,
+        8
+      ],
+      "team_saves": [
+        6,
+        2
+      ]
+    },
+    {
+      "seed": 31002,
+      "score": [
+        5,
+        2
+      ],
+      "actions": {
+        "dribble": 18,
+        "off_ball_movement": 354536,
+        "shoot": 33,
+        "short_pass": 971,
+        "tackle": 2178
+      },
+      "ai_slices": 17013,
+      "interceptions": 980,
+      "restarts": 22,
+      "saves": 4,
+      "shots": [
+        20,
+        13
+      ],
+      "shots_on_target": [
+        9,
+        4
+      ],
+      "team_saves": [
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 31003,
+      "score": [
+        1,
+        4
+      ],
+      "actions": {
+        "dribble": 9,
+        "off_ball_movement": 358247,
+        "shoot": 31,
+        "short_pass": 970,
+        "tackle": 2154
+      },
+      "ai_slices": 17187,
+      "interceptions": 977,
+      "restarts": 19,
+      "saves": 6,
+      "shots": [
+        7,
+        24
+      ],
+      "shots_on_target": [
+        1,
+        10
+      ],
+      "team_saves": [
+        6,
+        0
+      ]
+    },
+    {
+      "seed": 31004,
+      "score": [
+        0,
+        4
+      ],
+      "actions": {
+        "dribble": 20,
+        "off_ball_movement": 358265,
+        "shoot": 36,
+        "short_pass": 976,
+        "tackle": 2328
+      },
+      "ai_slices": 17213,
+      "interceptions": 986,
+      "restarts": 19,
+      "saves": 9,
+      "shots": [
+        14,
+        22
+      ],
+      "shots_on_target": [
+        3,
+        12
+      ],
+      "team_saves": [
+        7,
+        2
+      ]
+    },
+    {
+      "seed": 31005,
+      "score": [
+        0,
+        3
+      ],
+      "actions": {
+        "dribble": 35,
+        "off_ball_movement": 364236,
+        "shoot": 36,
+        "short_pass": 985,
+        "tackle": 2256
+      },
+      "ai_slices": 17479,
+      "interceptions": 999,
+      "restarts": 13,
+      "saves": 11,
+      "shots": [
+        12,
+        24
+      ],
+      "shots_on_target": [
+        5,
+        11
+      ],
+      "team_saves": [
+        6,
+        5
+      ]
+    },
+    {
+      "seed": 31006,
+      "score": [
+        0,
+        0
+      ],
+      "actions": {
+        "dribble": 29,
+        "off_ball_movement": 367972,
+        "shoot": 26,
+        "short_pass": 1009,
+        "tackle": 2348
+      },
+      "ai_slices": 17680,
+      "interceptions": 1021,
+      "restarts": 10,
+      "saves": 6,
+      "shots": [
+        14,
+        12
+      ],
+      "shots_on_target": [
+        4,
+        5
+      ],
+      "team_saves": [
+        2,
+        4
+      ]
+    },
+    {
+      "seed": 31007,
+      "score": [
+        0,
+        1
+      ],
+      "actions": {
+        "dribble": 26,
+        "off_ball_movement": 366071,
+        "shoot": 25,
+        "short_pass": 973,
+        "tackle": 2309
+      },
+      "ai_slices": 17573,
+      "interceptions": 980,
+      "restarts": 12,
+      "saves": 8,
+      "shots": [
+        9,
+        16
+      ],
+      "shots_on_target": [
+        3,
+        5
+      ],
+      "team_saves": [
+        5,
+        3
+      ]
+    },
+    {
+      "seed": 31008,
+      "score": [
+        2,
+        3
+      ],
+      "actions": {
+        "dribble": 40,
+        "off_ball_movement": 358913,
+        "shoot": 28,
+        "short_pass": 978,
+        "tackle": 2208
+      },
+      "ai_slices": 17228,
+      "interceptions": 981,
+      "restarts": 18,
+      "saves": 7,
+      "shots": [
+        5,
+        23
+      ],
+      "shots_on_target": [
+        2,
+        10
+      ],
+      "team_saves": [
+        7,
+        0
+      ]
+    },
+    {
+      "seed": 31009,
+      "score": [
+        0,
+        4
+      ],
+      "actions": {
+        "dribble": 73,
+        "off_ball_movement": 359147,
+        "shoot": 32,
+        "short_pass": 964,
+        "tackle": 2330
+      },
+      "ai_slices": 17254,
+      "interceptions": 973,
+      "restarts": 18,
+      "saves": 6,
+      "shots": [
+        17,
+        15
+      ],
+      "shots_on_target": [
+        6,
+        6
+      ],
+      "team_saves": [
+        2,
+        4
+      ]
+    },
+    {
+      "seed": 31010,
+      "score": [
+        1,
+        0
+      ],
+      "actions": {
+        "dribble": 51,
+        "off_ball_movement": 363560,
+        "shoot": 39,
+        "short_pass": 1002,
+        "tackle": 2247
+      },
+      "ai_slices": 17454,
+      "interceptions": 1012,
+      "restarts": 15,
+      "saves": 16,
+      "shots": [
+        16,
+        23
+      ],
+      "shots_on_target": [
+        5,
+        13
+      ],
+      "team_saves": [
+        13,
+        3
+      ]
+    }
+  ],
+  "mean_total_goals": 3.3,
+  "mean_shots_per_team": [
+    13,
+    18.9
+  ],
+  "all_matches_in_target": false
+}

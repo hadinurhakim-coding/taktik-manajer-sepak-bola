@@ -17,7 +17,7 @@ BallStepResult BallPhysics::step(BallState& b, double dt) {
         if (b.position.y <= radius + 1e-8 && b.velocity.y <= 0) {
             b.position.y = radius; b.velocity.y = 0;
             const double speed = std::hypot(b.velocity.x, b.velocity.z);
-            const double factor = speed > 0 ? std::max(0.0, speed - 3.5 * h) / speed : 0;
+            const double factor = speed > 0 ? std::max(0.0, speed - 2.8 * h) / speed : 0;
             b.velocity.x *= factor; b.velocity.z *= factor;
         } else {
             b.velocity.y -= gravity * h;
@@ -28,7 +28,7 @@ BallStepResult BallPhysics::step(BallState& b, double dt) {
         b.position.z += b.velocity.z * h;
         if (b.position.y < radius) {
             b.position.y = radius;
-            b.velocity.y = -b.velocity.y * 0.55;
+            b.velocity.y = -b.velocity.y * 0.48;
             if (b.velocity.y < 0.6) b.velocity.y = 0;
             result.bounced = true;
         }

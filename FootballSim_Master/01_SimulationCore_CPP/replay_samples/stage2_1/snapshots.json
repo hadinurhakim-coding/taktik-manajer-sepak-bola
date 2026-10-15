@@ -1,927 +1,15 @@
 {
-  "initial": {
-    "ball": [
-      0.0,
-      0.11,
-      0.0
-    ],
-    "ball_owner": 10,
-    "ball_velocity": [
-      0.0,
-      0.0,
-      0.0
-    ],
-    "game_duration_seconds": 5400,
-    "game_elapsed_seconds": 0.0,
-    "goals": {
-      "goal_status_version": "fsim.goal_status.v1",
-      "latest": null,
-      "score": [
-        0,
-        0
-      ],
-      "sequence": 0
-    },
-    "phase": "first_half",
-    "players": [
-      {
-        "action": "off_ball_movement",
-        "id": "tm_15531ff404756aa6:0",
-        "lineup_index": 0,
-        "position": [
-          -49.0,
-          0.0,
-          0.0
-        ],
-        "team": 0,
-        "velocity": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      },
-      {
-        "action": "off_ball_movement",
-        "id": "tm_15531ff404756aa6:1",
-        "lineup_index": 1,
-        "position": [
-          -30.0,
-          0.0,
-          -15.0
-        ],
-        "team": 0,
-        "velocity": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      },
-      {
-        "action": "off_ball_movement",
-        "id": "tm_15531ff404756aa6:2",
-        "lineup_index": 2,
-        "position": [
-          -30.0,
-          0.0,
-          0.0
-        ],
-        "team": 0,
-        "velocity": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      },
-      {
-        "action": "off_ball_movement",
-        "id": "tm_15531ff404756aa6:3",
-        "lineup_index": 3,
-        "position": [
-          -30.0,
-          0.0,
-          15.0
-        ],
-        "team": 0,
-        "velocity": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      },
-      {
-        "action": "off_ball_movement",
-        "id": "tm_15531ff404756aa6:4",
-        "lineup_index": 4,
-        "position": [
-          -11.666666666666668,
-          0.0,
-          -18.0
-        ],
-        "team": 0,
-        "velocity": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      },
-      {
-        "action": "off_ball_movement",
-        "id": "tm_15531ff404756aa6:5",
-        "lineup_index": 5,
-        "position": [
-          -11.666666666666668,
-          0.0,
-          -6.0
-        ],
-        "team": 0,
-        "velocity": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      },
-      {
-        "action": "off_ball_movement",
-        "id": "tm_15531ff404756aa6:6",
-        "lineup_index": 6,
-        "position": [
-          -11.666666666666668,
-          0.0,
-          6.0
-        ],
-        "team": 0,
-        "velocity": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      },
-      {
-        "action": "off_ball_movement",
-        "id": "tm_15531ff404756aa6:7",
-        "lineup_index": 7,
-        "position": [
-          -11.666666666666668,
-          0.0,
-          18.0
-        ],
-        "team": 0,
-        "velocity": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      },
-      {
-        "action": "off_ball_movement",
-        "id": "tm_15531ff404756aa6:8",
-        "lineup_index": 8,
-        "position": [
-          -6.666666666666664,
-          0.0,
-          -7.5
-        ],
-        "team": 0,
-        "velocity": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      },
-      {
-        "action": "off_ball_movement",
-        "id": "tm_15531ff404756aa6:9",
-        "lineup_index": 9,
-        "position": [
-          -6.666666666666664,
-          0.0,
-          7.5
-        ],
-        "team": 0,
-        "velocity": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      },
-      {
-        "action": "off_ball_movement",
-        "id": "tm_15531ff404756aa6:10",
-        "lineup_index": 10,
-        "position": [
-          -0.55,
-          0.0,
-          0.0
-        ],
-        "team": 0,
-        "velocity": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      },
-      {
-        "action": "off_ball_movement",
-        "id": "tm_1a1cdacb819699d1:0",
-        "lineup_index": 0,
-        "position": [
-          49.0,
-          0.0,
-          -0.0
-        ],
-        "team": 1,
-        "velocity": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      },
-      {
-        "action": "off_ball_movement",
-        "id": "tm_1a1cdacb819699d1:1",
-        "lineup_index": 1,
-        "position": [
-          30.0,
-          0.0,
-          18.0
-        ],
-        "team": 1,
-        "velocity": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      },
-      {
-        "action": "off_ball_movement",
-        "id": "tm_1a1cdacb819699d1:2",
-        "lineup_index": 2,
-        "position": [
-          30.0,
-          0.0,
-          6.0
-        ],
-        "team": 1,
-        "velocity": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      },
-      {
-        "action": "off_ball_movement",
-        "id": "tm_1a1cdacb819699d1:3",
-        "lineup_index": 3,
-        "position": [
-          30.0,
-          0.0,
-          -6.0
-        ],
-        "team": 1,
-        "velocity": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      },
-      {
-        "action": "off_ball_movement",
-        "id": "tm_1a1cdacb819699d1:4",
-        "lineup_index": 4,
-        "position": [
-          30.0,
-          0.0,
-          -18.0
-        ],
-        "team": 1,
-        "velocity": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      },
-      {
-        "action": "off_ball_movement",
-        "id": "tm_1a1cdacb819699d1:5",
-        "lineup_index": 5,
-        "position": [
-          11.666666666666668,
-          0.0,
-          7.5
-        ],
-        "team": 1,
-        "velocity": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      },
-      {
-        "action": "off_ball_movement",
-        "id": "tm_1a1cdacb819699d1:6",
-        "lineup_index": 6,
-        "position": [
-          11.666666666666668,
-          0.0,
-          -7.5
-        ],
-        "team": 1,
-        "velocity": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      },
-      {
-        "action": "off_ball_movement",
-        "id": "tm_1a1cdacb819699d1:7",
-        "lineup_index": 7,
-        "position": [
-          6.666666666666664,
-          0.0,
-          15.0
-        ],
-        "team": 1,
-        "velocity": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      },
-      {
-        "action": "off_ball_movement",
-        "id": "tm_1a1cdacb819699d1:8",
-        "lineup_index": 8,
-        "position": [
-          6.666666666666664,
-          0.0,
-          -0.0
-        ],
-        "team": 1,
-        "velocity": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      },
-      {
-        "action": "off_ball_movement",
-        "id": "tm_1a1cdacb819699d1:9",
-        "lineup_index": 9,
-        "position": [
-          6.666666666666664,
-          0.0,
-          -15.0
-        ],
-        "team": 1,
-        "velocity": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      },
-      {
-        "action": "off_ball_movement",
-        "id": "tm_1a1cdacb819699d1:10",
-        "lineup_index": 10,
-        "position": [
-          25.0,
-          0.0,
-          -0.0
-        ],
-        "team": 1,
-        "velocity": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      }
-    ],
-    "real_duration_seconds": 900,
-    "real_elapsed_seconds": 0.0,
-    "replay": {
-      "capacity": 301,
-      "frames": 1,
-      "sample_presentation_seconds": 0.05,
-      "window_presentation_seconds": 15
-    },
-    "restart_ticks_remaining": 0,
-    "score": [
-      0,
-      0
-    ],
-    "score_is_final_simulated_result": false,
-    "seed": "20261015",
-    "simulation_scope": "simple_utility_ai_and_ball_physics",
-    "snapshot_version": "fsim.match_snapshot.v2",
-    "statistics": {
-      "actions": {
-        "dribble": 0,
-        "off_ball_movement": 0,
-        "shoot": 0,
-        "short_pass": 0,
-        "tackle": 0
-      },
-      "ai_slices": 0,
-      "interceptions": 0,
-      "restarts": 1,
-      "saves": 0
-    },
-    "teams": [
-      {
-        "formation": "3-4-2-1",
-        "id": "tm_15531ff404756aa6",
-        "lineup": [
-          "tm_15531ff404756aa6:0",
-          "tm_15531ff404756aa6:1",
-          "tm_15531ff404756aa6:2",
-          "tm_15531ff404756aa6:3",
-          "tm_15531ff404756aa6:4",
-          "tm_15531ff404756aa6:5",
-          "tm_15531ff404756aa6:6",
-          "tm_15531ff404756aa6:7",
-          "tm_15531ff404756aa6:8",
-          "tm_15531ff404756aa6:9",
-          "tm_15531ff404756aa6:10"
-        ],
-        "name": "AS Roma"
-      },
-      {
-        "formation": "4-2-3-1",
-        "id": "tm_1a1cdacb819699d1",
-        "lineup": [
-          "tm_1a1cdacb819699d1:0",
-          "tm_1a1cdacb819699d1:1",
-          "tm_1a1cdacb819699d1:2",
-          "tm_1a1cdacb819699d1:3",
-          "tm_1a1cdacb819699d1:4",
-          "tm_1a1cdacb819699d1:5",
-          "tm_1a1cdacb819699d1:6",
-          "tm_1a1cdacb819699d1:7",
-          "tm_1a1cdacb819699d1:8",
-          "tm_1a1cdacb819699d1:9",
-          "tm_1a1cdacb819699d1:10"
-        ],
-        "name": "AC Milan"
-      }
-    ],
-    "tick": 0,
-    "ticks_per_real_second": 60,
-    "time_scale": 6.0
-  },
-  "halftime": {
-    "ball": [
-      0.0,
-      0.11,
-      0.0
-    ],
-    "ball_owner": 21,
-    "ball_velocity": [
-      0.0,
-      0.0,
-      0.0
-    ],
-    "game_duration_seconds": 5400,
-    "game_elapsed_seconds": 2700.0,
-    "goals": {
-      "goal_status_version": "fsim.goal_status.v1",
-      "latest": {
-        "crossing": [
-          52.61,
-          1.6022068343984976,
-          0.9429131855363362
-        ],
-        "own_goal": false,
-        "scorer_id": "tm_15531ff404756aa6:9",
-        "scorer_index": 9,
-        "scoring_team": 0,
-        "sequence": 18,
-        "tick": 16079
-      },
-      "score": [
-        14,
-        4
-      ],
-      "sequence": 18
-    },
-    "phase": "second_half",
-    "players": [
-      {
-        "action": "off_ball_movement",
-        "id": "tm_15531ff404756aa6:0",
-        "lineup_index": 0,
-        "position": [
-          49.0,
-          0.0,
-          -0.0
-        ],
-        "team": 0,
-        "velocity": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      },
-      {
-        "action": "off_ball_movement",
-        "id": "tm_15531ff404756aa6:1",
-        "lineup_index": 1,
-        "position": [
-          30.0,
-          0.0,
-          15.0
-        ],
-        "team": 0,
-        "velocity": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      },
-      {
-        "action": "off_ball_movement",
-        "id": "tm_15531ff404756aa6:2",
-        "lineup_index": 2,
-        "position": [
-          30.0,
-          0.0,
-          -0.0
-        ],
-        "team": 0,
-        "velocity": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      },
-      {
-        "action": "off_ball_movement",
-        "id": "tm_15531ff404756aa6:3",
-        "lineup_index": 3,
-        "position": [
-          30.0,
-          0.0,
-          -15.0
-        ],
-        "team": 0,
-        "velocity": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      },
-      {
-        "action": "off_ball_movement",
-        "id": "tm_15531ff404756aa6:4",
-        "lineup_index": 4,
-        "position": [
-          11.666666666666668,
-          0.0,
-          18.0
-        ],
-        "team": 0,
-        "velocity": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      },
-      {
-        "action": "off_ball_movement",
-        "id": "tm_15531ff404756aa6:5",
-        "lineup_index": 5,
-        "position": [
-          11.666666666666668,
-          0.0,
-          6.0
-        ],
-        "team": 0,
-        "velocity": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      },
-      {
-        "action": "off_ball_movement",
-        "id": "tm_15531ff404756aa6:6",
-        "lineup_index": 6,
-        "position": [
-          11.666666666666668,
-          0.0,
-          -6.0
-        ],
-        "team": 0,
-        "velocity": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      },
-      {
-        "action": "off_ball_movement",
-        "id": "tm_15531ff404756aa6:7",
-        "lineup_index": 7,
-        "position": [
-          11.666666666666668,
-          0.0,
-          -18.0
-        ],
-        "team": 0,
-        "velocity": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      },
-      {
-        "action": "off_ball_movement",
-        "id": "tm_15531ff404756aa6:8",
-        "lineup_index": 8,
-        "position": [
-          6.666666666666664,
-          0.0,
-          7.5
-        ],
-        "team": 0,
-        "velocity": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      },
-      {
-        "action": "off_ball_movement",
-        "id": "tm_15531ff404756aa6:9",
-        "lineup_index": 9,
-        "position": [
-          6.666666666666664,
-          0.0,
-          -7.5
-        ],
-        "team": 0,
-        "velocity": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      },
-      {
-        "action": "off_ball_movement",
-        "id": "tm_15531ff404756aa6:10",
-        "lineup_index": 10,
-        "position": [
-          25.0,
-          0.0,
-          -0.0
-        ],
-        "team": 0,
-        "velocity": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      },
-      {
-        "action": "off_ball_movement",
-        "id": "tm_1a1cdacb819699d1:0",
-        "lineup_index": 0,
-        "position": [
-          -49.0,
-          0.0,
-          0.0
-        ],
-        "team": 1,
-        "velocity": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      },
-      {
-        "action": "off_ball_movement",
-        "id": "tm_1a1cdacb819699d1:1",
-        "lineup_index": 1,
-        "position": [
-          -30.0,
-          0.0,
-          -18.0
-        ],
-        "team": 1,
-        "velocity": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      },
-      {
-        "action": "off_ball_movement",
-        "id": "tm_1a1cdacb819699d1:2",
-        "lineup_index": 2,
-        "position": [
-          -30.0,
-          0.0,
-          -6.0
-        ],
-        "team": 1,
-        "velocity": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      },
-      {
-        "action": "off_ball_movement",
-        "id": "tm_1a1cdacb819699d1:3",
-        "lineup_index": 3,
-        "position": [
-          -30.0,
-          0.0,
-          6.0
-        ],
-        "team": 1,
-        "velocity": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      },
-      {
-        "action": "off_ball_movement",
-        "id": "tm_1a1cdacb819699d1:4",
-        "lineup_index": 4,
-        "position": [
-          -30.0,
-          0.0,
-          18.0
-        ],
-        "team": 1,
-        "velocity": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      },
-      {
-        "action": "off_ball_movement",
-        "id": "tm_1a1cdacb819699d1:5",
-        "lineup_index": 5,
-        "position": [
-          -11.666666666666668,
-          0.0,
-          -7.5
-        ],
-        "team": 1,
-        "velocity": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      },
-      {
-        "action": "off_ball_movement",
-        "id": "tm_1a1cdacb819699d1:6",
-        "lineup_index": 6,
-        "position": [
-          -11.666666666666668,
-          0.0,
-          7.5
-        ],
-        "team": 1,
-        "velocity": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      },
-      {
-        "action": "off_ball_movement",
-        "id": "tm_1a1cdacb819699d1:7",
-        "lineup_index": 7,
-        "position": [
-          -6.666666666666664,
-          0.0,
-          -15.0
-        ],
-        "team": 1,
-        "velocity": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      },
-      {
-        "action": "off_ball_movement",
-        "id": "tm_1a1cdacb819699d1:8",
-        "lineup_index": 8,
-        "position": [
-          -6.666666666666664,
-          0.0,
-          0.0
-        ],
-        "team": 1,
-        "velocity": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      },
-      {
-        "action": "off_ball_movement",
-        "id": "tm_1a1cdacb819699d1:9",
-        "lineup_index": 9,
-        "position": [
-          -6.666666666666664,
-          0.0,
-          15.0
-        ],
-        "team": 1,
-        "velocity": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      },
-      {
-        "action": "off_ball_movement",
-        "id": "tm_1a1cdacb819699d1:10",
-        "lineup_index": 10,
-        "position": [
-          -0.55,
-          0.0,
-          0.0
-        ],
-        "team": 1,
-        "velocity": [
-          0.0,
-          0.0,
-          0.0
-        ]
-      }
-    ],
-    "real_duration_seconds": 900,
-    "real_elapsed_seconds": 450.0,
-    "replay": {
-      "capacity": 301,
-      "frames": 301,
-      "sample_presentation_seconds": 0.05,
-      "window_presentation_seconds": 15
-    },
-    "restart_ticks_remaining": 0,
-    "score": [
-      14,
-      4
-    ],
-    "score_is_final_simulated_result": false,
-    "seed": "20261015",
-    "simulation_scope": "simple_utility_ai_and_ball_physics",
-    "snapshot_version": "fsim.match_snapshot.v2",
-    "statistics": {
-      "actions": {
-        "dribble": 1185,
-        "off_ball_movement": 186720,
-        "shoot": 42,
-        "short_pass": 469,
-        "tackle": 188
-      },
-      "ai_slices": 8621,
-      "interceptions": 394,
-      "restarts": 100,
-      "saves": 18
-    },
-    "teams": [
-      {
-        "formation": "3-4-2-1",
-        "id": "tm_15531ff404756aa6",
-        "lineup": [
-          "tm_15531ff404756aa6:0",
-          "tm_15531ff404756aa6:1",
-          "tm_15531ff404756aa6:2",
-          "tm_15531ff404756aa6:3",
-          "tm_15531ff404756aa6:4",
-          "tm_15531ff404756aa6:5",
-          "tm_15531ff404756aa6:6",
-          "tm_15531ff404756aa6:7",
-          "tm_15531ff404756aa6:8",
-          "tm_15531ff404756aa6:9",
-          "tm_15531ff404756aa6:10"
-        ],
-        "name": "AS Roma"
-      },
-      {
-        "formation": "4-2-3-1",
-        "id": "tm_1a1cdacb819699d1",
-        "lineup": [
-          "tm_1a1cdacb819699d1:0",
-          "tm_1a1cdacb819699d1:1",
-          "tm_1a1cdacb819699d1:2",
-          "tm_1a1cdacb819699d1:3",
-          "tm_1a1cdacb819699d1:4",
-          "tm_1a1cdacb819699d1:5",
-          "tm_1a1cdacb819699d1:6",
-          "tm_1a1cdacb819699d1:7",
-          "tm_1a1cdacb819699d1:8",
-          "tm_1a1cdacb819699d1:9",
-          "tm_1a1cdacb819699d1:10"
-        ],
-        "name": "AC Milan"
-      }
-    ],
-    "tick": 27000,
-    "ticks_per_real_second": 60,
-    "time_scale": 6.0
-  },
   "fulltime": {
     "ball": [
-      28.614909726830778,
+      -11.792594953011623,
       0.11,
-      -27.070487576439653
+      -5.572023115532565
     ],
-    "ball_owner": 18,
+    "ball_owner": -1,
     "ball_velocity": [
-      4.182689610292307,
+      -5.1824884577333075,
       0.0,
-      -2.111386821810939
+      -9.09641989131101
     ],
     "game_duration_seconds": 5400,
     "game_elapsed_seconds": 5400.0,
@@ -930,21 +18,21 @@
       "latest": {
         "crossing": [
           -52.61,
-          1.6692655081277934,
-          -2.38487089816272
+          1.7848192594936199,
+          1.6481986092533403
         ],
         "own_goal": false,
-        "scorer_id": "tm_15531ff404756aa6:8",
-        "scorer_index": 8,
-        "scoring_team": 0,
-        "sequence": 42,
-        "tick": 53319
+        "scorer_id": "tm_1a1cdacb819699d1:10",
+        "scorer_index": 21,
+        "scoring_team": 1,
+        "sequence": 3,
+        "tick": 22288
       },
       "score": [
-        27,
-        15
+        2,
+        1
       ],
-      "sequence": 42
+      "sequence": 3
     },
     "phase": "completed",
     "players": [
@@ -953,15 +41,15 @@
         "id": "tm_15531ff404756aa6:0",
         "lineup_index": 0,
         "position": [
-          49.0,
+          50.0,
           0.0,
-          -3.835000000000009
+          -0.6691321026129576
         ],
         "team": 0,
         "velocity": [
           0.0,
           0.0,
-          -1.2700000000000067
+          -2.8095017624546337
         ]
       },
       {
@@ -969,15 +57,15 @@
         "id": "tm_15531ff404756aa6:1",
         "lineup_index": 1,
         "position": [
-          47.985978261730736,
+          15.883094784717299,
           0.0,
-          11.323728420886361
+          16.681928418378092
         ],
         "team": 0,
         "velocity": [
-          -4.142282599419502,
+          -2.439919133769255,
           0.0,
-          1.7058474765539522
+          -0.5878140104531226
         ]
       },
       {
@@ -985,15 +73,15 @@
         "id": "tm_15531ff404756aa6:2",
         "lineup_index": 2,
         "position": [
-          46.713320106327735,
+          18.785786855251565,
           0.0,
-          -3.6923393125221806
+          -0.21975324252285292
         ],
         "team": 0,
         "velocity": [
-          -3.6606489878122517,
+          -6.551378389683862,
           0.0,
-          1.847605208224743
+          -1.2786970693573743
         ]
       },
       {
@@ -1001,15 +89,15 @@
         "id": "tm_15531ff404756aa6:3",
         "lineup_index": 3,
         "position": [
-          29.55129992071158,
+          16.466529892725713,
           0.0,
-          -28.477351285859516
+          -15.986014447390744
         ],
         "team": 0,
         "velocity": [
-          -4.085295845360584,
+          -3.47905217147936,
           0.0,
-          4.8875157195288566
+          -0.058593950332284095
         ]
       },
       {
@@ -1017,15 +105,15 @@
         "id": "tm_15531ff404756aa6:4",
         "lineup_index": 4,
         "position": [
-          27.945206505487135,
+          1.3944497939653124,
           0.0,
-          14.371209852120609
+          19.96122760324471
         ],
         "team": 0,
         "velocity": [
-          -3.7915078415510095,
+          -1.9334355360925648,
           0.0,
-          1.7477825399644153
+          -2.385367063862489
         ]
       },
       {
@@ -1033,15 +121,15 @@
         "id": "tm_15531ff404756aa6:5",
         "lineup_index": 5,
         "position": [
-          29.636453150597955,
+          1.8069400384604726,
           0.0,
-          2.3109605603432404
+          5.9919801130396655
         ],
         "team": 0,
         "velocity": [
-          -2.6811297243838084,
+          3.5936231620905446,
           0.0,
-          1.5499460089416317
+          -0.26336145502495967
         ]
       },
       {
@@ -1049,15 +137,15 @@
         "id": "tm_15531ff404756aa6:6",
         "lineup_index": 6,
         "position": [
-          23.385402977350548,
+          3.8620184057261486,
           0.0,
-          -17.697206267300082
+          -8.43479956276035
         ],
         "team": 0,
         "velocity": [
-          0.038818376100593355,
+          2.0688540554539525,
           0.0,
-          1.2526538260946651
+          -1.5288621539868963
         ]
       },
       {
@@ -1065,15 +153,15 @@
         "id": "tm_15531ff404756aa6:7",
         "lineup_index": 7,
         "position": [
-          17.3871670437366,
+          -21.066368401175986,
           0.0,
-          -12.983297775405665
+          -18.02079168649973
         ],
         "team": 0,
         "velocity": [
-          3.4639948851694413,
+          -4.759975188234762,
           0.0,
-          -4.134184716726548
+          -0.18691992591811868
         ]
       },
       {
@@ -1081,15 +169,15 @@
         "id": "tm_15531ff404756aa6:8",
         "lineup_index": 8,
         "position": [
-          14.879769900456427,
+          -25.934137028255595,
           0.0,
-          3.89530021230415
+          8.29772780443949
         ],
         "team": 0,
         "velocity": [
-          1.3093822559467405,
+          -0.2558402112053315,
           0.0,
-          -2.0244985887655353
+          0.05388243051489994
         ]
       },
       {
@@ -1097,15 +185,15 @@
         "id": "tm_15531ff404756aa6:9",
         "lineup_index": 9,
         "position": [
-          14.339422651977605,
+          -9.940671318356799,
           0.0,
-          -12.06146283250396
+          -2.2043594668261024
         ],
         "team": 0,
         "velocity": [
-          1.8873574947006766,
+          -3.568910917995005,
           0.0,
-          1.148889857248001
+          -5.551820077353464
         ]
       },
       {
@@ -1113,15 +201,15 @@
         "id": "tm_15531ff404756aa6:10",
         "lineup_index": 10,
         "position": [
-          -11.471207819300393,
+          -21.193400258980795,
           0.0,
-          -1.406303897730596
+          -0.09889889515834976
         ],
         "team": 0,
         "velocity": [
-          5.487325137373986,
+          -6.119141866440536,
           0.0,
-          -1.4289887984145522
+          -0.5916821610461261
         ]
       },
       {
@@ -1129,15 +217,15 @@
         "id": "tm_1a1cdacb819699d1:0",
         "lineup_index": 0,
         "position": [
-          -49.0,
+          -50.0,
           0.0,
-          -2.55650000000013
+          -3.588841594169409
         ],
         "team": 1,
         "velocity": [
           0.0,
           0.0,
-          2.9249999999993515
+          -6.924999999999999
         ]
       },
       {
@@ -1145,15 +233,15 @@
         "id": "tm_1a1cdacb819699d1:1",
         "lineup_index": 1,
         "position": [
-          -18.273740343056396,
+          -32.808185159919155,
           0.0,
-          -21.861576827302628
+          -19.088984214107597
         ],
         "team": 1,
         "velocity": [
-          6.529535047720074,
+          6.809044458409659,
           0.0,
-          0.7919048080842117
+          0.5348724570055197
         ]
       },
       {
@@ -1161,15 +249,15 @@
         "id": "tm_1a1cdacb819699d1:2",
         "lineup_index": 2,
         "position": [
-          -17.52488054489032,
+          -9.824974221424428,
           0.0,
-          -9.661452791800967
+          3.7223178251523183
         ],
         "team": 1,
         "velocity": [
-          5.9548418065747555,
+          -3.0406823683280138,
           0.0,
-          0.6085282801853609
+          -1.7413428454773339
         ]
       },
       {
@@ -1177,15 +265,15 @@
         "id": "tm_1a1cdacb819699d1:3",
         "lineup_index": 3,
         "position": [
-          -19.35318704825077,
+          -28.24608257288881,
           0.0,
-          2.0461679594165765
+          8.093073229027821
         ],
         "team": 1,
         "velocity": [
-          6.226743781726327,
+          -5.1394388025810045,
           0.0,
-          0.6857707824971571
+          0.34141695306473707
         ]
       },
       {
@@ -1193,15 +281,15 @@
         "id": "tm_1a1cdacb819699d1:4",
         "lineup_index": 4,
         "position": [
-          -19.351249914895426,
+          -18.922909417919342,
           0.0,
-          14.371235730907603
+          4.496300117088496
         ],
         "team": 1,
         "velocity": [
-          1.8563029490115213,
+          -2.3181389133580055,
           0.0,
-          0.7582841415704067
+          -0.8285509950083814
         ]
       },
       {
@@ -1209,15 +297,15 @@
         "id": "tm_1a1cdacb819699d1:5",
         "lineup_index": 5,
         "position": [
-          -1.4165534941244702,
+          -13.878376325193113,
           0.0,
-          -12.913697352205128
+          -8.134447281933296
         ],
         "team": 1,
         "velocity": [
-          5.78836711837563,
+          -6.3433158051040905,
           0.0,
-          2.1877741861274025
+          2.1999028479874028
         ]
       },
       {
@@ -1225,31 +313,31 @@
         "id": "tm_1a1cdacb819699d1:6",
         "lineup_index": 6,
         "position": [
-          -2.6604535483826557,
+          -19.493773507464688,
           0.0,
-          3.5644002826613153
+          7.089499392337797
         ],
         "team": 1,
         "velocity": [
-          5.97854107313053,
+          0.4704078439646153,
           0.0,
-          0.4747141275408939
+          -1.441620901589129
         ]
       },
       {
-        "action": "dribble",
+        "action": "off_ball_movement",
         "id": "tm_1a1cdacb819699d1:7",
         "lineup_index": 7,
         "position": [
-          28.064909726830777,
+          -2.4452527238001918,
           0.0,
-          -27.070487576439653
+          -15.488838016644564
         ],
         "team": 1,
         "velocity": [
-          4.182689610292307,
+          -2.222329731096515,
           0.0,
-          -2.111386821810939
+          -0.5396057580727387
         ]
       },
       {
@@ -1257,15 +345,15 @@
         "id": "tm_1a1cdacb819699d1:8",
         "lineup_index": 8,
         "position": [
-          21.461234709019834,
+          -10.62931214914738,
           0.0,
-          -21.29222559378314
+          1.503919051012101
         ],
         "team": 1,
         "velocity": [
-          3.6286683416610543,
+          -2.7894844802442087,
           0.0,
-          -1.3048539697114592
+          -2.848768774574555
         ]
       },
       {
@@ -1273,15 +361,15 @@
         "id": "tm_1a1cdacb819699d1:9",
         "lineup_index": 9,
         "position": [
-          18.386216039025797,
+          -2.411932970672016,
           0.0,
-          11.317858349346867
+          14.671527874629053
         ],
         "team": 1,
         "velocity": [
-          1.3195914754318139,
+          -0.010530018428340782,
           0.0,
-          0.5250766004730956
+          0.005038802788668306
         ]
       },
       {
@@ -1289,15 +377,15 @@
         "id": "tm_1a1cdacb819699d1:10",
         "lineup_index": 10,
         "position": [
-          24.261957603294626,
+          18.148185467601902,
           0.0,
-          -4.6396798168225235
+          -0.49968640049019064
         ],
         "team": 1,
         "velocity": [
-          6.219165872138603,
+          0.14239952968491565,
           0.0,
-          0.5850353968640487
+          -1.0590690611795905
         ]
       }
     ],
@@ -1311,25 +399,37 @@
     },
     "restart_ticks_remaining": 0,
     "score": [
-      27,
-      15
+      2,
+      1
     ],
     "score_is_final_simulated_result": true,
-    "seed": "20261015",
+    "seed": "31001",
     "simulation_scope": "simple_utility_ai_and_ball_physics",
     "snapshot_version": "fsim.match_snapshot.v2",
     "statistics": {
       "actions": {
-        "dribble": 2872,
-        "off_ball_movement": 368521,
-        "shoot": 85,
-        "short_pass": 1180,
-        "tackle": 496
+        "dribble": 31,
+        "off_ball_movement": 365206,
+        "shoot": 33,
+        "short_pass": 985,
+        "tackle": 2239
       },
-      "ai_slices": 17086,
-      "interceptions": 998,
-      "restarts": 240,
-      "saves": 28
+      "ai_slices": 17521,
+      "interceptions": 999,
+      "restarts": 12,
+      "saves": 8,
+      "shots": [
+        16,
+        17
+      ],
+      "shots_on_target": [
+        5,
+        8
+      ],
+      "team_saves": [
+        6,
+        2
+      ]
     },
     "teams": [
       {

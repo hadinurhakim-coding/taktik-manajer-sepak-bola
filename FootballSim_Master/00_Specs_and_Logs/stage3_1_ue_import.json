@@ -1,0 +1,143 @@
+{
+  "status": "SUCCESS",
+  "animations": [
+    {
+      "name": "idle",
+      "path": "/Game/Football/Animations/A_idle.A_idle",
+      "seconds": 6.333333492279053
+    },
+    {
+      "name": "jog",
+      "path": "/Game/Football/Animations/A_jog.A_jog",
+      "seconds": 0.699999988079071
+    },
+    {
+      "name": "sprint",
+      "path": "/Game/Football/Animations/A_sprint.A_sprint",
+      "seconds": 0.46666666865348816
+    },
+    {
+      "name": "turn_left",
+      "path": "/Game/Football/Animations/A_turn_left.A_turn_left",
+      "seconds": 1.7999999523162842
+    },
+    {
+      "name": "turn_spin",
+      "path": "/Game/Football/Animations/A_turn_spin.A_turn_spin",
+      "seconds": 1.0666667222976685
+    },
+    {
+      "name": "turn_sprint",
+      "path": "/Game/Football/Animations/A_turn_sprint.A_turn_sprint",
+      "seconds": 0.8333333134651184
+    },
+    {
+      "name": "turn_walk",
+      "path": "/Game/Football/Animations/A_turn_walk.A_turn_walk",
+      "seconds": 0.8999999761581421
+    },
+    {
+      "name": "defend_stance",
+      "path": "/Game/Football/Animations/A_defend_stance.A_defend_stance",
+      "seconds": 2.933333396911621
+    },
+    {
+      "name": "defend_shuffle",
+      "path": "/Game/Football/Animations/A_defend_shuffle.A_defend_shuffle",
+      "seconds": 1.0
+    },
+    {
+      "name": "dribble",
+      "path": "/Game/Football/Animations/A_dribble.A_dribble",
+      "seconds": 1.4333332777023315
+    },
+    {
+      "name": "pass",
+      "path": "/Game/Football/Animations/A_pass.A_pass",
+      "seconds": 1.3333333730697632
+    },
+    {
+      "name": "shot",
+      "path": "/Game/Football/Animations/A_shot.A_shot",
+      "seconds": 1.0666667222976685
+    },
+    {
+      "name": "header",
+      "path": "/Game/Football/Animations/A_header.A_header",
+      "seconds": 1.5666667222976685
+    },
+    {
+      "name": "receive",
+      "path": "/Game/Football/Animations/A_receive.A_receive",
+      "seconds": 0.699999988079071
+    },
+    {
+      "name": "shield",
+      "path": "/Game/Football/Animations/A_shield.A_shield",
+      "seconds": 1.0
+    },
+    {
+      "name": "skill_juggle",
+      "path": "/Game/Football/Animations/A_skill_juggle.A_skill_juggle",
+      "seconds": 1.100000023841858
+    },
+    {
+      "name": "tackle_stand",
+      "path": "/Game/Football/Animations/A_tackle_stand.A_tackle_stand",
+      "seconds": 2.2333333492279053
+    },
+    {
+      "name": "tackle_lunge",
+      "path": "/Game/Football/Animations/A_tackle_lunge.A_tackle_lunge",
+      "seconds": 1.4666666984558105
+    },
+    {
+      "name": "tackle_slide",
+      "path": "/Game/Football/Animations/A_tackle_slide.A_tackle_slide",
+      "seconds": 1.8666666746139526
+    },
+    {
+      "name": "react_miss",
+      "path": "/Game/Football/Animations/A_react_miss.A_react_miss",
+      "seconds": 1.7999999523162842
+    },
+    {
+      "name": "gk_ready",
+      "path": "/Game/Football/Animations/A_gk_ready.A_gk_ready",
+      "seconds": 1.2000000476837158
+    },
+    {
+      "name": "gk_dive_left",
+      "path": "/Game/Football/Animations/A_gk_dive_left.A_gk_dive_left",
+      "seconds": 1.600000023841858
+    },
+    {
+      "name": "gk_dive_right",
+      "path": "/Game/Football/Animations/A_gk_dive_right.A_gk_dive_right",
+      "seconds": 1.600000023841858
+    },
+    {
+      "name": "gk_high",
+      "path": "/Game/Football/Animations/A_gk_high.A_gk_high",
+      "seconds": 1.2999999523162842
+    },
+    {
+      "name": "gk_smother",
+      "path": "/Game/Football/Animations/A_gk_smother.A_gk_smother",
+      "seconds": 1.5
+    },
+    {
+      "name": "gk_pass",
+      "path": "/Game/Football/Animations/A_gk_pass.A_gk_pass",
+      "seconds": 2.5333333015441895
+    },
+    {
+      "name": "penalty",
+      "path": "/Game/Football/Animations/A_penalty.A_penalty",
+      "seconds": 1.2333333492279053
+    }
+  ],
+  "mesh": "/Game/Football/Characters/SK_NicoPaz.SK_NicoPaz",
+  "skeleton": "/Game/Football/Characters/SK_NicoPaz_Skeleton.SK_NicoPaz_Skeleton",
+  "lod_count": 3
+}

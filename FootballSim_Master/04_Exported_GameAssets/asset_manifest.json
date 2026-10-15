@@ -1,0 +1,419 @@
+{
+  "status": "SUCCESS",
+  "blender": "5.2.2 LTS",
+  "source_sha256": {
+    "D:\\Hadi\\proyek\\manajer-sepak-bola\\build\\nico-paz\\blender-session-autosave.blend": "4a4ca7bc78377ed88589d04467d3c21908fac7c7118d56f391adca0f6501a892",
+    "D:\\Hadi\\proyek\\manajer-sepak-bola\\art\\animation\\football_20261015\\football_actions.blend": "39d21519742338050385e814e44eb3ef78bbccf9fcc8303d203447d3833ff6b0"
+  },
+  "bones": [
+    {
+      "name": "mixamorig:Hips",
+      "parent": null
+    },
+    {
+      "name": "mixamorig:LeftUpLeg",
+      "parent": "mixamorig:Hips"
+    },
+    {
+      "name": "mixamorig:LeftLeg",
+      "parent": "mixamorig:LeftUpLeg"
+    },
+    {
+      "name": "mixamorig:LeftFoot",
+      "parent": "mixamorig:LeftLeg"
+    },
+    {
+      "name": "mixamorig:LeftToeBase",
+      "parent": "mixamorig:LeftFoot"
+    },
+    {
+      "name": "mixamorig:LeftToe_End",
+      "parent": "mixamorig:LeftToeBase"
+    },
+    {
+      "name": "mixamorig:RightUpLeg",
+      "parent": "mixamorig:Hips"
+    },
+    {
+      "name": "mixamorig:RightLeg",
+      "parent": "mixamorig:RightUpLeg"
+    },
+    {
+      "name": "mixamorig:RightFoot",
+      "parent": "mixamorig:RightLeg"
+    },
+    {
+      "name": "mixamorig:RightToeBase",
+      "parent": "mixamorig:RightFoot"
+    },
+    {
+      "name": "mixamorig:RightToe_End",
+      "parent": "mixamorig:RightToeBase"
+    },
+    {
+      "name": "mixamorig:Spine",
+      "parent": "mixamorig:Hips"
+    },
+    {
+      "name": "mixamorig:Spine1",
+      "parent": "mixamorig:Spine"
+    },
+    {
+      "name": "mixamorig:Spine2",
+      "parent": "mixamorig:Spine1"
+    },
+    {
+      "name": "mixamorig:LeftShoulder",
+      "parent": "mixamorig:Spine2"
+    },
+    {
+      "name": "mixamorig:LeftArm",
+      "parent": "mixamorig:LeftShoulder"
+    },
+    {
+      "name": "mixamorig:LeftForeArm",
+      "parent": "mixamorig:LeftArm"
+    },
+    {
+      "name": "mixamorig:LeftHand",
+      "parent": "mixamorig:LeftForeArm"
+    },
+    {
+      "name": "mixamorig:Neck",
+      "parent": "mixamorig:Spine2"
+    },
+    {
+      "name": "mixamorig:Head",
+      "parent": "mixamorig:Neck"
+    },
+    {
+      "name": "mixamorig:HeadTop_End",
+      "parent": "mixamorig:Head"
+    },
+    {
+      "name": "mixamorig:RightShoulder",
+      "parent": "mixamorig:Spine2"
+    },
+    {
+      "name": "mixamorig:RightArm",
+      "parent": "mixamorig:RightShoulder"
+    },
+    {
+      "name": "mixamorig:RightForeArm",
+      "parent": "mixamorig:RightArm"
+    },
+    {
+      "name": "mixamorig:RightHand",
+      "parent": "mixamorig:RightForeArm"
+    }
+  ],
+  "materials": [
+    "nico_paz",
+    "perbaikan_wajah_local_portrait"
+  ],
+  "character_lods": [
+    {
+      "path": "04_Exported_GameAssets\\characters_lod\\NicoPaz_LOD0.fbx",
+      "bytes": 14275404,
+      "sha256": "4d7eeaaa8e724192d2fc2282502ef12776f8d0a392e8373a1160df3f0b8b220a",
+      "lod": 0,
+      "ratio": 1.0,
+      "triangles": 99537,
+      "vertices": 59958,
+      "vertex_groups": 25
+    },
+    {
+      "path": "04_Exported_GameAssets\\characters_lod\\NicoPaz_LOD1.fbx",
+      "bytes": 11689436,
+      "sha256": "7336de47a4c19d7ca2f744454a6ef33c60c310ec46d3ab7c8bae1614b19f6f96",
+      "lod": 1,
+      "ratio": 0.5,
+      "triangles": 49767,
+      "vertices": 34239,
+      "vertex_groups": 25
+    },
+    {
+      "path": "04_Exported_GameAssets\\characters_lod\\NicoPaz_LOD2.fbx",
+      "bytes": 10074076,
+      "sha256": "df7fe608b34178498ad972419773e974fc7e4c1efc89cd3daa00017cecb352e9",
+      "lod": 2,
+      "ratio": 0.2,
+      "triangles": 19906,
+      "vertices": 16936,
+      "vertex_groups": 25
+    }
+  ],
+  "animations": [
+    {
+      "path": "04_Exported_GameAssets\\animations_locomotion\\idle.fbx",
+      "bytes": 490492,
+      "sha256": "07eda80a249d1c04803ff57fb77e74b0c0474156020f1dc09ea6833cdb8f4f8e",
+      "name": "idle",
+      "group": "animations_locomotion",
+      "frame_start": 0,
+      "frame_end": 190,
+      "fps": 30
+    },
+    {
+      "path": "04_Exported_GameAssets\\animations_locomotion\\jog.fbx",
+      "bytes": 209324,
+      "sha256": "86c1647e2977dd50946dc558a3983bb7647eb814cd102357a4f2a6fc79e7b7dd",
+      "name": "jog",
+      "group": "animations_locomotion",
+      "frame_start": 0,
+      "frame_end": 21,
+      "fps": 30
+    },
+    {
+      "path": "04_Exported_GameAssets\\animations_locomotion\\sprint.fbx",
+      "bytes": 197852,
+      "sha256": "69372a50de184cf8c0861303999f0e3ab5aed50b7af8e45308950bad6bdefcf5",
+      "name": "sprint",
+      "group": "animations_locomotion",
+      "frame_start": 0,
+      "frame_end": 14,
+      "fps": 30
+    },
+    {
+      "path": "04_Exported_GameAssets\\animations_locomotion\\turn_left.fbx",
+      "bytes": 267900,
+      "sha256": "6c193bc5c5b90359924d0c835632bc29d3a28b4a235c921bf9bf2438f22028b2",
+      "name": "turn_left",
+      "group": "animations_locomotion",
+      "frame_start": 0,
+      "frame_end": 54,
+      "fps": 30
+    },
+    {
+      "path": "04_Exported_GameAssets\\animations_locomotion\\turn_spin.fbx",
+      "bytes": 226652,
+      "sha256": "1d01638300c1ec27f6e0421f79cca5694552adbce8d25c0c62ed45e712aef584",
+      "name": "turn_spin",
+      "group": "animations_locomotion",
+      "frame_start": 0,
+      "frame_end": 32,
+      "fps": 30
+    },
+    {
+      "path": "04_Exported_GameAssets\\animations_locomotion\\turn_sprint.fbx",
+      "bytes": 218908,
+      "sha256": "68a1e664c660e88fdd2b01bd98df08cde5147d88ecb5d9ca5eae1765fdd5f187",
+      "name": "turn_sprint",
+      "group": "animations_locomotion",
+      "frame_start": 0,
+      "frame_end": 25,
+      "fps": 30
+    },
+    {
+      "path": "04_Exported_GameAssets\\animations_locomotion\\turn_walk.fbx",
+      "bytes": 223820,
+      "sha256": "9a0a140d82a7a144fdf0459b3bf9fa75f6657875f4f7b0ebcd57d46caf781e3d",
+      "name": "turn_walk",
+      "group": "animations_locomotion",
+      "frame_start": 0,
+      "frame_end": 27,
+      "fps": 30
+    },
+    {
+      "path": "04_Exported_GameAssets\\animations_locomotion\\defend_stance.fbx",
+      "bytes": 327404,
+      "sha256": "e3eeb81a5650c3934d87af5489946ebb2efb7c1400ed3b320e15ff5fb008fb9a",
+      "name": "defend_stance",
+      "group": "animations_locomotion",
+      "frame_start": 0,
+      "frame_end": 88,
+      "fps": 30
+    },
+    {
+      "path": "04_Exported_GameAssets\\animations_locomotion\\defend_shuffle.fbx",
+      "bytes": 230844,
+      "sha256": "0c2bd98c9c503b8efd75e40300542995818e38539b256b69d40d87e67d3b998d",
+      "name": "defend_shuffle",
+      "group": "animations_locomotion",
+      "frame_start": 0,
+      "frame_end": 30,
+      "fps": 30
+    },
+    {
+      "path": "04_Exported_GameAssets\\animations_onball\\dribble.fbx",
+      "bytes": 248236,
+      "sha256": "384608c122273ae3f3e15359c4cd44b9190e9d4e34e49b0c840c7850f9081e9f",
+      "name": "dribble",
+      "group": "animations_onball",
+      "frame_start": 0,
+      "frame_end": 43,
+      "fps": 30
+    },
+    {
+      "path": "04_Exported_GameAssets\\animations_onball\\pass.fbx",
+      "bytes": 241740,
+      "sha256": "528923e0a48b099460d8d2a4fd2d1911c32f105ee4a2db6d93f780384516bb83",
+      "name": "pass",
+      "group": "animations_onball",
+      "frame_start": 0,
+      "frame_end": 40,
+      "fps": 30
+    },
+    {
+      "path": "04_Exported_GameAssets\\animations_onball\\shot.fbx",
+      "bytes": 226444,
+      "sha256": "9c7335f262a515e983c6c3c1e506fb7711d46267febb7ae0bb460987a0dbf0eb",
+      "name": "shot",
+      "group": "animations_onball",
+      "frame_start": 0,
+      "frame_end": 32,
+      "fps": 30
+    },
+    {
+      "path": "04_Exported_GameAssets\\animations_onball\\header.fbx",
+      "bytes": 254460,
+      "sha256": "e2b0edfad74afd6757caa0e4bfc71a8b6bdf498dfb6d23159c10236b00052b68",
+      "name": "header",
+      "group": "animations_onball",
+      "frame_start": 0,
+      "frame_end": 47,
+      "fps": 30
+    },
+    {
+      "path": "04_Exported_GameAssets\\animations_onball\\receive.fbx",
+      "bytes": 209324,
+      "sha256": "c6004eacfd86e79edeb43cf2778eb4f3b898670c961d5869ba8b744ae7ec39ed",
+      "name": "receive",
+      "group": "animations_onball",
+      "frame_start": 0,
+      "frame_end": 21,
+      "fps": 30
+    },
+    {
+      "path": "04_Exported_GameAssets\\animations_onball\\shield.fbx",
+      "bytes": 230844,
+      "sha256": "5c6d1885c08fa861b924fd9982c8a2f100bc6c28e22646c321fae26f1cdd2e50",
+      "name": "shield",
+      "group": "animations_onball",
+      "frame_start": 0,
+      "frame_end": 30,
+      "fps": 30
+    },
+    {
+      "path": "04_Exported_GameAssets\\animations_onball\\skill_juggle.fbx",
+      "bytes": 227644,
+      "sha256": "6316fb16cea298c44c430c7969e56fd42f670d3f810713a1e5aea3fada3877ae",
+      "name": "skill_juggle",
+      "group": "animations_onball",
+      "frame_start": 0,
+      "frame_end": 33,
+      "fps": 30
+    },
+    {
+      "path": "04_Exported_GameAssets\\animations_onball\\tackle_stand.fbx",
+      "bytes": 289644,
+      "sha256": "811edf67f98d6fe5c8a2ded241f0051c85a1e08b5defe028e149fe8a019da890",
+      "name": "tackle_stand",
+      "group": "animations_onball",
+      "frame_start": 0,
+      "frame_end": 67,
+      "fps": 30
+    },
+    {
+      "path": "04_Exported_GameAssets\\animations_onball\\tackle_lunge.fbx",
+      "bytes": 250332,
+      "sha256": "5fae11cebad877f051db6ea38cce99c8638fea94b1724244075a80cbdd0e1b92",
+      "name": "tackle_lunge",
+      "group": "animations_onball",
+      "frame_start": 0,
+      "frame_end": 44,
+      "fps": 30
+    },
+    {
+      "path": "04_Exported_GameAssets\\animations_onball\\tackle_slide.fbx",
+      "bytes": 270732,
+      "sha256": "8159790e45d080c0839de37331c45f53f489565b8672a4aa83043ec4a5d00a3d",
+      "name": "tackle_slide",
+      "group": "animations_onball",
+      "frame_start": 0,
+      "frame_end": 56,
+      "fps": 30
+    },
+    {
+      "path": "04_Exported_GameAssets\\animations_onball\\react_miss.fbx",
+      "bytes": 244380,
+      "sha256": "79065489a411afacbc8f145f799c51e8e97bd5904d8e9652f3f73746da011fe0",
+      "name": "react_miss",
+      "group": "animations_onball",
+      "frame_start": 0,
+      "frame_end": 54,
+      "fps": 30
+    },
+    {
+      "path": "04_Exported_GameAssets\\animations_goalkeeper\\gk_ready.fbx",
+      "bytes": 213980,
+      "sha256": "4edb64ccfc95efcdd71e76342a91265fa8720393a0bb6e61fb1fbbd7e2f0e1f4",
+      "name": "gk_ready",
+      "group": "animations_goalkeeper",
+      "frame_start": 0,
+      "frame_end": 36,
+      "fps": 30
+    },
+    {
+      "path": "04_Exported_GameAssets\\animations_goalkeeper\\gk_dive_left.fbx",
+      "bytes": 245612,
+      "sha256": "d35445072cfa9506f40b1ceebbe936ca5422f523f20ef50987d1425f95e2b73f",
+      "name": "gk_dive_left",
+      "group": "animations_goalkeeper",
+      "frame_start": 0,
+      "frame_end": 48,
+      "fps": 30
+    },
+    {
+      "path": "04_Exported_GameAssets\\animations_goalkeeper\\gk_dive_right.fbx",
+      "bytes": 245628,
+      "sha256": "1c502d629e056b63ae082c2713d81f00d266f957a58459613a8ce9472de4082b",
+      "name": "gk_dive_right",
+      "group": "animations_goalkeeper",
+      "frame_start": 0,
+      "frame_end": 48,
+      "fps": 30
+    },
+    {
+      "path": "04_Exported_GameAssets\\animations_goalkeeper\\gk_high.fbx",
+      "bytes": 224156,
+      "sha256": "7aa094fd301fe63209b742497f849260f3092bda017efb3053ae85fe23ef95ea",
+      "name": "gk_high",
+      "group": "animations_goalkeeper",
+      "frame_start": 0,
+      "frame_end": 39,
+      "fps": 30
+    },
+    {
+      "path": "04_Exported_GameAssets\\animations_goalkeeper\\gk_smother.fbx",
+      "bytes": 240460,
+      "sha256": "3ee1960bd9dcd659bbbba295c2c80cab9bd33e02c77f4437e4029fd4208c97d6",
+      "name": "gk_smother",
+      "group": "animations_goalkeeper",
+      "frame_start": 0,
+      "frame_end": 45,
+      "fps": 30
+    },
+    {
+      "path": "04_Exported_GameAssets\\animations_goalkeeper\\gk_pass.fbx",
+      "bytes": 307116,
+      "sha256": "f48def4a0c8ef854a1f802d6e5c2a0fbfcbb9407a7973a8f1877836ff46aa507",
+      "name": "gk_pass",
+      "group": "animations_goalkeeper",
+      "frame_start": 0,
+      "frame_end": 76,
+      "fps": 30
+    },
+    {
+      "path": "04_Exported_GameAssets\\animations_setpieces\\penalty.fbx",
+      "bytes": 235868,
+      "sha256": "b4d713e0c0eb729f4fb3b0500cefb723549715ff3b889bdefd7b97adc0ad1a1a",
+      "name": "penalty",
+      "group": "animations_setpieces",
+      "frame_start": 0,
+      "frame_end": 37,
+      "fps": 30
+    }
+  ],
+  "source_unchanged": true
+}

@@ -1,0 +1,619 @@
+{
+  "objects": [
+    {
+      "name": "Rim",
+      "type": "LIGHT",
+      "parent": null,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        0.0,
+        2.0,
+        3.0
+      ],
+      "modifiers": [],
+      "vertices": 0
+    },
+    {
+      "name": "NicoPaz_Como1907",
+      "type": "MESH",
+      "parent": "Armature_NicoPaz",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.5807698965072632,
+        1.903407096862793,
+        0.29874634742736816
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "modifiers": [
+        [
+          "Armature",
+          "ARMATURE"
+        ]
+      ],
+      "vertices": 59958
+    },
+    {
+      "name": "Nico_Paz_v2.001",
+      "type": "MESH",
+      "parent": null,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.8843348026275635,
+        0.38021180033683777,
+        1.8600000143051147
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "modifiers": [],
+      "vertices": 90696
+    },
+    {
+      "name": "Nico_Paz_v2",
+      "type": "MESH",
+      "parent": null,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.8843348026275635,
+        0.38021180033683777,
+        1.8600000143051147
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "modifiers": [],
+      "vertices": 70734
+    },
+    {
+      "name": "Nico_Paz_Review_Camera",
+      "type": "CAMERA",
+      "parent": null,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        0.0,
+        5.0,
+        0.949999988079071
+      ],
+      "modifiers": [],
+      "vertices": 0
+    },
+    {
+      "name": "Nico_Paz_Hair_5.001",
+      "type": "MESH",
+      "parent": null,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.06407091021537781,
+        0.03602544218301773,
+        0.06430518627166748
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "modifiers": [],
+      "vertices": 840
+    },
+    {
+      "name": "Nico_Paz_Hair_5",
+      "type": "MESH",
+      "parent": null,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.06407091021537781,
+        0.03602544218301773,
+        0.06430518627166748
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "modifiers": [],
+      "vertices": 720
+    },
+    {
+      "name": "Nico_Paz_Fullbody_Preview",
+      "type": "MESH",
+      "parent": null,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.9984012842178345,
+        0.403317928314209,
+        1.9730353355407715
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "modifiers": [],
+      "vertices": 30008
+    },
+    {
+      "name": "Nico_Paz_ComfyUI_Shape",
+      "type": "MESH",
+      "parent": null,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.9984012842178345,
+        0.403317928314209,
+        1.9730353355407715
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "modifiers": [],
+      "vertices": 30008
+    },
+    {
+      "name": "Nico_Paz.001",
+      "type": "MESH",
+      "parent": null,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.9412027597427368,
+        0.38021180033683777,
+        1.8600000143051147
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "modifiers": [],
+      "vertices": 35796
+    },
+    {
+      "name": "Nico_Paz",
+      "type": "MESH",
+      "parent": null,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.9412027597427368,
+        0.38021180033683777,
+        1.8600000143051147
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "modifiers": [],
+      "vertices": 35796
+    },
+    {
+      "name": "Light.001",
+      "type": "LIGHT",
+      "parent": null,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        4.076245307922363,
+        1.0054539442062378,
+        5.903861999511719
+      ],
+      "modifiers": [],
+      "vertices": 0
+    },
+    {
+      "name": "Key",
+      "type": "LIGHT",
+      "parent": null,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        -2.4000000953674316,
+        -3.200000047683716,
+        3.700000047683716
+      ],
+      "modifiers": [],
+      "vertices": 0
+    },
+    {
+      "name": "Icosphere",
+      "type": "MESH",
+      "parent": null,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        1.9021157026290894,
+        1.9999998807907104,
+        2.0
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "modifiers": [],
+      "vertices": 42
+    },
+    {
+      "name": "Fill",
+      "type": "LIGHT",
+      "parent": null,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        2.5,
+        -2.0,
+        2.799999952316284
+      ],
+      "modifiers": [],
+      "vertices": 0
+    },
+    {
+      "name": "Camera.001",
+      "type": "CAMERA",
+      "parent": null,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        7.358891487121582,
+        -6.925790786743164,
+        4.958309173583984
+      ],
+      "modifiers": [],
+      "vertices": 0
+    },
+    {
+      "name": "Armature_NicoPaz",
+      "type": "ARMATURE",
+      "parent": null,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions": [
+        0.9600175023078918,
+        1.9238711595535278,
+        0.3163966238498688
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "modifiers": [],
+      "vertices": 0
+    }
+  ],
+  "actions": [
+    {
+      "name": "turn_walk",
+      "frames": [
+        0.8000000715255737,
+        26.400001525878906
+      ],
+      "slots": [
+        [
+          "OBArmature_NicoPaz",
+          "OBJECT"
+        ]
+      ]
+    },
+    {
+      "name": "turn_sprint",
+      "frames": [
+        0.8000000715255737,
+        24.799999237060547
+      ],
+      "slots": [
+        [
+          "OBArmature_NicoPaz",
+          "OBJECT"
+        ]
+      ]
+    },
+    {
+      "name": "turn_spin",
+      "frames": [
+        0.8000000715255737,
+        31.19999885559082
+      ],
+      "slots": [
+        [
+          "OBArmature_NicoPaz",
+          "OBJECT"
+        ]
+      ]
+    },
+    {
+      "name": "turn_left",
+      "frames": [
+        0.8000000715255737,
+        53.599998474121094
+      ],
+      "slots": [
+        [
+          "OBArmature_NicoPaz",
+          "OBJECT"
+        ]
+      ]
+    },
+    {
+      "name": "tackle_stand",
+      "frames": [
+        0.8000000715255737,
+        66.4000015258789
+      ],
+      "slots": [
+        [
+          "OBArmature_NicoPaz",
+          "OBJECT"
+        ]
+      ]
+    },
+    {
+      "name": "tackle_slide",
+      "frames": [
+        0.8000000715255737,
+        56.0
+      ],
+      "slots": [
+        [
+          "OBArmature_NicoPaz",
+          "OBJECT"
+        ]
+      ]
+    },
+    {
+      "name": "tackle_lunge",
+      "frames": [
+        0.8000000715255737,
+        43.19999694824219
+      ],
+      "slots": [
+        [
+          "OBArmature_NicoPaz",
+          "OBJECT"
+        ]
+      ]
+    },
+    {
+      "name": "sprint",
+      "frames": [
+        0.8000000715255737,
+        13.600000381469727
+      ],
+      "slots": [
+        [
+          "OBArmature_NicoPaz",
+          "OBJECT"
+        ]
+      ]
+    },
+    {
+      "name": "skill_juggle",
+      "frames": [
+        0.8000000715255737,
+        32.79999923706055
+      ],
+      "slots": [
+        [
+          "OBArmature_NicoPaz",
+          "OBJECT"
+        ]
+      ]
+    },
+    {
+      "name": "shot",
+      "frames": [
+        0.8000000715255737,
+        32.0
+      ],
+      "slots": [
+        [
+          "OBArmature_NicoPaz",
+          "OBJECT"
+        ]
+      ]
+    },
+    {
+      "name": "penalty",
+      "frames": [
+        0.8000000715255737,
+        36.79999923706055
+      ],
+      "slots": [
+        [
+          "OBArmature_NicoPaz",
+          "OBJECT"
+        ]
+      ]
+    },
+    {
+      "name": "pass",
+      "frames": [
+        0.8000000715255737,
+        39.20000076293945
+      ],
+      "slots": [
+        [
+          "OBArmature_NicoPaz",
+          "OBJECT"
+        ]
+      ]
+    },
+    {
+      "name": "jog",
+      "frames": [
+        0.8000000715255737,
+        20.799999237060547
+      ],
+      "slots": [
+        [
+          "OBArmature_NicoPaz",
+          "OBJECT"
+        ]
+      ]
+    },
+    {
+      "name": "idle",
+      "frames": [
+        0.8000000715255737,
+        189.60000610351562
+      ],
+      "slots": [
+        [
+          "OBArmature_NicoPaz",
+          "OBJECT"
+        ]
+      ]
+    },
+    {
+      "name": "header",
+      "frames": [
+        0.8000000715255737,
+        46.39999771118164
+      ],
+      "slots": [
+        [
+          "OBArmature_NicoPaz",
+          "OBJECT"
+        ]
+      ]
+    },
+    {
+      "name": "gk_pass",
+      "frames": [
+        0.8000000715255737,
+        76.0
+      ],
+      "slots": [
+        [
+          "OBArmature_NicoPaz",
+          "OBJECT"
+        ]
+      ]
+    },
+    {
+      "name": "dribble",
+      "frames": [
+        0.8000000715255737,
+        42.400001525878906
+      ],
+      "slots": [
+        [
+          "OBArmature_NicoPaz",
+          "OBJECT"
+        ]
+      ]
+    },
+    {
+      "name": "defend_stance",
+      "frames": [
+        0.8000000715255737,
+        87.20000457763672
+      ],
+      "slots": [
+        [
+          "OBArmature_NicoPaz",
+          "OBJECT"
+        ]
+      ]
+    }
+  ]
+}
